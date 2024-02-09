@@ -16,7 +16,7 @@ const CardItem:React.FC<CardProps> = ({ icon, title, description }) => {
             {title}
           </p>
           <span className="text-[#6F7174] text-base">
-            A selection of hundreds of vehicles, each with professional drivers.
+            {description}
           </span>
         </div>
       </div>
