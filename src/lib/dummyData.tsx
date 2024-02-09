@@ -2,6 +2,12 @@ import XIcon from "@/assets/svgs/x-icon.svg"
 import FacebookIcon from "@/assets/svgs/facebook-icon.svg"
 import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg"
 import InstagramIcon from "@/assets/svgs/instagram-icon.svg"
+import DoorToDoorIcon from "@/assets/svgs/Door-to-door.svg"
+import RealSustainIcon from "@/assets/svgs/real.svg"
+import GoingFurtherIcon from "@/assets/svgs/going-further.svg"
+import WalletFriendlyIcon from "@/assets/svgs/wallet-friendly.svg"
+import CheckableEasyIcon from "@/assets/svgs/checkable-easy-payable.svg"
+import SuppotLocalBuzIcon from "@/assets/svgs/support-local-biz.svg";
 
 interface PostalCardProps {
   src: string;
@@ -23,6 +29,17 @@ interface BlogProps {
 interface SocialProps {
     href: string;
     icon: JSX.Element
+}[]
+
+interface IProps {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+[];
+interface AccordionDataProps {
+    title: string;
+    content: string
 }[]
 
 
@@ -150,4 +167,66 @@ export const socialMediaLists:SocialProps[] = [
         href: "https://www.instagram.com",
         icon: <InstagramIcon />
     }
+]
+
+export const EventUniqueData: IProps[] = [
+  {
+    icon: <DoorToDoorIcon />,
+    title: "Feel-good rides",
+    description:
+      "A great event starts with an enjoyable journey. Rest assured that our vehicles are thoroughly checked and insured, can be GPS-tracked, and your drivers are screened, qualified, and experienced",
+  },
+  {
+    icon: <RealSustainIcon />,
+    title: "Real sustainability",
+    description:
+      "We believe in sustainability that really means something; we utilize existing vehicles so that we don’t add extra cars to the road. Also, we offset our carbon to tackle deforestation and create sustainable jobs",
+  },
+  {
+    icon: <GoingFurtherIcon />,
+    title: "Going further? On it!",
+    description:
+      "Our service extends beyond our borders. For complete peace of mind, you can book a vehicle from our network of carefully screened Treepz drivers, based all over the world",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Budget-sized fees",
+    description:
+      "It may sound obvious, but in our opinion, you should only be charged for what you need. With Treepz, you can tailor your journey to fit your budget – no compromises, no surprises",
+  },
+  {
+    icon: <CheckableEasyIcon />,
+    title: "Visible, checkable, and easy payable",
+    description:
+      "Things don't need to be complicated. You can see all the information about your journey then review, approve, and pay easily",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Become a Treepz local business champion",
+    description:
+      "Because we have a network of carefully picked drivers who are already based in your chosen area, we can always support great local business owners",
+  },
+];
+
+export const AccordionData:AccordionDataProps[] = [
+    {
+        title: "Where is Treepz available?",
+        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
+    {
+        title: "How does Treepz work?",
+        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
+    {
+        title: "How does Treepz work?",
+        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
+    {
+        title: "How does Treepz work?",
+        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
+    {
+        title: "How does Treepz work?",
+        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
 ]

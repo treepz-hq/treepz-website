@@ -1,13 +1,17 @@
 'use client'
 import Image from "next/image";
 import React from "react";
+import { usePathname } from 'next/navigation'
 import { Button } from "../ui/button";
 
 const BetterTogetherComponent = () => {
+  const pathname = usePathname()
   return (
     <div className="relative px-4">
-      <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-blue-500 via-blue-500/20 to-transparent blur-sm mb-24"></div>
-      <div className="relative w-full sm:max-w-[1640px] h-[176.66px] sm:h-[377.861px] mx-auto z-0">
+      {["/"].includes(pathname) && (
+        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-blue-500 via-blue-500/20 to-transparent blur-sm mb-24"></div>
+      )}
+      <div className="relative w-full sm:max-w-[1640px] h-[176.66px] sm:h-[377.861px] mx-auto">
         <Image
           src="/footer-header.png"
           alt="footer"
