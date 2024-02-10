@@ -42,6 +42,18 @@ interface AccordionDataProps {
     content: string
 }[]
 
+interface TeamsMembersProps {
+    src: string;
+    name: string;
+    title: string;
+    rank?: string
+}[]
+
+interface CounterProps {
+    count: string;
+    text: string
+}[]
+
 
 export const PostalCardData:PostalCardProps[] = [
     {
@@ -228,5 +240,80 @@ export const AccordionData:AccordionDataProps[] = [
     {
         title: "How does Treepz work?",
         content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+    },
+]
+
+export const BoardMembers:TeamsMembersProps[] = [
+    {
+        src:"jane.png",
+        name: "Jane Egerton-Idehen",
+        title: "MD/CEO, NIGCOMSAT",
+        rank: "BOARD CHAIRMAN"
+    },
+    {
+        src:"ebenzer.png",
+        name: "Ebenezer Arthur",
+        title: "MD, Wangara Green Ventures",
+        rank: "BOARD MEMBER"
+    },
+    {
+        src:"sunil.png",
+        name: "Sunil Sharma",
+        title: "MD, Techstars Toronto",
+        rank: "BOARD MEMBER"
+    },
+    {
+        src:"adejare.png",
+        name: "Adejare Rasheed Olaoluwa",
+        title: "EX MD, Bank of Industry Limited",
+        rank: "BOARD MEMBER"
+    },
+    {
+        src:"laura.png",
+        name: "Laura Venasse",
+        title: "Partner, LaBarge Weinstein LLP",
+        rank: "BOARD MEMBER"
+    }
+]
+
+export const FoundersData:TeamsMembersProps[] = [
+    {
+        src:"onyeka.png",
+        name: "Onyeka Akumah",
+        title: "Co-Founder/CEO",
+    },
+    {
+        src:"johnny.png",
+        name: "Johnny Enagwolor",
+        title: "Co-Founder & President",
+    },
+    {
+        src:"afolabi.png",
+        name: "Afolabi Oluseyi",
+        title: "Co-Founder/VP of Products",
+    },
+    {
+        src:"john.png",
+        name: "John Atumeyi Shaibu",
+        title: "Co-Founder/VP of Customer Engagement",
+    },
+]
+
+export const CounterData:CounterProps[] = [
+    {
+        count: "11k+",
+        text: "Total completed bookings"
+    },
+    {
+        count: "2k+",
+        text: "Total hosts doing business on Treepz*"
+    },
+    {
+        count: "20k+",
+        text: "Vehicles listed on Treepz marketplace*"
+    },
+    {
+        count: "12+",
+        text: "African countries covered*"
     },
 ]
