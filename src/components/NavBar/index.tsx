@@ -46,7 +46,7 @@ const NavBar = () => {
        }
      };
   return (
-    <div className="w-full sm:container h-12 sm:h-[72px] mx-auto flex justify-between items-center pt-[20px] pb-2 px-4 sm:px-28">
+    <div className="w-full sm:container h-16 sm:h-[72px] mx-auto flex justify-between items-center pt-[20px] pb-2 px-4 sm:px-20">
       <div className="flex sm:w-[702px] justify-between items-center">
         <div
           className="relative w-[90px] h-[24px] cursor-pointer"
