@@ -263,6 +263,45 @@ export const ConventionUniqueData: IProps[] = [
   },
 ];
 
+export const ExecutiveUniqueData: IProps[] = [
+  {
+    icon: <SlickRides />,
+    title: "Smooth and safe",
+    description:
+      "A professional ride starts way before you set foot into the car. We carefully check and insure our vehicles and drivers for your peace of mind",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Flexible payments",
+    description:
+      "We provide you with the chance to streamline your business journeys and only pay for what you need. Call us mavericks if you like, it just makes sense to us",
+  },
+  {
+    icon: <AllAroundTheWorld />,
+    title: "Cut the carbon",
+    description:
+      "We make use of existing vehicles instead of adding new ones to the road, and we offset carbon by supporting projects that both prevent deforestation and create sustainable employment",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "You’re in the driver’s seat",
+    description:
+      "You have a full overview of your service before you pay, so you always know what you’re getting",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Your business makes the world go round",
+    description:
+      "For overseas journeys, we have cars and drivers all over the globe. They still undergo our same rigorous checks and are fully insured",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Champion local businesses",
+    description:
+      "When you book with Treepz, you’ll become a small business advocate – we use local, knowledgable drivers",
+  },
+];
+
 export const AccordionData:AccordionDataProps[] = [
     {
         title: "Where is Treepz available?",

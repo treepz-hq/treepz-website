@@ -10,7 +10,7 @@ import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
-import PopularCitiesCarousel from './PopularCitiesCarousel';
+import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 
 const NeededInformations = ["How Treepz Will Take Your Worries Away", "Treepz has the know-how", "Our conference shuttle services", "Tailor-made solutions", "Time and cost savings","Safety", "Choose your own vehicle","Carbon neutral","Options for convention shuttles","How much does it cost for convention transportation near me?", "Book EASY Convention Transporation"];
 
