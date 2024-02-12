@@ -125,7 +125,7 @@ const ExecutiveComponent = () => {
                 />
               </div>
             </div>
-            <div className="w-full h-[670px] relative">
+            <div className="w-full h-[404px] sm:h-[670px] relative">
               <Image
                 src="/about_us.png"
                 alt="About Us"
