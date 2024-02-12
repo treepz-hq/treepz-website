@@ -44,10 +44,6 @@ export const GroupTransport: SubMenuProps[] = [
     href: "/convention",
   },
   {
-    label: "Convention Transportation",
-    href: "/convention",
-  },
-  {
     label: "Conference Shuttles",
     href: "/conference",
   },

@@ -65,7 +65,7 @@ const ContactComponent = () => {
 
   return (
     <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-16 mt-10 sm:mt-[114px]">
-      <div className="w-full sm:w-[585px]">
+      <div className="w-full sm:w-[585px] hidden sm:inline-block">
         <h1 className="text-[#212529] text-[32px] sm:text-[56px] leading-[40px] sm:leading-[64px] font-bold uppercase">
           Wherever you want to go, Treepz will take you there.
         </h1>
