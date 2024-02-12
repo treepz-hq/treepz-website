@@ -8,6 +8,10 @@ import GoingFurtherIcon from "@/assets/svgs/going-further.svg"
 import WalletFriendlyIcon from "@/assets/svgs/wallet-friendly.svg"
 import CheckableEasyIcon from "@/assets/svgs/checkable-easy-payable.svg"
 import SuppotLocalBuzIcon from "@/assets/svgs/support-local-biz.svg";
+import SlickRides from "@/assets/svgs/slick-rides.svg";
+import EasyToBeGreen from "@/assets/svgs/easy-to-be-green.svg";
+import AllAroundTheWorld from "@/assets/svgs/all-around-the-world.svg";
+import ApproveReview from "@/assets/svgs/approve-review.svg";
 
 interface PostalCardProps {
   src: string;
@@ -217,6 +221,45 @@ export const EventUniqueData: IProps[] = [
     title: "Become a Treepz local business champion",
     description:
       "Because we have a network of carefully picked drivers who are already based in your chosen area, we can always support great local business owners",
+  },
+];
+
+export const ConventionUniqueData: IProps[] = [
+  {
+    icon: <SlickRides />,
+    title: "Slick rides",
+    description:
+      "Enjoy smooth, professional rides with our meticulously checked and insured vehicles, plus GPS-trackable journeys, and vetted, trained, and experienced drivers",
+  },
+  {
+    icon: <EasyToBeGreen />,
+    title: "Easy to be green",
+    description:
+      "We use existing group vehicles rather than adding new cars to the road, and we offset carbon by funding projects that prevent deforestation and create sustainable jobs",
+  },
+  {
+    icon: <AllAroundTheWorld />,
+    title: "All around the world",
+    description:
+      "If you have events that require travel overseas, we will help you with that too. Our network of vetted drivers is global, which sounds rather fancy but just makes sense to us",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Flexible billing",
+    description:
+      "Call us radical, but we believe you should only pay for what you actually need. Tweak your requirements and adjust your costs according to your company’s budget.",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Approve, review, and pay",
+    description:
+      "See all the information you need about your service before you pay, so you’ll never be left in the dark",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Support local business",
+    description:
+      "Be a fellow champion for smaller businesses by riding with our select vetted and checked pool of local drivers",
   },
 ];
 

@@ -8,7 +8,7 @@ import Postal from '../common/card';
 import { EventUniqueData, AccordionData } from '@/lib/dummyData';
 import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRight from '@/assets/svgs/chervon-right-nav.svg'
-import TechCommLogos from './techs'
+import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 
 
@@ -48,7 +48,7 @@ const EventComponent = () => {
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           Trusted by Your Favorite Businesses
         </p>
-        <div className="flex flex-col sm:flex-row justify-between items-center">
+        <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
           {OurPartnersData.map(({ src }: any) => (
             <OurPartners src={src} key={src} />
           ))}
