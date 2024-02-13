@@ -20,7 +20,7 @@ const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
   return (
     <div
       ref={ref}
-      className="flex absolute top-full left-0 bg-white mt-4 shadow-md rounded-md p-2 w-[456px] h-fit"
+      className="flex absolute top-full left-0 bg-white mt-4 shadow-md rounded-md p-2 w-[456px] h-fit z-50"
     >
       <div className="flex flex-col flex-1 pl-[12px]">
         <div className="flex flex-col">

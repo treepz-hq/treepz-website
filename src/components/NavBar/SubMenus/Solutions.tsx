@@ -16,7 +16,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
   return (
     <div
       ref={ref}
-      className="flex absolute top-full left-0 bg-white mt-4 shadow-md rounded-md p-2 w-[843px] h-[404px]"
+      className="flex absolute top-full left-0 bg-white mt-4 shadow-md rounded-md p-2 w-[843px] h-[404px] z-50"
     >
       <div className="flex flex-col w-[229px] pl-[12px]">
         <p className="text-[#6F7174] uppercase text-sm cursor-default">
