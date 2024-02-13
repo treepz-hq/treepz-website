@@ -12,6 +12,9 @@ import SlickRides from "@/assets/svgs/slick-rides.svg";
 import EasyToBeGreen from "@/assets/svgs/easy-to-be-green.svg";
 import AllAroundTheWorld from "@/assets/svgs/all-around-the-world.svg";
 import ApproveReview from "@/assets/svgs/approve-review.svg";
+import EmployeeSupport from "@/assets/svgs/employee-support.svg";
+import ReliabilityGuarantee from "@/assets/svgs/reliablity-guarantee.svg";
+import Vehicles4AllOccassions from "@/assets/svgs/vehicles-for-all-occasions.svg";
 
 interface PostalCardProps {
   src: string;
@@ -57,6 +60,12 @@ interface CounterProps {
     count: string;
     text: string
 }[]
+
+interface footerProps {
+  label: string;
+  href: string;
+}
+[];
 
 
 export const PostalCardData:PostalCardProps[] = [
@@ -123,13 +132,30 @@ export const BlogData: BlogProps[] = [
 ]
 
 export const solutionsLists = [
-  "Airport Shuttles",
-  "Campus Shuttles",
-  "Conference Shuttles",
-  "Convention Transportation",
-  "Corporate Shuttles",
-  "Corporate Shuttle Service",
-  "Event Transportation Service",
+    {
+        label: "Airport Shuttles",
+        href: "airport-shuttles"
+    },
+    {
+        label: "Campus Shuttles",
+        href: "campus-shuttles"
+    },
+    {
+        label: "Convention Transportation",
+        href: "convention"
+    },
+    {
+        label: "Corporate Shuttles",
+        href: "corporate-shuttles"
+    },
+    {
+        label: "Corporate Shuttle Service",
+        href: "corporate-shuttles-service"
+    },
+    {
+        label: "Event Transportation Service",
+        href: "event"
+    },
 ];
 
 export const groupLists = [
@@ -399,3 +425,30 @@ export const CounterData:CounterProps[] = [
         text: "African countries covered*"
     },
 ]
+
+export const ConferenceSolutionData: IProps[] = [
+  {
+    icon: <DoorToDoorIcon />,
+    title: "Flexible Solutions",
+    description:
+      "We offer solutions that adapt to your needs - from hybrid office commuter programs to running full-time recurring charters. We can scale with you.",
+  },
+  {
+    icon: <EmployeeSupport />,
+    title: "Employee Support",
+    description:
+      "Dedicated customer service experts, live chats, and SMS updates, available for you at all times before and during your reservation.",
+  },
+  {
+    icon: <ReliabilityGuarantee />,
+    title: "Reliability Guarantee",
+    description:
+      "We offer solutions that adapt to your needs - from hybrid office commuter programs to running full-time recurring charters. We can scale with you.",
+  },
+  {
+    icon: <Vehicles4AllOccassions />,
+    title: "Vehicle Choice",
+    description:
+      "Our fleet of vehicles range from transit vans to motor coaches and everything in between so you can find the ideal vehicle.",
+  },
+];
