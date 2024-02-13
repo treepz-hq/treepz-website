@@ -27,9 +27,9 @@ const Footer = () => {
           <div className="w-[196px]">
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">Solutions</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
-              {solutionsLists.map((link, index) => (
-                <Link href={`/${link}`} key={index}>
-                  {link}
+              {solutionsLists.map(({label, href}, index) => (
+                <Link href={`/${href}`} key={index}>
+                  {label}
                 </Link>
               ))}
             </div>
