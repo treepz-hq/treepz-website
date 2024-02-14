@@ -16,6 +16,7 @@ import EmployeeSupport from "@/assets/svgs/employee-support.svg";
 import ReliabilityGuarantee from "@/assets/svgs/reliablity-guarantee.svg";
 import Vehicles4AllOccassions from "@/assets/svgs/vehicles-for-all-occasions.svg";
 import TravelSupport247 from "@/assets/svgs/24-7-travel-support.svg";
+import CleanAndComfortableIcon from "@/assets/svgs/clean-and-comfortable.svg";
 
 interface PostalCardProps {
   src: string;
@@ -273,6 +274,45 @@ export const EventUniqueData: IProps[] = [
     title: "Become a Treepz local business champion",
     description:
       "Because we have a network of carefully picked drivers who are already based in your chosen area, we can always support great local business owners",
+  },
+];
+
+export const EmployeeUniqueData: IProps[] = [
+  {
+    icon: <DoorToDoorIcon />,
+    title: "Dedicated travel team",
+    description:
+      "Taking it all off your hands to coordinate your journeys in the most common sense way possible",
+  },
+  {
+    icon: <RealSustainIcon />,
+    title: "Traceable journeys",
+    description:
+      "Manage trips, cancel, or change details, monitor vehicles, and enjoy feeling in control",
+  },
+  {
+    icon: <CleanAndComfortableIcon />,
+    title: "Choice of clean and comfortable vehicles",
+    description:
+      "Your team can sit back and relax or start work early in one of our many sparkling vehicles",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Full Service Partner",
+    description:
+      "We offer cost-effective transportation solutions for groups of any size, tailoring our services to accommodate your special requests.",
+  },
+  {
+    icon: <CheckableEasyIcon />,
+    title: "Reliability Guarantee",
+    description:
+      "Treepz exclusively works with trusted transportation operators to ensure vehicles show up on time with 5-star drivers.",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "#1 User Friendly Service",
+    description:
+      "At Treepz, we take pride in leading the industry with outstanding customer experience. Whether it is choosing you shuttle or customizing your personal information, we make sure that each ride is perfectly tailored to each rider.",
   },
 ];
 

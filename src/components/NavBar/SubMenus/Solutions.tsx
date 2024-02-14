@@ -7,8 +7,9 @@ import useClickOutside from '@/lib/utils';
 interface IProps {
     items?: any
     setSelectedMenu: any
+    closeMenu: any
 }
-const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
+const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) => {
     const ref = useClickOutside(() => {
     setSelectedMenu(null);
   });
@@ -28,6 +29,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
               href={href}
               key={label}
               className="text-base py-1 text-[#212529] font-medium hover:text-black"
+              onClick={() => closeMenu()}
             >
               {label}
             </Link>
@@ -41,6 +43,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
             <Link
               href={href}
               key={label}
+              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -57,6 +60,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
             <Link
               href={href}
               key={label}
+              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -71,6 +75,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
             <Link
               href={href}
               key={label}
+              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -87,6 +92,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
             <Link
               href={href}
               key={label}
+              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -101,6 +107,7 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu }) => {
             <Link
               href={href}
               key={label}
+              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
