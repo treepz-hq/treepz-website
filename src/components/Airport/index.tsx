@@ -249,14 +249,21 @@ const AirportTransComponent = () => {
               Supporting Your Fellow Business Owners
             </h1>
             <p>
-              When you use Swoop for business, you will also be doing the very wonderful thing of supporting small, local business owners in your chosen area. That’s because Swoop is a passionate advocate and broker for small business owners all over the world.
+              When you use Swoop for business, you will also be doing the very
+              wonderful thing of supporting small, local business owners in your
+              chosen area. That’s because Swoop is a passionate advocate and
+              broker for small business owners all over the world.
             </p>
-            <p>We carefully select the best network of local drivers who are:</p>
+            <p>
+              We carefully select the best network of local drivers who are:
+            </p>
 
             <li>Vetted small business operators</li>
             <li>Background checked and insured</li>
             <li>People who give a damn about amazing transportation</li>
-            <li>Empowered with Swoop technology to provide a 5-star experience</li>
+            <li>
+              Empowered with Swoop technology to provide a 5-star experience
+            </li>
           </div>
 
           <div className="mt-6 flex flex-col border-b pb-10">
@@ -264,48 +271,69 @@ const AirportTransComponent = () => {
               A Deeper Dive into Swoop for Business
             </h1>
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Business Travel Management
+              Business Travel Management
             </h1>
             <p>
-              Swoop manages all aspects of business travel, including sourcing ground transportation and carrying out travel itinerary planning. We see it as our top priority to ensure that your travel arrangements are made according to your company's travel policy and budget.
+              Swoop manages all aspects of business travel, including sourcing
+              ground transportation and carrying out travel itinerary planning.
+              We see it as our top priority to ensure that your travel
+              arrangements are made according to your company&lsquo;s travel
+              policy and budget.
             </p>
 
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Corporate Event Planning
+              Corporate Event Planning
             </h1>
             <p>
-              Our corporate event planning services cover the organization and management of your business events such as conferences, meetings, and trade shows. We will assist with all the logistics, attendee registration, and even promote our services to your team.
+              Our corporate event planning services cover the organization and
+              management of your business events such as conferences, meetings,
+              and trade shows. We will assist with all the logistics, attendee
+              registration, and even promote our services to your team.
             </p>
 
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Group Travel Management
+              Group Travel Management
             </h1>
             <p>
-              Swoop arranges travel plans for groups of employees attending the same event or traveling for team-building activities, and we always ensure that group travel arrangements are cost-effective and well-organized.
+              Swoop arranges travel plans for groups of employees attending the
+              same event or traveling for team-building activities, and we
+              always ensure that group travel arrangements are cost-effective
+              and well-organized.
             </p>
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Employee Relocation Services
+              Employee Relocation Services
             </h1>
             <p>
-              Employee relocation services help you manage the process of relocating employees, both domestically and internationally – and all the transportation arrangements you make with Swoop will make the relocation process smooth for both you and the employee.
+              Employee relocation services help you manage the process of
+              relocating employees, both domestically and internationally – and
+              all the transportation arrangements you make with Swoop will make
+              the relocation process smooth for both you and the employee.
             </p>
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Travel Policy Compliance
+              Travel Policy Compliance
             </h1>
             <p>
-              Swoop’s easy and transparent booking process means all your trips will fit in with your company's guidelines – preventing any dreaded unauthorized expenses or overspending.
+              Swoop’s easy and transparent booking process means all your trips
+              will fit in with your company&lsquo;s guidelines – preventing any
+              dreaded unauthorized expenses or overspending.
             </p>
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Reporting and Analytics
+              Reporting and Analytics
             </h1>
             <p>
-              Swoop will provide your business with detailed reports and analytics to help you monitor travel expenses and identify cost-saving opportunities, so you can make informed decisions and optimize your travel programs.
+              Swoop will provide your business with detailed reports and
+              analytics to help you monitor travel expenses and identify
+              cost-saving opportunities, so you can make informed decisions and
+              optimize your travel programs.
             </p>
             <h1 className="font-semibold text-xl sm:text-2xl my-6">
-             Risk Management and Duty of Care
+              Risk Management and Duty of Care
             </h1>
             <p>
-              The safety and well-being of your employees are so important to us – so, Swoop will monitor the travel risks and provide real-time alerts, emergency assistance, and support to ensure all your employees are safe during their trips.
+              The safety and well-being of your employees are so important to us
+              – so, Swoop will monitor the travel risks and provide real-time
+              alerts, emergency assistance, and support to ensure all your
+              employees are safe during their trips.
             </p>
             <Button
               variant={"default"}
