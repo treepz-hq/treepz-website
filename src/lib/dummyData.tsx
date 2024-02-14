@@ -15,6 +15,7 @@ import ApproveReview from "@/assets/svgs/approve-review.svg";
 import EmployeeSupport from "@/assets/svgs/employee-support.svg";
 import ReliabilityGuarantee from "@/assets/svgs/reliablity-guarantee.svg";
 import Vehicles4AllOccassions from "@/assets/svgs/vehicles-for-all-occasions.svg";
+import TravelSupport247 from "@/assets/svgs/24-7-travel-support.svg";
 
 interface PostalCardProps {
   src: string;
@@ -67,6 +68,31 @@ interface footerProps {
 }
 [];
 
+interface OurPartnerProps {
+  src: string;
+}
+[];
+
+export const MiniPartnerData: OurPartnerProps[] = [
+  {
+    src: "Wakanow-Logo.png",
+  },
+  {
+    src: "Jeremiah-Foundation.png",
+  },
+  {
+    src: "New-mtn-logo.png",
+  },
+  {
+    src: "Eleveation-Church-logo.png",
+  },
+  {
+    src: "LBS-Logo.png",
+  },
+  {
+    src: "RBS_Rounded_Color_Claim_Logo.png",
+  }
+];
 
 export const PostalCardData:PostalCardProps[] = [
     {
@@ -286,6 +312,45 @@ export const ConventionUniqueData: IProps[] = [
     title: "Support local business",
     description:
       "Be a fellow champion for smaller businesses by riding with our select vetted and checked pool of local drivers",
+  },
+];
+
+export const ShoolUniqueData: IProps[] = [
+  {
+    icon: <TravelSupport247 />,
+    title: "Safety first",
+    description:
+      "Robust, child-friendly, and insured vehicles, GPS trackable journeys for staff and guardians, plus vetted, and screened drivers",
+  },
+  {
+    icon: <EasyToBeGreen />,
+    title: "Green means go!",
+    description:
+      "One large carbon-neutral vehicle can shuttle multiple students, reducing emissions and the amount of traffic on the roads",
+  },
+  {
+    icon: <AllAroundTheWorld />,
+    title: "School policy proff",
+    description:
+      "Stick to your school’s budget, sustainability policies, and staffing/ scheduling guidelines",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Follow the school rules",
+    description:
+      "Adhere to your federal, state, and local regulations with our wheelchair-accessible, regularly checked vehicles, trained and checked staff, plus onboard safety features",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Budget buddy system",
+    description:
+      "Only pay for what you need with our tailored fees and flexible billing options – budget friendly and simple",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Become a local business advocate",
+    description:
+      "Our carefully selected and vetted collection of drivers is always based in your chosen area – so we can all help to support local businesses together",
   },
 ];
 
