@@ -472,6 +472,45 @@ export const AirportUniqueData: IProps[] = [
   },
 ];
 
+export const CorporateUniqueData: IProps[] = [
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Vehicles that feel good",
+    description:
+      "We offer cost-effective transportation solutions for groups of any size, tailoring our services to accommodate your special requests.",
+  },
+  {
+    icon: <AllAroundTheWorld />,
+    title: "Sustainability is not just a buzz word",
+    description:
+      "We make use of existing vehicles instead of adding extra cars to the road, and we offset our carbon through funding projects that tackle deforestation and allow for sustainable jobs",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "It’s a global world",
+    description:
+      "We make use of existing vehicles instead of adding extra cars to the road, and we offset our carbon through funding projects that tackle deforestation and allow for sustainable jobs",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Your budget won’t hold you back",
+    description:
+      "It’s kinda common sense, but we believe you should only pay for what you need. Amend your requests and tailor your costs no matter what your company’s budget",
+  },
+  {
+    icon: <EmployeeSupport />,
+    title: "Become a local business advocate",
+    description:
+      "Our carefully selected and vetted collection of drivers is always based in your chosen area – so we can all help to support local businesses together",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Easy to approve and pay",
+    description:
+      "We don’t believe in making things complicated. Access all your information to review and approve, then pay with confidence",
+  },
+];
+
 export const AccordionData:AccordionDataProps[] = [
     {
         title: "Where is Treepz available?",
