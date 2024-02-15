@@ -11,12 +11,16 @@ interface IProps {
   items?: any;
   setSelectedMenu: any;
   type?: string;
-  closeMenu: any
+  closeMenu?: any
 }
 const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) => {
    const ref = useClickOutside(() => {
      setSelectedMenu(null);
    });
+
+    const handleMenuItemClick = () => {
+      closeMenu();
+    };
 
   return (
     <div
@@ -30,7 +34,6 @@ const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) =
               href={href}
               key={label}
               className="text-base py-1 text-[#212529] font-medium hover:text-black"
-              onClick={() => closeMenu()}
             >
               {label}
             </Link>
@@ -43,7 +46,6 @@ const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) =
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}

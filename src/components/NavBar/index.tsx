@@ -38,9 +38,17 @@ const NavBar = () => {
      const renderSubMenuItems = (item: any) => {
        switch (item) {
          case "group":
-           return <GroupSubMenu setSelectedMenu={setSelectedMenu} closeMenu={closeMenu} />;
+           return (
+             <GroupSubMenu
+               setSelectedMenu={setSelectedMenu}
+             />
+           );
          case "solutions":
-           return <SolutionsSubMenu setSelectedMenu={setSelectedMenu} closeMenu={closeMenu} />;
+           return (
+             <SolutionsSubMenu
+               setSelectedMenu={setSelectedMenu}
+             />
+           );
          default:
            return null;
        }
