@@ -32,14 +32,12 @@ const MenuComponent = () => {
         return (
           <GroupSubMenu
             setSelectedMenu={setSelectedMenu}
-            closeMenu={setSelectedMenu(null)}
           />
         );
       case 'solutions':
         return (
           <SolutionsSubMenu
             setSelectedMenu={setSelectedMenu}
-            closeMenu={setSelectedMenu(null)}
           />
         );
       default:

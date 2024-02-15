@@ -1,18 +1,46 @@
 'use client'
-import Link from 'next/link';
-import React, { useEffect, useRef } from 'react'
-import { CorporateTransportation, GroundTransportation, GroupTransport, HealthCareTransportation, SchoolTransport, TransitAgencyTransportation } from '../data';
-import useClickOutside from '@/lib/utils';
+import Link from "next/link";
+import React, { useEffect, useRef } from "react";
+import {
+  CorporateTransportation,
+  GroundTransportation,
+  GroupTransport,
+  HealthCareTransportation,
+  SchoolTransport,
+  TransitAgencyTransportation,
+} from "../data";
+import useClickOutside from "@/lib/utils";
 
 interface IProps {
-    items?: any
-    setSelectedMenu: any
-    closeMenu: any
+  items?: any;
+  setSelectedMenu: any;
+  closeMenu?: any;
 }
-const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) => {
-    const ref = useClickOutside(() => {
-    setSelectedMenu(null);
-  });
+
+const SolutionsSubMenu: React.FC<IProps> = ({
+  items,
+  setSelectedMenu,
+  closeMenu,
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setSelectedMenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setSelectedMenu]);
+
+  const handleMenuItemClick = () => {
+    closeMenu();
+  };
 
   return (
     <div
@@ -29,7 +57,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
               href={href}
               key={label}
               className="text-base py-1 text-[#212529] font-medium hover:text-black"
-              onClick={() => closeMenu()}
             >
               {label}
             </Link>
@@ -43,7 +70,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -60,7 +86,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -75,7 +100,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -92,7 +116,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -107,7 +130,6 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
             <Link
               href={href}
               key={label}
-              onClick={() => closeMenu()}
               className="text-base py-1 font-medium text-[#212529]"
             >
               {label}
@@ -115,18 +137,8 @@ const SolutionsSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu 
           ))}
         </div>
       </div>
-      {/* {items.map((item: any) => (
-        <Link
-          key={item.label}
-          href={item.href}
-          onClick={() => setSelectedMenu(item.href)}
-          className="block py-1 px-2 hover:bg-gray-200 rounded"
-        >
-          {item.label}
-        </Link>
-      ))} */}
     </div>
   );
 };
 
-export default SolutionsSubMenu
+export default SolutionsSubMenu;

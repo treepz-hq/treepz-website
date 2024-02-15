@@ -254,7 +254,7 @@ const AirportTransComponent = () => {
               chosen area. That’s because Swoop is a passionate advocate and
               broker for small business owners all over the world.
             </p>
-            <p>
+            <p className='my-2'>
               We carefully select the best network of local drivers who are:
             </p>
 

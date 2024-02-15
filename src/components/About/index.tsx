@@ -36,14 +36,14 @@ const AboutComponent = () => {
             </h1>
           </div>
           <div className="sm:hidden h-[322px] w-full relative bg-right">
-            <Image src="/about_us.png" alt="about" fill priority className="object-contain bg-right absolute" />
+            <Image src="/about_us.png" alt="about" fill priority className="bg-right absolute" />
           </div>
         </div>
         <div className="container px-4 sm:px-20 sm:mx-auto flex flex-col sm:flex-row justify-between sm:items-center my-4 sm:my-10">
           <p className="w-[306px] text-base sm:text-2xl font-medium text-[#6F7174]">
             We support the productivity of Africa&lsquo;s big teams
           </p>
-          <div className="w-full sm:w-[671px] gap-4 sm:gap-2 flex-wrap mt-4 sm:mt-0 flex">
+          <div className="w-full sm:w-[671px] justify-between sm:justify-start space-y-4 sm:space-y-0 sm:gap-2 flex-wrap mt-4 sm:mt-0 flex">
             {OurPartnersData.map(({ src }: any) => (
               <OurPartners src={src} key={src} />
             ))}
