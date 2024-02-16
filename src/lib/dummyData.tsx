@@ -635,3 +635,24 @@ export const ConferenceSolutionData: IProps[] = [
       "Our fleet of vehicles range from transit vans to motor coaches and everything in between so you can find the ideal vehicle.",
   },
 ];
+
+export const WeddingPostalData: BlogProps[] = [
+  {
+    src: "seamless.png",
+    title: "Seamless Booking Process",
+    description:
+      "Worry-free. Choose from hundreds of vehicle options for any wedding transportation request. We’ll provide tailored itineraries for you and your guests before the big day.",
+  },
+  {
+    src: "room-entire.png",
+    title: "Room for the Entire Group",
+    description:
+      "Tailored wedding packages and a variety of vehicles for any-sized group. We’re a one-stop-shop for all your wedding transportation needs.",
+  },
+  {
+    src: "always-care.png",
+    title: "Always Care About the Details",
+    description:
+      "Treepz simplifies group transportation to-and-from your wedding. We provide tailored wedding packages, access to hundreds of different vehicles, live vehicle tracking, personal concierge, and the ability to add on-site support.",
+  },
+];
