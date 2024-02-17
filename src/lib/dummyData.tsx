@@ -636,6 +636,46 @@ export const ConferenceSolutionData: IProps[] = [
   },
 ];
 
+export const NonEmeTranspUniqueData: IProps[] = [
+  {
+    icon: <SlickRides />,
+    title: "Safe and sound",
+    description:
+      "First and foremost, we provide safe transportation from door to door, employing drivers who will take you there in carefully designed and checked vehicles",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "We won’t waste your time or money",
+    description:
+      "We will not keep you waiting or make you late for appointments, and every trip can be tailored to your budget, with no fuss, no hidden extras",
+  },
+  {
+    icon: <TravelSupport247 />,
+    title: "Speak to a real person",
+    description:
+      "All of our team is trained and extremely caring; they will take onboard all of your concerns and requirements to provide the best and most common sense service for you",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Everyone is unique",
+    description:
+      "Whether you need a vehicle that is wheelchair-accessible or spacious enough for your vital equipment, our transportation service is completely inclusive",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Comfort and convenience",
+    description:
+      "Your vehicle will have amenities such as comfy seating and temperature control, so you will always feel comfortable",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Support local business",
+    description:
+      "Did you know that every journey you make will be with a local, checked, and screened driver who understands your neighborhood? So you can feel extra confidence",
+  },
+];
+
+
 export const HealthUniqueData: IProps[] = [
   {
     icon: <SlickRides />,
