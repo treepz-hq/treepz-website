@@ -636,42 +636,42 @@ export const ConferenceSolutionData: IProps[] = [
   },
 ];
 
-export const NonEmeTranspUniqueData: IProps[] = [
+export const HealthUniqueData: IProps[] = [
   {
     icon: <SlickRides />,
-    title: "Safe and sound",
+    title: "Full Service Partner",
     description:
-      "First and foremost, we provide safe transportation from door to door, employing drivers who will take you there in carefully designed and checked vehicles",
+      "We offer cost-effective transportation solutions for groups of any size, tailoring our services to accommodate your special requests.",
   },
   {
     icon: <WalletFriendlyIcon />,
-    title: "We won’t waste your time or money",
+    title: "Personal Concierge",
     description:
-      "We will not keep you waiting or make you late for appointments, and every trip can be tailored to your budget, with no fuss, no hidden extras",
+      "Dedicated customer service experts, live chats, and SMS updates, available for you at all times before and during your reservation.",
   },
   {
     icon: <TravelSupport247 />,
-    title: "Speak to a real person",
+    title: "Reliability Guarantee",
     description:
-      "All of our team is trained and extremely caring; they will take onboard all of your concerns and requirements to provide the best and most common sense service for you",
+      "We make use of existing vehicles instead of adding new ones to the road, and we offset carbon by supporting projects that both prevent deforestation and create sustainable employment",
   },
   {
     icon: <WalletFriendlyIcon />,
-    title: "Everyone is unique",
+    title: "Vehicles for All Occasions",
     description:
-      "Whether you need a vehicle that is wheelchair-accessible or spacious enough for your vital equipment, our transportation service is completely inclusive",
+      "Choose from vehicles of all types and sizes: Larger buses for big groups, luxury vehicles to impress, and customized vans for any setting.",
   },
   {
     icon: <ApproveReview />,
-    title: "Comfort and convenience",
+    title: "Last Mile Shuttling",
     description:
-      "Your vehicle will have amenities such as comfy seating and temperature control, so you will always feel comfortable",
+      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
   },
   {
     icon: <SuppotLocalBuzIcon />,
-    title: "Support local business",
+    title: "Hyper-Efficient",
     description:
-      "Did you know that every journey you make will be with a local, checked, and screened driver who understands your neighborhood? So you can feel extra confidence",
+      "Optimized routes, ensuring efficiency for every rider, parent, and school.",
   },
 ];
 
