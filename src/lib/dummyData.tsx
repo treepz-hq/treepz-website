@@ -675,6 +675,46 @@ export const NonEmeTranspUniqueData: IProps[] = [
   },
 ];
 
+
+export const HealthUniqueData: IProps[] = [
+  {
+    icon: <SlickRides />,
+    title: "Full Service Partner",
+    description:
+      "We offer cost-effective transportation solutions for groups of any size, tailoring our services to accommodate your special requests.",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Personal Concierge",
+    description:
+      "Dedicated customer service experts, live chats, and SMS updates, available for you at all times before and during your reservation.",
+  },
+  {
+    icon: <TravelSupport247 />,
+    title: "Reliability Guarantee",
+    description:
+      "We make use of existing vehicles instead of adding new ones to the road, and we offset carbon by supporting projects that both prevent deforestation and create sustainable employment",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Vehicles for All Occasions",
+    description:
+      "Choose from vehicles of all types and sizes: Larger buses for big groups, luxury vehicles to impress, and customized vans for any setting.",
+  },
+  {
+    icon: <ApproveReview />,
+    title: "Last Mile Shuttling",
+    description:
+      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Hyper-Efficient",
+    description:
+      "Optimized routes, ensuring efficiency for every rider, parent, and school.",
+  },
+];
+
 export const WeddingPostalData: BlogProps[] = [
   {
     src: "seamless.png",
