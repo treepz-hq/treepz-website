@@ -280,6 +280,45 @@ export const EventUniqueData: IProps[] = [
 export const EmployeeUniqueData: IProps[] = [
   {
     icon: <DoorToDoorIcon />,
+    title: "We do the checks so you don’t have to",
+    description:
+      "Our focus is providing you with the safest transportation possible, so we regularly check all our vehicles and drivers to keep you safe and secure on every journey",
+  },
+  {
+    icon: <RealSustainIcon />,
+    title: "Here for everyone",
+    description:
+      "Your airport shuttle vehicle will be comfortable and accessible for everyone, with all the legroom you need and plenty of space for your luggage",
+  },
+  {
+    icon: <CleanAndComfortableIcon />,
+    title: "Spend only what you need to",
+    description:
+      "Keep your money for when you get there; we only provide the vehicles you need and nothing more, so you can manage your budget effectively",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Sit back, relax…",
+    description:
+      "Begin to unwind from the moment you get into the vehicle. Everything is taken care of, and you can even plug into our WiFi and Bluetooth for extra convenience",
+  },
+  {
+    icon: <CheckableEasyIcon />,
+    title: "A team that understands",
+    description:
+      "At Treepz, we take pride in leading the industry with outstanding customer experience. Whether it is choosing you shuttle or customizing your personal information, we make sure that each ride is perfectly tailored to each rider.",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Support local businesses",
+    description:
+      "Booking with Treepz means you’re also supporting your local businesses because we carefully select regional drivers who know the area.",
+  },
+];
+
+export const AirlineUniqueData: IProps[] = [
+  {
+    icon: <DoorToDoorIcon />,
     title: "Dedicated travel team",
     description:
       "Taking it all off your hands to coordinate your journeys in the most common sense way possible",
@@ -313,6 +352,83 @@ export const EmployeeUniqueData: IProps[] = [
     title: "#1 User Friendly Service",
     description:
       "At Treepz, we take pride in leading the industry with outstanding customer experience. Whether it is choosing you shuttle or customizing your personal information, we make sure that each ride is perfectly tailored to each rider.",
+  },
+];
+export const GovernmentsUniqueData: IProps[] = [
+  {
+    icon: <DoorToDoorIcon />,
+    title: "Full Service Partner",
+    description:
+      "Our cost-effective transportation is tailored to groups of any size, and all our services accommodate your special requests",
+  },
+  {
+    icon: <RealSustainIcon />,
+    title: "Dependability guaranteed",
+    description:
+      "Swoop only works with trusted transportation operators across the US, with well-presented vehicles and 5-star drivers behind the wheel",
+  },
+  {
+    icon: <CleanAndComfortableIcon />,
+    title: "Personal Concierge",
+    description:
+      "Dedicated customer service experts, live chats, and SMS updates, available for you at all times before and during your reservation.",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "Vehicles for All Occasions",
+    description:
+      "Choose from vehicles of all types and sizes: Larger buses for big groups, luxury vehicles to impress, and customized vans for any setting.",
+  },
+  {
+    icon: <CheckableEasyIcon />,
+    title: "Last Mile Shuttling",
+    description:
+      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
+  },
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Hyper-Efficient",
+    description:
+      "Optimized routes, ensuring efficiency for every rider, parent, and school.",
+  },
+];
+
+export const UniversityUniqueData: IProps[] = [
+  {
+    icon: <SuppotLocalBuzIcon />,
+    title: "Attentive and secure",
+    description:
+      "We provide safe campus to campus buses. We regularly inspect our vehicles and drivers to ensure comfort and safety on every trip",
+  },
+  {
+    icon: <RealSustainIcon />,
+    title: "All aboard",
+    description:
+      "Our campus-to-campus bus service guarantees accessibility for everyone, with ample space for study materials, bags, and those with special accessibility needs",
+  },
+  {
+    icon: <CleanAndComfortableIcon />,
+    title: "Meeting your budget",
+    description:
+      "We know that as a university, you're often working within tight budgets, so we only give you the service you need and offer discounts for student groups and faculty",
+  },
+  {
+    icon: <WalletFriendlyIcon />,
+    title: "A relaxing experience",
+    description:
+      "We understand that a calm mind is essential for academic success, so our vehicles always arrive on time, equipped with all the modern amenities needed to relax or study",
+  },
+  {
+    icon: <CheckableEasyIcon />,
+    title: "World-class team",
+    description:
+      "When it comes to student shuttle services, reliability and efficiency are crucial. Our trained team ensures that you reach your destination on time, every time",
+  },
+  {
+    icon: <DoorToDoorIcon />,
+    title: "Support local business owners",
+    description:
+      "Each journey you take with Treepz is taken care of by a local, vetted driver who knows your neighborhood and surrounding areas.",
   },
 ];
 
