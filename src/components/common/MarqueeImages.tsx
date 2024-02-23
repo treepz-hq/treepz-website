@@ -17,7 +17,7 @@ const MarqueeImages: React.FC<MarqueeImagesProps> = ({
           direction === "left" ? "marquee-left" : "marquee-right"
         }`}
       >
-        {data.map(({src}, index) => (
+       {/*  {data?.map(({src}, index) => (
           <div className="marquee-item" key={index}>
             <Image
               src={`/partners/${src}`}
@@ -26,7 +26,7 @@ const MarqueeImages: React.FC<MarqueeImagesProps> = ({
               height={100}
             />
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
