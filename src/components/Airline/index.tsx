@@ -14,6 +14,7 @@ import ChevronRightIcon from "@/assets/svgs/chervon-right-nav.svg";
 import TechCommLogos from "@/components/common/techs";
 import BetterTogetherComponent from "@/components/Trips";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
+import Link from 'next/link'
 
 const NeededInformations = [
   "Recurring Airport Shuttle Journeys",
@@ -146,21 +147,22 @@ const AirlineComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg  bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link
+              href={`#info_${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
-        <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
+        <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info_1">
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             Recurring Airport Shuttle Journeys
           </h1>
@@ -200,7 +202,7 @@ const AirlineComponent = () => {
             />
           </div> */}
 
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id="info_2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Hotels with Airport Shuttle: Take Convenience to New Heights
             </h1>
@@ -241,7 +243,10 @@ const AirlineComponent = () => {
               </Button>
             </div>
           </div>
-          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+          <div
+            className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6"
+            id="info_3"
+          >
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Our Airport Services in More Detail
             </h1>
@@ -278,7 +283,10 @@ const AirlineComponent = () => {
               </li>
             </ul>
           </div>
-          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+          <div
+            className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6"
+            id="info_4"
+          >
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Drill Down to the Detail
             </h1>

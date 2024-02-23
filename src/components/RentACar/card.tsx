@@ -11,8 +11,8 @@ interface IProps {
 
 const RentCarCard:React.FC<IProps> = ({ src, title, noOfUsers}) => {
   return (
-    <div className="flex flex-col space-y-2 w-[302px] gap-x-6">
-      <div className="w-[302px] h-[233px] relative">
+    <div className="flex flex-col space-y-2 w-[302px] gap-x-6 transition-transform duration-300 transform-gpu group">
+      <div className="w-[302px] h-[233px] relative transition-transform duration-300 transform-gpu group-hover:scale-105 overflow-hidden rounded-2xl">
         <Image
           src={`/${src}`}
           alt={src}
@@ -24,13 +24,11 @@ const RentCarCard:React.FC<IProps> = ({ src, title, noOfUsers}) => {
       <div className="w-full h-10 rounded-full bg-[#F8F9F9] px-[12px] py-2 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <CarIcon />
-          <span className="text-base font-medium text-[#212529]">
-            {title}
-          </span>
+          <span className="text-base font-medium text-[#212529]">{title}</span>
         </div>
-        <NextIcon /> 
+        <NextIcon />
       </div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 transition-transform duration-300 transform-gpu group-hover:scale-105">
         <div className="w-[72px] h-[24px] relative">
           <Image
             src="/peoples.png"
@@ -40,7 +38,9 @@ const RentCarCard:React.FC<IProps> = ({ src, title, noOfUsers}) => {
             className="absolute"
           />
         </div>
-        <span className="text-base text-[#6F7174]">{noOfUsers} guests have hired</span>
+        <span className="text-base text-[#6F7174]">
+          {noOfUsers} guests have hired
+        </span>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import React from 'react'
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import Link from 'next/link'
 import OurPartners from '../Hero/partners';
 import Postal from '../common/card';
 import { CorporateUniqueData, AccordionData, MiniPartnerData } from '@/lib/dummyData';
@@ -125,18 +126,18 @@ const CorporateComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">

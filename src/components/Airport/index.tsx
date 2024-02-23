@@ -10,6 +10,7 @@ import TimerIcon from '@/assets/svgs/timer.svg'
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
+import Link from 'next/link'
 
 const NeededInformations = [
   "Why Use a Corporate Travel Service?",
@@ -144,22 +145,26 @@ const AirportTransComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link
+              href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
-          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          <h1
+            className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
+            id="info-1"
+          >
             Why Use a Corporate Travel Service?
           </h1>
           <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
@@ -189,7 +194,7 @@ const AirportTransComponent = () => {
             />
           </div>
           <div className="w-full flex flex-col border-t pt-14">
-            <h1 className="font-semibold text-xl sm:text-2xl mb-6">
+            <h1 className="font-semibold text-xl sm:text-2xl mb-6" id="info-2">
               More than A to B
             </h1>
             <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
@@ -244,7 +249,7 @@ const AirportTransComponent = () => {
               />
             </div>
           </div>
-          <div className="mt-6 flex flex-col border-b pb-10">
+          <div className="mt-6 flex flex-col border-b pb-10" id="info-3">
             <h1 className="font-semibold text-xl sm:text-2xl mb-6">
               Supporting Your Fellow Business Owners
             </h1>
@@ -254,7 +259,7 @@ const AirportTransComponent = () => {
               chosen area. That’s because Swoop is a passionate advocate and
               broker for small business owners all over the world.
             </p>
-            <p className='my-2'>
+            <p className="my-2">
               We carefully select the best network of local drivers who are:
             </p>
 
@@ -266,7 +271,7 @@ const AirportTransComponent = () => {
             </li>
           </div>
 
-          <div className="mt-6 flex flex-col border-b pb-10">
+          <div className="mt-6 flex flex-col border-b pb-10" id="info-4">
             <h1 className="font-semibold text-xl sm:text-[28px] mb-6">
               A Deeper Dive into Swoop for Business
             </h1>

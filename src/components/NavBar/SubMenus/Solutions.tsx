@@ -13,7 +13,7 @@ import useClickOutside from "@/lib/utils";
 
 interface IProps {
   items?: any;
-  setSelectedMenu: any;
+  setSelectedMenu?: any;
   closeMenu?: any;
 }
 

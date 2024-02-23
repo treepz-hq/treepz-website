@@ -2,6 +2,7 @@
 import React from 'react'
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 import OurPartners from '../Hero/partners';
 import { OurPartnersData } from '../Hero/data';
 import Postal from '../common/card';
@@ -126,21 +127,22 @@ const ConventionComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
-              className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
+            <Link
+              href={`#info${index + 1}`}
+              className="flex border-b cursor-pointer text-gray-900 justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
-        <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
+        <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info1">
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             How Treepz Will Take Your Worries Away
           </h1>
@@ -181,7 +183,7 @@ const ConventionComponent = () => {
             />
           </div>
 
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id="info2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Treepz has the know-how
             </h1>
@@ -262,7 +264,10 @@ const ConventionComponent = () => {
               Treepz x Lagos Business School
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Treepz specializes in large events that are notoriously complex. We understand that you are looking for a reputable company that can take the strain away from you and take your delegates, guests, and teammates to a conference or convention.
+              Treepz specializes in large events that are notoriously complex.
+              We understand that you are looking for a reputable company that
+              can take the strain away from you and take your delegates, guests,
+              and teammates to a conference or convention.
             </p>
           </div>
           <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
@@ -270,7 +275,9 @@ const ConventionComponent = () => {
               Book an ‘A’ in Transportation!
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Check out Treepz! You are in the right place, if you are looking for reliable private transportation services for school near me—you can simply contact us now for your FREE bespoke quote.
+              Check out Treepz! You are in the right place, if you are looking
+              for reliable private transportation services for school near
+              me—you can simply contact us now for your FREE bespoke quote.
             </p>
           </div>
           <Button
@@ -283,15 +290,19 @@ const ConventionComponent = () => {
           </Button>
         </div>
       </div>
-          <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
-            <h1 className="font-semibold text-xl sm:text-2xl mb-6">
-              Explore our most popular cities
-            </h1>
-            <p>Working with you is more than just a quick transaction to us. Our dedicated and experienced team always makes sure that we tailor exactly to your specific needs.</p>
-          </div>
-        <div className="mt-20">
-          <PopularCitiesCarousel />
-        </div>
+      <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
+        <h1 className="font-semibold text-xl sm:text-2xl mb-6">
+          Explore our most popular cities
+        </h1>
+        <p>
+          Working with you is more than just a quick transaction to us. Our
+          dedicated and experienced team always makes sure that we tailor
+          exactly to your specific needs.
+        </p>
+      </div>
+      <div className="mt-20">
+        <PopularCitiesCarousel />
+      </div>
       <TechCommLogos />
       <BetterTogetherComponent />
     </div>

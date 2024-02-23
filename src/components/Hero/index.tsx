@@ -1,21 +1,25 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '../ui/button';
 import Image from 'next/image';
 import OurPartners from './partners';
-import { OurPartnersData } from './data';
+import { OurPartnersData, NewPartnerLogos } from './data';
+import { useRouter } from 'next/navigation'
+import SwipeWordAnimation from "../WordSwipe";
+import MarqueeImages from '../common/MarqueeImages';
+import PartnersLogo from '../common/partners';
 
 const HeroComponent = () => {
+  /* Conference Shuttling, vehicle rental, you 
+  Employee transportation*/
+  const router = useRouter()
   return (
-    <div className="w-full">
-      <div className="w-[343px] sm:w-[800px] mx-auto flex flex-col text-center">
-        <h1 className="font-bold text-4xl sm:text-[56px] uppercase mt-12 sm:mt-20 sm:leading-[64px]">
-          treepz is the corporate mobility solution
-        </h1>
-        <span className="text-[#F8B02B] hidden sm:inline-flex text-[56px] uppercase text-center font-bold">
-          Employee transportation
-        </span>
-        <div className="mt-6 mb-14 sm:text-left">
+    <div className="w-full mt-5 sm:mt-10">
+      <div className="px-4 sm:px-20 w-full flex flex-col">
+        <div className="w-full mt-10 sm:mt-[108px]">
+          <SwipeWordAnimation />
+        </div>
+        <div className="mt-6 mb-14 sm:text-left sm:max-w-[1016px] text-xl">
           Treepz is the ultimate ground transportation solution for corporate
           travel managers, executives, students, sports teams, and everything
           in-between. We provide shuttles, car services, private cars, buses and
@@ -24,17 +28,29 @@ const HeroComponent = () => {
         <div className="flex flex-col sm:flex-row gap-4">
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full text-black flex items-center gap-2"
-            //onClick={() => {}}
+            className="relative overflow-hidden cursor-pointer rounded-full text-black flex items-center gap-2 sm:w-[240px] group"
+            onClick={() => router.push("/business-solutions")}
           >
-            Explore our business solutions
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              Explore our business solutions
+            </span>
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              Explore our business solutions
+            </span>
           </Button>
+
           <Button
             variant={"outline"}
-            className="cursor-pointer border-gray-900 rounded-full font-bold flex items-center gap-2"
+            className="relative sm:w-[156px] cursor-pointer border-gray-900 rounded-full font-bold flex items-center gap-2 group overflow-hidden"
             //onClick={() => {}}
           >
-            Get a quote
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              Get a quote
+            </span>
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              Get a quote
+            </span>
+            
           </Button>
         </div>
       </div>
@@ -66,10 +82,9 @@ const HeroComponent = () => {
               <p className="font-semibold text-[#6F7174] w-full text-center">
                 Trusted by Your Favorite Businesses
               </p>
-              <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8">
-                {OurPartnersData.map(({src}: any) => (
-                  <OurPartners src={src} key={src} />
-                ))}
+              {/* <MarqueeImages data={OurPartnersData}  /> */}
+              <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]">
+                <PartnersLogo data={NewPartnerLogos} />
               </div>
             </div>
           </div>
