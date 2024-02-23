@@ -21,6 +21,12 @@ import CleanAndComfortableIcon from "@/assets/svgs/clean-and-comfortable.svg";
 interface PostalCardProps {
   src: string;
   title: string;
+  href?: string;
+}[]
+
+interface PrivateTransProps {
+  title: string;
+  desc: string
 }[]
 
 interface RentACarProps {
@@ -98,28 +104,83 @@ export const MiniPartnerData: OurPartnerProps[] = [
 export const PostalCardData:PostalCardProps[] = [
     {
         src:"postal-1.png",
-        title:"Employee Shuttle Services"
+        title:"Employee Shuttle Services",
+        href: "employee-transportation"
     },
     {
         src:"car-rental.png",
-        title:"Car Rental Services"
+        title:"Car Rental Services",
     },
     {
         src:"school-transportation.png",
-        title:"School Transportation"
+        title:"School Transportation",
+        href: "school-transportation"
     },
     {
         src:"conference-conventions.png",
-        title:"Conference and Conventions"
+        title:"Conference and Conventions",
+        href: "conference"
     },
     {
         src:"event-transportation.png",
-        title:"Event Transportation"
+        title:"Event Transportation",
+        href: "event"
     },
     {
         src:"airport-transportation.png",
-        title:"Airport Transportation"
+        title:"Airport Transportation",
+        href: "airport-transportation"
     }
+]
+export const BusinessSolutionsData:PostalCardProps[] = [
+    {
+        src:"postal-1.png",
+        title:"Airline",
+        href: "airline"
+    },
+    {
+        src:"car-rental.png",
+        title:"Religious groups",
+    },
+    {
+        src:"school-transportation.png",
+        title:"Corporate events",
+        href: "school-transportation"
+    },
+    {
+        src:"school-transportation.png",
+        title:"School trips",
+        href: "school-transportation"
+    },
+    {
+        src:"event-transportation.png",
+        title:"Private events",
+    },
+    {
+        src:"airport-transportation.png",
+        title:"University",
+        href: "university"
+    },
+    {
+        src:"airport-transportation.png",
+        title:"Sporting teams",
+    },
+    {
+        src:"airport-transportation.png",
+        title:"Military",
+    },
+    {
+        src:"airport-transportation.png",
+        title:"Production crews",
+    },
+    {
+        src:"airport-transportation.png",
+        title:"Weddings",
+    },
+    {
+        src:"airport-transportation.png",
+        title:"Government",
+    },
 ]
 
 export const RentACarData:RentACarProps[] = [
@@ -850,4 +911,46 @@ export const WeddingPostalData: BlogProps[] = [
     description:
       "Treepz simplifies group transportation to-and-from your wedding. We provide tailored wedding packages, access to hundreds of different vehicles, live vehicle tracking, personal concierge, and the ability to add on-site support.",
   },
+];
+
+export const ProsData: PrivateTransProps[] = [
+  {
+    title: "Peace of mind",
+    desc: "Private transportation companies ensure reliability, safety, and professionalism, giving you peace of mind throughout your journey",
+  },
+  {
+    title: "Experienced drivers",
+    desc: "Skilled and trained drivers with local knowledge ensure a smooth and stress-free travel experience",
+  },
+  {
+    title: "Flexible options",
+    desc: "Private providers offer a wide range of vehicle options to accommodate your group size and specific needs, from cars to buses and coaches",
+  },
+  {
+    title: "Customization",
+    desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points",
+  },
+  {
+    title: "Budget management",
+    desc: "Clear pricing and payment structures make it easier to manage your finances and avoid unexpected expenses",
+  },
+];
+
+export const ConsData: PrivateTransProps[] = [
+  {
+    title: "Potentially higher cost",
+    desc: "Private transportation companies ensure reliability, safety, and professionalism, giving you peace of mind throughout your journey",
+  },
+  {
+    title: "Less direct control",
+    desc: "You might have to rely on the company's schedules and policies rather than managing everything independently",
+  },
+  {
+    title: "Limited spontaneity",
+    desc: "There could be less room for last-minute changes or adjustments during the trip, so it’s key to choose a company that allows for life’s little changes",
+  },
+  {
+    title: "Customization",
+    desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points",
+  }
 ];

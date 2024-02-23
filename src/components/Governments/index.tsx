@@ -14,6 +14,7 @@ import ChevronRightIcon from "@/assets/svgs/chervon-right-nav.svg";
 import TechCommLogos from "@/components/common/techs";
 import BetterTogetherComponent from "@/components/Trips";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
+import Link from 'next/link'
 
 const NeededInformations = [
   "Discrete, Reliable, and Punctual",
@@ -146,18 +147,19 @@ const GovernmentsComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link
+              href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
@@ -181,7 +183,13 @@ const GovernmentsComponent = () => {
             </h1>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <p>
-                Our team of professional drivers and support staff are extensively trained in secure and safe transportation practices. They have been screened and vetted for security clearances, ensuring the necessary trust and reliability in our services. Our drivers are all established in their local area, so they are adept at navigating complex routes, and maintaining punctuality while prioritizing safety.
+                Our team of professional drivers and support staff are
+                extensively trained in secure and safe transportation practices.
+                They have been screened and vetted for security clearances,
+                ensuring the necessary trust and reliability in our services.
+                Our drivers are all established in their local area, so they are
+                adept at navigating complex routes, and maintaining punctuality
+                while prioritizing safety.
               </p>
             </div>
           </div>
@@ -189,14 +197,28 @@ const GovernmentsComponent = () => {
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Comfort During Demanding Journeys
             </h1>
-            <p>In our commitment to excellence, we also pay special attention to comfort. We recognize that the demanding duties of government officials often involve long hours and arduous journeys. Therefore, with our government charter service, we ensure our vehicles are not only secure and reliable but also provide a comfortable and restful environment. Our range of high-end vehicles is equipped with comfortable seating, climate control, and other amenities, ensuring your travel is as stress-free as possible.</p>
+            <p>
+              In our commitment to excellence, we also pay special attention to
+              comfort. We recognize that the demanding duties of government
+              officials often involve long hours and arduous journeys.
+              Therefore, with our government charter service, we ensure our
+              vehicles are not only secure and reliable but also provide a
+              comfortable and restful environment. Our range of high-end
+              vehicles is equipped with comfortable seating, climate control,
+              and other amenities, ensuring your travel is as stress-free as
+              possible.
+            </p>
           </div>
           <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Anywhere, Any Time Travel Management
             </h1>
             <p>
-              We pride ourselves on the strong relationships we&lsquo;ve built with our government clientele over the years—our team values the trust placed in us and strives to reciprocate with exceptional service. With every trip we manage and deliver, we aim to build upon this foundation of trust and partnership.
+              We pride ourselves on the strong relationships we&lsquo;ve built
+              with our government clientele over the years—our team values the
+              trust placed in us and strives to reciprocate with exceptional
+              service. With every trip we manage and deliver, we aim to build
+              upon this foundation of trust and partnership.
             </p>
           </div>
           <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
@@ -204,9 +226,14 @@ const GovernmentsComponent = () => {
               Journeys You Can Track
             </h1>
             <p>
-              Swoop is a centralized booking system where you can track your trips, amend your details to make sure everyone is transported to and from where they need, and manage every detail in one place. This not only gives you the complete visibility you need but allows you to streamline future journeys, allowing you to work within your budget every time.
+              Swoop is a centralized booking system where you can track your
+              trips, amend your details to make sure everyone is transported to
+              and from where they need, and manage every detail in one place.
+              This not only gives you the complete visibility you need but
+              allows you to streamline future journeys, allowing you to work
+              within your budget every time.
             </p>
-        </div>
+          </div>
           <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl">
             <Image
               src="/governor-1.png"
@@ -216,39 +243,49 @@ const GovernmentsComponent = () => {
               className="object-cover absolute"
             />
           </div>
-           <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
-                <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-                Duty of Care and Risk Management
-                </h1>
-                <p>
-                Our charter services aim to set the gold standard in government transportation – we take extra steps to monitor any travel issues to provide you with real-time alerts and emergency assistance. Together, we can enhance operational efficiency and contribute to the nation&lsquo;s welfare.
-                </p>
-            </div>
-           <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
-                <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-                Be a Local Business Advocate
-                </h1>
-                <p>
-                    When you use Swoop’s sports transportation services, you also support small, local business owners in your local area. We think it paramount that, as a national and global organization, we champion small business owners all over the world.
-                </p>
-                <p>
-                    For government charter services, we painstakingly select the best network of local drivers who are
-                </p>
-                <ul className="list-disc list-inside">
-                    <li>Established small business owners</li>
-                    <li>Background checked and fully insured</li>
-                    <li>People who care about providing an impeccable service</li>
-                    <li>Equipped with Swoop technology to provide a 5-star experience</li>
-                </ul>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              //onClick={() => {}}
-            >
-              Experience a new standard
-              <ChevronRightIcon />
-            </Button>
+          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
+              Duty of Care and Risk Management
+            </h1>
+            <p>
+              Our charter services aim to set the gold standard in government
+              transportation – we take extra steps to monitor any travel issues
+              to provide you with real-time alerts and emergency assistance.
+              Together, we can enhance operational efficiency and contribute to
+              the nation&lsquo;s welfare.
+            </p>
+          </div>
+          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
+              Be a Local Business Advocate
+            </h1>
+            <p>
+              When you use Swoop’s sports transportation services, you also
+              support small, local business owners in your local area. We think
+              it paramount that, as a national and global organization, we
+              champion small business owners all over the world.
+            </p>
+            <p>
+              For government charter services, we painstakingly select the best
+              network of local drivers who are
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Established small business owners</li>
+              <li>Background checked and fully insured</li>
+              <li>People who care about providing an impeccable service</li>
+              <li>
+                Equipped with Swoop technology to provide a 5-star experience
+              </li>
+            </ul>
+          </div>
+          <Button
+            variant={"default"}
+            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+            //onClick={() => {}}
+          >
+            Experience a new standard
+            <ChevronRightIcon />
+          </Button>
         </div>
       </div>
       <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">

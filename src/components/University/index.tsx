@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import OurPartners from "../Hero/partners";
 import Postal from "../common/card";
 import {
@@ -147,22 +148,26 @@ const UniversityComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link
+              href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
-          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          <h1
+            className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
+            id="info-1"
+          >
             Why Use Swoop for Your Intercampus Shuttle Services?
           </h1>
           <h2 className="text-2xl font-semibold my-4">
@@ -177,7 +182,7 @@ const UniversityComponent = () => {
               entire semester.
             </p>
           </div>
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id="info-4">
             <h2 className="font-semibold text-xl sm:text-2xl">
               KPI Loaded Passenger App
             </h2>
@@ -202,7 +207,10 @@ const UniversityComponent = () => {
               on every trip.
             </p>
           </div>
-          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+          <div
+            className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6"
+            id="info-2"
+          >
             <h2 className="font-semibold text-xl sm:text-2xl">
               Support Your Local Business!
             </h2>
@@ -222,7 +230,10 @@ const UniversityComponent = () => {
               </li>
             </ul>
           </div>
-          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+          <div
+            className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6"
+            id="info-3"
+          >
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Frequently Asked Questions
             </h1>

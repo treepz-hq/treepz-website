@@ -10,6 +10,7 @@ import TimerIcon from '@/assets/svgs/timer.svg'
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
+import Link from 'next/link'
 
 const NeededInformations = [
   "What is the Impact of Using an Employee Shuttle Service?",
@@ -149,18 +150,19 @@ const EmployeeTransComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
+            <Link
+              href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
@@ -261,14 +263,16 @@ const EmployeeTransComponent = () => {
             >
               Get in touch
               <ChevronRightIcon />
-          </Button>
+            </Button>
           </div>
           <div className="flex flex-col space-y-6 mt-12">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               An Employee Shuttle Service You Can Rely on
             </h1>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
-              There is a lot to think about when it comes to arranging transportation services for your business – but we have everything wrapped up
+              There is a lot to think about when it comes to arranging
+              transportation services for your business – but we have everything
+              wrapped up
               <li>
                 <span className="font-semibold">Safety</span> – robust and
                 child-friendly vehicles, traceable journeys that both school
@@ -289,25 +293,46 @@ const EmployeeTransComponent = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-6 my-6">
-              <h1 className="font-semibold text-xl sm:text-2xl">Drill Down to the Detail</h1>
-              <p className="text-lg text-[#6F7174]">
-                Whether you have a couple of people in your team or a thousand employees, an employee shuttle service can make all the difference to your working day. We will tailor all your logistics to you – we have a whole range of vehicles from executive SUVs, transit vans, sprinter vans, mini-coaches, and motor coaches.</p>
-                
-                <p className="text-lg text-[#6F7174]">With Swoop, your team will have a relaxing and productive journey thanks to our amenities like secure WiFi and USB charging ports as standard. We can also offer you vehicles with reclining seats, air conditioning, and PA systems.</p>
-                <p className="text-lg text-[#6F7174]">To keep things straightforward and consistent, when you book with Swoop, you will receive a dedicated employee shuttle service account manager and 24/7 support. Not only do they organize everything for you in the beginning, but they will regularly check ongoing performance through our data collection feature, then suggest new improvements.</p>
-                <p className="text-lg text-[#6F7174]">And that’s not all. We can even help you come up with an effective launch plan to maximize engagement.
-              </p>
+            <h1 className="font-semibold text-xl sm:text-2xl">
+              Drill Down to the Detail
+            </h1>
+            <p className="text-lg text-[#6F7174]">
+              Whether you have a couple of people in your team or a thousand
+              employees, an employee shuttle service can make all the difference
+              to your working day. We will tailor all your logistics to you – we
+              have a whole range of vehicles from executive SUVs, transit vans,
+              sprinter vans, mini-coaches, and motor coaches.
+            </p>
 
-              <Button
-                variant={"default"}
-                className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                //onClick={() => {}}
-              >
-                Find how Treepz can help
-                <ChevronRightIcon />
+            <p className="text-lg text-[#6F7174]">
+              With Swoop, your team will have a relaxing and productive journey
+              thanks to our amenities like secure WiFi and USB charging ports as
+              standard. We can also offer you vehicles with reclining seats, air
+              conditioning, and PA systems.
+            </p>
+            <p className="text-lg text-[#6F7174]">
+              To keep things straightforward and consistent, when you book with
+              Swoop, you will receive a dedicated employee shuttle service
+              account manager and 24/7 support. Not only do they organize
+              everything for you in the beginning, but they will regularly check
+              ongoing performance through our data collection feature, then
+              suggest new improvements.
+            </p>
+            <p className="text-lg text-[#6F7174]">
+              And that’s not all. We can even help you come up with an effective
+              launch plan to maximize engagement.
+            </p>
+
+            <Button
+              variant={"default"}
+              className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              //onClick={() => {}}
+            >
+              Find how Treepz can help
+              <ChevronRightIcon />
             </Button>
-            </div>
-            <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl">
+          </div>
+          <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl">
             <Image
               src="/employee-1.png"
               alt="employee"
@@ -326,13 +351,16 @@ const EmployeeTransComponent = () => {
                 Home to Work
               </h1>
               <p className="text-lg text-[#6F7174]">
-                The most simple and effective choice – this service will pick up your commuters near their home and take them to work and back.
+                The most simple and effective choice – this service will pick up
+                your commuters near their home and take them to work and back.
               </p>
             </div>
             <div className="flex flex-col space-y-6 my-6">
               <h1 className="font-semibold text-xl sm:text-2xl">Last Mile</h1>
               <p className="text-lg text-[#6F7174]">
-                With this service, you can connect your business with a local transit hub and then seamlessly transfer your team to work via their chosen method of public transport.
+                With this service, you can connect your business with a local
+                transit hub and then seamlessly transfer your team to work via
+                their chosen method of public transport.
               </p>
             </div>
             <div className="flex flex-col space-y-6 my-6">
@@ -340,15 +368,18 @@ const EmployeeTransComponent = () => {
                 Intra-Campus
               </h1>
               <p className="text-lg text-[#6F7174]">
-                If your campus is spread out and has several buildings or parking lots, you can arrange regular shuttles between sites. This allows for seamless transitions between meetings and other workplace events.
+                If your campus is spread out and has several buildings or
+                parking lots, you can arrange regular shuttles between sites.
+                This allows for seamless transitions between meetings and other
+                workplace events.
               </p>
             </div>
             <div className="flex flex-col space-y-6">
-              <h1 className="font-semibold text-xl sm:text-2xl">
-                Pack & Ride
-              </h1>
+              <h1 className="font-semibold text-xl sm:text-2xl">Pack & Ride</h1>
               <p className="text-lg text-[#6F7174]">
-                Organize easy collections from pre-arranged parking locations so that your employees can make it to work on time and cool as a cucumber.
+                Organize easy collections from pre-arranged parking locations so
+                that your employees can make it to work on time and cool as a
+                cucumber.
               </p>
             </div>
             <div className="flex flex-col space-y-6">
@@ -356,33 +387,39 @@ const EmployeeTransComponent = () => {
                 Carpooling feature
               </h1>
               <p className="text-lg text-[#6F7174]">
-               If you have employees who live close to one another, Swoop can provide a carpooling feature that allows them to share rides. This significantly lowers the number of cars on the road and reduces traffic congestion.
+                If you have employees who live close to one another, Swoop can
+                provide a carpooling feature that allows them to share rides.
+                This significantly lowers the number of cars on the road and
+                reduces traffic congestion.
               </p>
             </div>
           </div>
 
-            {/* End */}
-            <div className="mt-11 border-b pb-6">
-              <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
-                It’s a Win-Win for Your Business
+          {/* End */}
+          <div className="mt-11 border-b pb-6">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              It’s a Win-Win for Your Business
+            </h1>
+            <div className="flex flex-col space-y-6 my-6">
+              <h1 className="font-semibold text-xl sm:text-2xl">
+                Employee Transportation Companies Near Me
               </h1>
-              <div className="flex flex-col space-y-6 my-6">
-                <h1 className="font-semibold text-xl sm:text-2xl">
-                  Employee Transportation Companies Near Me
-                </h1>
-                <p className="text-lg text-[#6F7174]">
-                  If you are looking for a reliable employee shuttle service that gets your team to work feeling less hassled and more productive, check out Swoop! You can simply contact us now for your FREE bespoke quote.
-                </p>
-              </div>
-              <Button
-                variant={"default"}
-                className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                  //onClick={() => {}}
-                >
-                  Get your custom quote
-                  <ChevronRightIcon />
-              </Button>
+              <p className="text-lg text-[#6F7174]">
+                If you are looking for a reliable employee shuttle service that
+                gets your team to work feeling less hassled and more productive,
+                check out Swoop! You can simply contact us now for your FREE
+                bespoke quote.
+              </p>
             </div>
+            <Button
+              variant={"default"}
+              className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              //onClick={() => {}}
+            >
+              Get your custom quote
+              <ChevronRightIcon />
+            </Button>
+          </div>
         </div>
       </div>
       <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">

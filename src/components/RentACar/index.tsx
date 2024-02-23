@@ -28,13 +28,13 @@ const RentACarComponent = () => {
             priority
             className="absolute object-contain"
           />
-          <div className="absolute w-[217px] mx-auto space-y-[18px] mx-4 bottom-3">
-            <p className="mt-[20px] text-white font-extrabold text-base sm:text-lg leading-[40px]">
-              Explore without limits. Find your next ride.
+          <div className="absolute w-full mx-auto space-y-[18px] px-4 mx-4 bottom-4">
+            <p className="mt-[20px] text-white text-base sm:text-lg leading-[40px]">
+              Explore without limits. <br />Find your next ride.
             </p>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full w-full text-gray-900 flex items-center gap-2"
+              className="cursor-pointer rounded-lg w-full !h-10 text-gray-900 flex items-center gap-2"
               //onClick={() => {}}
             >
               Rent a car now

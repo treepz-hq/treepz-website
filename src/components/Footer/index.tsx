@@ -28,7 +28,7 @@ const Footer = () => {
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">Solutions</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
               {solutionsLists.map(({label, href}, index) => (
-                <Link href={`/${href}`} key={index}>
+                <Link href={`/${href}`} key={index} className="hover:underline space-y-3">
                   {label}
                 </Link>
               ))}

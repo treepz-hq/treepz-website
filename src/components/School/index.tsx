@@ -10,6 +10,7 @@ import TimerIcon from '@/assets/svgs/timer.svg'
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
+import Link from 'next/link'
 
 const NeededInformations = [
   "Treepz’s School Transport Services",
@@ -142,21 +143,25 @@ const SchoolTransComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
           {NeededInformations.map((info, index) => (
-            <div
-              className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
+            <Link
+              href={`#info${index+1}`}
+              className="flex border-b cursor-pointer text-gray-900 justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
               <ChevronRightIcon />
-            </div>
+            </Link>
           ))}
         </div>
-        <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
+        <div
+          className="w-full sm:w-[853px] mt-10 sm:mt-0"
+          id="info-1"
+        >
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             Treepz’s School Transport Services
           </h1>
@@ -195,7 +200,7 @@ const SchoolTransComponent = () => {
             />
           </div>
 
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id='info-2'>
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               School Transportation Services You Can Rely on
             </h1>
@@ -222,7 +227,10 @@ const SchoolTransComponent = () => {
               </li>
             </div>
           </div>
-          <div className="flex flex-col space-y-6 mt-12">
+          <div
+            className="flex flex-col space-y-6 mt-12"
+            id="info-3"
+          >
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Our School Transportation Services are Top of the Class!
             </h1>
@@ -272,7 +280,7 @@ const SchoolTransComponent = () => {
               className="object-cover absolute my-10"
             />
           </div>
-          <div className="mt-11 border-b pb-11">
+          <div className="mt-11 border-b pb-11" id='info-4'>
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
               Options
             </h1>
@@ -328,7 +336,10 @@ const SchoolTransComponent = () => {
             Get the there with Treepz
             <ChevronRightIcon />
           </Button>
-          <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
+          <div
+            className="flex flex-col space-y-6 border-t mt-6 pt-6"
+            id="info-5"
+          >
             <h1 className="font-semibold text-xl sm:text-2xl">
               Treepz x Lagos Business School
             </h1>

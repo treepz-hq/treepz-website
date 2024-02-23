@@ -7,7 +7,7 @@ interface IProps {
 
 const OurPartners: React.FC<IProps> = ({ src }) => {
   return (
-    <div className={`w-[100px] sm:max-w-[181px] h-12 relative flex items-center`}>
+    <div className={`w-[100px] sm:max-w-[181px] h-16 relative flex items-center`}>
       <Image
         src={`/partners/${src}`}
         fill
