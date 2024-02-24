@@ -9,6 +9,7 @@ import ArrowDownIcon from "@/assets/icons/ArrowDown";
 import { NavMenu as MenuItems } from "./data";
 import useClickOutside, { cn } from "@/lib/utils";
 import Link from 'next/link'
+import Company_Logo from '@/assets/svgs/Logo.svg'
 import SolutionsSubMenu from "./SubMenus/Solutions";
 import GroupSubMenu from "./SubMenus/GroupSubMenu";
 import {
@@ -110,19 +111,9 @@ const handleSubMenuItemClick = () => {
       }`}
     >
       <div className="flex sm:w-[702px] justify-between items-center">
-        <div
-          className="relative w-[90px] h-[24px] cursor-pointer"
-          onClick={() => router.push("/")}
-        >
-          <Image
-            src="/Logo.png"
-            alt="logo"
-            className="object-contain absolute"
-            fill
-            priority
-          />
-        </div>
-
+        <span className="cursor-pointer" onClick={() => router.push("/")}>
+          <Company_Logo />
+        </span>
         <NavigationMenu className="hidden sm:inline-block">
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -269,14 +260,12 @@ const handleSubMenuItemClick = () => {
       <div className="hidden sm:flex flex-col sm:flex-row gap-4">
         <Button
           variant={"outline"}
-          className="cursor-pointer border-gray-900 rounded-full flex items-center gap-2"
           //onClick={() => {}}
         >
           Rent a car
         </Button>
         <Button
           variant={"default"}
-          className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2"
           onClick={() => router.push("/business-solutions")}
         >
           Explore our business solutions
