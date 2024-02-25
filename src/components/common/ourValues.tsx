@@ -2,15 +2,15 @@ import Image from 'next/image'
 
 const OurValues = () => {
     return (
-        <div className="w-full sm:max-w-[1392px] bg-[#F7F7F7] mt-20">
-            <div className="flex flex-col sm:flex-row gap-4 mt-10 sm:mt-20 ">
+        <div className="w-full sm:max-w-[1335px] bg-[#F7F7F7] mt-20 mr-[120px] sm:pr-20">
+            <div className="flex flex-col sm:flex-row justify-between mt-10 sm:mt-20 ">
                 <div className="flex justify-between flex-col w-full sm:w-[470px]">
                     <h1 className="text-2xl sm:text-[32px] font-bold uppercase sm:leading-[40px] text-[#212529] w-full sm:pl-20">Our Values</h1>
                     <div className="relative w-full sm:w-[470px] h-[352px] hidden sm:inline-block">
-                        <Image src="/value-bg.png" alt="Value" fill priority className='absolute object-contain' />
+                        <Image src="/value-bg.png" alt="Value" fill sizes='100vw' priority className='absolute object-contain' />
                     </div>
                 </div>
-                <div className="w-full sm:w-[715px] flex flex-col sm:flex-row justify-between gap-8 sm:mb-[90px]">
+                <div className="w-full sm:w-[715px] flex flex-col sm:flex-row gap-[75px] sm:mb-[90px]">
                     <div className="flex-1">
                         <div className="w-full sm:w-[320px] mb-5 sm:mb-10">
                             <h1 className="font-medium text-xl text-[#212529]">Humility</h1>
@@ -46,7 +46,7 @@ const OurValues = () => {
                     </div>
                 </div>
                 <div className="relative w-full h-[260px] sm:hidden">
-                        <Image src="/value-bg.png" alt="Value" fill priority className='absolute object-contain' />
+                        <Image src="/value-bg.png" alt="Value" fill sizes="100vw" priority className='absolute object-contain' />
                     </div>
             </div>
         </div>
