@@ -71,7 +71,7 @@ const AboutComponent = () => {
             </h1>
             <Button
               variant={"default"}
-              className="w-[240px] mb-[12px] mt-8 sm:mt-0"
+              className="w-[240px] mb-3 mt-8 sm:mt-0 h-[56px]"
               //onClick={() => {}}
             >
               View open roles
