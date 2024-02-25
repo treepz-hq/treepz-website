@@ -1,6 +1,4 @@
 'use client'
-import { OurPartnersData } from "../Hero/data";
-import OurPartners from "../Hero/partners";
 import { Button } from "../ui/button";
 import Image from 'next/image';
 
@@ -11,11 +9,13 @@ import MeetOurTeams from "./../common/teams";
 import Counter from "@/components/About/counter";
 
 import { CounterData } from '@/lib/dummyData'
+import PartnersLogo from "../common/partners";
+import { NewPartnerLogos } from "./data";
 
 const AboutComponent = () => {
     return (
       <>
-        <div className="sm:bg-[url(/about_us.png)] bg-no-repeat sm:h-[704px] bg-contain bg-right">
+        <div className="sm:bg-[url(/about_us.png)] bg-no-repeat sm:h-[704px] bg-contain bg-right sm:mt-20">
           <div className="w-full sm:w-[940px] px-4 sm:px-20 my-10 sm:my-[85px] flex justifiy-center flex-col">
             <Button
               variant={"default"}
@@ -27,26 +27,30 @@ const AboutComponent = () => {
             <h1 className="text-[32px] sm:text-[56px] text-center sm:text-left font-bold leading-[40px] sm:leading-[64px] uppercase text-[#212529]">
               we put Africa&lsquo;s 26 million vehciles to better use.
             </h1>
-          </div>
-          <div className="w-full sm:w-[940px] px-4 sm:px-20">
-            <h2 className="mb-[12px] uppercase text-[#A57F0C]">our vision</h2>
-            <h1 className="text-xl w-full sm:w-[452px] text-[#212529]">
-              To ensure wherever you are, you can book and pay for the perfect
-              vehicle to explore Africa with our reliable Treepz hosts.
-            </h1>
+            <div className="w-full sm:w-[484px] rounded-[12px] border border-[#FDF2D0] gap-4 p-4 mt-10 sm:mt-[75px]">
+              <h2 className="mb-4 uppercase text-[#A57F0C]">our vision</h2>
+              <h1 className="text-xl w-full text-[#212529]">
+                To ensure wherever you are, you can book and pay for the perfect
+                vehicle to explore Africa with our reliable Treepz hosts.
+              </h1>
+            </div>
           </div>
           <div className="sm:hidden h-[322px] w-full relative bg-right">
-            <Image src="/about_us.png" alt="about" fill priority className="bg-right absolute" />
+            <Image
+              src="/about_us.png"
+              alt="about"
+              fill
+              priority
+              className="bg-right absolute"
+            />
           </div>
         </div>
         <div className="container px-4 sm:px-20 sm:mx-auto flex flex-col sm:flex-row justify-between sm:items-center my-4 sm:my-10">
-          <p className="w-[306px] text-base sm:text-2xl font-medium text-[#6F7174]">
+          <p className="w-full sm:w-[306px] text-base sm:text-2xl font-medium text-[#6F7174]">
             We support the productivity of Africa&lsquo;s big teams
           </p>
-          <div className="w-full sm:w-[671px] justify-between sm:justify-start space-y-4 sm:space-y-0 sm:gap-2 flex-wrap mt-4 sm:mt-0 flex">
-            {OurPartnersData.map(({ src }: any) => (
-              <OurPartners src={src} key={src} />
-            ))}
+          <div className="w-full sm:w-[671px] justify-between sm:justify-start space-y-4 sm:space-y-0 sm:gap-x-[62.2px] flex-wrap mt-4 sm:mt-0 flex">
+              <PartnersLogo data={NewPartnerLogos} />
           </div>
         </div>
         <OurStory />
@@ -67,7 +71,7 @@ const AboutComponent = () => {
             </h1>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-[16px] sm:rounded-full flex items-center font-semibold gap-2 w-[240px] mb-[12px] mt-8 sm:mt-0 text-gray-900"
+              className="w-[240px] mb-3 mt-8 sm:mt-0 h-[56px]"
               //onClick={() => {}}
             >
               View open roles
