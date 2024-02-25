@@ -61,7 +61,7 @@ const UsersAppComponent = () => {
             </p>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full bg-white w-full sm:w-[144px] text-gray-900 flex items-center gap-2 mt-5 sm:mt-14"
+              className="hover:bg-white bg-white w-full sm:w-[144px] sm:h-[52px] mt-5 sm:mt-14"
               //onClick={() => {}}
             >
               Learn More

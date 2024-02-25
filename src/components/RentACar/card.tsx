@@ -28,7 +28,7 @@ const RentCarCard:React.FC<IProps> = ({ src, title, noOfUsers}) => {
         </div>
         <NextIcon />
       </div>
-      <div className="flex items-center gap-1 transition-transform duration-300 transform-gpu group-hover:scale-105">
+      <div className="flex items-center gap-1">
         <div className="w-[72px] h-[24px] relative">
           <Image
             src="/peoples.png"

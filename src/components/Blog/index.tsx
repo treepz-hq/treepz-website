@@ -12,14 +12,14 @@ const BlogComponent = () => {
         </h1>
         <Button
           variant={"outline"}
-          className="hidden cursor-pointer border-white w-fit !bg-transparent px-4 text-white sm:flex items-center gap-2 hover:text-white"
+          className="hidden cursor-pointer border-white w-fit sm:w-[279px] !bg-transparent px-4 text-white sm:flex items-center hover:text-white"
           //onClick={() => {}}
         >
           Learn more about corporate shuttles
         </Button>
       </div>
       {/*  */}
-      <div className="w-full flex flex-col sm:flex-row gap-8">
+      <div className="w-full flex flex-col sm:flex-row gap-8 mb-16">
         {BlogData.map(({ src, title, description }) => (
           <BlogCard
             src={src}

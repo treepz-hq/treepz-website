@@ -8,6 +8,7 @@ import SwipeWordAnimation from "../WordSwipe";
 import PartnersLogo from '../common/partners';
 import ModalComponent from '../Modal';
 import BookNowForm from '../Forms/BookNowForm';
+import Marquee from '../common/Marquee';
 
 const HeroComponent = () => {
 const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +21,10 @@ const [isOpen, setIsOpen] = useState(false)
             <SwipeWordAnimation />
           </div>
           <div className="mt-6 mb-14 sm:text-left sm:max-w-[1016px] text-xl text-[#6F7174]">
-            We specialize in efficient and reliable personal and group transportation across Africa. We&lsquo;ve helped move over 4 million people to events, conventions, and conferences across 16 cities in 4 continent.
+            We specialize in efficient and reliable personal and group
+            transportation across Africa. We&lsquo;ve helped move over 4 million
+            people to events, conventions, and conferences across 16 cities in 4
+            continent.
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -56,6 +60,7 @@ const [isOpen, setIsOpen] = useState(false)
               src="/street.png"
               alt="street"
               fill
+              sizes="100vw"
               priority
               className="absolute object-cover"
             />
@@ -78,8 +83,11 @@ const [isOpen, setIsOpen] = useState(false)
                   Trusted by Your Favorite Businesses
                 </p>
                 {/* <MarqueeImages data={OurPartnersData}  /> */}
-                <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]">
+                <Marquee data={NewPartnerLogos} />
+                {/* <Marquee data={data}>
                   <PartnersLogo data={NewPartnerLogos} />
+                </Marquee> */}
+                <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]">
                 </div>
               </div>
             </div>

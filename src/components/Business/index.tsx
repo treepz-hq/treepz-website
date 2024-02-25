@@ -30,7 +30,7 @@ const BusinessSolutionComponent = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               variant={"default"}
-              className="relative overflow-hidden cursor-pointer rounded-full text-black flex items-center gap-2 sm:w-[194px] group"
+              className="relative overflow-hidden sm:w-[194px] sm:h-[64px] group"
               onClick={() => router.push("/business-solutions")}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
@@ -43,7 +43,7 @@ const BusinessSolutionComponent = () => {
 
             <Button
               variant={"outline"}
-              className="relative sm:w-[194px] cursor-pointer border-gray-900 rounded-full font-bold flex items-center gap-2 group overflow-hidden"
+              className="relative sm:w-[194px] sm:h-[64px] group overflow-hidden"
               onClick={() => router.push("/personal-solutions")}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
