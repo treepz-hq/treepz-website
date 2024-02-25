@@ -45,7 +45,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
               className="w-full flex-shrink-0"
               style={{ width: "100%" }}
             >
-              <div className="flex flex-col sm:flex-row justify-between items-center mx-10 gap-10">
+              <div className="flex flex-col sm:flex-row justify-between items-center mx-10 gap-14">
                 <div className="relative w-full sm:w-[320px] h-[160px] sm:ml-10">
                   <Image
                     src={slide.src}
@@ -55,8 +55,8 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                     className="absolute object-contain"
                   />
                 </div>
-                <div className="w-full sm:w-[657px]">
-                  <p className="font-semibold sm:w-[500px]">
+                <div className="w-full sm:w-[657px] sm:text-[32px] sm:leading-[40px] text-[#212529]">
+                  <p className="font-semibold w-full">
                     “{slide.message}”
                   </p>
                   <div className="flex justify-between items-center my-8 sm:!mt-[64px]">

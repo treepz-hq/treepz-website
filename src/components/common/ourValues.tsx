@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 const OurValues = () => {
     return (
-        <div className="bg-[#F7F7F7] w-full mt-20">
-            <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between gap-8 mt-10 sm:mt-20">
+        <div className="w-full sm:max-w-[1392px] bg-[#F7F7F7] mt-20">
+            <div className="flex flex-col sm:flex-row gap-4 mt-10 sm:mt-20 ">
                 <div className="flex justify-between flex-col w-full sm:w-[470px]">
-                    <h1 className="text-2xl sm:text-[32px] font-bold uppercase sm:leading-[40px] text-[#212529] w-full sm:text-center">Our Values</h1>
+                    <h1 className="text-2xl sm:text-[32px] font-bold uppercase sm:leading-[40px] text-[#212529] w-full sm:pl-20">Our Values</h1>
                     <div className="relative w-full sm:w-[470px] h-[352px] hidden sm:inline-block">
                         <Image src="/value-bg.png" alt="Value" fill priority className='absolute object-contain' />
                     </div>

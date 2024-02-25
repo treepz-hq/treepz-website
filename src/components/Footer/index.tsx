@@ -1,22 +1,24 @@
-import Image from "next/image";
+'use client'
 import React from "react";
 import Link from "next/link";
 import { companyLists, groupLists, socialMediaLists, solutionsLists } from "@/lib/dummyData";
+import Company_Logo from "@/assets/svgs/Logo.svg";
+import { useRouter } from "next/navigation";
+
+
 
 const Footer = () => {
+  const router = useRouter()
   return (
     <div className="container px-4 sm:px-20">
-      <div className="mt-20 flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
+      <div className="sm:mt-[183px] flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
         <div className="w-full sm:w-[298px] flex flex-col">
-          <div className="relative w-[90px] h-[24px] cursor-pointer mb-5">
-            <Image
-              src="/Logo.png"
-              alt="logo"
-              className="object-contain absolute"
-              fill
-              priority
-            />
-          </div>
+          <span
+            className="cursor-pointer mb-4"
+            onClick={() => router.push("/")}
+          >
+            <Company_Logo />
+          </span>
           <p className="text-[#4D5154] text-sm">
             Treepz is an all-in-one transportation solution for all your
             transportation needs - from commuter shuttling, executive VIP
@@ -27,8 +29,12 @@ const Footer = () => {
           <div className="w-[196px]">
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">Solutions</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
-              {solutionsLists.map(({label, href}, index) => (
-                <Link href={`/${href}`} key={index} className="hover:underline space-y-3">
+              {solutionsLists.map(({ label, href }, index) => (
+                <Link
+                  href={`/${href}`}
+                  key={index}
+                  className="transition duration-300 ease-in-out hover:underline my-1"
+                >
                   {label}
                 </Link>
               ))}
@@ -40,7 +46,7 @@ const Footer = () => {
             </h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
               {groupLists.map((link, index) => (
-                <Link href={`/${link}`} key={index}>
+                <Link href={`/${link}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
                   {link}
                 </Link>
               ))}
@@ -50,7 +56,7 @@ const Footer = () => {
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">company</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
               {companyLists.map((link, index) => (
-                <Link href={`/${link.href}`} key={index}>
+                <Link href={`/${link.href}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
                   {link.label}
                 </Link>
               ))}
@@ -64,7 +70,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-2 items-center text-sm text-[#4D5154]">
           {socialMediaLists.map((link, index) => (
-            <Link href={`/${link.href}`} key={index}>
+            <Link href={`/${link.href}`} key={index} className="transition duration-900 ease-in-out hover:underline my-1">
               {link.icon}
             </Link>
           ))}

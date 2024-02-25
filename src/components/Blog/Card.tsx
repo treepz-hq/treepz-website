@@ -8,7 +8,7 @@ interface IProps {
 }
 const BlogCard:React.FC<IProps> = ({ src, title, description }) => {
   return (
-    <div className="w-full sm:w-[397px] flex flex-col space-y-6">
+    <div className="w-full sm:w-[397.33px] flex flex-col">
       <div className="w-full sm:w[397px] h-[248px] relative mb-2 sm:mb-8">
         <Image
           src={`/${src}`}
@@ -19,7 +19,7 @@ const BlogCard:React.FC<IProps> = ({ src, title, description }) => {
         />
       </div>
       <h1 className="text-2xl font-medium text-white">{title}</h1>
-      <p className="!text-[#D9D9D9] text-xl">
+      <p className="!text-[#D9D9D9] text-xl mt-3">
        {description}
       </p>
     </div>
