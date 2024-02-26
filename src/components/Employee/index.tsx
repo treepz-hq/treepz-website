@@ -11,6 +11,7 @@ import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
 import Link from 'next/link'
+import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
 
 const NeededInformations = [
   "What is the Impact of Using an Employee Shuttle Service?",
@@ -24,7 +25,7 @@ const NeededInformations = [
 const EmployeeTransComponent = () => {
   return (
     <>
-      <div className="bg-[url(/employee-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5">
+      <div className="bg-[url(/employee-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
         <div className="mb-13 flex flex-col w-full sm:w-[783px] text-center">
           <h1 className="text-[36px] sm:text-[56px] font-bold leading-[40px] sm:leading-[64px] uppercase text-center w-full">
             Streamlined Commuting with Treepz’s Employee Shuttle Services
@@ -36,7 +37,7 @@ const EmployeeTransComponent = () => {
         </div>
         <Button
           variant={"default"}
-          className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-semibold gap-2 mt-14"
+          className="w-fit sm:w-[197px] mx-auto mt-5 sm:mt-[52px] sm:h-[64px] font-semibold text-base"
           //onClick={() => {}}
         >
           Speak with our team
@@ -84,6 +85,7 @@ const EmployeeTransComponent = () => {
         <Image
           src="/blue-blur-rect.png"
           fill
+          sizes="100vw"
           priority
           className="absolute object-fill"
           alt="rect"
@@ -149,22 +151,9 @@ const EmployeeTransComponent = () => {
           </div>
         </div>
       </div>
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
-          <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
-            FILL ALL THE INFORMATION YOU NEED
-          </h1>
-          {NeededInformations.map((info, index) => (
-            <Link
-              href={`#info-${index + 1}`}
-              className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
-              key={index}
-            >
-              <span className="w-full sm:w-[290px] font-semibold">{info}</span>
-              <ChevronRightIcon />
-            </Link>
-          ))}
-        </div>
+      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:mt-[116px] py-4">
+        <MiniStickyBarMenu data={NeededInformations} />
+        <div id="info-1" className="hidden h-20"></div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             What is the Impact of Using an Employee Shuttle Service?
@@ -234,7 +223,7 @@ const EmployeeTransComponent = () => {
               financial relief and job satisfaction.
             </p>
           </div>
-          <div className="mt-6 flex flex-col">
+          <div className="mt-6 flex flex-col" id="info-2">
             <h1 className="font-semibold text-xl sm:text-2xl mb-6">
               🤝 Support local business
             </h1>
@@ -251,14 +240,14 @@ const EmployeeTransComponent = () => {
             <p className="text-lg text-[#6F7174]">
               We will listen to your requirements and take into account your
               budget, then come up with an employee transport package – or a
-              one-off journey plan – that matches exactlywhat you need.
+              one-off journey plan – that matches exactly what you need.
             </p>
-            <p>
+            <p id="info-3">
               Don’t be shy: get in touch for a no-nonsense conversation today.
             </p>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
               //onClick={() => {}}
             >
               Get in touch
@@ -292,7 +281,7 @@ const EmployeeTransComponent = () => {
               </li>
             </div>
           </div>
-          <div className="flex flex-col space-y-6 my-6">
+          <div className="flex flex-col space-y-6 my-6" id="info-4">
             <h1 className="font-semibold text-xl sm:text-2xl">
               Drill Down to the Detail
             </h1>
@@ -325,7 +314,7 @@ const EmployeeTransComponent = () => {
 
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              className="mt-6 w-fit sm:w-[263px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
               //onClick={() => {}}
             >
               Find how Treepz can help
@@ -342,7 +331,7 @@ const EmployeeTransComponent = () => {
             />
           </div>
           {/* start */}
-          <div className="mt-11 border-b pb-11">
+          <div className="mt-11 border-b pb-11" id="info-5">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
               So, What Are the Options?
             </h1>
@@ -382,7 +371,7 @@ const EmployeeTransComponent = () => {
                 cucumber.
               </p>
             </div>
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-6" id="info-6">
               <h1 className="font-semibold text-xl sm:text-2xl">
                 Carpooling feature
               </h1>
@@ -413,7 +402,7 @@ const EmployeeTransComponent = () => {
             </div>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              className="font-mediummt-6 w-fit sm:w-[241px] mx-auto sm:h-[64px] sm:mt-10 sm:mb-[48px]"
               //onClick={() => {}}
             >
               Get your custom quote
@@ -435,8 +424,6 @@ const EmployeeTransComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
     </>
   );
 }
