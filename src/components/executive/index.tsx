@@ -11,13 +11,14 @@ import BetterTogetherComponent from '@/components/Trips';
 import { OurPartnersData } from "@/components/Hero/data";
 import OurPartners from "@/components/Hero/partners";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
+import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 
 const ExecutiveInfo =["What is the Impact of Using an Employee Shuttle Service?", "How much does it cost?", "An Employee Shuttle Service You Can Rely on","Drill Down to the Detail", "So, What Are the Options?", "It’s a Win-Win for Your Business"]
 
 const ExecutiveComponent = () => {
     return (
       <div>
-        <div className="bg-[url(/exec-trans.png)] bg-cover bg-no-repeat w-full h-[479px] sm:h-[708px] justify-center items-center">
+        <div className="bg-[url(/exec-trans.png)] bg-cover bg-no-repeat w-full h-[479px] sm:h-[708px] justify-center items-center sm:mt-20">
           <div className="w-full sm:w-[920px] mx-auto text-white pt-[60px] sm:pt-[180px] px-4">
             <h1 className="font-bold text-[32px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
               Treepz’s Polished Executive Transportation
@@ -26,13 +27,15 @@ const ExecutiveComponent = () => {
               Your workplace teams and contacts deserve a journey that will
               instill a feeling of calm confidence in your business.
             </p>
+            <div className="flex justify-center">
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full w-full sm:w-[194px] mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
+              className="w-full sm:w-[194px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px]"
               //onClick={() => {}}
             >
               Tell me more
             </Button>
+            </div>
           </div>
         </div>
         <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
@@ -75,6 +78,7 @@ const ExecutiveComponent = () => {
             src="/blue-blur-rect.png"
             fill
             priority
+            sizes="100vw"
             className="absolute object-fill"
             alt="rect"
           />
@@ -94,9 +98,10 @@ const ExecutiveComponent = () => {
                   <span className="font-medium text-base">3 minutes</span>
                 </div>
               </div>
+
               <Button
                 variant={"default"}
-                className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
+                className="font-semibold sm:w-[144px] sm:h-[64px]"
                 //onClick={() => {}}
               >
                 Get a quote
@@ -120,6 +125,7 @@ const ExecutiveComponent = () => {
                   src="/google-rating.png"
                   alt="google rating"
                   fill
+                  sizes="100vw"
                   priority
                   className="absolute object-contain"
                 />
@@ -130,6 +136,7 @@ const ExecutiveComponent = () => {
                 src="/about_us.png"
                 alt="About Us"
                 fill
+                sizes="100vw"
                 priority
                 className="absolute object-cover"
               />
@@ -137,7 +144,9 @@ const ExecutiveComponent = () => {
           </div>
         </div>
         <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-          <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
+                  <MiniStickyBarMenu data={ExecutiveInfo} />
+
+          {/* <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">
             <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
               FILL ALL THE INFORMATION YOU NEED
             </h1>
@@ -152,7 +161,7 @@ const ExecutiveComponent = () => {
                 <ChevronRightIcon />
               </div>
             ))}
-          </div>
+          </div> */}
           <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
               Put Your Workplace Woes in Treepz’s Hands
@@ -173,7 +182,7 @@ const ExecutiveComponent = () => {
             </div>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-f w-fit sm:mt-10 sm:mb-[48px]"
+              className="mt-6 w-full sm:w-[200px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
               //onClick={() => {}}
             >
               Contact our team

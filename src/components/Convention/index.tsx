@@ -12,13 +12,14 @@ import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
+import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
 
 const NeededInformations = ["How Treepz Will Take Your Worries Away", "Treepz has the know-how", "Our conference shuttle services", "Tailor-made solutions", "Time and cost savings","Safety", "Choose your own vehicle","Carbon neutral","Options for convention shuttles","How much does it cost for convention transportation near me?", "Book EASY Convention Transporation"];
 
 const ConventionComponent = () => {
   return (
     <div>
-      <div className="bg-[url(/Hero-convention.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px]">
+      <div className="bg-[url(/Hero-convention.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
             CONVENTION Transportation
@@ -28,13 +29,15 @@ const ConventionComponent = () => {
             your next convention shuttle service, we have dozens of options and
             amenities for you to choose from.
           </p>
-          <Button
-            variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[297px] mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
-            //onClick={() => {}}
-          >
-            Find out more
-          </Button>
+          <div className="flex w-full justify-center">
+            <Button
+              variant={"default"}
+              className="w-full sm:w-[172px] mx-auto mt-8 sm:mt-14 sm:h-[64px]"
+              //onClick={() => {}}
+            >
+              Find out more
+            </Button>
+          </div>
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
@@ -127,22 +130,9 @@ const ConventionComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
-          <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
-            FILL ALL THE INFORMATION YOU NEED
-          </h1>
-          {NeededInformations.map((info, index) => (
-            <Link
-              href={`#info${index + 1}`}
-              className="flex border-b cursor-pointer text-gray-900 justify-between items-center p-4"
-              key={index}
-            >
-              <span className="w-full sm:w-[290px] font-semibold">{info}</span>
-              <ChevronRightIcon />
-            </Link>
-          ))}
-        </div>
-        <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info1">
+        <MiniStickyBarMenu data={NeededInformations} />
+
+        <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info-1">
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             How Treepz Will Take Your Worries Away
           </h1>
@@ -183,7 +173,7 @@ const ConventionComponent = () => {
             />
           </div>
 
-          <div className="flex flex-col space-y-6 mt-12" id="info2">
+          <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Treepz has the know-how
             </h1>
@@ -228,7 +218,7 @@ const ConventionComponent = () => {
                 there.
               </p>
             </div>
-            <div className="flex flex-col space-y-6 my-6">
+            <div className="flex flex-col space-y-6 my-6" id="info-3">
               <h1 className="font-semibold text-xl sm:text-2xl">
                 Door-to-door school bus services
               </h1>
@@ -239,7 +229,7 @@ const ConventionComponent = () => {
                 like this and it will get built into your service.
               </p>
             </div>
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-6" id="info-4">
               <h1 className="font-semibold text-xl sm:text-2xl">
                 Special needs transportation
               </h1>
@@ -259,7 +249,10 @@ const ConventionComponent = () => {
             Get the there with Treepz
             <ChevronRightIcon />
           </Button>
-          <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
+          <div
+            className="flex flex-col space-y-6 border-t mt-6 pt-6"
+            id="info-5"
+          >
             <h1 className="font-semibold text-xl sm:text-2xl">
               Treepz x Lagos Business School
             </h1>
@@ -270,7 +263,10 @@ const ConventionComponent = () => {
               and teammates to a conference or convention.
             </p>
           </div>
-          <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
+          <div
+            className="flex flex-col space-y-6 border-t mt-6 pt-6"
+            id="info-6"
+          >
             <h1 className="font-semibold text-xl sm:text-2xl">
               Book an ‘A’ in Transportation!
             </h1>
@@ -303,8 +299,6 @@ const ConventionComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
     </div>
   );
 };

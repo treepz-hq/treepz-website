@@ -3,15 +3,23 @@ import React from "react";
 import Link from "next/link";
 import { companyLists, groupLists, socialMediaLists, solutionsLists } from "@/lib/dummyData";
 import Company_Logo from "@/assets/svgs/Logo.svg";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import clsx from 'clsx'
 
 
 
 const Footer = () => {
   const router = useRouter()
+  const pathname = usePathname()
+
+  console.log(pathname)
   return (
+    <div className={clsx({
+      "w-full pt-[88px] mt-10": true,
+      "bg-[#F7F7F7]": ['/employee-transportation'].includes(pathname)
+    })}>
     <div className="container px-4 sm:px-20">
-      <div className="sm:mt-[183px] flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
+      <div className="flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
         <div className="w-full sm:w-[298px] flex flex-col">
           <span
             className="cursor-pointer mb-4"
@@ -76,6 +84,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

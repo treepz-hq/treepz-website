@@ -12,7 +12,7 @@ import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 const ConferenceComponent = () => {
     return (
       <>
-        <div className="container px-4 sm:px-20 mt-10">
+        <div className="container px-4 sm:px-20 mt-32">
           <div className="w-full h-[479px] sm:h-[620px] relative overflow-hidden">
             <Image
               src="/conference-hero.png"
@@ -31,11 +31,10 @@ const ConferenceComponent = () => {
               </p>
               <Button
                 variant={"default"}
-                className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
+                className="mt-5 w-fit px-5 py-4 sm:w-[168px] mx-auto sm:h-[64px] font-medium"
                 //onClick={() => {}}
               >
                 Connect with us
-                <ChevronRightIcon />
               </Button>
             </div>
           </div>
@@ -75,11 +74,10 @@ const ConferenceComponent = () => {
             </h1>
             <Button
               variant={"default"}
-              className="cursor-pointer flex rounded-full w-fit mx-auto mt-5 font-semibold text-gray-900 flex items-center gap-2"
+              className="w-fit sm:w-[144px] mx-auto font-semibold sm:h-[64px]"
               //onClick={() => {}}
             >
               Get a quote
-              <ChevronRightIcon />
             </Button>
           </div>
         </div>
@@ -88,7 +86,7 @@ const ConferenceComponent = () => {
             Popular way to treepz
           </h1>
           <div className="flex flex-col sm:flex-row justify-between gap-4 w-full">
-            <div className="w-full sm:w-[292px] py-4 px-[12px] sm:gap-4 rounded-2xl mt-10 shadow">
+            <div className="w-full sm:w-[292px] py-4 px-[12px] sm:gap-4 rounded-2xl mt-10 genShadow">
               <div className="w-full sm:w-[268px] h-[205px] relative overflow-hidden">
                 <Image
                   src="/lagos.png"
@@ -150,12 +148,13 @@ const ConferenceComponent = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between container px-4 sm:px-20 sm:my-14">
+        <div className="flex flex-col sm:flex-row justify-between container px-4 sm:px-20 sm:mt-[177px]">
           <div className="w-full sm:w-[624px] h-[320px] sm:h-[552px] relative mb-8 sm:mb-0">
             <Image
               src="/treepz-bg.png"
               alt="bg"
               fill
+              sizes='100vw'
               priority
               className="object-contain absolute"
             />
@@ -170,7 +169,7 @@ const ConferenceComponent = () => {
             </p>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-14 text-black flex items-center gap-2"
+              className="cursor-pointer rounded-full w-fit sm:w-[156px] font-semibold mt-8 sm:mt-[54px] sm:h-[64px]"
               //onClick={() => {}}
             >
               Get a quote

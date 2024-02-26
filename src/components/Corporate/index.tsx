@@ -11,13 +11,14 @@ import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
+import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 
 const NeededInformations = ["Corporate Shuttle Service", "Which Swoop corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Swoop vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Swoop corporate shuttle service near me?"];
 
 const CorporateComponent = () => {
   return (
     <div>
-      <div className="bg-[url(/corporate-hero.png)] bg-cover bg-no-repeat w-full h-[622px] sm:h-[707px]">
+      <div className="bg-[url(/corporate-hero.png)] bg-cover bg-no-repeat w-full h-[622px] sm:h-[707px] sm:mt-20">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[144px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[54px] sm:leading-[56px] mb-[28px] uppercase text-center">
             Corporate Shuttle Services: The Drive Behind Your Business
@@ -28,14 +29,15 @@ const CorporateComponent = () => {
             another. Treepz has dozens of options to make travel a beneficial
             part of your working day. 
           </p>
-          <Button
-            variant={"default"}
-            className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
-            //onClick={() => {}}
-          >
-            Book your corporate transportation
-            <ChevronRightIcon />
-          </Button>
+          <div className="flex justify-center w-full">
+            <Button
+              variant={"default"}
+              className="w-fit mx-auto mt-8 sm:mt-14 sm:w-[310px] font-semibold sm:h-[64px]"
+              //onClick={() => {}}
+            >
+              Book your corporate transportation
+            </Button>
+          </div>
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
@@ -126,22 +128,12 @@ const CorporateComponent = () => {
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
-          <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
-            FILL ALL THE INFORMATION YOU NEED
-          </h1>
-          {NeededInformations.map((info, index) => (
-            <Link href={`#info-${index + 1}`}
-              className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
-              key={index}
-            >
-              <span className="w-full sm:w-[290px] font-semibold">{info}</span>
-              <ChevronRightIcon />
-            </Link>
-          ))}
-        </div>
+        <MiniStickyBarMenu data={NeededInformations} />
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
-          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          <h1
+            className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
+            id="info-1"
+          >
             Corporate Shuttle Service
           </h1>
           <div className="space-y-6 text-[#6F7174] text-lg">
@@ -168,7 +160,7 @@ const CorporateComponent = () => {
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+            className="sm:h-[64px] w-full sm:w-[252px] sm:mt-10 sm:mb-[48px]"
             //onClick={() => {}}
           >
             Talk to our friendly team
@@ -184,7 +176,7 @@ const CorporateComponent = () => {
             />
           </div>
 
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Which Swoop corporate shuttle service should I choose?
             </h1>
@@ -213,7 +205,7 @@ const CorporateComponent = () => {
               </li>
               <Button
                 variant={"default"}
-                className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+                className="mt-6 w-full sm:w-[220px] sm:mt-10 sm:mb-[48px]"
                 //onClick={() => {}}
               >
                 Get your team there
@@ -221,7 +213,7 @@ const CorporateComponent = () => {
               </Button>
             </div>
           </div>
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-3">
             <h1 className="font-semibold text-xl sm:text-2xl">
               How much does a corporate shuttle program cost?
             </h1>
@@ -245,23 +237,27 @@ const CorporateComponent = () => {
                 src="/airport-1.png"
                 alt="detail"
                 fill
+                sizes="100vw"
                 priority
                 className="object-contain absolute"
               />
             </div>
           </div>
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-4">
             <h1 className="font-semibold text-xl sm:text-2xl">
               What type of amenities do Swoop vehicles offer?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Your employees will have a much more productive journey thanks to secure WiFi and USB charging ports as standard.
+              Your employees will have a much more productive journey thanks to
+              secure WiFi and USB charging ports as standard.
             </p>
             <p className="text-lg text-[#6F7174]">
-              Other amenities include reclining seats, air conditioning, and PA systems, all available upon request.
+              Other amenities include reclining seats, air conditioning, and PA
+              systems, all available upon request.
             </p>
             <p className="text-lg text-[#6F7174]">
-              You will receive a dedicated account manager and 24/7 support – because we know you have your own job to do.
+              You will receive a dedicated account manager and 24/7 support –
+              because we know you have your own job to do.
             </p>
           </div>
 
@@ -270,31 +266,39 @@ const CorporateComponent = () => {
               How many vehicles can I reserve for the corporate shuttle service?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Ask us for whatever you need. We offer a wide range of vehicles from executive SUVs, minivans, sprinter vans, mini-coaches, and motor coaches.
+              Ask us for whatever you need. We offer a wide range of vehicles
+              from executive SUVs, minivans, sprinter vans, mini-coaches, and
+              motor coaches.
             </p>
             <p className="text-lg text-[#6F7174]">
-              Whether it’s a small group or thousands of employees we can tailor the logistics and vehicles based on your needs.
+              Whether it’s a small group or thousands of employees we can tailor
+              the logistics and vehicles based on your needs.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-5">
             <h1 className="font-semibold text-xl sm:text-2xl">
               How many vehicles can I reserve for the corporate shuttle service?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Ask us for whatever you need. We offer a wide range of vehicles from executive SUVs, minivans, sprinter vans, mini-coaches, and motor coaches.
+              Ask us for whatever you need. We offer a wide range of vehicles
+              from executive SUVs, minivans, sprinter vans, mini-coaches, and
+              motor coaches.
             </p>
             <p className="text-lg text-[#6F7174]">
-              Whether it’s a small group or thousands of employees we can tailor the logistics and vehicles based on your needs.
+              Whether it’s a small group or thousands of employees we can tailor
+              the logistics and vehicles based on your needs.
             </p>
           </div>
 
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-6">
             <h1 className="font-semibold text-xl sm:text-2xl">
               Is there a Swoop corporate shuttle service near me?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              We currently service large metropolitan cities throughout the U.S. from New York to LA, Austin to San Francisco, and from Miami to Seattle, as well as globally.
+              We currently service large metropolitan cities throughout the U.S.
+              from New York to LA, Austin to San Francisco, and from Miami to
+              Seattle, as well as globally.
             </p>
           </div>
           <div className="flex flex-col space-y-6 my-6 border-b pb-11">
@@ -302,16 +306,19 @@ const CorporateComponent = () => {
               Great, how do I get started?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Contact us right away FREE, customized quote – our team will listen to your needs and challenges to build a flexible and dependable service to ensure your employees feel less stress, have more security and enjoy a productive working day.
+              Contact us right away FREE, customized quote – our team will
+              listen to your needs and challenges to build a flexible and
+              dependable service to ensure your employees feel less stress, have
+              more security and enjoy a productive working day.
             </p>
             <Button
-                variant={"default"}
-                className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
-                //onClick={() => {}}
-              >
-                Get a customized quote
-                <ChevronRightIcon />
-              </Button>
+              variant={"default"}
+              className="sm:h-[64px] mt-6 w-full sm:w-[248px] sm:mt-10 sm:mb-[48px]"
+              //onClick={() => {}}
+            >
+              Get a customized quote
+              <ChevronRightIcon />
+            </Button>
           </div>
         </div>
       </div>

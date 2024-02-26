@@ -23,7 +23,7 @@ import {
 const EventComponent = () => {
   return (
     <div>
-      <div className="bg-[url(/Hero.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px]">
+      <div className="bg-[url(/Hero.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
             Event Transportation Service by Treepz
@@ -35,13 +35,15 @@ const EventComponent = () => {
             and everything else you need for your business trips, events, and
             more.
           </p>
+          <div className="flex justify-center w-full">
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[297px] mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
+            className="w-full sm:w-[337px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px]"
             //onClick={() => {}}
           >
             Book your event transportation service
           </Button>
+          </div>
         </div>
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
@@ -93,7 +95,7 @@ const EventComponent = () => {
             </div>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
+              className="sm:h-[64px] sm:w-[144px] font-semibold"
               //onClick={() => {}}
             >
               Get a quote
@@ -117,6 +119,7 @@ const EventComponent = () => {
                 src="/google-rating.png"
                 alt="google rating"
                 fill
+                sizes='100vw'
                 priority
                 className="absolute object-contain"
               />
@@ -127,6 +130,7 @@ const EventComponent = () => {
               src="/bus-route.png"
               alt="Bus routing"
               fill
+              sizes='100vw'
               priority
               className="absolute object-cover"
             />
@@ -140,7 +144,7 @@ const EventComponent = () => {
           </h1>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full w-[200px] text-gray-900 flex items-center gap-2"
+            className="w-fit sm:w-[200px]"
             //onClick={() => {}}
           >
             Contact our team

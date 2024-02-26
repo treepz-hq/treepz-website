@@ -261,12 +261,14 @@ const handleSubMenuItemClick = () => {
         <Button
           variant={"outline"}
           //onClick={() => {}}
+          className='font-semibold'
         >
           Rent a car
         </Button>
         <Button
           variant={"default"}
           onClick={() => router.push("/business-solutions")}
+          className='font-semibold'
         >
           Explore our business solutions
         </Button>
