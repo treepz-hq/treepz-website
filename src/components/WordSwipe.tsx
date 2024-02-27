@@ -27,7 +27,7 @@ const SwipeWordAnimation: React.FC = () => {
             {texts.map((text, index) => (
               <li
                 key={index}
-                className={`ml-1 ${
+                className={`ml-2 ${
                   index === 0
                     ? "text-[#F8B02B]" // Employee transportation
                     : index === 1

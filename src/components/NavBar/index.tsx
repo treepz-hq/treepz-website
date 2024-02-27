@@ -31,6 +31,7 @@ import {
   GroupFirstColumn,
   GroupSecondColumn,
 } from "./data";
+import { useModal } from '@/contexts/ModalContext';
 
 
 const NavBar = () => {
@@ -42,6 +43,7 @@ const NavBar = () => {
    const [openSubMenu, setOpenSubMenu] = useState(null);
    const [selectedMenu, setSelectedMenu] = useState(null);
    const [subMenuItemClicked, setSubMenuItemClicked] = useState(false);
+   const { showModal } = useModal();
 
    const toggleMenu = () => {
      setIsOpen(!isOpen);
@@ -260,12 +262,12 @@ const handleSubMenuItemClick = () => {
       <div className="hidden sm:flex flex-col sm:flex-row gap-4">
         <Button
           variant={"outline"}
-          //onClick={() => {}}
-          className='font-semibold w-fit sm:w-[144px] relative group overflow-hidden'
+          onClick={showModal}
+          className="font-medium w-fit sm:w-[144px] relative group overflow-hidden"
         >
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                Rent a car
-              </span>
+            Rent a car
+          </span>
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
             Rent a car
           </span>
@@ -273,11 +275,11 @@ const handleSubMenuItemClick = () => {
         <Button
           variant={"default"}
           onClick={() => router.push("/business-solutions")}
-          className='font-semibold w-fit sm:w-[255px] relative overflow-hidden px-2 group'
+          className="font-medium w-fit sm:w-[255px] relative overflow-hidden px-2 group"
         >
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                Explore our business solutions
-              </span>
+            Explore our business solutions
+          </span>
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
             Explore our business solutions
           </span>
@@ -288,7 +290,7 @@ const handleSubMenuItemClick = () => {
           src="/hamburger.png"
           alt="hamburger"
           fill
-          sizes='100vw'
+          sizes="100vw"
           priority
           className="absolute"
           onClick={() => setIsOpen(!isOpen)}
@@ -313,11 +315,11 @@ const handleSubMenuItemClick = () => {
                     <div
                       key={item.label}
                       className="flex items-center justify-between mr-2 space-y-6 cursor-pointer relative"
-                     onClick={() => {
+                      onClick={() => {
                         handleMenuClick(item);
                         handleSubMenuItemClick(); // Call the submenu item click handler
                       }}
-                     >
+                    >
                       {item.label}
                       <ArrowDownIcon />
                     </div>

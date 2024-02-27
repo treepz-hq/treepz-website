@@ -1,17 +1,21 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Button } from "../ui/button";
+import { useModal } from '@/contexts/ModalContext';
 
 const BetterTogetherComponent = () => {
+  const { showModal } = useModal();
   const pathname = usePathname()
+  const router = useRouter()
   return (
       <div className="relative px-4 sm:pt-[111px]">
         <div className="relative w-full sm:max-w-[1640px] h-[176.66px] sm:h-[377.861px] mx-auto">
           <Image
             src="/footer-header.png"
             alt="footer"
+            sizes="100vw"
             fill
             priority
             className="absolute object-contain"
@@ -30,7 +34,7 @@ const BetterTogetherComponent = () => {
               <Button
                 variant={"default"}
                 className="w-full sm:w-[284px] sm:h-[64px] relative overflow-hidden group"
-                //onClick={() => {}}
+                onClick={() => router.push("/business-solutions")}
               >
                 <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Explore our business solutions
@@ -43,7 +47,7 @@ const BetterTogetherComponent = () => {
               <Button
                 variant={"outline"}
                 className="!bg-transparent text-white border-white w-fit sm:w-[156px] hover:text-white sm:h-[64px] group overflow-hidden relative"
-                //onClick={() => {}}
+                onClick={showModal}
               >
                 <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Contact us

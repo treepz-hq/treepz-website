@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Textarea } from '../ui/textarea';
 
 const formSchema = z.object({
   first_name: z.string().min(2).max(50),
@@ -57,6 +58,7 @@ const BookNowForm = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values)
+    /* Send an email with a provider here */
   }
   return (
     <div className="mt-8 flex flex-col">
@@ -71,7 +73,7 @@ const BookNowForm = () => {
         </p>
       </div>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 mx-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
           <FormField
             control={form.control}
             name="range"
@@ -98,17 +100,8 @@ const BookNowForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Total estimated passengers</FormLabel>
-                  <FormControl>
-                    <Select>
-                      <SelectTrigger className="w-full sm:w-[256px]">
-                        <SelectValue placeholder="1" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="1">1</SelectItem>
-                        <SelectItem value="2">2</SelectItem>
-                        <SelectItem value="3">3</SelectItem>
-                      </SelectContent>
-                    </Select>
+                  <FormControl className="w-full">
+                    <Input type="number" min="1" placeholder="" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -126,21 +119,13 @@ const BookNowForm = () => {
                         <SelectValue placeholder="School" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
+                        <SelectItem value="corporate">Corporate</SelectItem>
+                        <SelectItem value="conference">Conference</SelectItem>
+                        <SelectItem value="school">School</SelectItem>
+                        <SelectItem value="employee">Employee</SelectItem>
+                        <SelectItem value="personal">Personal</SelectItem>
+                        <SelectItem value="wedding">Wedding</SelectItem>
+                        <SelectItem value="others">Others</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormControl>
@@ -158,16 +143,7 @@ const BookNowForm = () => {
                   Describe the transportation you are looking for *
                 </FormLabel>
                 <FormControl>
-                  <Select>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="1" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1">1</SelectItem>
-                      <SelectItem value="2">2</SelectItem>
-                      <SelectItem value="3">3</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <Textarea placeholder="Describe transportation"></Textarea>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -187,21 +163,11 @@ const BookNowForm = () => {
                       <SelectValue placeholder="School" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="School Shuttle">
-                        School Shuttle
-                      </SelectItem>
-                      <SelectItem value="School Shuttle">
-                        School Shuttle
-                      </SelectItem>
-                      <SelectItem value="School Shuttle">
-                        School Shuttle
-                      </SelectItem>
-                      <SelectItem value="School Shuttle">
-                        School Shuttle
-                      </SelectItem>
-                      <SelectItem value="School Shuttle">
-                        School Shuttle
-                      </SelectItem>
+                      <SelectItem value="daily">Daily</SelectItem>
+                      <SelectItem value="weekly">Weekly</SelectItem>
+                      <SelectItem value="monthly">Monthly</SelectItem>
+                      <SelectItem value="quaterly">Quaterly</SelectItem>
+                      <SelectItem value="once-a-year">Once a year</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormControl>
@@ -281,28 +247,7 @@ const BookNowForm = () => {
                     Country Code <span className="ml-2 text-red-500">*</span>
                   </FormLabel>
                   <FormControl>
-                    <Select>
-                      <SelectTrigger className="w-full sm:w-110px]">
-                        <SelectValue placeholder="Code" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <Input placeholder="code" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
