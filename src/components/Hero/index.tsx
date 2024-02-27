@@ -9,10 +9,12 @@ import PartnersLogo from '../common/partners';
 import ModalComponent from '../Modal';
 import BookNowForm from '../Forms/BookNowForm';
 import Marquee from '../common/Marquee';
+import { useModal } from '@/contexts/ModalContext';
 
 const HeroComponent = () => {
-const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
+  const { showModal } = useModal();
+
   return (
     <>
       <div className="w-full mt-5 sm:mt-10">
@@ -42,7 +44,7 @@ const [isOpen, setIsOpen] = useState(false)
             <Button
               variant={"outline"}
               className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
-              onClick={() => setIsOpen(true)}
+              onClick={showModal}
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Get a quote
@@ -92,15 +94,11 @@ const [isOpen, setIsOpen] = useState(false)
           </div>
         </div>
       </div>
-      {isOpen && (
-        <ModalComponent
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          title="Book Now & Contact us"
-        >
-          <BookNowForm />
-        </ModalComponent>
-      )}
+      <ModalComponent
+        title="Book Now & Contact us"
+      >
+        <BookNowForm />
+      </ModalComponent>
     </>
   );
 }

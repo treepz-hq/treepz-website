@@ -74,11 +74,11 @@ const Footer = () => {
       </div>
       <div className="w-full flex flex-col sm:flex-row space-y-4 justify-between items-center py-10">
         <p className="text-[#666] text-[15px] leading-[20px]">
-          © 2023 Treepz, Inc. All rights reserved.
+          © 2024 Treepz, Inc. All rights reserved.
         </p>
         <div className="flex gap-2 items-center text-sm text-[#4D5154]">
           {socialMediaLists.map((link, index) => (
-            <Link href={`/${link.href}`} key={index} className="transition duration-900 ease-in-out hover:underline my-1">
+            <Link href={`/${link.href}`} key={index} className="transition duration-900 ease-in-out hover:text-red-500 my-1">
               {link.icon}
             </Link>
           ))}

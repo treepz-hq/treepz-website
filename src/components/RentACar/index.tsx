@@ -4,8 +4,10 @@ import React from 'react'
 import RentCarCard from './card';
 import { Button } from '../ui/button';
 import { RentACarData } from '@/lib/dummyData';
+import { useModal } from '@/contexts/ModalContext';
 
 const RentACarComponent = () => {
+  const { showModal } = useModal();
   return (
     <div className="flex flex-col w-full my-10 container px-4 sm:px-20">
       <h1 className="font-bold text-[28px] uppercase leading-[32px] text-[#212529] mb-10 text-center sm:text-left">
@@ -36,7 +38,7 @@ const RentACarComponent = () => {
             <Button
               variant={"default"}
               className="rounded-lg w-full !h-10 group relative overflow-hidden"
-              //onClick={() => {}}
+              onClick={showModal}
             >
                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Rent a car now

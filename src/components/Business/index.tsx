@@ -7,6 +7,7 @@ import CheckedIcon from "@/assets/icons/Checked-icon";
 import PostalCard from "../Feature/card";
 import { BusinessSolutionsData, ProsData, ConsData } from "@/lib/dummyData";
 import Testimony from "@/components/common/testimony";
+import { useModal } from "@/contexts/ModalContext";
 
 const ListOne = ["Representatives are available 24/7 to assist with the planning process", "Our cars come to any pick-up point or destination, including airports, hotels, resorts, theme parks, and more", "We cater to any type of special event, from weddings to school trips, sports games, or conferences"];
 
@@ -14,6 +15,7 @@ const ListTwo = ["Luxury sedans", "Luxury vans", "SUVs", "Mini-buses","Mini-buse
 
 const BusinessSolutionComponent = () => {
   const router = useRouter();
+   const { showModal } = useModal();
 
   return (
     <>
@@ -31,7 +33,7 @@ const BusinessSolutionComponent = () => {
             <Button
               variant={"default"}
               className="relative overflow-hidden sm:w-[194px] sm:h-[64px] group"
-              onClick={() => router.push("/business-solutions")}
+              onClick={showModal}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                 For business use
@@ -44,7 +46,7 @@ const BusinessSolutionComponent = () => {
             <Button
               variant={"outline"}
               className="relative sm:w-[194px] sm:h-[64px] group overflow-hidden"
-              onClick={() => router.push("/personal-solutions")}
+              onClick={showModal}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                 For personal use
