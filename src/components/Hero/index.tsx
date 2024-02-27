@@ -83,22 +83,12 @@ const HeroComponent = () => {
                 <p className="font-semibold text-[#6F7174] w-full text-center">
                   Trusted by Your Favorite Businesses
                 </p>
-                {/* <MarqueeImages data={OurPartnersData}  /> */}
                 <Marquee data={NewPartnerLogos} />
-                {/* <Marquee data={data}>
-                  <PartnersLogo data={NewPartnerLogos} />
-                </Marquee> */}
-                {/* <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]"></div> */}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <ModalComponent
-        title="Book Now & Contact us"
-      >
-        <BookNowForm />
-      </ModalComponent>
     </>
   );
 }

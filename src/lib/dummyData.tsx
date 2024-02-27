@@ -264,49 +264,49 @@ export const groupLists = [
 ];
 
 export const companyLists = [
-    {
-        href: "about",
-        label: "About"
-    },
-    {
-        href: "career",
-        label: "Career"
-    },
-    {
-        href: "press",
-        label: "Press"
-    },
-    {
-        href: "blog",
-        label: "Blog"
-    },
-    {
-        href: "terms",
-        label: "Terms & Conditions"
-    },
-    {
-        href: "privacy",
-        label: "Privacy & Cookie Policy"
-    },
-]
-export const socialMediaLists:SocialProps[] = [
-    {
-        href: "http://www.x.com",
-        icon: <XIcon />
-    },
-    {
-        href: "https://www.facebooks.com",
-        icon: <FacebookIcon />
-    },
-    {
-        href: "https://www.linkedin.com",
-        icon: <LinkedinIcon />
-    },
-    {
-        href: "https://www.instagram.com",
-        icon: <InstagramIcon />
-    }
-]
+  {
+    href: "about",
+    label: "About",
+  },
+  {
+    href: "career",
+    label: "Career",
+  },
+  {
+    href: "press",
+    label: "Press",
+  },
+  {
+    href: "https://blog.treepz.com",
+    label: "Blog",
+  },
+  {
+    href: "terms",
+    label: "Terms & Conditions",
+  },
+  {
+    href: "privacy",
+    label: "Privacy & Cookie Policy",
+  },
+];
+export const socialMediaLists: SocialProps[] = [
+  {
+    href: "https://twitter.com/treepzglobal",
+    icon: <XIcon />,
+  },
+  {
+    href: "https://facebook.com/treepzglobal",
+    icon: <FacebookIcon />,
+  },
+  {
+    href: "https://www.linkedin.com/company/20535443/admin/feed/posts/",
+    icon: <LinkedinIcon />,
+  },
+  {
+    href: "https://www.instagram.com/treepzglobal",
+    icon: <InstagramIcon />,
+  },
+];
 
 export const EventUniqueData: IProps[] = [
   {

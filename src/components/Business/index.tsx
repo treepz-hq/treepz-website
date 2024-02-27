@@ -2,12 +2,11 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
-import ChevronRightIcon from "@/assets/svgs/chervon-right-nav.svg";
-import CheckedIcon from "@/assets/icons/Checked-icon";
+import CheckedIcon from "@/assets/svgs/checked-icon.svg";
 import PostalCard from "../Feature/card";
 import { BusinessSolutionsData, ProsData, ConsData } from "@/lib/dummyData";
-import Testimony from "@/components/common/testimony";
 import { useModal } from "@/contexts/ModalContext";
+
 
 const ListOne = ["Representatives are available 24/7 to assist with the planning process", "Our cars come to any pick-up point or destination, including airports, hotels, resorts, theme parks, and more", "We cater to any type of special event, from weddings to school trips, sports games, or conferences"];
 
@@ -22,12 +21,15 @@ const BusinessSolutionComponent = () => {
       <div className="sm:bg-[url(/Treep.png)] bg-no-repeat sm:h-[704px] bg-contain bg-right">
         <div className="mt-32 w-full sm:w-[720px] sm:pl-20">
           <h1 className="text-[32px] sm:text-[48px] text-center sm:text-left font-bold leading-[40px] sm:leading-[64px] uppercase text-[#212529] mb-6">
-            Best in Class Services for Every Need Group Transportation Solutions
+            Move Together,
+            <br /> Effortlessly: Choose
+            <br /> Treepz
           </h1>
           <p className="text-xl w-full text-[#4D5154] sm:mb-[56px]">
-            This article takes you into the realm of these services, stressing
-            on good customer service, wide variety vehicle options and compiling
-            useful instructions to make your journey smoother.
+            At Treepz, we believe every group is unique, and their
+            transportation needs deserve the same. That&lsquo;s why we offer
+            best-in-class services meticulously crafted to accommodate diverse
+            requirements and exceed expectations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -62,6 +64,7 @@ const BusinessSolutionComponent = () => {
             src="/Treep.png"
             alt="about"
             fill
+            sizes="100vw"
             priority
             className="bg-right absolute"
           />
@@ -88,13 +91,32 @@ const BusinessSolutionComponent = () => {
               key={index}
             />
           ))}
-        </div>
+          <div className="flex flex-col w-full sm:w-[408px] sm:h-[380px] rounded-2xl bg-[#1E1E1E] relative justify-center items-center">
+              <div className="absolute flex flex-col w-[356px] text-center  text-white">
+                <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] font-extrabold">Custom Solutions Available</h1>
+                <p className="sm:mt-4 sm:mb-11 text-lg sm:text-xl">Looking for more customized transportation solutions and want to chat with an expert?</p>
+                <Button
+                  variant={"default"}
+                  className="relative overflow-hidden sm:w-[194px] mx-auto sm:h-[64px] group"
+                  onClick={showModal}
+                >
+                <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
+                  Contact Us
+                </span>
+                <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0">
+                  Contact Us
+                </span>
+            </Button>
+              </div>
+            </div>
+          </div>
       </div>
       <div className="w-full h-[52px] mt-10 relative">
         <Image
           src="/blue-blur-rect.png"
           fill
           priority
+          sizes="100vw"
           className="absolute object-fill"
           alt="rect"
         />
