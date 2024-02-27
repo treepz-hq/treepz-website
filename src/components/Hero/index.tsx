@@ -32,9 +32,9 @@ const [isOpen, setIsOpen] = useState(false)
               className="relative overflow-hidden sm:w-[249px] sm:h-[64px] text-center items-center sm:px-[17px] group"
               onClick={() => router.push("/business-solutions")}
             >
-              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              <p className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Explore our business solutions
-              </span>
+              </p>
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
                 Explore our business solutions
               </span>
@@ -72,10 +72,9 @@ const [isOpen, setIsOpen] = useState(false)
                   Why choose Treepz?
                 </h1>
                 <p className="font-normal text-xl text-[#4D5154]">
-                  At Treepz, we believe in crafting transportation experiences
-                  that are tailored just for you. Our team, backed by years of
-                  expertise, is committed to understanding your unique needs and
-                  ensuring every journey is seamless and memorable.
+                  Our commitment to providing structured, accessible, and
+                  predictable corporate mobility solutions has made us the
+                  leading shared mobility platform in Africa.
                 </p>
               </div>
               <div className="flex justify-center w-full flex-col sm:max-w-[1252px] mx-auto h-fit">
@@ -87,8 +86,7 @@ const [isOpen, setIsOpen] = useState(false)
                 {/* <Marquee data={data}>
                   <PartnersLogo data={NewPartnerLogos} />
                 </Marquee> */}
-                <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]">
-                </div>
+                {/* <div className="w-full flex justify-between items-center mb-8 flex-wrap gap-3 my-2 sm:gap-24 space-y-2 sm:space-y-0 mt-6 sm:mt-8 sm:h-[144px]"></div> */}
               </div>
             </div>
           </div>

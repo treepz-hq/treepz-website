@@ -22,7 +22,7 @@ const Testimony = () => {
             <div className="w-full sm:w-[162px] h-14 relative">
               <Image
                 alt="elevation"
-                src="/trusted/Eleveation-Church-logo.png"
+                src="/testimony/brighter-money.png"
                 fill
                 priority
                 className="object-contain absolute"

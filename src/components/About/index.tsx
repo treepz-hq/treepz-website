@@ -17,21 +17,19 @@ const AboutComponent = () => {
       <>
         <div className="sm:bg-[url(/about_us.png)] bg-no-repeat sm:h-[704px] bg-contain bg-right sm:mt-20">
           <div className="w-full sm:w-[940px] px-4 sm:px-20 my-10 sm:my-[85px] flex justifiy-center flex-col">
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full bg-[#FDF2D0] flex items-center gap-2 w-[155px] mx-auto sm:mx-0 mb-[12px] uppercase text-[#A57F0C]"
-              //onClick={() => {}}
-            >
+            <div className="bg-[#FDF2D0] flex items-center gap-2 w-[155px] h-10 text-xl rounded-full mx-auto sm:mx-0 mb-[12px] uppercase text-[#A57F0C] py-2 px-3">
               our mission
-            </Button>
-            <h1 className="text-[32px] sm:text-[56px] text-center sm:text-left font-bold leading-[40px] sm:leading-[64px] uppercase text-[#212529]">
-              we put Africa&lsquo;s 26 million vehciles to better use.
+              </div>
+            <h1 className="text-[32px] sm:text-[56px] text-center sm:text-left font-bold leading-[40px] sm:leading-[64px] uppercase text-[#212529] w-full sm:w-[776px]">
+              to empower 1 million daily commuters with the options to move
+              better in africa
             </h1>
             <div className="w-full sm:w-[484px] rounded-[12px] border border-[#FDF2D0] gap-4 p-4 mt-10 sm:mt-[75px]">
               <h2 className="mb-4 uppercase text-[#A57F0C]">our vision</h2>
               <h1 className="text-xl w-full text-[#212529]">
-                To ensure wherever you are, you can book and pay for the perfect
-                vehicle to explore Africa with our reliable Treepz hosts.
+                We are building a future where your ability to move freely
+                aligns with shared values of sustainability, safety and
+                community.
               </h1>
             </div>
           </div>
@@ -39,6 +37,7 @@ const AboutComponent = () => {
             <Image
               src="/about_us.png"
               alt="about"
+              sizes="100vw"
               fill
               priority
               className="bg-right absolute"
@@ -49,15 +48,15 @@ const AboutComponent = () => {
           <p className="w-full sm:w-[306px] text-base sm:text-2xl font-medium text-[#6F7174]">
             We support the productivity of Africa&lsquo;s big teams
           </p>
-          <div className="w-full sm:w-[671px] justify-between sm:justify-start space-y-4 sm:space-y-0 sm:gap-x-[62.2px] flex-wrap mt-4 sm:mt-0 flex">
-              <PartnersLogo data={NewPartnerLogos} />
+          <div className="w-full sm:w-[855.15px] justify-between sm:justify-start space-y-6 sm:space-y-0 sm:gap-x-[62.2px] flex-wrap mt-4 sm:mt-0 flex">
+            <PartnersLogo data={NewPartnerLogos} />
           </div>
         </div>
         <OurStory />
         <OurValues />
         <Investors />
         <MeetOurTeams />
-        <div className="bg-[#F7F7F7] w-full my-20 sm:my-[183px]">
+        <div className="bg-[#F7F7F7] w-full my-20 sm:my-[208px]">
           <div className="container px-4 sm:px-20 sm:py-14 flex flex-col sm:flex-row justify-between items-center">
             {CounterData.map(({ count, text }) => (
               <Counter count={count} text={text} key={text} />
@@ -71,10 +70,16 @@ const AboutComponent = () => {
             </h1>
             <Button
               variant={"default"}
-              className="w-[240px] mb-3 mt-8 sm:mt-0 h-[56px]"
+              className="w-[240px] mb-3 mt-8 sm:mt-0 h-[56px] py-4 px-6 font-semibold relative overflow-hidden group"
               //onClick={() => {}}
             >
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               View open roles
+            </span>
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              View open roles
+            </span>
+              
             </Button>
           </div>
         </div>

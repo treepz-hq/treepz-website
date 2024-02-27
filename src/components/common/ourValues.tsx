@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const OurValues = () => {
     return (
-        <div className="w-full sm:max-w-[1335px] bg-[#F7F7F7] mt-20 mr-[120px] sm:pr-20">
+        <div className="w-full sm:max-w-[1335px] bg-[#F7F7F7] sm:mt-[228px] mr-[120px] sm:pr-20">
             <div className="flex flex-col sm:flex-row justify-between mt-10 sm:mt-20 ">
                 <div className="flex justify-between flex-col w-full sm:w-[470px]">
                     <h1 className="text-2xl sm:text-[32px] font-bold uppercase sm:leading-[40px] text-[#212529] w-full sm:pl-20">Our Values</h1>

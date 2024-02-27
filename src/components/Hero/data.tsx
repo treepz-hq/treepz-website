@@ -6,54 +6,77 @@ interface IProps {
 
 export const NewPartnerLogos: IProps[] = [
   {
-    src: "Wakanow-Logo.png",
-    width: 181.74,
+    src: "logo-1.png",
   },
   {
-    src: "Jeremiah-Foundation.png",
-    width: 125.9
-
-  },
-   {
-    src: "New-mtn-logo.png",
-    width: 96
+    src: "logo-2.png",
   },
   {
-    src: "Eleveation-Church-logo.png",
-    width: 139.12
-  },
-   {
-    src: "LBS-Logo.png",
-    width: 139.2
+    src: "logo-3.png",
   },
   {
-    src: "RBS_Rounded_Color_Claim_Logo.png",
-    width: 48
+    src: "logo-4.png",
   },
   {
-    src: "MultiChoice-Nigeria.png",
-    width: 79.27
+    src: "logo-5.png",
   },
   {
-    src: "House-of-Grace-Church.png",
-    width: 157.47
+    src: "logo-6.png"
   },
   {
-    src: "Gopel-Pillars-Church.png",
-    width: 156.29
+    src: "logo-7.png"
   },
-   {
-    src: "WakaWakaNG.png",
-    width: 48
+  {
+    src: "logo-8.png"
   },
-   {
-    src: "cu-logo.png",
-    width: 45.7
+  {
+    src: "logo-9.png"
   },
-    {
-    src: "logo.png",
-    width: 147.39
-  }
+  {
+    src: "logo-10.png"
+  },
+  {
+    src: "logo-11.png"
+  },
+  {
+    src: "logo-12.png"
+  },
+  {
+    src: "logo-13.png"
+  },
+  {
+    src: "logo-14.png"
+  },
+  {
+    src: "logo-15.png"
+  },
+  {
+    src: "logo-16.png"
+  },
+  {
+    src: "logo-17.png"
+  },
+  {
+    src: "logo-18.png"
+  },
+  {
+    src: "logo-19.png"
+  },
+  {
+    src: "logo-20.png"
+  },
+  {
+    src: "logo-21.png"
+  },
+  {
+    src: "logo-22.png"
+  },
+  {
+    src: "logo-23.png"
+  },
+  {
+    src: "logo-24.png"
+  },
 ];
 
 export const OurPartnersData: IProps[] = [

@@ -10,9 +10,10 @@ interface IProps {
 }
 
 const PartnersLogo: React.FC<IProps> = ({ data }) => {
+  
   return (
     <>
-      {data.map(({ src, height = 48, width = 110.75 }, index) => (
+      {data.map(({ src, height = 64, width = 90.52 }, index) => (
           <Image
             src={`/partners/${src}`}
             alt={src}

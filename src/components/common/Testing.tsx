@@ -31,8 +31,8 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between sm:items-center w-full !my-[67px] sm:!my-40 bg-[#FEF0EB] p-4 sm:px-12 sm:py-[76px] rounded-2xl sm:rounded-[32px] relative">
-      <div className="relative overflow-hidden w-full">
+    <div className="flex flex-col sm:flex-row justify-between sm:items-center w-full !my-[67px] sm:!my-40 bg-[#FEF0EB] p-4 sm:px-12 max-h-fit rounded-2xl sm:rounded-[32px] relative">
+      <div className="relative overflow-hidden w-full h-fit pt-20">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
@@ -51,18 +51,19 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
                     src={slide.src}
                     alt={slide.src}
                     fill
+                    sizes="100vw"
                     priority
                     className="absolute object-contain"
                   />
                 </div>
-                <div className="w-full sm:w-[657px] sm:text-[32px] sm:leading-[40px] text-[#212529]">
+                <div className="w-full sm:w-[742px] sm:text-[32px] sm:leading-[40px] text-[#212529]">
                   <p className="font-semibold w-full">
-                    “{slide.message}”
+                    <span className="text-[64px] leading-[40px] text-[#212529]">“</span>{slide.message}
                   </p>
-                  <div className="flex justify-between items-center my-8 sm:!mt-[64px]">
-                    <p className="text-base sm:text-xl text-[#212529] w-full">
-                      <span className="font-semibold">{slide.sender}</span> /{" "}
-                      {slide.position}
+                  <div className="flex justify-between items-center my-8 sm:!mt-[50px]">
+                    <p className="text-base sm:text-xl text-[#212529] w-full flex flex-col">
+                      <span className="font-semibold">{slide.sender},</span>
+                      <span>{slide.position}</span>
                     </p>
                   </div>
                 </div>
@@ -71,7 +72,7 @@ const Slider: React.FC<SliderProps> = ({ slides }) => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-6 right-10 flex justify-between sm:w-[136px]">
+      <div className="absolute sm:bottom-24 right-20 flex justify-between sm:w-[136px]">
         <span
           onClick={handlePrev}
           className={`w-14 h-14 flex justify-center items-center ${

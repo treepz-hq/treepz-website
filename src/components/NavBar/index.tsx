@@ -106,7 +106,7 @@ const handleSubMenuItemClick = () => {
      };
   return (
     <div
-      className={`w-full sm:container h-16 sm:h-[80px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 bg-white fixed top-0 z-50 mb-20 ${
+      className={`w-full sm:container h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 bg-white fixed top-0 z-50 ${
         ["/wedding-transportation"].includes(pathname) && "bg-[#FDF3D8]"
       }`}
     >
@@ -261,16 +261,26 @@ const handleSubMenuItemClick = () => {
         <Button
           variant={"outline"}
           //onClick={() => {}}
-          className='font-semibold'
+          className='font-semibold w-fit sm:w-[144px] relative group overflow-hidden'
         >
-          Rent a car
+          <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Rent a car
+              </span>
+          <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+            Rent a car
+          </span>
         </Button>
         <Button
           variant={"default"}
           onClick={() => router.push("/business-solutions")}
-          className='font-semibold'
+          className='font-semibold w-fit sm:w-[255px] relative overflow-hidden px-2 group'
         >
-          Explore our business solutions
+          <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Explore our business solutions
+              </span>
+          <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+            Explore our business solutions
+          </span>
         </Button>
       </div>
       <div className="sm:hidden cursor-pointer relative w-[48px] h-[44px]">
@@ -278,6 +288,7 @@ const handleSubMenuItemClick = () => {
           src="/hamburger.png"
           alt="hamburger"
           fill
+          sizes='100vw'
           priority
           className="absolute"
           onClick={() => setIsOpen(!isOpen)}
