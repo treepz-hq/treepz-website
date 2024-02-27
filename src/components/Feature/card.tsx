@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import clsx from "clsx";
 import Link from "next/link";
+import clsx from "clsx";
 
 interface IProps {
   src: string;
@@ -13,8 +13,8 @@ interface IProps {
 const PostalCard: React.FC<IProps> = ({ src, title, index, href }) => {
   return (
     <Link href={href ? `/${href}` : '/'}>
-      <div className="flex flex-col w-full sm:w-[408px] sm:h-[480px] overflow-hidden rounded-2xl group">
-        <div className="w-full sm:w-[408px] h-[480px] relative overflow-hidden rounded-2xl transition-transform duration-300 ease-in-out transform-gpu group-hover:scale-90">
+      <div className="flex flex-col w-full sm:w-[408px] sm:h-[380px] overflow-hidden rounded-2xl group">
+        <div className="w-full sm:w-[408px] h-[380px] relative overflow-hidden rounded-2xl transition-transform duration-300 ease-in-out transform-gpu group-hover:scale-90">
           <Image
             src={`/postals/${src}`}
             alt={src}
