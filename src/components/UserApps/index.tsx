@@ -6,10 +6,10 @@ import { Button } from "../ui/button";
 import BlogComponent from "../Blog";
 
 const InforArray = [
-  "Intuitive technology",
-  "Overview your trips or trips",
+  "Streamlined technology",
+  "Track your trips",
   "Make changes anytime",
-  "Say goodbye to pre-journey stress!",
+  "Stress-free trips",
 ];
 
 const UsersAppComponent = () => {
@@ -31,10 +31,11 @@ const UsersAppComponent = () => {
               Passenger App
             </h1>
             <p className="text-xl text-[#DEE0E3] w-full">
-              We want you to feel cool, calm, and in control – that’s why we
-              have a specially designed Treepz app to help you track your
-              driver, access all your journey details, make changes to details
-              or routes, scale your trips up or down, and even contact our team.
+              With the Treepz app, you&lsquo;re the boss of your ride. Track
+              your driver in real-time, see all your trip details in one tap,
+              tweak things on the fly, and even adjust your group size - all
+              with a few finger swipes. It&lsquo;s your ride, your way, made
+              easy.
             </p>
             <div className="flex flex-col mt-10 space-y-3">
               {InforArray.map((info, index) => (
@@ -54,17 +55,24 @@ const UsersAppComponent = () => {
               Tracking dashboard
             </h1>
             <p className="text-xl text-[#DEE0E3] w-full">
-              We won&lsquo;t leave you hanging – every ride you book with Treepz
-              can be tracked on our app. Run it for one-off trips or large
-              events, and receive a bird&lsquo;s-eye view of all trips happening
-              with real-time updates.
+              Treepz puts the power in your pocket. Track your driver in
+              real-time, see all your trips happening live, and get instant
+              updates - no matter how big or small. With Treepz, you&lsquo;re
+              always in the know, so you can focus on the fun, not the
+              logistics.
             </p>
             <Button
               variant={"default"}
-              className="hover:bg-white bg-white w-full sm:w-[144px] sm:h-[52px] mt-5 sm:mt-14"
+              className="hover:bg-white bg-white w-full sm:w-[144px] sm:h-[52px] mt-5 sm:mt-14 group overflow-hidden relative"
               //onClick={() => {}}
             >
-              Learn More
+               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Learn More
+              </span>
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                Learn More
+              </span>
+              
             </Button>
           </div>
           <div className="relative w-full sm:w-[624px] h-[282px] sm:h-[552px]">

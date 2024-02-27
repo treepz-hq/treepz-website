@@ -57,11 +57,17 @@ interface AccordionDataProps {
     content: string
 }[]
 
+interface AnnouncementProps {
+  title: string;
+  date: string;
+  link: string
+}[]
 interface TeamsMembersProps {
     src: string;
     name: string;
     title: string;
-    rank?: string
+    rank?: string;
+    social: string
 }[]
 
 interface CounterProps {
@@ -202,22 +208,25 @@ export const RentACarData:RentACarProps[] = [
 ]
 
 export const BlogData: BlogProps[] = [
-    {
-        src:"easy-payment.png",
-        title: "Easy Payment",
-        description: "We won’t leave you hanging – every ride you book with Treepz can be tracked on our app. Run it for one-off trips or large events, and receive a bird's-eye view of all trips happening with real-time updates."
-    },
-    {
-        src:"simple-booking.png",
-        title: "Simple booking",
-        description: "We won’t leave you hanging – every ride you book with Treepz can be tracked on our app. Run it for one-off trips or large events, and receive a bird's-eye view of all trips happening with real-time updates."
-    },
-    {
-        src:"efficient-pricing.png",
-        title: "Efficient pricing",
-        description: "We won’t leave you hanging – every ride you book with Treepz can be tracked on our app. Run it for one-off trips or large events, and receive a bird's-eye view of all trips happening with real-time updates."
-    }
-]
+  {
+    src: "easy-payment.png",
+    title: "Easy Payment",
+    description:
+      "You don't have to enter your card details every time you want to make a payment. Plus, we also offer convenient options like Apple Pay and Google Pay for an even faster checkout experience.",
+  },
+  {
+    src: "simple-booking.png",
+    title: "Simple booking",
+    description:
+      "With Treepz, getting wherever you need to go is as easy as tapping your phone. Our streamlined booking process cuts through the clutter, letting you secure your ride in seconds, not minutes.",
+  },
+  {
+    src: "efficient-pricing.png",
+    title: "Efficient pricing",
+    description:
+      "Our upfront transparent pricing, and no hidden fees, means you can plan your travel with confidence. Whether you're a budget-conscious traveler or simply value smart spending, Treepz delivers.",
+  },
+];
 
 export const solutionsLists = [
     {
@@ -691,98 +700,107 @@ export const CorporateUniqueData: IProps[] = [
 export const AccordionData:AccordionDataProps[] = [
     {
         title: "Where is Treepz available?",
-        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+        content: "Currently, Treepz operates in several countries across Africa, including Nigeria, Kenya, Ghana, and Uganda."
     },
     {
         title: "How does Treepz work?",
+        content: "When you visit the Treepz website, Make a booking request via a form where you will provide your preferred service (car rental, airport shuttle, ride-hailing, or medical transport), and enter your specific needs (location, dates, passengers, etc.). Our team will reach out to give you a tarlor made service."
+    },
+    {
+        title: "Are there any safety measures in place? ",
         content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
     },
     {
-        title: "How does Treepz work?",
-        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+        title: "Do you offer any personal mobility solutions?",
+        content: "Yes, we offer car rentals services."
     },
     {
-        title: "How does Treepz work?",
-        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
-    },
-    {
-        title: "How does Treepz work?",
-        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
+        title: "Can I customize solutions for my specific needs?",
+        content: "Absolutely! We offer flexible solutions with various vehicle types, scheduling options, and accessibility features. Contact us for a personalized quote."
     },
 ]
 
-export const BoardMembers:TeamsMembersProps[] = [
-    {
-        src:"jane.png",
-        name: "Jane Egerton-Idehen",
-        title: "MD/CEO, NIGCOMSAT",
-        rank: "BOARD CHAIRMAN"
-    },
-    {
-        src:"ebenzer.png",
-        name: "Ebenezer Arthur",
-        title: "MD, Wangara Green Ventures",
-        rank: "BOARD MEMBER"
-    },
-    {
-        src:"sunil.png",
-        name: "Sunil Sharma",
-        title: "MD, Techstars Toronto",
-        rank: "BOARD MEMBER"
-    },
-    {
-        src:"adejare.png",
-        name: "Adejare Rasheed Olaoluwa",
-        title: "EX MD, Bank of Industry Limited",
-        rank: "BOARD MEMBER"
-    },
-    {
-        src:"laura.png",
-        name: "Laura Venasse",
-        title: "Partner, LaBarge Weinstein LLP",
-        rank: "BOARD MEMBER"
-    }
-]
+export const BoardMembers: TeamsMembersProps[] = [
+  {
+    src: "jane.png",
+    name: "Jane Egerton-Idehen",
+    title: "MD/CEO, NIGCOMSAT",
+    rank: "BOARD CHAIRMAN",
+    social: "https://www.linkedin.com/in/jane-egerton-idehen-6716a39/",
+  },
+  {
+    src: "ebenzer.png",
+    name: "Ebenezer Arthur",
+    title: "MD, Wangara Green Ventures",
+    rank: "BOARD MEMBER",
+    social: "https://www.linkedin.com/in/ebenezerarthur/",
+  },
+  {
+    src: "sunil.png",
+    name: "Sunil Sharma",
+    title: "MD, Techstars Toronto",
+    rank: "BOARD MEMBER",
+    social: "https://www.linkedin.com/in/sunilsharmats/"
+  },
+  {
+    src: "adejare.png",
+    name: "Adejare Rasheed Olaoluwa",
+    title: "EX MD, Bank of Industry Limited",
+    rank: "BOARD MEMBER",
+    social: "https://www.linkedin.com/in/adejare-rasheed-olaoluwa-82588933/"
+  },
+  {
+    src: "laura.png",
+    name: "Laura Venasse",
+    title: "Partner, LaBarge Weinstein LLP",
+    rank: "BOARD MEMBER",
+    social: "https://www.linkedin.com/in/laura-venasse-a56b6a5a/"
+  },
+];
 
 export const FoundersData:TeamsMembersProps[] = [
     {
         src:"onyeka.png",
         name: "Onyeka Akumah",
         title: "Co-Founder/CEO",
+        social: "https://www.linkedin.com/in/onyekaakumah/"
     },
     {
         src:"johnny.png",
         name: "Johnny Enagwolor",
         title: "Co-Founder & President",
+        social: "https://www.linkedin.com/in/johnny-enagwolor-99b83766/"
     },
     {
         src:"afolabi.png",
         name: "Afolabi Oluseyi",
         title: "Co-Founder/VP of Products",
+        social: "https://www.linkedin.com/in/oluseyi-afolabi/"
     },
     {
         src:"john.png",
         name: "John Atumeyi Shaibu",
         title: "Co-Founder/VP of Customer Engagement",
+        social: "https://www.linkedin.com/in/john-atumeyi-shaibu/"
     },
 ]
 
 export const CounterData:CounterProps[] = [
     {
-        count: "11k+",
-        text: "Total completed bookings"
+        count: "4M+",
+        text: "Customers Served"
     },
     {
-        count: "2k+",
-        text: "Total hosts doing business on Treepz*"
+        count: "1.2M+",
+        text: "Passenger trips completed"
     },
     {
-        count: "20k+",
-        text: "Vehicles listed on Treepz marketplace*"
+        count: "688",
+        text: "Vehicles signed up"
     },
     {
-        count: "12+",
-        text: "African countries covered*"
+        count: "16+",
+        text: "Cities covered"
     },
 ]
 
@@ -954,3 +972,21 @@ export const ConsData: PrivateTransProps[] = [
     desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points",
   }
 ];
+
+export const AnnouncementData: AnnouncementProps[] = [
+  {
+    title: "Mobility start-up Treepz expands further in East Africa",
+    date: "Feb 14, 2023",
+    link: "https://www.cnbcafrica.com/media/6320383101112/"
+  },
+  {
+    title: "Treepz Appoints Ex-Meta Senior Exec And Former Nigerian MD of Bank of Industry To Its Board",
+    date: "Aug 16, 2023",
+    link: "https://techlabari.com/treepz-appoints-ex-meta-senior-exec-and-former-nigerian-md-of-bank-of-industry-to-its-board/"
+  },
+  {
+    title: "Promoting Equitable And Sustainable Transport In Africa",
+    date: "May 11, 2023",
+    link: "https://blog.treepz.com/treepz-promoting-equitable-and-sustainable-transport-in-africa/"
+  },
+]

@@ -3,6 +3,7 @@ import React from 'react'
 import ArrowBlackIcon from '@/assets/svgs/arrow-black-right.svg'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { AnnouncementData } from '@/lib/dummyData'
 
 const AnnouncementComponent = () => {
   return (
@@ -11,18 +12,18 @@ const AnnouncementComponent = () => {
         <h1 className="pb-4 text-xs uppercase text-[#4D5154] border-b mb-4">
           Announcements
         </h1>
-        {[1, 2, 3].map((item) => (
-        <div key={item} className="flex flex-col space-y-2 pb-6 border-b mb-4">
+        {AnnouncementData.map(({title, link, date}) => (
+        <div key={link} className="flex flex-col space-y-2 pb-6 border-b mb-4">
           <div className="flex w-full justify-between items-center">
-            <h1 className="font-semibold text-xl sm:text-2xl">
-              Nigerian MaaS startup Treepz closes $2.8M seed round to fund
-            </h1>
+            <Link href={link} className="font-semibold text-xl sm:text-2xl">
+              {title}
+            </Link>
             <span className="w8 h-8 cursor-pointer">
               <ArrowBlackIcon />
             </span>
           </div>
           <p className="text-[#6F7174] text-base capitalize mt-6">
-            Jan 17, 2023
+            {date}
           </p>
         </div>
         ))}

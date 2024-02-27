@@ -16,18 +16,19 @@ interface IProps {
 export const FutureData: IProps[] = [
   {
     icon: <EndlessOptionsIcon />,
-    title: "Endless Options",
+    title: "Unlimited Choices",
     description:
-      "A selection of hundreds of vehicles, each with professional drivers.",
+      "We have a selection of hundreds of vehicles, each with professional drivers.",
   },
   {
     icon: <CustomizableJourneyIcon />,
-    title: "Customizable Journeys",
-    description: "Change, update, and amend. Because life happens.",
+    title: "Incident Proof",
+    description:
+      "We change, update, and service our vehicles to get them incident ready. ",
   },
   {
     icon: <WalletFriendlyIcon />,
-    title: "Wallet-Friendly",
+    title: "Budget-Friendly",
     description:
       "Five-star service at super competitive rates – and only pay for what you need.",
   },
@@ -38,22 +39,22 @@ export const FutureData: IProps[] = [
   },
   {
     icon: <ReportIcon />,
-    title: "Analysis and Reporting",
-    description: "To help you make better decisions for regular trips.",
+    title: "Data Driven",
+    description: "We help you make informed decisions for regular trips.",
   },
   {
     icon: <LargeScaleIcon />,
-    title: "Large Scale Programs",
-    description: "Events of +25k people? We’ll take care of that.",
+    title: "Comprehensive Projects",
+    description: "We take care of events of any scale.",
   },
   {
     icon: <TechnologyIcon />,
-    title: "24/7 Travel Support",
-    description: "It’s tough planning an event – we’re just one text away.",
+    title: "Cutting-edge Technology",
+    description: "We have advanced technologies to give you the best experience.",
   },
   {
     icon: <SupportLocalBizIcon />,
-    title: "24/7 Travel Support",
-    description: "It’s tough planning an event – we’re just one text away.",
+    title: "Community Driven",
+    description: "We work with business owners in your community.",
   },
 ];

@@ -6,55 +6,39 @@ interface IProps {
 
 export const NewPartnerLogos: IProps[] = [
   {
-    src: "Wakanow-Logo.png",
-    width: 60,
+    src: "logo-18.png",
   },
   {
-    src: "Jeremiah-Foundation.png",
-    width: 60,
-    height: 22.88
-
-  },
-   {
-    src: "New-mtn-logo.png",
-    width: 60,
+    src: "logo-4.png",
   },
   {
-    src: "Eleveation-Church-logo.png",
-    width: 60,
-  },
-   {
-    src: "LBS-Logo.png",
-    width: 60,
-    height: 20.69
+    src: "logo-5.png",
   },
   {
-    src: "RBS_Rounded_Color_Claim_Logo.png",
-    width: 60
+    src: "logo-8.png",
   },
   {
-    src: "MultiChoice-Nigeria.png",
-    width: 60,
-    height: 36.33
+    src: "logo-0.png",
   },
   {
-    src: "House-of-Grace-Church.png",
-    width: 60
+    src: "logo-25.png",
   },
   {
-    src: "Gopel-Pillars-Church.png",
-    width: 60
+    src: "logo-17.png",
   },
-   {
-    src: "WakaWakaNG.png",
-    width: 60
+  {
+    src: "logo-16.png",
   },
-   {
-    src: "cu-logo.png",
-    width: 60
+  {
+    src: "logo-15.png",
   },
-    {
-    src: "logo.png",
-    width: 60
+  {
+    src: "logo-13.png",
+  },
+  {
+    src: "logo-12.png",
+  },
+  {
+    src: "logo-10.png",
   }
 ];

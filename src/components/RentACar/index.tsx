@@ -35,10 +35,16 @@ const RentACarComponent = () => {
             </p>
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-lg w-full !h-10 text-gray-900 flex items-center gap-2"
+              className="rounded-lg w-full !h-10 group relative overflow-hidden"
               //onClick={() => {}}
             >
-              Rent a car now
+               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Rent a car now
+              </span>
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                Rent a car now
+              </span>
+              
             </Button>
           </div>
         </div>

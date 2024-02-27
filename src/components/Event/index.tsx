@@ -24,24 +24,26 @@ const EventComponent = () => {
   return (
     <div>
       <div className="bg-[url(/Hero.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
-        <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
+        <div className="w-full sm:w-[724px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
             Event Transportation Service by Treepz
           </h1>
           <p className="text-base sm:text-xl text-center">
-            Treepz is the ultimate ground transportation solution for corporate
-            travel managers, executives, students, sports teams, and everything
-            in-between. We provide shuttles, car services, private cars, buses
-            and everything else you need for your business trips, events, and
-            more.
+            Plan seamless event transportation with Treepz. We offer diverse options like shuttles, cars, and buses, catering to any group size and budget. Experience reliable rides and dedicated support for stress-free events.
           </p>
           <div className="flex justify-center w-full">
           <Button
             variant={"default"}
-            className="w-full sm:w-[337px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px]"
+            className="w-full sm:w-[337px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px] font-semibold group overflow-hidden relative"
             //onClick={() => {}}
           >
-            Book your event transportation service
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              Book your event transportation service
+            </span>
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              Book your event transportation service
+            </span>
+            
           </Button>
           </div>
         </div>
@@ -156,7 +158,7 @@ const EventComponent = () => {
             {AccordionData.map(({ title, content }, index) => (
               <AccordionItem value={title + index} key={index}>
                 <AccordionTrigger>{title}</AccordionTrigger>
-                <AccordionContent>{content}</AccordionContent>
+                <AccordionContent className="text-lg text-[#6F7174]">{content}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
