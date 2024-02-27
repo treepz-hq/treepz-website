@@ -41,7 +41,7 @@ const MeetOurTeams = () => {
             The team brings together decades of experience across transportation, and technology
           </p>
           <p className="text-[#6F7174] text-base">
-            They're a collective force fueled by diverse journeys within the African transportation and tech world.
+            They&lsquo;re a collective force fueled by diverse journeys within the African transportation and tech world.
           </p>
         </div>
         <div className="w-full sm:w-[900px] flex flex-row flex-wrap gap-4">
