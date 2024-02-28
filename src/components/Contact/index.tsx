@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
   first_name: z.string().min(2).max(50),
@@ -141,7 +142,10 @@ const ContactComponent = () => {
               name="range"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>When is your trip? *</FormLabel>
+                  <FormLabel>
+                    When is your trip?{" "}
+                    <sup className="text-red-500 font-bold">*</sup>
+                  </FormLabel>
                   <FormControl className="w-full">
                     <Input
                       placeholder="Please use a range of dates for multiple days trip"
@@ -159,17 +163,8 @@ const ContactComponent = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Total estimated passengers</FormLabel>
-                    <FormControl>
-                      <Select>
-                        <SelectTrigger className="w-full sm:w-[256px]">
-                          <SelectValue placeholder="1" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1">1</SelectItem>
-                          <SelectItem value="2">2</SelectItem>
-                          <SelectItem value="3">3</SelectItem>
-                        </SelectContent>
-                      </Select>
+                    <FormControl className="w-full">
+                      <Input type="number" min="1" placeholder="" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -187,21 +182,13 @@ const ContactComponent = () => {
                           <SelectValue placeholder="School" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="School Shuttle">
-                            School Shuttle
-                          </SelectItem>
-                          <SelectItem value="School Shuttle">
-                            School Shuttle
-                          </SelectItem>
-                          <SelectItem value="School Shuttle">
-                            School Shuttle
-                          </SelectItem>
-                          <SelectItem value="School Shuttle">
-                            School Shuttle
-                          </SelectItem>
-                          <SelectItem value="School Shuttle">
-                            School Shuttle
-                          </SelectItem>
+                          <SelectItem value="corporate">Corporate</SelectItem>
+                          <SelectItem value="conference">Conference</SelectItem>
+                          <SelectItem value="school">School</SelectItem>
+                          <SelectItem value="employee">Employee</SelectItem>
+                          <SelectItem value="personal">Personal</SelectItem>
+                          <SelectItem value="wedding">Wedding</SelectItem>
+                          <SelectItem value="others">Others</SelectItem>
                         </SelectContent>
                       </Select>
                     </FormControl>
@@ -219,16 +206,7 @@ const ContactComponent = () => {
                     Describe the transportation you are looking for *
                   </FormLabel>
                   <FormControl>
-                    <Select>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="1" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="1">1</SelectItem>
-                        <SelectItem value="2">2</SelectItem>
-                        <SelectItem value="3">3</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <Textarea placeholder="Describe transportation"></Textarea>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -248,21 +226,11 @@ const ContactComponent = () => {
                         <SelectValue placeholder="School" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
-                        <SelectItem value="School Shuttle">
-                          School Shuttle
-                        </SelectItem>
+                        <SelectItem value="daily">Daily</SelectItem>
+                        <SelectItem value="weekly">Weekly</SelectItem>
+                        <SelectItem value="monthly">Monthly</SelectItem>
+                        <SelectItem value="quaterly">Quaterly</SelectItem>
+                        <SelectItem value="once-a-year">Once a year</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormControl>
@@ -332,18 +300,17 @@ const ContactComponent = () => {
                 )}
               />
             </div>
-            <div className="w-full flex flex-col sm:flex-row space-y-3 sm:space-y-0 justify-between sm:items-end">
+            <div className="w-full flex flex-col gap-2 sm:flex-row space-y-3 sm:space-y-0 justify-between sm:items-end">
               <FormField
                 control={form.control}
                 name="country_code"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>
-                      Country Code
-                      <span className="ml-2 text-red-500">*</span>
+                      Country Code <span className="ml-2 text-red-500">*</span>
                     </FormLabel>
-                    <FormControl className="w-full sm:w-[122px]">
-                      <Input placeholder="" {...field} />
+                    <FormControl>
+                      <Input placeholder="code" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -363,12 +330,12 @@ const ContactComponent = () => {
                 )}
               />
             </div>
-            <p>
+            <p className="my-4 sm:!mt-6 sm:!mb-8">
               Treepz needs the contact information you provide to us to contact
               you about our products and services. You may unsubscribe from
               these communications at anytime.
             </p>
-            <Button type="submit" className="w-full mt-8 text-gray-900">
+            <Button type="submit" className="w-full !mb-8 text-gray-900">
               Submit
             </Button>
           </form>
