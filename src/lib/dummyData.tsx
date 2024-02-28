@@ -25,7 +25,7 @@ interface PostalCardProps {
 }[]
 
 interface PrivateTransProps {
-  title: string;
+  title?: string;
   desc: string
 }[]
 
@@ -930,6 +930,48 @@ export const WeddingPostalData: BlogProps[] = [
       "Treepz simplifies group transportation to-and-from your wedding. We provide tailored wedding packages, access to hundreds of different vehicles, live vehicle tracking, personal concierge, and the ability to add on-site support.",
   },
 ];
+
+export const BookingPros: PrivateTransProps[] = [
+  {
+    title: "Cost saving",
+    desc: "Self-booking can sometimes lead to lower costs, especially for small groups or simple, one-off travel arrangements"
+  },
+  {
+    title: "Full control",
+    desc: "You have complete control over the planning, scheduling, and logistics"
+  },
+]
+
+export const BookingCros: PrivateTransProps[] = [
+  {
+    title: "Uncertainty",
+    desc: "Dealing with various service providers can lead to unpredictability, from vehicle quality to driver competence"
+  },
+  {
+    title: "Administrative burden",
+    desc: "Organizing your own group transportation can be time-consuming and may require significant effort and stress"
+  },
+  {
+    title: "Safety concerns",
+    desc: "Ensuring the safety and reliability of self-booked transportation can be challenging, not to mention accessibility"
+  }
+
+]
+
+export const IntegrationData: PrivateTransProps[] = [
+  {
+    desc: "Private transportation companies ensure reliability, safety, and professionalism, giving you peace of mind throughout your journey"
+  },
+  {
+    desc: "Skilled and trained drivers with local knowledge ensure a smooth and stress-free travel experience"
+  },
+  {
+    desc: "Private providers offer a wide range of vehicle options to accommodate your group size and specific needs, from cars to buses and coaches"
+  },
+  {
+    desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points"
+  },
+]
 
 export const ProsData: PrivateTransProps[] = [
   {

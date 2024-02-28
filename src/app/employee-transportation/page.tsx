@@ -1,4 +1,6 @@
 import EmployeeTransComponent from '@/components/Employee'
+import { Metadata } from 'next'
+
 const page = () => {
     return (
         <EmployeeTransComponent />
@@ -6,3 +8,8 @@ const page = () => {
 }
 
 export default page
+
+export const metadata: Metadata = {
+  title: "Treepz: Streamlined Employee Transportation",
+};
+

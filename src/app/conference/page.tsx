@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import ConferenceComponent from '@/components/Conference'
 
 const page = () => {
@@ -7,3 +8,7 @@ const page = () => {
 }
 
 export default page
+
+export const metadata: Metadata = {
+  title: "Treepz: Effortless Conference Shuttles.",
+};

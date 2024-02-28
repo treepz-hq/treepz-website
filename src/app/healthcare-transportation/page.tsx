@@ -1,4 +1,5 @@
 import HealthTranspComponent from '@/components/Health'
+import { Metadata } from 'next'
 
 const page = () => {
     return (
@@ -7,3 +8,8 @@ const page = () => {
 }
 
 export default page
+
+export const metadata: Metadata = {
+  title: "Treepz: Reliable Healthcare Shuttles",
+};
+
