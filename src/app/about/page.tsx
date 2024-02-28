@@ -1,6 +1,5 @@
 import React from 'react'
 import AboutComponent from '@/components/About'
-import Layout from '@/components/Layout'
 import { Metadata } from 'next';
 
 const page = () => {
