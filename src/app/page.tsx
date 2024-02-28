@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import RentACarComponent from '@/components/RentACar';
 import HeroComponent from './../components/Hero';
 import FeaturesComponent from '@/components/Feature';
@@ -17,3 +18,9 @@ export default function Home() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Treepz: Africa's Leading Corporate Mobility Solution.",
+};
+
+

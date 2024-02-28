@@ -1,4 +1,5 @@
 import React from 'react'
+import { Metadata} from 'next'
 
 const page = () => {
   return (
@@ -7,3 +8,7 @@ const page = () => {
 }
 
 export default page
+
+export const metadata: Metadata = {
+  title: "Treepz: Your Corporate Shuttle Solution.",
+};

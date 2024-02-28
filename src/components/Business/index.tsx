@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
-import CheckedIcon from "@/assets/svgs/checked-icon.svg";
+import CheckedIcon from "@/assets/icons/Checked-icon";
 import PostalCard from "../Feature/card";
-import { BusinessSolutionsData, ProsData, ConsData } from "@/lib/dummyData";
+import { BusinessSolutionsData, ProsData, ConsData, BookingPros, BookingCros } from "@/lib/dummyData";
 import { useModal } from "@/contexts/ModalContext";
-
+import GotPower from "./got-the-power"
 
 const ListOne = ["Representatives are available 24/7 to assist with the planning process", "Our cars come to any pick-up point or destination, including airports, hotels, resorts, theme parks, and more", "We cater to any type of special event, from weddings to school trips, sports games, or conferences"];
 
@@ -92,24 +92,29 @@ const BusinessSolutionComponent = () => {
             />
           ))}
           <div className="flex flex-col w-full sm:w-[408px] sm:h-[380px] rounded-2xl bg-[#1E1E1E] relative justify-center items-center">
-              <div className="absolute flex flex-col w-[356px] text-center  text-white">
-                <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] font-extrabold">Custom Solutions Available</h1>
-                <p className="sm:mt-4 sm:mb-11 text-lg sm:text-xl">Looking for more customized transportation solutions and want to chat with an expert?</p>
-                <Button
-                  variant={"default"}
-                  className="relative overflow-hidden sm:w-[194px] mx-auto sm:h-[64px] group"
-                  onClick={showModal}
-                >
+            <div className="absolute flex flex-col w-[356px] text-center  text-white">
+              <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] font-extrabold">
+                Custom Solutions Available
+              </h1>
+              <p className="sm:mt-4 sm:mb-11 text-lg sm:text-xl">
+                Looking for more customized transportation solutions and want to
+                chat with an expert?
+              </p>
+              <Button
+                variant={"default"}
+                className="relative overflow-hidden sm:w-[194px] mx-auto sm:h-[64px] group"
+                onClick={showModal}
+              >
                 <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                   Contact Us
                 </span>
                 <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0">
                   Contact Us
                 </span>
-            </Button>
-              </div>
+              </Button>
             </div>
           </div>
+        </div>
       </div>
       <div className="w-full h-[52px] mt-10 relative">
         <Image
@@ -153,7 +158,7 @@ const BusinessSolutionComponent = () => {
                     className="flex items-center gap-4 my-4 text-lg sm:text-xl font-medium"
                   >
                     <span>
-                      <CheckedIcon />
+                      <CheckedIcon fill="#FA6533" />
                     </span>{" "}
                     {datum}{" "}
                   </li>
@@ -176,7 +181,7 @@ const BusinessSolutionComponent = () => {
                     className="flex items-center gap-4 my-4 text-lg sm:text-xl font-medium"
                   >
                     <span>
-                      <CheckedIcon />
+                      <CheckedIcon fill="#FA6533" />
                     </span>{" "}
                     {datum}{" "}
                   </li>
@@ -298,8 +303,78 @@ const BusinessSolutionComponent = () => {
               </div>
             </div>
           </div>
+          <div className="mt-10 sm:mt-20">
+            <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] font-bold mb-5 sm:mb-14">
+              Booking Your Own Group Transportation
+            </h1>
+            <div className="w-full flex justify-between gap-5 items-center">
+              <div className="bg-white w-full sm:w-[616px] h-fit sm:h-[492px] p-4 sm:p-8 rounded-3xl">
+                <p className="text-xl sm:text-2xl text-[#231F20] font-medium mb-2 sm:mb-4">
+                  Pros
+                </p>
+                {BookingPros.map((item, index) => (
+                  <div key={index} className="flex gap-4 mb-3">
+                    <span>
+                      <CheckedIcon />
+                    </span>
+                    <div className="flex flex-col text-lg sm:text-xl space-y-3">
+                      <p className="text-[#231F20] font-medium">{item.title}</p>
+                      <span className="text-[#6F7174]">{item.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-white w-full sm:w-[616px] h-fit sm:h-[492px] p-4 sm:p-8 rounded-3xl">
+                <p className="text-xl sm:text-2xl text-[#231F20] font-medium mb-2 sm:mb-4">
+                  Cons
+                </p>
+                {BookingCros.map((item, index) => (
+                  <div key={index} className="flex gap-4 mb-3">
+                    <span>
+                      <CheckedIcon fill="#D5404C" />
+                    </span>
+                    <div className="flex flex-col text-lg sm:text-xl space-y-3">
+                      <p className="text-[#231F20] font-medium">{item.title}</p>
+                      <span className="text-[#6F7174]">{item.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="sm:mt-[205px] w-full sm:max-w-[816px] mx-auto sm:h-[252px] h-fit justify-center items-center flex flex-col">
+            <h1 className="text-2xl sm:text-[32px] leading-[40px] text-[#212529] mb-6 font-bold">In short</h1>
+            <p className="text-[#4D5154] text-lg sm:text-xl sm:mb-10">While self-booking has its advantages in terms of cost control and independence, high-quality private transportation providers like Treepz offer a more comprehensive and hassle-free solution with experienced drivers, flexible options, and peace of mind.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              variant={"default"}
+              className="relative overflow-hidden sm:w-[249px] sm:h-[64px] text-center items-center sm:px-[17px] group"
+              onClick={() => router.push("/business-solutions")}
+            >
+              <p className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Explore our group solutions
+              </p>
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                Explore our group solutions
+              </span>
+            </Button>
+            <Button
+              variant={"outline"}
+              className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
+              onClick={showModal}
+            >
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                For Personal Use
+              </span>
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                For Personal Use
+              </span>
+            </Button>
+          </div>
+          </div>
         </div>
       </div>
+      <GotPower />
       {/* End here */}
     </>
   );
