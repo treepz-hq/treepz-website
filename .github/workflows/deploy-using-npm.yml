@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -24,11 +24,10 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
-      - name: Deploy to DigitalOcean
+      - name: Deploy to EC2
         run: |
-          # Set up SSH key
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          # Set up SSH key | Change SSH_KEY mode
+          chmod 600 ~/.ssh/treepz_website_github_rsa
 
           # Transfer files to server
           rsync -avz --delete-after -e "ssh -o StrictHostKeyChecking=no" ./build/ $SSH_USERNAME@$SSH_HOST:/var/www/demo.treepz.com
@@ -38,5 +37,5 @@ jobs:
 
     env:
       SSH_HOST: ${{ secrets.SSH_HOST }}
-      SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      SSH_USERNAME: ${{ secrets.SSH_USER }}
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
