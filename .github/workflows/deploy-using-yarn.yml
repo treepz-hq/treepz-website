@@ -1,0 +1,39 @@
+name: Deploy Next.js to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          yarn config set ignore-engines true
+          yarn install
+
+      - name: Deploy to EC2
+        run: |
+          root="/var/www/demo.treepz.com"
+          cd $root
+          echo -e '\e[1m\e[34mPulling code from remote..\e[0m\n'
+          git checkout main && git stash && git pull
+          echo -e '\e[1m\e[34m\nInstalling required packages..\e[0m\n'
+          yarn install
+          echo -e '\e[1m\e[34m\nBuilding the application\e[0m\n'
+          yarn build
+          echo -e '\e[1m\e[34m\nRestarting service(Nginx)..\e[0m\n'
+          # Restart Nginx
+          sudo systemctl restart nginx
+          echo -e '\n\e[1m\e[34mDeployment successful\e[0m'
+          echo "Deploying to EC2..."
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
