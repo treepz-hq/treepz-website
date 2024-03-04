@@ -26,8 +26,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          # Set up SSH key
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/treepz_website_github_rsa
+          # Set up SSH key | Change SSH_KEY mode
           chmod 600 ~/.ssh/treepz_website_github_rsa
 
           # Transfer files to server
@@ -38,5 +37,5 @@ jobs:
 
     env:
       SSH_HOST: ${{ secrets.SSH_HOST }}
-      SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+      SSH_USERNAME: ${{ secrets.SSH_USER }}
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
