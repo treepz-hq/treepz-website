@@ -1,4 +1,4 @@
-name: Deploy Next.js to EC2
+name: Deploy Next.js to EC2 Using npm
 
 on:
   push:
@@ -26,9 +26,6 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          # Set up SSH key | Change SSH_KEY mode
-          chmod 600 ~/.ssh/treepz_website_github_rsa
-
           # Transfer files to server
           rsync -avz --delete-after -e "ssh -o StrictHostKeyChecking=no" ./build/ $SSH_USERNAME@$SSH_HOST:/var/www/demo.treepz.com
 
