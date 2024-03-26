@@ -59,7 +59,8 @@ const ContactComponent = () => {
 
     },
   })
-
+//TODO Fix this submit
+//
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values)
   }

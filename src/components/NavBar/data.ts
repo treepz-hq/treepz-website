@@ -73,10 +73,10 @@ export const CorporateTransportation: SubMenuProps[] = [
     label: "Executive Transportation",
     href: "/executive-transportation",
   },
-  {
-    label: "Off-Site Parking Transportation",
-    href: "/off-siteparking-transportation",
-  },
+  // {
+  //   label: "Off-Site Parking Transportation",
+  //   href: "/off-siteparking-transportation",
+  // },
 ];
 
 export const GroundTransportation: SubMenuProps[] = [
@@ -92,10 +92,10 @@ export const GroundTransportation: SubMenuProps[] = [
     label: "Executive Transportation",
     href: "/executive-transportation",
   },
-  {
-    label: "Off-Site Parking Transportation",
-    href: "/off-siteparking-transportation",
-  },
+  // {
+  //   label: "Off-Site Parking Transportation",
+  //   href: "/off-siteparking-transportation",
+  // },
 ];
 
 export const HealthCareTransportation: SubMenuProps[] = [
@@ -107,21 +107,21 @@ export const HealthCareTransportation: SubMenuProps[] = [
     label: "Healthcare Shuttle",
     href: "/healthcare-transportation",
   },
-  {
-    label: "Elderly Transportation Services",
-    href: "/elderly-transportation",
-  },
-  {
-    label: "Off-Site Parking Transportation",
-    href: "/off-siteparking-transportation",
-  },
+  // {
+  //   label: "Elderly Transportation Services",
+  //   href: "/elderly-transportation",
+  // },
+  // {
+  //   label: "Off-Site Parking Transportation",
+  //   href: "/off-siteparking-transportation",
+  // },
 ];
 
 export const TransitAgencyTransportation: SubMenuProps[] = [
-  {
-    label: "Transit Agency Transport",
-    href: "/transit-agency-transportation",
-  },
+  // {
+  //   label: "Transit Agency Transport",
+  //   href: "/transit-agency-transportation",
+  // },
 ];
 
 export const GroupFirstColumn: SubMenuProps[] = [
@@ -129,22 +129,22 @@ export const GroupFirstColumn: SubMenuProps[] = [
     label: "For Airline",
     href: "/airline",
   },
-  {
-    label: "For Corporate Events",
-    href: "/corporate-events",
-  },
-  {
-    label: "For Military",
-    href: "/military",
-  },
-  {
-    label: "For Private Events",
-    href: "/private-events",
-  },
-  {
-    label: "For Wedding",
-    href: "/wedding",
-  },
+  // {
+  //   label: "For Corporate Events",
+  //   href: "/corporate-events",
+  // },
+  // {
+  //   label: "For Military",
+  //   href: "/military",
+  // },
+  // {
+  //   label: "For Private Events",
+  //   href: "/private-events",
+  // },
+  // {
+  //   label: "For Wedding",
+  //   href: "/wedding",
+  // },
   {
     label: "For Governments",
     href: "/governments",
@@ -152,24 +152,24 @@ export const GroupFirstColumn: SubMenuProps[] = [
 ];
 
 export const GroupSecondColumn: SubMenuProps[] = [
-  {
-    label: "For Religious Groups",
-    href: "/religious",
-  },
-  {
-    label: "For School Trips",
-    href: "/school-trips",
-  },
-  {
-    label: "For School Team",
-    href: "/school-team",
-  },
+  // {
+  //   label: "For Religious Groups",
+  //   href: "/religious",
+  // },
+  // {
+  //   label: "For School Trips",
+  //   href: "/school-trips",
+  // },
+  //   {
+  //   label: "For School Team",
+  //   href: "/school-team",
+  // },
   {
     label: "For University",
     href: "/university",
   },
-  {
-    label: "For Production Crews",
-    href: "/production-crews",
-  },
+  // {
+  //   label: "For Production Crews",
+  //   href: "/production-crews",
+  // },
 ];

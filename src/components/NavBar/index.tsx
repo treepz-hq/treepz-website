@@ -187,9 +187,9 @@ const handleSubMenuItemClick = () => {
                             </ListItem>
                           ))}
                         </div>
-                        <p className="text-[#6F7174] hover:text-[#F8B02B] hover:bg-[#FDF2D0] uppercase text-sm cursor-default px-4">
-                          ground Transportation services
-                        </p>
+                        {/* <p className="text-[#6F7174] hover:text-[#F8B02B] hover:bg-[#FDF2D0] uppercase text-sm cursor-default px-4"> */}
+                        {/*   ground Transportation services */}
+                        {/* </p> */}
                         <div className="flex flex-col">
                           {TransitAgencyTransportation.map(
                             ({ label, href }) => (

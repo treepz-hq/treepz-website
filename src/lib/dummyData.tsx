@@ -1,12 +1,12 @@
-import XIcon from "@/assets/svgs/x-icon.svg"
-import FacebookIcon from "@/assets/svgs/facebook-icon.svg"
-import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg"
-import InstagramIcon from "@/assets/svgs/instagram-icon.svg"
-import DoorToDoorIcon from "@/assets/svgs/Door-to-door.svg"
-import RealSustainIcon from "@/assets/svgs/real.svg"
-import GoingFurtherIcon from "@/assets/svgs/going-further.svg"
-import WalletFriendlyIcon from "@/assets/svgs/wallet-friendly.svg"
-import CheckableEasyIcon from "@/assets/svgs/checkable-easy-payable.svg"
+import XIcon from "@/assets/svgs/x-icon.svg";
+import FacebookIcon from "@/assets/svgs/facebook-icon.svg";
+import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
+import InstagramIcon from "@/assets/svgs/instagram-icon.svg";
+import DoorToDoorIcon from "@/assets/svgs/Door-to-door.svg";
+import RealSustainIcon from "@/assets/svgs/real.svg";
+import GoingFurtherIcon from "@/assets/svgs/going-further.svg";
+import WalletFriendlyIcon from "@/assets/svgs/wallet-friendly.svg";
+import CheckableEasyIcon from "@/assets/svgs/checkable-easy-payable.svg";
 import SuppotLocalBuzIcon from "@/assets/svgs/support-local-biz.svg";
 import SlickRides from "@/assets/svgs/slick-rides.svg";
 import EasyToBeGreen from "@/assets/svgs/easy-to-be-green.svg";
@@ -22,29 +22,34 @@ interface PostalCardProps {
   src: string;
   title: string;
   href?: string;
-}[]
+}
+[];
 
 interface PrivateTransProps {
   title?: string;
-  desc: string
-}[]
+  desc: string;
+}
+[];
 
 interface RentACarProps {
-    src: string;
+  src: string;
   title: string;
   noOfUsers: number;
-}[]
+}
+[];
 
 interface BlogProps {
-    src: string;
-    title: string;
-    description: string;
-}[]
+  src: string;
+  title: string;
+  description: string;
+}
+[];
 
 interface SocialProps {
-    href: string;
-    icon: JSX.Element
-}[]
+  href: string;
+  icon: JSX.Element;
+}
+[];
 
 interface IProps {
   icon: JSX.Element;
@@ -53,27 +58,31 @@ interface IProps {
 }
 [];
 interface AccordionDataProps {
-    title: string;
-    content: string
-}[]
+  title: string;
+  content: string;
+}
+[];
 
 interface AnnouncementProps {
   title: string;
   date: string;
-  link: string
-}[]
+  link: string;
+}
+[];
 interface TeamsMembersProps {
-    src: string;
-    name: string;
-    title: string;
-    rank?: string;
-    social: string
-}[]
+  src: string;
+  name: string;
+  title: string;
+  rank?: string;
+  social: string;
+}
+[];
 
 interface CounterProps {
-    count: string;
-    text: string
-}[]
+  count: string;
+  text: string;
+}
+[];
 
 interface footerProps {
   label: string;
@@ -104,108 +113,108 @@ export const MiniPartnerData: OurPartnerProps[] = [
   },
   {
     src: "RBS_Rounded_Color_Claim_Logo.png",
-  }
+  },
 ];
 
-export const PostalCardData:PostalCardProps[] = [
-    {
-        src:"postal-1.png",
-        title:"Employee Shuttle Services",
-        href: "employee-transportation"
-    },
-    {
-        src:"car-rental.png",
-        title:"Car Rental Services",
-    },
-    {
-        src:"school-transportation.png",
-        title:"School Transportation",
-        href: "school-transportation"
-    },
-    {
-        src:"conference-conventions.png",
-        title:"Conference and Conventions",
-        href: "conference"
-    },
-    {
-        src:"event-transportation.png",
-        title:"Event Transportation",
-        href: "event"
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Airport Transportation",
-        href: "airport-transportation"
-    }
-]
-export const BusinessSolutionsData:PostalCardProps[] = [
-    {
-        src:"postal-1.png",
-        title:"Airline",
-        href: "airline"
-    },
-    {
-        src:"car-rental.png",
-        title:"Religious groups",
-    },
-    {
-        src:"school-transportation.png",
-        title:"Corporate events",
-        href: "school-transportation"
-    },
-    {
-        src:"school-transportation.png",
-        title:"School trips",
-        href: "school-transportation"
-    },
-    {
-        src:"event-transportation.png",
-        title:"Private events",
-    },
-    {
-        src:"airport-transportation.png",
-        title:"University",
-        href: "university"
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Sporting teams",
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Military",
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Production crews",
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Weddings",
-    },
-    {
-        src:"airport-transportation.png",
-        title:"Government",
-    },
-]
+export const PostalCardData: PostalCardProps[] = [
+  {
+    src: "postal-1.png",
+    title: "Employee Shuttle Services",
+    href: "employee-transportation",
+  },
+  {
+    src: "car-rental.png",
+    title: "Car Rental Services",
+  },
+  {
+    src: "school-transportation.png",
+    title: "School Transportation",
+    href: "school-transportation",
+  },
+  {
+    src: "conference-conventions.png",
+    title: "Conference and Conventions",
+    href: "conference",
+  },
+  {
+    src: "event-transportation.png",
+    title: "Event Transportation",
+    href: "event",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Airport Transportation",
+    href: "airport-transportation",
+  },
+];
+export const BusinessSolutionsData: PostalCardProps[] = [
+  {
+    src: "postal-1.png",
+    title: "Airline",
+    href: "airline",
+  },
+  {
+    src: "car-rental.png",
+    title: "Religious groups",
+  },
+  {
+    src: "school-transportation.png",
+    title: "Corporate events",
+    href: "school-transportation",
+  },
+  {
+    src: "school-transportation.png",
+    title: "School trips",
+    href: "school-transportation",
+  },
+  {
+    src: "event-transportation.png",
+    title: "Private events",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "University",
+    href: "university",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Sporting teams",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Military",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Production crews",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Weddings",
+  },
+  {
+    src: "airport-transportation.png",
+    title: "Government",
+  },
+];
 
-export const RentACarData:RentACarProps[] = [
-    {
-        src: "luxurous.png",
-        title: "Luxurious",
-        noOfUsers: 233
-    },
-    {
-        src: "basic.png",
-        title: "Basic",
-        noOfUsers: 400
-    },
-    {
-        src: "group.png",
-        title: "Group",
-        noOfUsers: 200
-    }
-]
+export const RentACarData: RentACarProps[] = [
+  {
+    src: "luxurous.png",
+    title: "Luxurious",
+    noOfUsers: 233,
+  },
+  {
+    src: "basic.png",
+    title: "Basic",
+    noOfUsers: 400,
+  },
+  {
+    src: "group.png",
+    title: "Group",
+    noOfUsers: 200,
+  },
+];
 
 export const BlogData: BlogProps[] = [
   {
@@ -229,38 +238,38 @@ export const BlogData: BlogProps[] = [
 ];
 
 export const solutionsLists = [
-    {
-        label: "Airport Shuttles",
-        href: "airport-shuttles"
-    },
-    {
-        label: "Campus Shuttles",
-        href: "campus-shuttles"
-    },
-    {
-        label: "Convention Transportation",
-        href: "convention"
-    },
-    {
-        label: "Corporate Shuttles",
-        href: "corporate-shuttles"
-    },
-    {
-        label: "Corporate Shuttle Service",
-        href: "corporate-shuttles-service"
-    },
-    {
-        label: "Event Transportation Service",
-        href: "event"
-    },
+  {
+    label: "Airport Shuttles",
+    href: "airport-shuttles",
+  },
+  {
+    label: "Campus Shuttles",
+    href: "campus-shuttles",
+  },
+  {
+    label: "Convention Transportation",
+    href: "convention",
+  },
+  {
+    label: "Corporate Shuttles",
+    href: "corporate-shuttles",
+  },
+  {
+    label: "Corporate Shuttle Service",
+    href: "corporate-shuttles-service",
+  },
+  {
+    label: "Event Transportation Service",
+    href: "event",
+  },
 ];
 
 export const groupLists = [
-  "For Airlines",
-  "For Religious Groups",
-  "For Corporate Events",
-  "For School Trips",
-  "For Military",
+  { label: " For Airlines ", href: "airline" },
+  // { label: "For Religious Groups", href: "airport-transportation" },
+  { label: "For Corporate Events", href: "event" },
+  { label: "For School Trips", href: "university" },
+  ,
 ];
 
 export const companyLists = [
@@ -268,10 +277,10 @@ export const companyLists = [
     href: "about",
     label: "About",
   },
-  {
-    href: "career",
-    label: "Career",
-  },
+  // {
+  //   href: "career",
+  //   label: "Career",
+  // },
   {
     href: "press",
     label: "Press",
@@ -280,14 +289,14 @@ export const companyLists = [
     href: "https://blog.treepz.com",
     label: "Blog",
   },
-  {
-    href: "terms",
-    label: "Terms & Conditions",
-  },
-  {
-    href: "privacy",
-    label: "Privacy & Cookie Policy",
-  },
+  // {
+  //   href: "terms",
+  //   label: "Terms & Conditions",
+  // },
+  // {
+  //   href: "privacy",
+  //   label: "Privacy & Cookie Policy",
+  // },
 ];
 export const socialMediaLists: SocialProps[] = [
   {
@@ -697,28 +706,32 @@ export const CorporateUniqueData: IProps[] = [
   },
 ];
 
-export const AccordionData:AccordionDataProps[] = [
-    {
-        title: "Where is Treepz available?",
-        content: "Currently, Treepz operates in several countries across Africa, including Nigeria, Kenya, Ghana, and Uganda."
-    },
-    {
-        title: "How does Treepz work?",
-        content: "When you visit the Treepz website, Make a booking request via a form where you will provide your preferred service (car rental, airport shuttle, ride-hailing, or medical transport), and enter your specific needs (location, dates, passengers, etc.). Our team will reach out to give you a tarlor made service."
-    },
-    {
-        title: "Are there any safety measures in place? ",
-        content: "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle."
-    },
-    {
-        title: "Do you offer any personal mobility solutions?",
-        content: "Yes, we offer car rentals services."
-    },
-    {
-        title: "Can I customize solutions for my specific needs?",
-        content: "Absolutely! We offer flexible solutions with various vehicle types, scheduling options, and accessibility features. Contact us for a personalized quote."
-    },
-]
+export const AccordionData: AccordionDataProps[] = [
+  {
+    title: "Where is Treepz available?",
+    content:
+      "Currently, Treepz operates in several countries across Africa, including Nigeria, Kenya, Ghana, and Uganda.",
+  },
+  {
+    title: "How does Treepz work?",
+    content:
+      "When you visit the Treepz website, Make a booking request via a form where you will provide your preferred service (car rental, airport shuttle, ride-hailing, or medical transport), and enter your specific needs (location, dates, passengers, etc.). Our team will reach out to give you a tarlor made service.",
+  },
+  {
+    title: "Are there any safety measures in place? ",
+    content:
+      "As a renter, you can search for available cars on our platform and book the one that best fits your needs. As an owner, you can list your car on our platform, set your rental rates and availability, and earn money by renting out your vehicle.",
+  },
+  {
+    title: "Do you offer any personal mobility solutions?",
+    content: "Yes, we offer car rentals services.",
+  },
+  {
+    title: "Can I customize solutions for my specific needs?",
+    content:
+      "Absolutely! We offer flexible solutions with various vehicle types, scheduling options, and accessibility features. Contact us for a personalized quote.",
+  },
+];
 
 export const BoardMembers: TeamsMembersProps[] = [
   {
@@ -740,69 +753,69 @@ export const BoardMembers: TeamsMembersProps[] = [
     name: "Sunil Sharma",
     title: "MD, Techstars Toronto",
     rank: "BOARD MEMBER",
-    social: "https://www.linkedin.com/in/sunilsharmats/"
+    social: "https://www.linkedin.com/in/sunilsharmats/",
   },
   {
     src: "adejare.png",
     name: "Adejare Rasheed Olaoluwa",
     title: "EX MD, Bank of Industry Limited",
     rank: "BOARD MEMBER",
-    social: "https://www.linkedin.com/in/adejare-rasheed-olaoluwa-82588933/"
+    social: "https://www.linkedin.com/in/adejare-rasheed-olaoluwa-82588933/",
   },
   {
     src: "laura.png",
     name: "Laura Venasse",
     title: "Partner, LaBarge Weinstein LLP",
     rank: "BOARD MEMBER",
-    social: "https://www.linkedin.com/in/laura-venasse-a56b6a5a/"
+    social: "https://www.linkedin.com/in/laura-venasse-a56b6a5a/",
   },
 ];
 
-export const FoundersData:TeamsMembersProps[] = [
-    {
-        src:"onyeka.png",
-        name: "Onyeka Akumah",
-        title: "Co-Founder/CEO",
-        social: "https://www.linkedin.com/in/onyekaakumah/"
-    },
-    {
-        src:"johnny.png",
-        name: "Johnny Enagwolor",
-        title: "Co-Founder & President",
-        social: "https://www.linkedin.com/in/johnny-enagwolor-99b83766/"
-    },
-    {
-        src:"afolabi.png",
-        name: "Afolabi Oluseyi",
-        title: "Co-Founder/VP of Products",
-        social: "https://www.linkedin.com/in/oluseyi-afolabi/"
-    },
-    {
-        src:"john.png",
-        name: "John Atumeyi Shaibu",
-        title: "Co-Founder/VP of Customer Engagement",
-        social: "https://www.linkedin.com/in/john-atumeyi-shaibu/"
-    },
-]
+export const FoundersData: TeamsMembersProps[] = [
+  {
+    src: "onyeka.png",
+    name: "Onyeka Akumah",
+    title: "Co-Founder/CEO",
+    social: "https://www.linkedin.com/in/onyekaakumah/",
+  },
+  {
+    src: "johnny.png",
+    name: "Johnny Enagwolor",
+    title: "Co-Founder & President",
+    social: "https://www.linkedin.com/in/johnny-enagwolor-99b83766/",
+  },
+  {
+    src: "afolabi.png",
+    name: "Afolabi Oluseyi",
+    title: "Co-Founder/VP of Products",
+    social: "https://www.linkedin.com/in/oluseyi-afolabi/",
+  },
+  {
+    src: "john.png",
+    name: "John Atumeyi Shaibu",
+    title: "Co-Founder/VP of Customer Engagement",
+    social: "https://www.linkedin.com/in/john-atumeyi-shaibu/",
+  },
+];
 
-export const CounterData:CounterProps[] = [
-    {
-        count: "4M+",
-        text: "Customers Served"
-    },
-    {
-        count: "1.2M+",
-        text: "Passenger trips completed"
-    },
-    {
-        count: "688",
-        text: "Vehicles signed up"
-    },
-    {
-        count: "16+",
-        text: "Cities covered"
-    },
-]
+export const CounterData: CounterProps[] = [
+  {
+    count: "4M+",
+    text: "Customers Served",
+  },
+  {
+    count: "1.2M+",
+    text: "Passenger trips completed",
+  },
+  {
+    count: "688",
+    text: "Vehicles signed up",
+  },
+  {
+    count: "16+",
+    text: "Cities covered",
+  },
+];
 
 export const ConferenceSolutionData: IProps[] = [
   {
@@ -870,7 +883,6 @@ export const NonEmeTranspUniqueData: IProps[] = [
   },
 ];
 
-
 export const HealthUniqueData: IProps[] = [
   {
     icon: <SlickRides />,
@@ -934,44 +946,43 @@ export const WeddingPostalData: BlogProps[] = [
 export const BookingPros: PrivateTransProps[] = [
   {
     title: "Cost saving",
-    desc: "Self-booking can sometimes lead to lower costs, especially for small groups or simple, one-off travel arrangements"
+    desc: "Self-booking can sometimes lead to lower costs, especially for small groups or simple, one-off travel arrangements",
   },
   {
     title: "Full control",
-    desc: "You have complete control over the planning, scheduling, and logistics"
+    desc: "You have complete control over the planning, scheduling, and logistics",
   },
-]
+];
 
 export const BookingCros: PrivateTransProps[] = [
   {
     title: "Uncertainty",
-    desc: "Dealing with various service providers can lead to unpredictability, from vehicle quality to driver competence"
+    desc: "Dealing with various service providers can lead to unpredictability, from vehicle quality to driver competence",
   },
   {
     title: "Administrative burden",
-    desc: "Organizing your own group transportation can be time-consuming and may require significant effort and stress"
+    desc: "Organizing your own group transportation can be time-consuming and may require significant effort and stress",
   },
   {
     title: "Safety concerns",
-    desc: "Ensuring the safety and reliability of self-booked transportation can be challenging, not to mention accessibility"
-  }
-
-]
+    desc: "Ensuring the safety and reliability of self-booked transportation can be challenging, not to mention accessibility",
+  },
+];
 
 export const IntegrationData: PrivateTransProps[] = [
   {
-    desc: "Private transportation companies ensure reliability, safety, and professionalism, giving you peace of mind throughout your journey"
+    desc: "Private transportation companies ensure reliability, safety, and professionalism, giving you peace of mind throughout your journey",
   },
   {
-    desc: "Skilled and trained drivers with local knowledge ensure a smooth and stress-free travel experience"
+    desc: "Skilled and trained drivers with local knowledge ensure a smooth and stress-free travel experience",
   },
   {
-    desc: "Private providers offer a wide range of vehicle options to accommodate your group size and specific needs, from cars to buses and coaches"
+    desc: "Private providers offer a wide range of vehicle options to accommodate your group size and specific needs, from cars to buses and coaches",
   },
   {
-    desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points"
+    desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points",
   },
-]
+];
 
 export const ProsData: PrivateTransProps[] = [
   {
@@ -1012,23 +1023,25 @@ export const ConsData: PrivateTransProps[] = [
   {
     title: "Customization",
     desc: "Tailored itineraries and services allow you to plan your trip according to your preferences and needs, such as requiring various pickup points",
-  }
+  },
 ];
 
 export const AnnouncementData: AnnouncementProps[] = [
   {
     title: "Mobility start-up Treepz expands further in East Africa",
     date: "Feb 14, 2023",
-    link: "https://www.cnbcafrica.com/media/6320383101112/"
+    link: "https://www.cnbcafrica.com/media/6320383101112/",
   },
   {
-    title: "Treepz Appoints Ex-Meta Senior Exec And Former Nigerian MD of Bank of Industry To Its Board",
+    title:
+      "Treepz Appoints Ex-Meta Senior Exec And Former Nigerian MD of Bank of Industry To Its Board",
     date: "Aug 16, 2023",
-    link: "https://techlabari.com/treepz-appoints-ex-meta-senior-exec-and-former-nigerian-md-of-bank-of-industry-to-its-board/"
+    link: "https://techlabari.com/treepz-appoints-ex-meta-senior-exec-and-former-nigerian-md-of-bank-of-industry-to-its-board/",
   },
   {
     title: "Promoting Equitable And Sustainable Transport In Africa",
     date: "May 11, 2023",
-    link: "https://blog.treepz.com/treepz-promoting-equitable-and-sustainable-transport-in-africa/"
+    link: "https://blog.treepz.com/treepz-promoting-equitable-and-sustainable-transport-in-africa/",
   },
-]
+];
+

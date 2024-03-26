@@ -53,9 +53,9 @@ const Footer = () => {
               GROUP TRANSPORTATION SERVICES
             </h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
-              {groupLists.map((link, index) => (
-                <Link href={`/${link}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
-                  {link}
+              {groupLists.map(({ label, href }, index) => (
+                <Link href={`/${href}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
+                  {label}
                 </Link>
               ))}
             </div>
