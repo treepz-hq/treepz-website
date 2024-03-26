@@ -64,7 +64,7 @@ const Footer = () => {
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">company</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
               {companyLists.map((link, index) => (
-                <Link href={`/${link.href}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
+                <Link href={link.href.includes('blog') ? link.href :`/${link.href}`}  key={index} className="transition duration-300 ease-in-out hover:underline my-1">
                   {link.label}
                 </Link>
               ))}

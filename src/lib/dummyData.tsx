@@ -284,10 +284,10 @@ export const companyLists = [
     href: "press",
     label: "Press",
   },
-  // {
-  //   href: "https://blog.treepz.com",
-  //   label: "Blog",
-  // },
+  {
+    href: "https://blog.treepz.com",
+    label: "Blog",
+  },
   // {
   //   href: "terms",
   //   label: "Terms & Conditions",

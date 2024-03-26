@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -20,12 +20,11 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Textarea } from '../ui/textarea';
-
+import { Textarea } from "../ui/textarea";
 const formSchema = z.object({
   first_name: z.string().min(2).max(50),
   range: z.string(),
-  estimated_passengers: z.number(),
+  estimated_passengers: z.string(),
   type_of_transportation: z.string(),
   describe: z.string(),
   how_often: z.string(),
@@ -37,29 +36,57 @@ const formSchema = z.object({
 });
 
 const BookNowForm = () => {
-
-    const form = useForm<z.infer<typeof formSchema>>({
+  const { reset } = useForm();
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       first_name: "",
       range: "",
-      estimated_passengers: 1,
-      type_of_transportation:"",
+      estimated_passengers: "1",
+      type_of_transportation: "",
       describe: "",
       how_often: "",
       email: "",
       company_name: "",
       last_name: "",
       country_code: "",
-      phone_number: ""
-
+      phone_number: "",
     },
-  })
+  });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+  const onSubmit = async (values: any) => {
+    console.log(values);
+
+    const response = await fetch("/api/sendemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+
+    if (response.ok) {
+      alert("Form submitted successfully!");
+      form.reset({
+        first_name: "",
+        range: "",
+        estimated_passengers: "1",
+        type_of_transportation: "",
+        describe: "",
+        how_often: "",
+        email: "",
+        company_name: "",
+        last_name: "",
+        country_code: "",
+        phone_number: "",
+      });
+    } else {
+      console.error("Failed to submit the form.");
+
+      alert("Form submitted successfully!");
+    }
     /* Send an email with a provider here */
-  }
+  };
   return (
     <div className="mt-8 flex flex-col">
       <div className="text-[#101010] mb-10">
@@ -110,13 +137,13 @@ const BookNowForm = () => {
             <FormField
               control={form.control}
               name="type_of_transportation"
-              render={({ field }) => (
+              render={({ field: { onChange, onBlur, value, ref } }) => (
                 <FormItem>
                   <FormLabel>What type of transportation?</FormLabel>
                   <FormControl>
-                    <Select>
+                    <Select onValueChange={onChange} value={value}>
                       <SelectTrigger className="w-full sm:w-[256px]">
-                        <SelectValue placeholder="School" />
+                        <SelectValue placeholder="Select Type" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="corporate">Corporate</SelectItem>
@@ -143,7 +170,10 @@ const BookNowForm = () => {
                   Describe the transportation you are looking for *
                 </FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Describe transportation"></Textarea>
+                  <Textarea
+                    {...field}
+                    placeholder="Describe transportation"
+                  ></Textarea>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -152,15 +182,15 @@ const BookNowForm = () => {
           <FormField
             control={form.control}
             name="how_often"
-            render={({ field }) => (
+            render={({ field: { onChange, onBlur, value, ref } }) => (
               <FormItem>
                 <FormLabel>
                   How often does your organization book transportation?
                 </FormLabel>
                 <FormControl>
-                  <Select>
+                  <Select onValueChange={onChange} value={value}>
                     <SelectTrigger className="w-full">
-                      <SelectValue placeholder="School" />
+                      <SelectValue placeholder="Select How Often" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="daily">Daily</SelectItem>
@@ -279,6 +309,7 @@ const BookNowForm = () => {
       </Form>
     </div>
   );
-}
+};
 
-export default BookNowForm
+export default BookNowForm;
+
