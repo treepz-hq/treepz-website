@@ -266,7 +266,6 @@ export const solutionsLists = [
 
 export const groupLists = [
   { label: " For Airlines ", href: "airline" },
-  // { label: "For Religious Groups", href: "airport-transportation" },
   { label: "For Corporate Events", href: "event" },
   { label: "For School Trips", href: "university" },
   ,
