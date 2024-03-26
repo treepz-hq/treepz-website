@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
   // Set up email data
   const mailOptions = {
     from: ` <${email}>`, // Sender address
-    to: "dinakanwamu@gmail.com", // List of receivers
+    to: "info@treepz.com", // List of receivers
     subject: "New Message from Contact Form", // Subject line
     html: `
         <h2>Transportation Request Details</h2>
