@@ -238,26 +238,26 @@ export const BlogData: BlogProps[] = [
 ];
 
 export const solutionsLists = [
-  {
-    label: "Airport Shuttles",
-    href: "airport-shuttles",
-  },
-  {
-    label: "Campus Shuttles",
-    href: "campus-shuttles",
-  },
+  // {
+  //   label: "Airport Shuttles",
+  //   href: "airport-shuttles",
+  // },
+  // {
+  //   label: "Campus Shuttles",
+  //   href: "campus-shuttles",
+  // },
   {
     label: "Convention Transportation",
     href: "convention",
   },
-  {
-    label: "Corporate Shuttles",
-    href: "corporate-shuttles",
-  },
-  {
-    label: "Corporate Shuttle Service",
-    href: "corporate-shuttles-service",
-  },
+  // {
+  //   label: "Corporate Shuttles",
+  //   href: "corporate-shuttles",
+  // },
+  // {
+  //   label: "Corporate Shuttle Service",
+  //   href: "corporate-shuttles-service",
+  // },
   {
     label: "Event Transportation Service",
     href: "event",
@@ -284,10 +284,10 @@ export const companyLists = [
     href: "press",
     label: "Press",
   },
-  {
-    href: "https://blog.treepz.com",
-    label: "Blog",
-  },
+  // {
+  //   href: "https://blog.treepz.com",
+  //   label: "Blog",
+  // },
   // {
   //   href: "terms",
   //   label: "Terms & Conditions",
