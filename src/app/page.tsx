@@ -21,6 +21,9 @@ export default function Home() {
 
 export const metadata: Metadata = {
   title: "Treepz: Africa's Leading Corporate Mobility Solution.",
+   icons: {
+    icon: './favicon.png',
+  },
 };
 
 

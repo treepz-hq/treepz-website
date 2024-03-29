@@ -35,10 +35,12 @@ export async function POST(req: NextRequest) {
         <h2>Transportation Request Details</h2>
         <p><b>First Name:</b> ${first_name}</p>
         <p><b>Last Name:</b> ${last_name}</p>
+        <p><b>Email:</b> ${email}</p>
         <p><b>Range:</b> ${range}</p>
         <p><b>Estimated Passengers:</b> ${estimated_passengers}</p>
         <p><b>Type of Transportation:</b> ${type_of_transportation}</p>
         <p><b>Description:</b> ${describe}</p>
+
         <p><b>Frequency:</b> ${how_often}</p>
         <p><b>Company Name:</b> ${company_name}</p>
         <p><b>Country Code:</b> ${country_code}</p>
