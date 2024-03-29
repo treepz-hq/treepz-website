@@ -443,7 +443,7 @@ export const GovernmentsUniqueData: IProps[] = [
     icon: <RealSustainIcon />,
     title: "Dependability guaranteed",
     description:
-      "Swoop only works with trusted transportation operators across the US, with well-presented vehicles and 5-star drivers behind the wheel",
+      "Treepz only works with trusted transportation operators across the US, with well-presented vehicles and 5-star drivers behind the wheel",
   },
   {
     icon: <CleanAndComfortableIcon />,
@@ -461,7 +461,7 @@ export const GovernmentsUniqueData: IProps[] = [
     icon: <CheckableEasyIcon />,
     title: "Last Mile Shuttling",
     description:
-      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
+      "A unique feature to the Treepz corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
   },
   {
     icon: <SuppotLocalBuzIcon />,
@@ -656,7 +656,7 @@ export const AirportUniqueData: IProps[] = [
     icon: <ApproveReview />,
     title: "Last Mile Shuttling",
     description:
-      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
+      "A unique feature to the Treepz corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
   },
   {
     icon: <SuppotLocalBuzIcon />,
@@ -911,7 +911,7 @@ export const HealthUniqueData: IProps[] = [
     icon: <ApproveReview />,
     title: "Last Mile Shuttling",
     description:
-      "A unique feature to the Swoop corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
+      "A unique feature to the Treepz corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
   },
   {
     icon: <SuppotLocalBuzIcon />,

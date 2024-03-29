@@ -18,7 +18,7 @@ import Link from 'next/link'
 
 const NeededInformations = [
   "Discrete, Reliable, and Punctual",
-  "Why Use Swoop for Government Charter Services?",
+  "Why Use Treepz for Government Charter Services?",
   "Comfort During Demanding Journeys",
   "Be a Local Business Advocate",
 ];
@@ -32,7 +32,7 @@ const GovernmentsComponent = () => {
             Seamless and Secure: The Premier Government Charter Services
           </h1>
           <p className="text-base sm:text-xl text-center">
-            Swoop understands and serves the special needs of government bodies
+            Treepz understands and serves the special needs of government bodies
             that need a dedicated provider of reliable and secure
             transportation. We know that you want a service that always promises
             efficiency, plus stringent safety and discretion—our government
@@ -49,7 +49,7 @@ const GovernmentsComponent = () => {
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
         <h1 className="text-[32px] font-bold leading-[40px] text-[#212529] my-8 w-full text-center">
-          Why Choose Swoop for Your Premier Government Charter Transportation?
+          Why Choose Treepz for Your Premier Government Charter Transportation?
         </h1>
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           Companies who use Treepz
@@ -67,7 +67,7 @@ const GovernmentsComponent = () => {
         <p className="text-xl text-[#4D5154] text-center">
           Large-scale movements between bases, secret training programs,
           diplomatic visits, or even daily transit—each of these activities
-          requires meticulous planning and seamless implementation. Swoop’s
+          requires meticulous planning and seamless implementation. Treepz’s
           government charter services ensure that transportation is never your
           concern. With us at your service, you can focus on your essential
           duties, while we handle the logistics.
@@ -113,11 +113,11 @@ const GovernmentsComponent = () => {
         <div className="px-4 sm:pl-20 sm:pr-0 flex justify-between flex-col sm:flex-row">
           <div className="py-4 sm:py-[120px] flex flex-col w-full sm:w-[648px]">
             <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Government Transportation with Swoop
+              Government Transportation with Treepz
             </h1>
             <p className="text-lg sm:text-xl w-full">
               With our many vehicle options plus scheduling technology that
-              finally puts you in control, Swoop provides super-reliable,
+              finally puts you in control, Treepz provides super-reliable,
               carefully designed public transport services that fit your
               community and budget. When you speak to our lovely, expert team
               you will be provided with group transport options, key information
@@ -179,7 +179,7 @@ const GovernmentsComponent = () => {
           </div>
           <div className="flex flex-col space-y-6 mt-12">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-              Why Use Swoop for Government Charter Services?
+              Why Use Treepz for Government Charter Services?
             </h1>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <p>
@@ -226,7 +226,7 @@ const GovernmentsComponent = () => {
               Journeys You Can Track
             </h1>
             <p>
-              Swoop is a centralized booking system where you can track your
+              Treepz is a centralized booking system where you can track your
               trips, amend your details to make sure everyone is transported to
               and from where they need, and manage every detail in one place.
               This not only gives you the complete visibility you need but
@@ -260,7 +260,7 @@ const GovernmentsComponent = () => {
               Be a Local Business Advocate
             </h1>
             <p>
-              When you use Swoop’s sports transportation services, you also
+              When you use Treepz’s sports transportation services, you also
               support small, local business owners in your local area. We think
               it paramount that, as a national and global organization, we
               champion small business owners all over the world.
@@ -274,7 +274,7 @@ const GovernmentsComponent = () => {
               <li>Background checked and fully insured</li>
               <li>People who care about providing an impeccable service</li>
               <li>
-                Equipped with Swoop technology to provide a 5-star experience
+                Equipped with Treepz technology to provide a 5-star experience
               </li>
             </ul>
           </div>

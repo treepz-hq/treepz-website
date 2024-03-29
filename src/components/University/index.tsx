@@ -17,7 +17,7 @@ import BetterTogetherComponent from "@/components/Trips";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 
 const NeededInformations = [
-  "Why Use Swoop for Your Intercampus Shuttle Services?",
+  "Why Use Treepz for Your Intercampus Shuttle Services?",
   "Support Your Local Business!",
   "An Employee Shuttle Service You Can Rely on",
   "Drill Down to the Detail",
@@ -37,7 +37,7 @@ const UniversityComponent = () => {
             You have a bustling campus full of vibrant minds and activities.
             Some have lots of study materials, others need accessible
             transportation (and, be honest, many have parties to get to).
-            Swoop’s intercampus shuttle service will get your students and
+            Treepz’s intercampus shuttle service will get your students and
             faculty to your classes and campus events calmly, swiftly – and
             ready to seize the day.
           </p>
@@ -168,14 +168,14 @@ const UniversityComponent = () => {
             className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
             id="info-1"
           >
-            Why Use Swoop for Your Intercampus Shuttle Services?
+            Why Use Treepz for Your Intercampus Shuttle Services?
           </h1>
           <h2 className="text-2xl font-semibold my-4">
             All-Powerful Travel Management
           </h2>
           <div className="space-y-6 text-[#6F7174] text-lg border-b pb-11">
             <p>
-              Swoop arranges travel plans for students and faculty commuting
+              Treepz arranges travel plans for students and faculty commuting
               between campuses, providing budget-friendly and meticulously
               organized schedules. We have solutions to simplify your students’
               life, whether you need transportation for a single day or the
@@ -188,7 +188,7 @@ const UniversityComponent = () => {
             </h2>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <p>
-                Swoop provides a centralized booking hub where you can set your
+                Treepz provides a centralized booking hub where you can set your
                 KPIs, track your journeys, modify your details, see your
                 drivers, and manage every aspect of your travel in one place.
                 This gives you the visibility you need and allows you to
@@ -215,7 +215,7 @@ const UniversityComponent = () => {
               Support Your Local Business!
             </h2>
             <p>
-              By using Swoop’s intercampus shuttle services, you are also
+              By using Treepz’s intercampus shuttle services, you are also
               supporting the local business owners in your area. We are
               passionate advocates for local businesses worldwide, so we
               carefully select a network of local drivers who are:
@@ -225,7 +225,7 @@ const UniversityComponent = () => {
               <li>Background checked and fully insured</li>
               <li>Committed to providing excellent transportation</li>
               <li>
-                Equipped with Swoop’s cutting-edge technology for a stellar
+                Equipped with Treepz’s cutting-edge technology for a stellar
                 experience
               </li>
             </ul>

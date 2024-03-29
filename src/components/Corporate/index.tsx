@@ -13,7 +13,7 @@ import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 
-const NeededInformations = ["Corporate Shuttle Service", "Which Swoop corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Swoop vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Swoop corporate shuttle service near me?"];
+const NeededInformations = ["Corporate Shuttle Service", "Which Treepz corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Treepz vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Treepz corporate shuttle service near me?"];
 
 const CorporateComponent = () => {
   return (
@@ -99,7 +99,7 @@ const CorporateComponent = () => {
       <div className="bg-[#FDF2D0] w-full">
         <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
           <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">About Swoop</h1>
+            <h1 className="text-2xl font-bold mb-2 sm:mb-6">About Treepz</h1>
             <p className="text-lg sm:text-xl">
               Choose from hundreds of vehicles, dozens of styles, and seemingly
               endless choices when it comes to amenities. Travel around in
@@ -178,7 +178,7 @@ const CorporateComponent = () => {
 
           <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-              Which Swoop corporate shuttle service should I choose?
+              Which Treepz corporate shuttle service should I choose?
             </h1>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <li>
@@ -221,7 +221,7 @@ const CorporateComponent = () => {
               The cost of your corporate shuttle program depends on certain
               variables, such as where your passengers are traveling, how long
               you need the shuttle to run for, and how many vehicles you need.
-              Contact book@swoopapp.com to request a FREE, customized quote.
+              Contact book@Treepzapp.com to request a FREE, customized quote.
             </p>
           </div>
           <div className="flex flex-col space-y-6 my-6 border-b pb-11">
@@ -229,7 +229,7 @@ const CorporateComponent = () => {
               Is Treepz carbon neutral?
             </h1>
             <p className="text-lg text-[#6F7174]">
-              Certainly, and you can read more about that here: Swoop Rides are
+              Certainly, and you can read more about that here: Treepz Rides are
               now 100% Carbon Neutral
             </p>
             <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl">
@@ -245,7 +245,7 @@ const CorporateComponent = () => {
           </div>
           <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-4">
             <h1 className="font-semibold text-xl sm:text-2xl">
-              What type of amenities do Swoop vehicles offer?
+              What type of amenities do Treepz vehicles offer?
             </h1>
             <p className="text-lg text-[#6F7174]">
               Your employees will have a much more productive journey thanks to
@@ -293,7 +293,7 @@ const CorporateComponent = () => {
 
           <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-6">
             <h1 className="font-semibold text-xl sm:text-2xl">
-              Is there a Swoop corporate shuttle service near me?
+              Is there a Treepz corporate shuttle service near me?
             </h1>
             <p className="text-lg text-[#6F7174]">
               We currently service large metropolitan cities throughout the U.S.

@@ -12,7 +12,7 @@ import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import Link from 'next/link'
 
-const NeededInformations = ["Why Use a Corporate Travel Service?", "More than A to B", "Supporting Your Fellow Business Owners", "A Deeper Dive into Swoop for Business"];
+const NeededInformations = ["Why Use a Corporate Travel Service?", "More than A to B", "Supporting Your Fellow Business Owners", "A Deeper Dive into Treepz for Business"];
 
 const HealthTranspComponent = () => {
   return (
@@ -40,7 +40,7 @@ const HealthTranspComponent = () => {
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
         <h1 className="text-2xl text-[32px] sm:leading-[40px] font-bold uppercase text-center mb-8">
-          Why Choose swoop for business
+          Why Choose Treepz for business
         </h1>
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           Companies who use Treepz
@@ -101,11 +101,11 @@ const HealthTranspComponent = () => {
         <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
           <div className="py-4 sm:py-[120px] flex flex-col w-full sm:w-[648px]">
             <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Swoop for Business
+              Treepz for Business
             </h1>
             <p className="text-lg sm:text-xl">
               Vehicles provided by specialized travel management companies or
-              TMCs like Swoop (hey there) will help your business effectively
+              TMCs like Treepz (hey there) will help your business effectively
               manage your travel-related activities – from events and
               conferences to those stressful daily commutes.
             </p>
@@ -161,7 +161,7 @@ const HealthTranspComponent = () => {
 
             <p>
               Vehicles provided by specialized travel management companies or
-              TMCs like Swoop (hey there) will help your business effectively
+              TMCs like Treepz (hey there) will help your business effectively
               manage your travel-related activities – from events and
               conferences to those stressful daily commutes.
             </p>
@@ -189,14 +189,14 @@ const HealthTranspComponent = () => {
               More than A to B
             </h1>
             <p className="text-[#6F7174] text-lg">
-              Swoop was born out of a desire to improve on what’s come before –
+              Treepz was born out of a desire to improve on what’s come before –
               to create the next generation of on-demand transportation using
               the best quality drivers and vehicles, specially engineered
               technology, and friendly experts who will support you every mile
               of your journey.
             </p>
             <p className="text-[#6F7174] text-lg">
-              Swoop’s business travel options offer tons of benefits to your
+              Treepz’s business travel options offer tons of benefits to your
               business – more than giving your employees a ride from one place
               to another. We help you with hugely vital considerations like cost
               savings, efficient travel planning, compliance with your travel
@@ -245,9 +245,9 @@ const HealthTranspComponent = () => {
                   Supporting Your Fellow Business Owners
                 </h1>
                 <p className="text-[#6F7174] text-lg">
-                  When you use Swoop for business, you will also be doing the
+                  When you use Treepz for business, you will also be doing the
                   very wonderful thing of supporting small, local business
-                  owners in your chosen area. That’s because Swoop is a
+                  owners in your chosen area. That’s because Treepz is a
                   passionate advocate and broker for small business owners all
                   over the world.
                 </p>
@@ -260,20 +260,20 @@ const HealthTranspComponent = () => {
                 <li>Background checked and insured</li>
                 <li>People who give a damn about amazing transportation</li>
                 <li>
-                  Empowered with Swoop technology to provide a 5-star experience
+                  Empowered with Treepz technology to provide a 5-star experience
                 </li>
               </p>
             </div>
           </div>
           <div className="flex flex-col space-y-6 my-6 border-b pb-11" id='info-4'>
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-              A Deeper Dive into Swoop for Business
+              A Deeper Dive into Treepz for Business
             </h1>
             <h2 className="font-semibold text-xl sm:text-2xl">
               Business Travel Management
             </h2>
             <p className="text-lg text-[#6F7174]">
-              Swoop manages all aspects of business travel, including sourcing
+              Treepz manages all aspects of business travel, including sourcing
               ground transportation and carrying out travel itinerary planning.
               We see it as our top priority to ensure that your travel
               arrangements are made according to your company&lsquo;s travel
@@ -294,14 +294,14 @@ const HealthTranspComponent = () => {
             <p className="text-lg text-[#6F7174]">
               Employee relocation services help you manage the process of
               relocating employees, both domestically and internationally – and
-              all the transportation arrangements you make with Swoop will make
+              all the transportation arrangements you make with Treepz will make
               the relocation process smooth for both you and the employee.
             </p>
             <h2 className="font-semibold text-xl sm:text-2xl">
               Customizable Solutions
             </h2>
             <p className="text-lg text-[#6F7174]">
-              Whatever your company&lsquo;s goals, culture, and budget, Swoop
+              Whatever your company&lsquo;s goals, culture, and budget, Treepz
               will take it all into account. Because we don’t only rely on
               state-of-the-art technology but a combination of tech and real,
               helpful people, every detail is covered
@@ -310,7 +310,7 @@ const HealthTranspComponent = () => {
               Travel Policy Compliance
             </h2>
             <p className="text-lg text-[#6F7174]">
-              Swoop’s easy and transparent booking process means all your trips
+              Treepz’s easy and transparent booking process means all your trips
               will fit in with your company&lsquo;s guidelines – preventing any
               dreaded unauthorized expenses or overspending.
             </p>
@@ -318,7 +318,7 @@ const HealthTranspComponent = () => {
               Reporting and Analytics
             </h2>
             <p className="text-lg text-[#6F7174]">
-              Swoop will provide your business with detailed reports and
+              Treepz will provide your business with detailed reports and
               analytics to help you monitor travel expenses and identify
               cost-saving opportunities, so you can make informed decisions and
               optimize your travel programs.
@@ -328,7 +328,7 @@ const HealthTranspComponent = () => {
             </h2>
             <p className="text-lg text-[#6F7174]">
               The safety and well-being of your employees are so important to us
-              – so, Swoop will monitor the travel risks and provide real-time
+              – so, Treepz will monitor the travel risks and provide real-time
               alerts, emergency assistance, and support to ensure all your
               employees are safe during their trips.
             </p>

@@ -78,7 +78,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-2 items-center text-sm text-[#4D5154]">
           {socialMediaLists.map((link, index) => (
-            <Link href={`/${link.href}`} key={index} className="transition duration-900 ease-in-out hover:text-red-500 my-1">
+            <Link href={link.href} key={index} className="transition duration-900 ease-in-out hover:text-red-500 my-1">
               {link.icon}
             </Link>
           ))}

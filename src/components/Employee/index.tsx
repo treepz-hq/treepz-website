@@ -228,7 +228,7 @@ const EmployeeTransComponent = () => {
               🤝 Support local business
             </h1>
             <p>
-              Swoop&lsquo;s partnership with local shuttle providers boosts the
+              Treepz&lsquo;s partnership with local shuttle providers boosts the
               local economy and strengthens community connections, enhancing
               service reliability and community engagement.
             </p>
@@ -294,14 +294,14 @@ const EmployeeTransComponent = () => {
             </p>
 
             <p className="text-lg text-[#6F7174]">
-              With Swoop, your team will have a relaxing and productive journey
+              With Treepz, your team will have a relaxing and productive journey
               thanks to our amenities like secure WiFi and USB charging ports as
               standard. We can also offer you vehicles with reclining seats, air
               conditioning, and PA systems.
             </p>
             <p className="text-lg text-[#6F7174]">
               To keep things straightforward and consistent, when you book with
-              Swoop, you will receive a dedicated employee shuttle service
+              Treepz, you will receive a dedicated employee shuttle service
               account manager and 24/7 support. Not only do they organize
               everything for you in the beginning, but they will regularly check
               ongoing performance through our data collection feature, then
@@ -376,7 +376,7 @@ const EmployeeTransComponent = () => {
                 Carpooling feature
               </h1>
               <p className="text-lg text-[#6F7174]">
-                If you have employees who live close to one another, Swoop can
+                If you have employees who live close to one another, Treepz can
                 provide a carpooling feature that allows them to share rides.
                 This significantly lowers the number of cars on the road and
                 reduces traffic congestion.
@@ -396,7 +396,7 @@ const EmployeeTransComponent = () => {
               <p className="text-lg text-[#6F7174]">
                 If you are looking for a reliable employee shuttle service that
                 gets your team to work feeling less hassled and more productive,
-                check out Swoop! You can simply contact us now for your FREE
+                check out Treepz! You can simply contact us now for your FREE
                 bespoke quote.
               </p>
             </div>

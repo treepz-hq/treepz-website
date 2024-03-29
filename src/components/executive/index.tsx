@@ -116,7 +116,7 @@ const ExecutiveComponent = () => {
                 TREEPZ for Business
               </h1>
               <p className="text-lg sm:text-xl">
-                So, now it’s time to take advantage of Swoop’s luxury executive
+                So, now it’s time to take advantage of Treepz’s luxury executive
                 ground transportation for a stylish and professional transfer.
               </p>
 

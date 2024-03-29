@@ -51,7 +51,7 @@ const AirlineComponent = () => {
       </div>
       <div className="container px-4 sm:px-20 flex flex-col mt-[63px] mb-[113px]">
         <h1 className="text-[32px] font-bold leading-[40px] text-[#212529] my-8 w-full text-center">
-          Why Choose Swoop for Your Airline Transportation?
+          Why Choose Treepz for Your Airline Transportation?
         </h1>
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           Trusted by the Best in Business
@@ -64,7 +64,7 @@ const AirlineComponent = () => {
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
         <h1 className="w-full sm:w-[641px] mx-auto font-bold text-[28px] sm:text-[32px] leading-[40px] uppercase text-[#212529] mb-6 text-center sm:text-left">
-          Great Fliers Don’t Flap – They Swoop
+          Great Fliers Don’t Flap – They Treepz
         </h1>
         <p className="text-xl text-[#4D5154] text-center">
           Our airport shuttle services are tailored to suit your needs – you

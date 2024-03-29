@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import RentACarComponent from '@/components/RentACar';
-import HeroComponent from './../components/Hero';
-import FeaturesComponent from '@/components/Feature';
-import FutureTransportation from '@/components/Future';
-import UsersAppComponent from '@/components/UserApps';
-import BetterTogetherComponent from '@/components/Trips';
+import { Metadata } from "next";
+import RentACarComponent from "@/components/RentACar";
+import HeroComponent from "./../components/Hero";
+import FeaturesComponent from "@/components/Feature";
+import FutureTransportation from "@/components/Future";
+import UsersAppComponent from "@/components/UserApps";
+import BetterTogetherComponent from "@/components/Trips";
 
 export default function Home() {
   return (
@@ -21,9 +21,6 @@ export default function Home() {
 
 export const metadata: Metadata = {
   title: "Treepz: Africa's Leading Corporate Mobility Solution.",
-   icons: {
-    icon: './favicon.png',
-  },
-};
-
-
+ icons: {
+    icon: '/favicon.png', // /public path
+  },};
