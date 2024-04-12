@@ -381,8 +381,7 @@ const BusinessSolutionComponent = () => {
           </div>
         </div>
       </div>
-      {/* <GotPower /> */}
-      {/* End here */}
+      <GotPower />
     </>
   );
 };
