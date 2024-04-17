@@ -349,7 +349,7 @@ const ContactComponent = () => {
                       })}
                       containerClass={clsx({
                         " focus:outline-none border border-[#A0A3A6] border-opacity-60 rounded-[8px] px-3 py-4 w-full placeholder:text-color-100 ": true,
-                        "border-red-600": "border-red-600",
+                        "border-[#A0A3A6]": "border-[#A0A3A6]",
                       })}
                       dropdownClass="bg-white"
                       countryCodeEditable={false}
