@@ -340,7 +340,6 @@ const ContactComponent = () => {
                       value={value}
                       onChange={onChange}
                       inputProps={{
-                        name,
                         required: true,
                       }}
                       country={"ng"}
