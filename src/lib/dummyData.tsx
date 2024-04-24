@@ -109,17 +109,17 @@ export const BlogsData: NewsProps[] = [
   },
   {
     src: "/blogs/blog-2.png",
-    title: "So What Have We Been Up To At Treepz In 2023?",
-    date: "Jan 14, 2023",
-    desc: "At Treepz, we’re thrilled to reflect on the remarkable achievements and growth we experienced throughout 2023.",
-    href: "https://blog.treepz.com/so-what-have-we-been-up-to-at-treepz-in-2023/",
+    title: "5 Trends In Business: What To Expect In The Next Decade",
+    date: "Oct 20, 2023",
+    desc: "These trends in business are fast-disrupting customer expectations, moving their experience needle, and influencing how they view businesses.",
+    href: "https://blog.treepz.com/5-trends-in-business-what-to-expect-in-the-next-decade/",
   },
   {
     src: "/blogs/blog-3.png",
-    title: "So What Have We Been Up To At Treepz In 2023?",
-    date: "Jan 14, 2023",
-    desc: "At Treepz, we’re thrilled to reflect on the remarkable achievements and growth we experienced throughout 2023.",
-    href: "https://blog.treepz.com/so-what-have-we-been-up-to-at-treepz-in-2023/",
+    title: "Steal The Spotlight: Why Celebs Choose Treepz Car Rentals",
+    date: "Sept 28, 2023",
+    desc: "From commanding an executive presence to stealing the spotlight, and making cool money, discover why celebs always opt for Treepz car rentals.",
+    href: "https://blog.treepz.com/what-if-we-told-you-that-treepz-could-help-you-steal-the-spotlight-like-jay-z-irrespective-of-the-occasion-without-necessarily-sweating-your-pockets/",
   },
 ];
 
@@ -138,8 +138,8 @@ export const NewsData: NewsProps[] = [
   },
   {
     logo: <TechMoranLogo />,
-    title: "Online vehicle rentals company, Treepz expands into Kenya",
-    date: "Feb 14, 2023",
+    title: "Treepz Selected for 2023 VC4A Venture Showcase",
+    date: "Aug 24, 2023",
     href: "https://techmoran.com/2023/08/24/treepz-selected-for-2023-vc4a-venture-showcase-appoints-new-board-members-to-foster-sustainable-growth/"
   },
   {
@@ -208,10 +208,11 @@ export const BusinessSolutionsData:PostalCardProps[] = [
         title:"Airline",
         href: "airline"
     },
-    {
-        src:"religious.png",
-        title:"Religious groups",
-    },
+    // {
+    //     src:"religious.png",
+    //     title:"Religious groups",
+    //     href: 'contact'
+    // },
     {
         src:"corporate.png",
         title:"Corporate events",
@@ -225,31 +226,36 @@ export const BusinessSolutionsData:PostalCardProps[] = [
     {
         src:"private.png",
         title:"Private events",
+        href: 'executive-transportation'
+
     },
     {
         src:"university.png",
         title:"University",
         href: "university"
     },
-    {
-        src:"sporting.png",
-        title:"Sporting teams",
-    },
-    {
-        src:"military.png",
-        title:"Military",
-    },
+    // {
+    //     src:"sporting.png",
+    //     title:"Sporting teams",
+    // },
+    // {
+    //     src:"military.png",
+    //     title:"Military",
+    // },
     {
         src:"production.png",
         title:"Production crews",
+        href: "contact"
     },
     {
         src:"weddings.png",
         title:"Weddings",
+        href: 'wedding-transportation'
     },
     {
         src:"government.png",
         title:"Government",
+        href:'governments'
     },
 ]
 
@@ -338,14 +344,14 @@ export const companyLists = [
     href: "https://blog.treepz.com",
     label: "Blog",
   },
-  // {
-  //   href: "terms",
-  //   label: "Terms & Conditions",
-  // },
-  // {
-  //   href: "privacy",
-  //   label: "Privacy & Cookie Policy",
-  // },
+  {
+    href: "terms",
+    label: "Terms & Conditions",
+  },
+  {
+    href: "privacy",
+    label: "Privacy & Cookie Policy",
+  },
 ];
 export const socialMediaLists: SocialProps[] = [
   {

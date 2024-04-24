@@ -39,7 +39,8 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
    const pathname = usePathname();
-
+  const targetPaths = ["/wedding-transportation", "/privacy", "/terms"];
+  const bgClass = targetPaths.includes(pathname) ? "!bg-[#FDF3D8]" : "!bg-white";
    const [openSubMenu, setOpenSubMenu] = useState(null);
    const [selectedMenu, setSelectedMenu] = useState(null);
    const [subMenuItemClicked, setSubMenuItemClicked] = useState(false);
@@ -108,9 +109,7 @@ const handleSubMenuItemClick = () => {
      };
   return (
     <div
-      className={`w-full sm:max-w-[1691px] h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 bg-white fixed top-0 z-50 ${
-        ["/wedding-transportation"].includes(pathname) && "bg-[#FDF3D8]"
-      }`}
+      className={`w-full sm:max-w-[1691px]  h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 fixed top-0 z-50 ${bgClass}`}
     >
       <div className="flex sm:w-[702px] justify-between items-center">
         <span className="cursor-pointer mr-10" onClick={() => router.push("/")}>
@@ -119,13 +118,13 @@ const handleSubMenuItemClick = () => {
         <NavigationMenu className="hidden sm:inline-block">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+              <NavigationMenuTrigger className={bgClass} >Solutions</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 sm:w-[900px] lg:w-[900px] lg:grid-cols-3">
+                <ul className={`${bgClass} grid gap-3 p-6 sm:w-[900px] lg:w-[900px] lg:grid-cols-3`}>
                   <li className="row-span-2">
                     <NavigationMenuLink asChild>
                       <div className="flex flex-col w-[229px] mr-2">
-                        <p className="text-[#6F7174] hover:text-[#F8B02B] hover:bg-[#FDF2D0] uppercase text-sm cursor-default px-4">
+                        <p className={`text-[#6F7174] hover:text-[#F8B02B] hover:bg-[#FDF2D0] uppercase text-sm cursor-default px-4`}>
                           group Transportation services
                         </p>
                         <div className="mb-10 flex flex-col">
@@ -208,11 +207,11 @@ const handleSubMenuItemClick = () => {
 
             {/* Group Transportation Services */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="hover:!bg-none">
+              <NavigationMenuTrigger className={`hover:!bg-none ${bgClass}`}>
                 Group Transportation Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 sm:w-[400px] lg:w-[500px] lg:grid-cols-2">
+                <ul className={`grid gap-3 p-6  sm:w-[400px] lg:w-[500px] lg:grid-cols-2 ${bgClass}`}>
                   <li className="row-span-2">
                     <NavigationMenuLink asChild>
                       <div className="flex flex-col w-[229px] pl-[12px]">
@@ -244,14 +243,14 @@ const handleSubMenuItemClick = () => {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink className={`${bgClass} ${navigationMenuTriggerStyle()} `}>
                   About us
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink className={`${bgClass} ${navigationMenuTriggerStyle()} `}>
                   Contact us
                 </NavigationMenuLink>
               </Link>
@@ -263,7 +262,7 @@ const handleSubMenuItemClick = () => {
         <Button
           variant={"outline"}
           onClick={showModal}
-          className="font-medium w-fit sm:w-[144px] relative group overflow-hidden"
+          className={`font-medium w-fit sm:w-[144px] relative group overflow-hidden ${bgClass}`}
         >
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
             Rent a car

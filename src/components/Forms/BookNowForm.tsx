@@ -26,7 +26,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from '../ui/textarea';
-
+import toast from 'react-hot-toast';
 const formSchema = z.object({
   first_name: z.string().min(2).max(50),
   range: z.string(),
@@ -72,7 +72,7 @@ const BookNowForm = () => {
     });
 
     if (response.ok) {
-      alert("Form submitted successfully!");
+            toast.success('Form submitted successfully!');
       form.reset({
         first_name: "",
         range: "",
@@ -85,8 +85,9 @@ const BookNowForm = () => {
         last_name: "",
         phone_number: "",
       });
+
     } else {
-      alert("Failed to submit the form.");
+            toast.error('Form submission failed!');
     }
   }
   return (
