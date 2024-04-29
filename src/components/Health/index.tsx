@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import Image from 'next/image';
 import OurPartners from '../Hero/partners';
 import Postal from '../common/card';
-import { HealthUniqueData, AccordionData, MiniPartnerData } from '@/lib/dummyData';
+import { HealthUniqueData, AccordionData, MiniPartnerData, HealthPartnerData } from '@/lib/dummyData';
 import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
@@ -33,6 +33,8 @@ const HealthTranspComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit sm:w-[152px] sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
+
+                            onClick={showModal}
           >
             Learn more
           </Button>
@@ -46,7 +48,7 @@ const HealthTranspComponent = () => {
           Companies who use Treepz
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
-          {MiniPartnerData.map(({ src }: any) => (
+          {HealthPartnerData.map(({ src }: any) => (
             <OurPartners src={src} key={src} />
           ))}
         </div>
@@ -60,7 +62,7 @@ const HealthTranspComponent = () => {
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {HealthUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -244,6 +246,7 @@ const HealthTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px] sm:h-[64px]"
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Change your travel plans
@@ -265,8 +268,7 @@ const HealthTranspComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
+    
     </div>
   );
 };

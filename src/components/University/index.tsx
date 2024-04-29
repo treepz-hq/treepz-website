@@ -17,35 +17,30 @@ import BetterTogetherComponent from "@/components/Trips";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
-
+import { useModal } from "@/contexts/ModalContext";
 const NeededInformations = [
   "Why Use Treepz for Your Intercampus Shuttle Services?",
   "Support Your Local Business!",
-  "An Employee Shuttle Service You Can Rely on",
-  "Drill Down to the Detail",
-  "So, What Are the Options?",
-  "It’s a Win-Win for Your Business",
+  "Frequently Asked Questions",
+  
 ];
 
 const UniversityComponent = () => {
+    const {showModal} = useModal()
   return (
     <div>
       <div className="bg-[url(/university-hero.png)] bg-cover bg-no-repeat w-full h-[650px] sm:h-[708px]">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
           <h1 className="font-bold text-[28px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
-            Treepz’s Intercampus Shuttle for Easier Day Seizability
+          Treepz Shuttle: Campus hustle made easy.
           </h1>
           <p className="text-base sm:text-xl text-center">
-            You have a bustling campus full of vibrant minds and activities.
-            Some have lots of study materials, others need accessible
-            transportation (and, be honest, many have parties to get to).
-            Treepz’s intercampus shuttle service will get your students and
-            faculty to your classes and campus events calmly, swiftly – and
-            ready to seize the day.
+   Campus life is filled with packed schedules: Juggling classes, clubs, events, and maybe some fun on the side? Treepz gets it. Our intercampus shuttle fits seamlessly into your busy world, getting you where you need to be – fast, stress-free, and ready to conquer your day.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
+onClick={showModal}
             //onClick={() => {}}
           >
             Speak to Treepz
@@ -80,7 +75,7 @@ const UniversityComponent = () => {
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {UniversityUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -216,7 +211,8 @@ const UniversityComponent = () => {
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]" 
+                        onClick={showModal}
             //onClick={() => {}}
           >
             Contact us
@@ -237,8 +233,7 @@ const UniversityComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
+ 
     </div>
   );
 };

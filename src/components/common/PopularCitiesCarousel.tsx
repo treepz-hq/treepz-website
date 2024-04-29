@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState ,useEffect} from 'react'
 import Image from 'next/image'
 import ArrowLeftLine from '@/assets/svgs/arrow-left-line.svg'
 import ArrowRightLine from '@/assets/svgs/arrow-right-line.svg'
@@ -16,10 +17,26 @@ import {
 } from "@/components/ui/card"
 
 const PopularCitiesCarousel = () => {
+    const [number, setNumber] = useState(0)
+  const handleRightClick = () => {
+    if (number <= 400) { // Ensure the number does not go above 1000 after adding 200
+      setNumber(prevNumber => prevNumber + 200);
+            console.log(number)
+    }
+  };
+
+  const handleLeftClick = (event:any) => {
+    if (number >= 200) { // Ensure the number does not go below 0 after subtracting 200
+      setNumber(prevNumber => prevNumber - 200);
+
+    }
+  };
+    useEffect(() => {setNumber(number)},[number])
   return (
-    <>
-      <div className="w-full flex px-4 overflow-hidden gap-x-6 mb-5">
-        <div className="w-full sm:w-[292px] h-[377px] p-[12px] mb-1 flex flex-col shadow rounded-2xl">
+    <div className="w-full relative overflow-hidden">
+      <div className={`w-full flex px-4 flex-col items-center md:items-start md:justify-start gap-y-3 sm:gap-y-0 justify-center md:flex-row -ml-[${number}px] gap-x-6 transition ease-in-out duration-300  mb-5 `}>
+
+        <div className="w-[303px] sm:w-[292px] h-[377px] p-[12px] mb-1 flex flex-col shadow rounded-2xl">
           <div className="w-[268px] h-[205px] relative overflow-hidden">
             <Image
               src="/lagos.png"
@@ -38,7 +55,7 @@ const PopularCitiesCarousel = () => {
             Experience Lagos with Treepz!
           </p>
         </div>
-        <div className="w-full sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
+        <div className="w-[303px] sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
           <div className="w-[268px] h-[205px] relative overflow-hidden">
             <Image
               src="/abuja.png"
@@ -57,7 +74,7 @@ const PopularCitiesCarousel = () => {
             must-sees.
           </p>
         </div>
-        <div className="w-full sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
+        <div className="w-[303px] sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
           <div className="w-[268px] h-[205px] relative overflow-hidden">
             <Image
               src="/nairobi.png"
@@ -76,7 +93,7 @@ const PopularCitiesCarousel = () => {
             explore the city effortlessly with Treepz!
           </p>
         </div>
-        <div className="w-full sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
+        <div className="w-[303px] sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
           <div className="w-[268px] h-[205px] relative overflow-hidden">
             <Image
               src="/lagos.png"
@@ -95,7 +112,7 @@ const PopularCitiesCarousel = () => {
             style.
           </p>
         </div>
-        <div className="w-full sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
+        <div className="w-[303px] sm:w-[292px] h-[377px] p-[12px] flex flex-col shadow rounded-2xl">
           <div className="w-[268px] h-[205px] relative overflow-hidden">
             <Image
               src="/kampala.png"
@@ -115,15 +132,15 @@ const PopularCitiesCarousel = () => {
           </p>
         </div>
       </div>
-      <div className="w-full sm:w-[292px] flex gap-6 p-2 mt-10 ml-10 sm:ml-20">
-        <div className="flex justify-center border border-gray-900 items-center w-8 h-8 rounded-full">
+      <div className="w-full sm:w-[292px] hidden md:flex gap-6 p-2 mt-10 ml-10 sm:ml-20">
+        <div onClick={handleLeftClick}  className="flex cursor-pointer justify-center border border-gray-900 items-center w-8 h-8 rounded-full">
           <ArrowLeftLine />
         </div>
-        <div className="flex justify-center items-center w-8 h-8 border border-gray-900 rounded-full">
+        <div onClick={handleRightClick} className="flex justify-center cursor-pointer items-center w-8 h-8 border border-gray-900 rounded-full">
           <ArrowRightLine />
         </div>
       </div>
-    </>
+    </div>
     /*  <Carousel className="w-full bg-red-900">
       <CarouselContent className="-ml-1">
         {Array.from({ length: 5 }).map((_, index) => (

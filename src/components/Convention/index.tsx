@@ -1,28 +1,39 @@
-'use client'
-import React from 'react'
-import { Button } from '../ui/button';
-import Image from 'next/image';
-import Link from 'next/link';
-import OurPartners from '../Hero/partners';
+"use client";
+import React from "react";
+import { Button } from "../ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import OurPartners from "../Hero/partners";
 import { StaticPartnersDataForCon } from "../Hero/data";
-import Postal from '../common/card';
-import { ConventionUniqueData, AccordionData } from '@/lib/dummyData';
-import TimerIcon from '@/assets/svgs/timer.svg'
-import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
-import TechCommLogos from '@/components/common/techs'
-import BetterTogetherComponent from '@/components/Trips';
-import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
-import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
-import GetAQuote from '@/components/common/get-a-quote'
-import UserRoutesComponent from '@/components/common/user-routes'
-import { useModal } from '@/contexts/ModalContext';
-import StaticPartners from '../common/static-partners';
+import Postal from "../common/card";
+import { ConventionUniqueData, AccordionData } from "@/lib/dummyData";
+import TimerIcon from "@/assets/svgs/timer.svg";
+import ChevronRightIcon from "@/assets/svgs/chervon-right-nav.svg";
+import TechCommLogos from "@/components/common/techs";
+import BetterTogetherComponent from "@/components/Trips";
+import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
+import MiniStickyBarMenu from "@/components/common/MiniStickyBarMenu";
+import GetAQuote from "@/components/common/get-a-quote";
+import UserRoutesComponent from "@/components/common/user-routes";
+import { useModal } from "@/contexts/ModalContext";
+import StaticPartners from "../common/static-partners";
 
-
-const NeededInformations = ["How Treepz Will Take Your Worries Away", "Treepz has the know-how", "Our conference shuttle services", "Tailor-made solutions", "Time and cost savings","Safety", "Choose your own vehicle","Carbon neutral","Options for convention shuttles","How much does it cost for convention transportation near me?", "Book EASY Convention Transporation"];
+const NeededInformations = [
+  "How Treepz Will Take Your Worries Away",
+  "Treepz has the know-how",
+  "Our conference shuttle services",
+  "Tailor-made solutions",
+  "Time and cost savings",
+  "Safety",
+  "Choose your own vehicle",
+  "Carbon neutral",
+  "Options for convention shuttles",
+  "How much does it cost for convention transportation near me?",
+  "Book EASY Convention Transporation",
+];
 
 const ConventionComponent = () => {
-   const { showModal } = useModal();
+  const { showModal } = useModal();
   return (
     <div>
       <div className="bg-[url(/Hero-convention.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
@@ -38,6 +49,7 @@ const ConventionComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[172px] mx-auto mt-8 sm:mt-14 sm:h-[64px]"
+              onClick={showModal}
               //onClick={() => {}}
             >
               Find out more
@@ -99,6 +111,7 @@ const ConventionComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+            onClick={showModal}
             //onClick={() => {}}
           >
             Get a quote
@@ -113,7 +126,6 @@ const ConventionComponent = () => {
               className="object-contain absolute"
             />
           </div>
-
           <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               We are experts in the game
@@ -129,10 +141,10 @@ const ConventionComponent = () => {
                 vehicle selection for your convention.
               </p>
             </div>
-            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
+            <h1 id="info-3" className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Our conference shuttle services
             </h1>
-            <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
+            <div className="space-y-6 text-[#6F7174] text-lg">
               <p>
                 Treepz is your trusted partner for large-scale event
                 transportation. Our years of experience and proven track record
@@ -142,100 +154,186 @@ const ConventionComponent = () => {
               </p>
             </div>
           </div>
-          <div className="mt-11 border-b pb-11">
+          <div className="mt-[24px] border-b pb-11">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
-              Options
+              The Treepz difference
             </h1>
-            <div className="flex flex-col space-y-6 my-6">
-              <h1 className="font-semibold text-xl sm:text-2xl">
-                School bus services
-              </h1>
-              <p className="text-lg text-[#6F7174]">
-                Bus services for schools need a reliable, transparent, and safe
-                system comprising common sense teamwork, experienced drivers,
-                and real-time technology for peace of mind. Check them all off
-                your list – Treepz has it covered.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-6 my-6">
-              <h1 className="font-semibold text-xl sm:text-2xl">Bus rental</h1>
-              <p className="text-lg text-[#6F7174]">
-                If your school requires a bus for a special day out or field
-                trip, why not take advantage of our bus rental services? One of
-                the school’s designated drivers can transfer the kids from A to
-                B with little fuss, so they can have a lot of fun when they get
-                there.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-6 my-6" id="info-3">
-              <h1 className="font-semibold text-xl sm:text-2xl">
-                Door-to-door school bus services
-              </h1>
-              <p className="text-lg text-[#6F7174]">
-                Some of your students may need to be picked up from their homes
-                rather than a collective bus stop or meeting point. That is
-                completely fine, you can just let our team know any requirements
-                like this and it will get built into your service.
-              </p>
-            </div>
-            <div className="flex flex-col space-y-6" id="info-4">
-              <h1 className="font-semibold text-xl sm:text-2xl">
-                Special needs transportation
-              </h1>
-              <p className="text-lg text-[#6F7174]">
-                We can provide vehicles for groups of children who have special
-                needs – perhaps a smaller vehicle is needed, or a vehicle with
-                additional wheelchair or stroller access. Let us know what will
-                work for your students and we will make it happen.
-              </p>
+            <div className="flex flex-col space-y-6 ">
+              <div className="text-lg text-[#6F7174]">
+                <ul className="list-disc">
+                  <li>24/7 travel support</li>
+                  <li>Best price guarantee</li>
+                  <li>Free cancellation</li>
+                  <li>Endless options</li>
+                  <li>Successful trips</li>
+                  <li>BBB A+ accredited</li>
+                  <li>
+                    Trusted by small businesses to Fortune 500 companies alike
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <Button
-            variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[260px] font-medium mt-8 sm:mt-6 text-black flex gap-2"
-            //onClick={() => {}}
-          >
-            Get the there with Treepz
-            <ChevronRightIcon />
-          </Button>
-          <div
-            className="flex flex-col space-y-6 border-t mt-6 pt-6"
-            id="info-5"
-          >
-            <h1 className="font-semibold text-xl sm:text-2xl">
-              Treepz x Lagos Business School
+          <div id="info-4" className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Tailor-made solutions
             </h1>
-            <p className="text-lg text-[#6F7174]">
-              Treepz specializes in large events that are notoriously complex.
-              We understand that you are looking for a reputable company that
-              can take the strain away from you and take your delegates, guests,
-              and teammates to a conference or convention.
-            </p>
+            <div className="flex flex-col space-y-6 ">
+              <div className="text-lg text-[#6F7174]">
+                <p>
+                  Got special requirements? We can take care of them – just talk
+                  to our team at Treepz and request a FREE, customized quote for
+                  your convention transportation. Every trip we take you on will
+                  be:
+                </p>
+                <ul className="list-disc space-y-3">
+                  <li>Comfortable</li>
+                  <li>Safe</li>
+                  <li>Reliable</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div
-            className="flex flex-col space-y-6 border-t mt-6 pt-6"
-            id="info-6"
-          >
-            <h1 className="font-semibold text-xl sm:text-2xl">
-              Book an ‘A’ in Transportation!
+          <div id="info-5" className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Time and cost savings
             </h1>
-            <p className="text-lg text-[#6F7174]">
-              Check out Treepz! You are in the right place, if you are looking
-              for reliable private transportation services for school near
-              me—you can simply contact us now for your FREE bespoke quote.
-            </p>
+            <div className="">
+              <div className="text-lg text-[#6F7174]">
+                <ul className="list-disc space-y-6">
+                  <li>
+                    Save driving time – we have only professional and
+                    experienced chauffeurs who know exactly how to get from A to
+                    B without running into X, Y, or Z
+                  </li>
+                  <li>
+                    Save your research time – just check out our excellent
+                    reviews from past customer conventions in locations such as
+                    Los Angeles, Atlanta, San Francisco, New York, Miami, and
+                    more{" "}
+                  </li>
+                  <li>
+                    Save money – because we use the best routing options to make
+                    sure you don’t pay for a vehicle when you don't need to
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="h-[328px] relative w-[343px] sm:w-[500px] mt-[40px]  md:w-[853px]">
+              <Image
+                src="/conference-hero.png"
+                alt="Convention"
+                layout="fill"
+              />
+            </div>
           </div>
-          <Button
-            variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[216px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
-            onClick={showModal}
-          >
-            Get a custom quote
-            <ChevronRightIcon />
-          </Button>
+          <div id="info-6" className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Safety
+            </h1>
+            <div className="flex flex-col space-y-6 ">
+              <div className="text-lg text-[#6F7174]">
+                You are covered by top insurance and you will be driven by
+                top-of-the-line drivers using the best GPS software.
+              </div>
+            </div>
+
+            <h1 id="info-7" className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] my-6">
+              Choose your own vehicles
+            </h1>
+
+            <div className="flex flex-col space-y-6 ">
+              <div className="text-lg text-[#6F7174]">
+                Choose from a selection of sprinter vans, charter buses,
+                mini-coaches, limousines, SUVs, sedans, party buses, and transit
+                buses.{" "}
+              </div>
+            </div>
+          </div>{" "}
+          <div id="info-8" className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Carbon neutral
+            </h1>
+            <div className="">
+              <div className="text-lg text-[#6F7174]">
+                We pledge that every trip booked with Treepz will support the
+                fight against climate change. Find out more here - Treepz Rides
+                are now 100% Carbon Neutral
+              </div>
+            </div>
+            <div className="h-[328px] relative w-[343px] sm:w-[500px] mt-[40px]  md:w-[853px]">
+              <Image src="/carbon.png" alt="Carbon" layout="fill" />
+            </div>
+          </div>
+          <div id="info-9"  className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Options for Convention shuttles
+            </h1>
+            <div className="">
+              <div className="text-lg text-[#6F7174]">
+                <ul className="list-disc ">
+                  <li>Airport transfers & hotel shuttles</li>
+                  <li>VIP sedan, SUV, and limo tranfers</li>
+                  <li>Convention center to hotel shuttles</li>
+                  <li>Hotel-to-hotel shuttles</li>
+                  <li>
+                    Local convention center for group tours, sightseeing,
+                    events, conferences, field trips, and corporate events
+                  </li>
+                </ul>
+                <p className="my-6">
+                  All of our vehicles are classy and comfy – you will enjoy
+                  premium seating with lots of legroom, perfect air temperature
+                  control, restrooms, entertainment systems, and that
+                  all-important Wi-Fi access.
+                </p>
+              </div>
+              <Button
+                className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
+                onClick={showModal}
+              >
+                {" "}
+                Get a customized quote{" "}
+                <ChevronRightIcon className="ml-2 w-6 h-6" />{" "}
+              </Button>
+            </div>
+          </div>
+   <div id="info-10" className="mt-[24px] border-b pb-11">
+        <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          How much does it cost for convention transportation near me?
+        </h1>
+        <div className="flex flex-col space-y-6 ">
+          <div className="text-lg text-[#6F7174]">
+            The cost of your convention transportation depends on a few things
+            like where you need your passengers to go, how long the conference
+            shuttle service is running, and how many vehicles you require.
+            Contact Treepz to request a FREE, bespoke quote for your conference
+            transportation.
+          </div>
+        </div>
+      </div>{" "}
+      <div id="info-11"  className="mt-[24px]  pb-11">
+        <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          Book EASY Convention Transportation
+        </h1>
+        <div className="flex flex-col space-y-6 mb-[40px] ">
+          <div className="text-lg text-[#6F7174]">
+            Don't hesitate. Discover our convention transportation services
+          </div>
+        </div>
+        <Button
+          className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
+          onClick={showModal}
+        >
+          {" "}
+          Book easy convention transportation{" "}
+          <ChevronRightIcon className="ml-2 w-6 h-6" />{" "}
+        </Button>
+      </div>{" "}
+
         </div>
       </div>
-      <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
+         <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
         <h1 className="font-semibold text-xl sm:text-2xl mb-6">
           Explore our most popular cities
         </h1>
@@ -252,4 +350,5 @@ const ConventionComponent = () => {
   );
 };
 
-export default ConventionComponent
+export default ConventionComponent;
+

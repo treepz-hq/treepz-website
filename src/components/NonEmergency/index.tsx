@@ -12,11 +12,12 @@ import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
-
+import { useModal } from '@/contexts/ModalContext';
 
 const NeededInformations = ["Non-Emergency Medical Transportation", "Caring Transportation When You Need it Most", "Get There Safely with Treepz", "Drill Down to the Detail", "So, What Are the Options?","It’s a Win-Win for Your Business"];
 
 const NonEmergencyTranspComponent = () => {
+    const {showModal} = useModal()
   return (
     <div>
       <div className="bg-[url(/non-eme-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px] mt-10 sm:mt-20">
@@ -25,12 +26,12 @@ const NonEmergencyTranspComponent = () => {
             Non-Emergency Medical Transportation
           </h1>
           <p className="text-base sm:text-lg text-center w-full sm:w-[671px] mx-auto">
-            Book our service and have an experience tailored to your needs.
-            Dozens of options and amenities to choose from!
+           Convenient transportation for your medical needs.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold w-full sm:w-fit sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
+                        onClick={showModal}
             //onClick={() => {}}
           >
             Book your non-medical emergency transportation
@@ -43,7 +44,7 @@ const NonEmergencyTranspComponent = () => {
           Why Choose Treepz for Non-Emergency Medical Transportation?
         </h1>
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
-          Companies who use Treepz
+We work with the best companies  in business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
           {MiniPartnerData.map(({ src }: any) => (
@@ -53,16 +54,14 @@ const NonEmergencyTranspComponent = () => {
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
         <h1 className="w-full sm:w-[735px] mx-auto font-bold text-[20px] sm:text-[28px] leading-[32px] uppercase text-[#212529] mb-6 text-center">
-          Capabilities for all your needs
+treepz, your companion for good health
         </h1>
         <p className="text-xl text-[#4D5154] text-center w-full sm:w-[1022px] mx-auto">
-          We’re different from your average transportation provider, and working
-          with us is more than just a quick transaction. Our dedicated team is
-          ready to tailor our services exactly to your transportation needs.
+It's not just a ride, it's a tailored solution. Our dedicated team works with you to create a transportation plan that fits your unique needs.
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {NonEmeTranspUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -122,6 +121,8 @@ const NonEmergencyTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+
+                        onClick={showModal}
               //onClick={() => {}}
             >
               Get a quote
@@ -259,6 +260,7 @@ const NonEmergencyTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+                        onClick={showModal}
               //onClick={() => {}}
             >
               Contact our team
@@ -274,7 +276,7 @@ const NonEmergencyTranspComponent = () => {
               and Los Angeles. Contact us to talk about your hometown!
             </p>
           </div>
-          <div className="flex flex-col space-y-6 my-6 pb-11">
+          <div className="flex flex-col space-y-6 my-6 pb-11" id='info-6'>
             <h1 className="font-semibold text-xl sm:text-2xl">
               Book your Non-Emergency Medical Transportation
             </h1>
@@ -288,6 +290,7 @@ const NonEmergencyTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+                        onClick={showModal}
               //onClick={() => {}}
             >
               Talk to us about your needs
@@ -309,8 +312,6 @@ const NonEmergencyTranspComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
     </div>
   );
 };

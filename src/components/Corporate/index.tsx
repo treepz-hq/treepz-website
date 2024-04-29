@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import OurPartners from '../Hero/partners';
 import Postal from '../common/card';
-import { CorporateUniqueData, AccordionData, MiniPartnerData } from '@/lib/dummyData';
+import { CorporateUniqueData, CorporateShuttleData, AccordionData, MiniPartnerData, MainPartnerData } from '@/lib/dummyData';
 import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
@@ -14,27 +14,27 @@ import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '../common/user-routes';
-
+import { useModal } from '@/contexts/ModalContext';
 const NeededInformations = ["Corporate Shuttle Service", "Which Treepz corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Treepz vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Treepz corporate shuttle service near me?"];
 
 const CorporateComponent = () => {
+    const {showModal} = useModal();
   return (
     <div>
       <div className="bg-[url(/corporate-hero.png)] bg-cover bg-no-repeat w-full h-[622px] sm:h-[707px] sm:mt-20">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[144px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[54px] sm:leading-[56px] mb-[28px] uppercase text-center">
-            Corporate Shuttle Services: The Drive Behind Your Business
+           Drive Your Business Forward 
+with Treepz Shuttles.
           </h1>
           <p className="text-base sm:text-lg text-center">
-            Much more than A to B – workplace journeys should provide comfort
-            and professional calm for your team as they move from one place to
-            another. Treepz has dozens of options to make travel a beneficial
-            part of your working day. 
+       Workplace trips shouldn't be a hassle. Treepz provides dozens of options to create a comfortable, professional atmosphere for your team, from the moment they leave home to the moment they arrive.
           </p>
           <div className="flex justify-center w-full">
             <Button
               variant={"default"}
               className="w-fit mx-auto mt-8 sm:mt-14 sm:w-[310px] font-semibold sm:h-[64px]"
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Book your corporate transportation
@@ -47,24 +47,22 @@ const CorporateComponent = () => {
           Setting the Standard in Corporate Shuttle Services
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
-          {MiniPartnerData.map(({ src }: any) => (
+          {MainPartnerData.map(({ src }: any) => (
             <OurPartners src={src} key={src} />
           ))}
         </div>
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
-        <h1 className="w-full sm:w-[735px] mx-auto font-bold text-[20px] sm:text-[28px] leading-[32px] uppercase text-[#212529] mb-6 text-center sm:text-left">
-          Skilled Services, Providing Everything You Need
+        <h1 className="w-full mx-auto font-bold text-[20px] sm:text-[28px]  leading-[32px] uppercase text-[#212529] mb-6 text-center ">
+Expert Solutions for Your Transportation needs
         </h1>
         <p className="text-xl text-[#4D5154] text-center w-full sm:w-[725px] mx-auto">
-          We’re different from your average transportation provider, and working
-          with us is more than just a quick transaction. Our dedicated team is
-          ready to tailor our services exactly to your transportation needs.
+We're invested in your journey, not just your destination. Treepz goes beyond quick transactions, building relationships and adapting to your evolving transportation needs.
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
-        {CorporateUniqueData.map(({ icon, title, description }) => (
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
+        {CorporateShuttleData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
             key={title}
@@ -114,6 +112,7 @@ const CorporateComponent = () => {
           <Button
             variant={"default"}
             className="sm:h-[64px] w-full sm:w-[252px] sm:mt-10 sm:mb-[48px]"
+              onClick={showModal}
             //onClick={() => {}}
           >
             Talk to our friendly team
@@ -159,6 +158,7 @@ const CorporateComponent = () => {
               <Button
                 variant={"default"}
                 className="mt-6 w-full sm:w-[220px] sm:mt-10 sm:mb-[48px]"
+              onClick={showModal}
                 //onClick={() => {}}
               >
                 Get your team there
@@ -177,7 +177,7 @@ const CorporateComponent = () => {
               Contact book@Treepzapp.com to request a FREE, customized quote.
             </p>
           </div>
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id='info-4' >
             <h1 className="font-semibold text-xl sm:text-2xl">
               Is Treepz carbon neutral?
             </h1>
@@ -196,7 +196,7 @@ const CorporateComponent = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-4">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-5">
             <h1 className="font-semibold text-xl sm:text-2xl">
               What type of amenities do Treepz vehicles offer?
             </h1>
@@ -214,7 +214,7 @@ const CorporateComponent = () => {
             </p>
           </div>
 
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id='info-6' >
             <h1 className="font-semibold text-xl sm:text-2xl">
               How many vehicles can I reserve for the corporate shuttle service?
             </h1>
@@ -229,22 +229,7 @@ const CorporateComponent = () => {
             </p>
           </div>
 
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-5">
-            <h1 className="font-semibold text-xl sm:text-2xl">
-              How many vehicles can I reserve for the corporate shuttle service?
-            </h1>
-            <p className="text-lg text-[#6F7174]">
-              Ask us for whatever you need. We offer a wide range of vehicles
-              from executive SUVs, minivans, sprinter vans, mini-coaches, and
-              motor coaches.
-            </p>
-            <p className="text-lg text-[#6F7174]">
-              Whether it’s a small group or thousands of employees we can tailor
-              the logistics and vehicles based on your needs.
-            </p>
-          </div>
-
-          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-6">
+          <div className="flex flex-col space-y-6 my-6 border-b pb-11" id="info-7">
             <h1 className="font-semibold text-xl sm:text-2xl">
               Is there a Treepz corporate shuttle service near me?
             </h1>
@@ -267,6 +252,7 @@ const CorporateComponent = () => {
             <Button
               variant={"default"}
               className="sm:h-[64px] mt-6 w-full sm:w-[248px] sm:mt-10 sm:mb-[48px]"
+              onClick={showModal}
               //onClick={() => {}}
             >
               Get a customized quote
@@ -288,8 +274,6 @@ const CorporateComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-      <TechCommLogos />
-      <BetterTogetherComponent />
     </div>
   );
 };

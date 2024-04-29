@@ -12,21 +12,9 @@ const WeddingFeatures = () => {
       </h1>
       <div className="flex w-full flex-col space-y-6 text-base sm:text-lg text-[#4D5154] mb-[80px] sm:mb-[107px]">
         <p>
-          Imagine Treepz as an extension of your team; whether it’s a wedding
-          shuttle service, a wedding party bus, or a limousine, Treepz will make
-          sure transportation for your wedding is just as amazing as your big
-          day.
+     Planning a wedding? Ditch the stress and let Treepz be your magic carpet ride! We've got stylish limos, fun party buses, and elegant shuttles to whisk your guests away in comfort. Our award-winning service is all about making your big day special, so you can focus on the love.c
         </p>
-        <p>
-          Treepz transportation provides award-winning wedding rides. Our team
-          does everything we can do make sure you your special days is SPECIAL.
-          When booking with Treepz, you are guaranteed that your wedding shuttle
-          service is reliable and affordable.
-        </p>
-        <p>
-          Feel confident when booking a Wedding Bus, party busses for weddings
-          or any other vehicles with us.
-        </p>
+    
       </div>
       <div className="flex flex-col sm:flex-row justify-between sm:items-center">
         <div>{FirstColumn.map(item => (
