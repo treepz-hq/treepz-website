@@ -233,8 +233,8 @@ onClick={showModal}
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
- 
-    </div>
+
+        </div>
   );
 };
 

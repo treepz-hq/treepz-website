@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef } from "react";
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
@@ -21,7 +22,7 @@ const useClickOutside = (callback: () => void) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [callback]);
+  }, [callback, handleClickOutside]);
 
   return ref;
 };
