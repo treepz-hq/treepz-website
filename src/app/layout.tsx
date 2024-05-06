@@ -11,6 +11,7 @@ import { ReactNode } from "react";
 import ModalComponent from "@/components/Modal";
 import BookNowForm from "@/components/Forms/BookNowForm";
 
+import toast, { Toaster } from 'react-hot-toast';
 const myFont = localFont({
   src: [
     {
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <ModalComponent title="Book Now & Contact us">
               <BookNowForm />
             </ModalComponent>
+                        <Toaster/>
           </ModalProvider>
         </div>
       </body>

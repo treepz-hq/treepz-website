@@ -141,5 +141,8 @@
 }
 
 
-
+html {
+scroll-padding-top: 75px;
+  scroll-behavior: smooth;
+}
 /* ENDS HERE */

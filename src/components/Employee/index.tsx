@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from '../ui/button';
 import OurPartners from '@/components/Hero/partners';
 import Postal from "../common/card";
-import { EmployeeUniqueData, MiniPartnerData } from "@/lib/dummyData";
+import { EmployeePartnerData, EmployeeUniqueData, MainPartnerData, MiniPartnerData } from "@/lib/dummyData";
 import Image from 'next/image';
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TimerIcon from '@/assets/svgs/timer.svg'
@@ -14,7 +14,7 @@ import Link from 'next/link'
 import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
-
+import { useModal } from '@/contexts/ModalContext';
 const NeededInformations = [
   "What is the Impact of Using an Employee Shuttle Service?",
   "How much does it cost?",
@@ -25,12 +25,13 @@ const NeededInformations = [
 ];
 
 const EmployeeTransComponent = () => {
+    const {showModal} = useModal()
   return (
     <>
       <div className="bg-[url(/employee-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
         <div className="mb-13 flex flex-col w-full sm:w-[783px] text-center">
           <h1 className="text-[36px] sm:text-[56px] font-bold leading-[40px] sm:leading-[64px] uppercase text-center w-full">
-            Streamlined Commuting with Treepz’s Employee Shuttle Services
+Get your employees to move better
           </h1>
           <p className="text-base text-center sm:text-xl mt-[20px] sm:mt-[28px]">
             Less stress, more productivity. Get your colleagues and employees to
@@ -40,7 +41,7 @@ const EmployeeTransComponent = () => {
         <Button
           variant={"default"}
           className="w-fit sm:w-[197px] mx-auto mt-5 sm:mt-[52px] sm:h-[64px] font-semibold text-base"
-          //onClick={() => {}}
+          onClick={showModal}
         >
           Speak with our team
         </Button>
@@ -51,10 +52,10 @@ const EmployeeTransComponent = () => {
       <div className="container px-4 sm:px-20 flex flex-col mt-[75px] mb-[113px]">
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           {}
-          Trusted by Your Favorite Businesses
+          We are trusted by the best in the business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center ">
-          {MiniPartnerData.map(({ src }: any) => (
+          {EmployeePartnerData.map(({ src }: any) => (
             <OurPartners src={src} key={src} />
           ))}
         </div>
@@ -63,17 +64,12 @@ const EmployeeTransComponent = () => {
         <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] text-[#212529] uppercase font-bold text-center">
           Any Size, Any Time, Anywhere
         </h1>
-        <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center sm:text-left">
-          We understand that every business is different – so with our employee
-          transportation service, you can order one or two vehicles or a whole
-          fleet. We guarantee punctuality, traceability, timeliness, and cool
-          tunes if that&lsquo;s your thing. Because when it comes to getting
-          your team where they need to be, we&lsquo;re not just on time –
-          we&lsquo;re on your vibe!
+        <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center ">
+      Our employee transportation scales to your needs, from small teams to large companies. Enjoy reliable rides, real-time tracking, and optional music at affordable prices. Get your team where they need to be, efficiently and cost-effectively.
         </p>
       </div>
       {/* School category */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap my-14">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {EmployeeUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -200,7 +196,7 @@ const EmployeeTransComponent = () => {
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px] h-[64px]"
-              //onClick={() => {}}
+              onClick={showModal}
             >
               Get in touch
               <ChevronRightIcon />
@@ -267,6 +263,7 @@ const EmployeeTransComponent = () => {
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[263px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
+              onClick={showModal}
               //onClick={() => {}}
             >
               Find how Treepz can help
@@ -356,6 +353,7 @@ const EmployeeTransComponent = () => {
             <Button
               variant={"default"}
               className="font-mediummt-6 w-fit sm:w-[241px] mx-auto sm:h-[64px] sm:mt-10 sm:mb-[48px]"
+              onClick={showModal}
               //onClick={() => {}}
             >
               Get your custom quote

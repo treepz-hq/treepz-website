@@ -17,7 +17,7 @@ import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import Link from 'next/link'
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from "../common/user-routes";
-
+import { useModal } from "@/contexts/ModalContext";
 const NeededInformations = [
   "Discrete, Reliable, and Punctual",
   "Why Use Treepz for Government Charter Services?",
@@ -26,26 +26,25 @@ const NeededInformations = [
 ];
 
 const GovernmentsComponent = () => {
+    const {showModal }= useModal()
   return (
     <div>
       <div className="bg-[url(/government-hero.png)] bg-cover bg-no-repeat w-full h-[650px] sm:h-[708px]">
-        <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
-          <h1 className="font-bold text-[28px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
-            Seamless and Secure: The Premier Government Charter Services
+        <div className="w-full mx-auto text-white pt-[60px]  sm:pt-[100px] px-4">
+          <h1 className="font-bold text-[28px] mt-[40px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
+            Seamless and Secure: The <br className="hidden sm:block"/>Premier Government Charter <br className="hidden sm:block"/> Services
           </h1>
           <p className="text-base sm:text-xl text-center">
-            Treepz understands and serves the special needs of government bodies
-            that need a dedicated provider of reliable and secure
-            transportation. We know that you want a service that always promises
-            efficiency, plus stringent safety and discretion—our government
-            charter services are meticulously designed to offer just that.
+           
+Choose Treepz, your trusted partner for secure, reliable rides. We understand your unique needs for discretion, <br/>safety, and efficiency, delivering meticulously planned charters that meet your strictest requirements.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
+                        onClick={showModal}
             //onClick={() => {}}
           >
-            Learn more
+Learn more about our Premier Government Charter Services
           </Button>
         </div>
       </div>
@@ -67,16 +66,11 @@ const GovernmentsComponent = () => {
           Focus on Your Essential Duties
         </h1>
         <p className="text-xl text-[#4D5154] text-center">
-          Large-scale movements between bases, secret training programs,
-          diplomatic visits, or even daily transit—each of these activities
-          requires meticulous planning and seamless implementation. Treepz’s
-          government charter services ensure that transportation is never your
-          concern. With us at your service, you can focus on your essential
-          duties, while we handle the logistics.
+Treepz tailors charter solutions for any government need, from large-scale deployments to VIP transport. Our expertise guarantees meticulous planning and flawless execution, leaving you free to fulfill your vital missions.
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {GovernmentsUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -105,7 +99,7 @@ const GovernmentsComponent = () => {
           {NeededInformations.map((info, index) => (
             <Link
               href={`#info-${index + 1}`}
-              className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
+              className="flex border-b cursor-pointer text-gray-900  justify-between items-center p-4"
               key={index}
             >
               <span className="w-full sm:w-[290px] font-semibold">{info}</span>
@@ -114,7 +108,7 @@ const GovernmentsComponent = () => {
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
-          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6" id='info-1'>
             Discrete, Reliable, and Punctual
           </h1>
           <div className="space-y-6 text-[#6F7174] text-lg border-b pb-11">
@@ -128,7 +122,7 @@ const GovernmentsComponent = () => {
               professional as you do.
             </p>
           </div>
-          <div className="flex flex-col space-y-6 mt-12">
+          <div className="flex flex-col space-y-6 mt-12" id='info-2'>
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Why Use Treepz for Government Charter Services?
             </h1>
@@ -144,7 +138,7 @@ const GovernmentsComponent = () => {
               </p>
             </div>
           </div>
-          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
+          <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6" id="info-3">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
               Comfort During Demanding Journeys
             </h1>
@@ -207,7 +201,7 @@ const GovernmentsComponent = () => {
             </p>
           </div>
           <div className="mt-11 border-b pb-11 flex flex-col space-y-6 my-6">
-            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]" id="info-4">
               Be a Local Business Advocate
             </h1>
             <p>
@@ -232,6 +226,7 @@ const GovernmentsComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+                        onClick={showModal}
             //onClick={() => {}}
           >
             Experience a new standard

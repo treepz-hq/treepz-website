@@ -21,7 +21,7 @@ const WeddingComponent = () => {
                         <h1 className="text-[28px] sm:text-[56px] font-bold text-[#212529] sm:leading-[64px]">Treepz for Weddings</h1>
                         <div className="flex space-y-8 flex-col text-lg sm:text-xl">
                             <p>Weddings are tough to plan. Finding wedding transportation shouldn’t be.</p>
-                            <p>With over 5000 positive reviews and satisfied couples nationwide, our promise is to provide you and your loved ones with a 5-Star Experience on your special day.</p>
+                            <p>Book Treepz for a seemless wedding transportation.</p>
                         </div>
                         <Button
                             variant={"default"}
@@ -48,6 +48,7 @@ const WeddingComponent = () => {
                 </div>
             </div>
             <WeddingFeatures />
+            <div className='mt-[150px]'></div>
             <Testimony />
             <div className="container px-4 sm:px-20 flex justify-between items-center flex-col sm:flex-row">
                 {WeddingPostalData.map(({ src, title, description}) => (

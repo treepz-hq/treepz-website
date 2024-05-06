@@ -1,9 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import React from 'react'
 import { Button } from '../ui/button';
 import Image from 'next/image';
 import Postal from '../common/card';
-import { ExecutiveUniqueData, AccordionData } from '@/lib/dummyData';
+import { ExecutiveUniqueData, AccordionData, ExecutivePartnerData } from '@/lib/dummyData';
 import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
@@ -14,10 +15,11 @@ import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
-
-const ExecutiveInfo =["What is the Impact of Using an Employee Shuttle Service?", "How much does it cost?", "An Employee Shuttle Service You Can Rely on","Drill Down to the Detail", "So, What Are the Options?", "It’s a Win-Win for Your Business"]
+import { useModal } from '@/contexts/ModalContext';
+const ExecutiveInfo =["Put Your Workplace Travels  in Treepz’s Hands", "Why Choose Treepz for Your Executive Transport?", "Our Tailored Event Transportation Services","Convenient Luxury Tailored to Your Business", "How much does it cost?", "Got questions? Go Ahead!","Get Started Right Away"]
 
 const ExecutiveComponent = () => {
+    const { showModal } = useModal();
     return (
       <div>
         <div className="bg-[url(/exec-trans.png)] bg-cover bg-no-repeat w-full h-[479px] sm:h-[708px] justify-center items-center sm:mt-20">
@@ -33,6 +35,7 @@ const ExecutiveComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[194px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px]"
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Tell me more
@@ -48,7 +51,7 @@ const ExecutiveComponent = () => {
             Companies who use Treepz
           </p>
           <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
-            {OurPartnersData.map(({ src }: any) => (
+            {ExecutivePartnerData.map(({ src }: any) => (
               <OurPartners src={src} key={src} />
             ))}
           </div>
@@ -58,14 +61,11 @@ const ExecutiveComponent = () => {
             Convenient Luxury that Doesn’t Break the Bank
           </h1>
           <p className="text-lg text-[#4D5154] text-center">
-            Executive transportation could include anything from airport
-            transfers to corporate events, business meetings, conferences, and
-            even employee commutes. All of these traditionally hold a level of
-            stress, making the working day feel trickier than it should.
+    From airport pickups to critical meetings, executive transportation shouldn't add to your busy schedule. Eliminate the stress of arranging rides and focus on what matters with our seamless solutions.
           </p>
         </div>
         {/* unique */}
-        <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
           {ExecutiveUniqueData.map(({ icon, title, description }) => (
             <Postal
               icon={icon}
@@ -110,7 +110,7 @@ const ExecutiveComponent = () => {
               </div>
             ))}
           </div> */}
-          <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
+          <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id='info-1'>
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
               Put Your Workplace Woes in Treepz’s Hands
             </h1>
@@ -131,6 +131,8 @@ const ExecutiveComponent = () => {
             <Button
               variant={"default"}
               className="mt-6 w-full sm:w-[200px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
+
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Contact our team
@@ -145,7 +147,7 @@ const ExecutiveComponent = () => {
               />
             </div> */}
 
-            <div className="flex flex-col space-y-6 mt-12">
+            <div className="flex flex-col space-y-6 mt-12" id='info-2'>
               <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
                 Why Choose Treepz for Your Executive Transport?
               </h1>
@@ -191,7 +193,7 @@ const ExecutiveComponent = () => {
                 </li>
               </div>
             </div>
-            <div className="mt-11 border-b pb-11">
+            <div className="mt-11 border-b pb-11" id='info-3'>
               {/* <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
                 Options
               </h1> */}
@@ -215,7 +217,7 @@ const ExecutiveComponent = () => {
                   </li>
                 </p>
               </div>
-              <div className="flex flex-col space-y-6 my-6">
+              <div className="flex flex-col space-y-6 my-6" id='info-4'>
                 <h1 className="font-semibold text-xl sm:text-2xl">
                   Convenient Luxury Tailored to Your Business
                 </h1>
@@ -251,6 +253,8 @@ const ExecutiveComponent = () => {
               <Button
                 variant={"default"}
                 className="cursor-pointer rounded-full w-fit sm:w-[260px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+
+                            onClick={showModal}
                 //onClick={() => {}}
               >
                 Get them there with Treepz
@@ -266,7 +270,7 @@ const ExecutiveComponent = () => {
                 className="object-fill absolute"
               />
             </div>
-            <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
+            <div className="flex flex-col space-y-6 border-t mt-6 pt-6" id='info-5'>
               <h1 className="font-semibold text-xl sm:text-2xl">
                 How much does it cost?
               </h1>
@@ -290,58 +294,15 @@ const ExecutiveComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+
               //onClick={() => {}}
+                            onClick={showModal}
             >
               Get them there with Treepz
               <ChevronRightIcon />
             </Button>
-            <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
-              <h1 className="font-semibold text-xl sm:text-2xl">
-                Get Started Right Away
-              </h1>
-              <p className="text-lg text-[#6F7174]">
-                If this sounds like you right now
-                <li>
-                  You are tired of a complicated booking process for each event
-                  or journey
-                </li>
-                <li>
-                  You’re fed up with drivers showing up late or getting stuck in
-                  traffic
-                </li>
-                <li>
-                  You need to know exactly where your clients or employees are
-                  while they travel
-                </li>
-                <li>
-                  Or you simply want to help your colleagues get to work on time
-                  every day
-                </li>
-                <p className="my-6">
-                  We guarantee we have all the vehicles and organizational
-                  skills you need so you can get on with your day job (right?).
-                </p>
-              </p>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
-              //onClick={() => {}}
-            >
-              Get a quota
-              <ChevronRightIcon />
-            </Button>
-            <div className="w-full h-[400px] sm:h-[328px] relative overflow-hidden my-10">
-              <Image
-                src="/exe-2.png"
-                alt="detail"
-                fill
-                priority
-                className="object-fill absolute"
-              />
-            </div>
-            <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
-              <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+                       <div className="flex flex-col space-y-6 border-t mt-6 pt-6">
+              <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6" id='info-6'>
                 Got questions? Go Ahead!
               </h1>
               <h1 className="font-semibold text-xl sm:text-[22px] sm:leading-[28px]">
@@ -390,11 +351,61 @@ const ExecutiveComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Get a quota
               <ChevronRightIcon />
             </Button>
+ <div className="flex flex-col space-y-6 border-t mt-6 pt-6" id='info-7'>
+              <h1 className="font-semibold text-xl sm:text-2xl">
+                Get Started Right Away
+              </h1>
+              <p className="text-lg text-[#6F7174]">
+                If this sounds like you right now
+                <li>
+                  You are tired of a complicated booking process for each event
+                  or journey
+                </li>
+                <li>
+                  You’re fed up with drivers showing up late or getting stuck in
+                  traffic
+                </li>
+                <li>
+                  You need to know exactly where your clients or employees are
+                  while they travel
+                </li>
+                <li>
+                  Or you simply want to help your colleagues get to work on time
+                  every day
+                </li>
+                <p className="my-6">
+                  We guarantee we have all the vehicles and organizational
+                  skills you need so you can get on with your day job (right?).
+                </p>
+              </p>
+            </div>
+            <Button
+              variant={"default"}
+              className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+
+                            onClick={showModal}
+              //onClick={() => {}}
+            >
+              Get a quota
+              <ChevronRightIcon />
+            </Button>
+            <div className="w-full h-[400px] sm:h-[328px] relative overflow-hidden my-10">
+              <Image
+                src="/exe-2.png"
+                alt="detail"
+                fill
+                priority
+                className="object-fill absolute"
+              />
+            </div>
+
           </div>
         </div>
         <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">

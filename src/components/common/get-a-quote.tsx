@@ -1,8 +1,9 @@
 'use client'
 import TimerIcon from '@/assets/svgs/timer.svg'
 import { Button } from '../ui/button';
-
+import { useModal } from '@/contexts/ModalContext';
 const GetAQuote = () => {
+    const { showModal } = useModal();
     return (
         <div className="bg-black">
         <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
@@ -22,7 +23,8 @@ const GetAQuote = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full w-fit sm:w-[144px] text-gray-900 flex items-center ml-3 sm:ml-10"
-              //onClick={() => {}}
+
+                            onClick={showModal}
             >
               Get a quote
             </Button>
