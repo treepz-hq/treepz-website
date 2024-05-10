@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from '../ui/button';
 import OurPartners from '@/components/Hero/partners';
 import Postal from "../common/card";
-import { ShoolUniqueData, MiniPartnerData } from "@/lib/dummyData";
+import { ShoolUniqueData, MiniPartnerData, SchoolPartnerData } from "@/lib/dummyData";
 import Image from 'next/image';
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TimerIcon from '@/assets/svgs/timer.svg'
@@ -13,6 +13,7 @@ import BetterTogetherComponent from '@/components/Trips';
 import Link from 'next/link'
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
+import { useModal } from '@/contexts/ModalContext';
 
 const NeededInformations = [
   "Treepz’s School Transport Services",
@@ -22,6 +23,7 @@ const NeededInformations = [
 ];
 
 const SchoolTransComponent = () => {
+    const {showModal} = useModal()
   return (
     <>
       <div className="bg-[url(/school-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5">
@@ -30,15 +32,13 @@ const SchoolTransComponent = () => {
             TREEPZ’S School Transportation Services
           </h1>
           <p className="text-base text-center sm:text-xl mt-[20px] sm:mt-[28px]">
-            If you’re here because you have been handed the task of organizing
-            your next convention shuttle service, we have dozens of options and
-            amenities for you to choose from.
+      From field trips to sporting events, Treepz gets your students there comfortably, efficiently, and happily.  Book your next school trip with confidence and let us handle the ride, so you can focus on what matters most - your students!
           </p>
         </div>
         <Button
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-semibold gap-2 mt-14"
-          //onClick={() => {}}
+          onClick={showModal}
         >
           Book your school transportation service
         </Button>
@@ -49,10 +49,10 @@ const SchoolTransComponent = () => {
       <div className="container px-4 sm:px-20 flex flex-col mt-[75px] mb-[113px]">
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
           {}
-          Trusted by Your Favorite Businesses
+          Trusted by Your Favorite Schools
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center ">
-          {MiniPartnerData.map(({ src }: any) => (
+          {SchoolPartnerData.map(({ src }: any) => (
             <OurPartners src={src} key={src} />
           ))}
         </div>
@@ -68,7 +68,7 @@ const SchoolTransComponent = () => {
         </p>
       </div>
       {/* School category */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap my-14">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {ShoolUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -95,7 +95,7 @@ const SchoolTransComponent = () => {
               ground transportation for a stylish and professional transfer."
       />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
-        <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
+        <div className="md:flex flex-col w-full sm:w-[352px] hidden h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
             FILL ALL THE INFORMATION YOU NEED
           </h1>
@@ -137,6 +137,8 @@ const SchoolTransComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-medium flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+
+              onClick={showModal}
             //onClick={() => {}}
           >
             Get a quote
@@ -218,7 +220,7 @@ const SchoolTransComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              //onClick={() => {}}
+              onClick={showModal}
             >
               Get the there with Treepz
               <ChevronRightIcon />
@@ -316,6 +318,8 @@ const SchoolTransComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-full sm:w-[216px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+
+              onClick={showModal}
             //onClick={() => {}}
           >
             Get a custom quote

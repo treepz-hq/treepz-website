@@ -18,7 +18,7 @@ const Footer = () => {
       "bg-[#F7F7F7]": ['/employee-transportation', '/contact'].includes(pathname),
       "mt-[206px]": ['/contact'].includes(pathname)
     })}>
-    <div className="container px-4 sm:px-20">
+    <div className="container  z-50 relative px-4 sm:px-20">
       <div className="flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
         <div className="w-full sm:w-[298px] flex flex-col">
           <span
@@ -36,9 +36,9 @@ const Footer = () => {
         <div className="w-full sm:w-[730px] flex flex-col sm:flex-row justify-between">
           <div className="w-[196px]">
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">Solutions</h1>
-            <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
+            <div className="flex flex-col gap-2 text-sm text-[#4D5154]">
               {solutionsLists.map(({ label, href }, index) => (
-                <Link href={`/${href}`}  key={index} className="relative inline-block transition-colors duration-700 group w-fit">
+                <Link href={`/${href}`}  key={index} className="relativetransition-colors duration-700 group w-fit">
                       {label}
                       <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#4D5154] transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100"></span>
                   </Link>

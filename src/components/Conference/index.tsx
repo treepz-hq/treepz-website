@@ -7,9 +7,12 @@ import { ConferenceSolutionData } from '@/lib/dummyData';
 import CompaniesWithSolution from '@/components/common/companyWithSolution'
 import Testimony from '@/components/common/testimony'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
+import { useModal } from '@/contexts/ModalContext';
 
-
+import { usePathname, useRouter } from 'next/navigation'
 const ConferenceComponent = () => {
+const {showModal} = useModal();
+    const router = useRouter();
     return (
       <>
         <div className="container px-4 sm:px-20 mt-32">
@@ -32,6 +35,7 @@ const ConferenceComponent = () => {
               <Button
                 variant={"default"}
                 className="mt-5 w-fit px-5 py-4 sm:w-[168px] mx-auto sm:h-[64px] font-medium"
+                            onClick={showModal}
                 //onClick={() => {}}
               >
                 Connect with us
@@ -50,7 +54,9 @@ const ConferenceComponent = () => {
             </div>
           </div>
           {/* company Solution */}
-          <div className="flex flex-col sm:flex-row items-center gap-[73px]">
+                <h1 className='uppercase font-bold max-w-[527px] mb-[52px] sm:text-[32px] '>
+                Providing Hundreds of <br/> Companies With Solutions</h1>
+          <div className="flex flex-col sm:flex-row items-center sm:mb-[100px] gap-[73px]">
             {ConferenceSolutionData.map(
               ({ icon, title, description }, index) => (
                 <CompaniesWithSolution
@@ -75,7 +81,7 @@ const ConferenceComponent = () => {
             <Button
               variant={"default"}
               className="w-fit sm:w-[144px] mx-auto font-semibold sm:h-[64px]"
-              //onClick={() => {}}
+            onClick={showModal}
             >
               Get a quote
             </Button>
@@ -99,7 +105,6 @@ const ConferenceComponent = () => {
               <h1 className="text-[28px] sm:text-[32px] text-[#4D5154] mt-6 mb-10 font-semibold">
                 Lagos
               </h1>
-              <p className="text-xl sm:text-2xl text-[#6F7174]">20 people</p>
             </div>
             <div className="w-full sm:w-[292px] py-4 px-[12px] gap-4 rounded-2xl mt-10 shadow">
               <div className="w-full sm:w-[268px] h-[205px] relative overflow-hidden">
@@ -114,7 +119,6 @@ const ConferenceComponent = () => {
               <h1 className="text-[32px] text-[#4D5154] mt-6 mb-10 font-semibold">
                 Kampala
               </h1>
-              <p className="text-2xl text-[#6F7174]">20 people</p>
             </div>
             <div className="w-full sm:w-[292px] py-4 px-[12px] gap-4 shadow rounded-2xl mt-10">
               <div className="w-full sm:w-[268px] h-[205px] relative overflow-hidden">
@@ -129,7 +133,6 @@ const ConferenceComponent = () => {
               <h1 className="text-[32px] text-[#4D5154] mt-6 mb-10 font-semibold">
                 Abuja
               </h1>
-              <p className="text-2xl text-[#6F7174]">20 people</p>
             </div>
             <div className="w-full sm:w-[292px] py-4 px-[12px] gap-4 shadow rounded-2xl mt-10">
               <div className="w-full sm:w-[268px] h-[205px] relative overflow">
@@ -144,7 +147,6 @@ const ConferenceComponent = () => {
               <h1 className="text-[32px] text-[#4D5154] mt-6 mb-10 font-semibold">
                 Nairobi
               </h1>
-              <p className="text-2xl text-[#6F7174]">20 people</p>
             </div>
           </div>
         </div>
@@ -170,13 +172,52 @@ const ConferenceComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full w-fit sm:w-[156px] font-semibold mt-8 sm:mt-[54px] sm:h-[64px]"
-              //onClick={() => {}}
+              onClick={showModal}
             >
               Get a quote
               <ChevronRightIcon />
             </Button>
-          </div>
+          </div>  
         </div>
+  <div className="relative w-full sm:max-w-[1640px] mt-[50px] sm:mt-[200px]  h-[176.66px] sm:h-[377.861px] mx-auto">
+          <Image
+            src="/footer-header.png"
+            alt="footer"
+            sizes="100vw"
+            fill
+            priority
+            className="absolute object-contain"
+          />
+        </div>
+
+  <div className="relative z-10 bg-[url(/cta-card.png)] bg-cover bg-no-repeat bg-black p-4 sm:p-14 rounded-2xl sm:rounded-[32px] w-full sm:w-[1138px] sm:mx-auto -mt-16 flex justify-center shadow">
+
+          <div className="w-full sm:w-[791px] mx-auto text-white">
+            <h1 className="text-[28px] sm:text-[56px] text-white font-semibold mb-8 w-full text-center sm:w-[841px] sm:leading-[64px]">
+              WE ARE HERE TO HELP
+            </h1>
+            <p className="text-xl text-[#DEE0E3] text-center w-full">
+Submit your event details and we’ll reach out within 24 hours. We’re here to help you every step of the way.
+            </p>
+
+            <div className="flex flex-col sm:flex-row w-full  mt-11  justify-center items-center">
+              <Button
+                variant={"default"}
+                className="w-full sm:w-[200px] sm:h-[64px] relative overflow-hidden group"
+                onClick={showModal}
+              >
+                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              Get in touch
+            </span>
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              Get in touch
+            </span>
+                
+              </Button>
+    
+            </div>
+          </div>
+            </div>
       </>
     );
 }

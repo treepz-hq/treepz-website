@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import React from 'react'
 import { Button } from '../ui/button';
@@ -17,7 +18,7 @@ import { useModal } from "@/contexts/ModalContext";
 import { useRouter } from 'next/navigation'
 
 const NeededInformations = [
-  "Why Use a Corporate Travel Service?",
+  "Why Use an Airport Transport Service?",
   "More than A to B",
   "Supporting Your Fellow Business Owners",
   "A Deeper Dive into Treepz for Business"
@@ -32,21 +33,19 @@ const AirportTransComponent = () => {
       <div className="bg-[url(/airport-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
         <div className="mb-13 flex flex-col w-full sm:w-[783px] text-center">
           <h1 className="text-[36px] sm:text-[56px] font-bold leading-[40px] sm:leading-[64px] uppercase text-center w-full">
-            The Best in Ground Transportation
+From touchdown to town
           </h1>
           <p className="text-base text-center sm:text-xl mt-[20px] sm:mt-[28px]">
-            We are transportation service experts across executive company
-            events, executive transfers, special occasions, and team off-sites.
-            Easily search and book sprinter vans, coaches, and charter buses
-            with a professional driver.
+           Leave the airport hassle behind: Book your stress-free ride with Treepz.
           </p>
         </div>
         <Button
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-medium gap-2 mt-14"
+                    onClick={showModal}
           //onClick={() => {}}
         >
-          Learn more
+       Book Now 
         </Button>
       </div>
       <h1 className="text-2xl sm:text-[32px] leading-[40px] font-bold mt-[56px] sm:mt-[96px] sm:mb-[42px] w-full text-center">
@@ -54,7 +53,7 @@ const AirportTransComponent = () => {
       </h1>
       <div className="container px-4 sm:px-20 flex flex-col mt-[75px] mb-[113px]">
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
-          Companies who use Treepz
+We are used by the best airlines cin business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center ">
           {MiniPartnerData.map(({ src }: any) => (
@@ -64,16 +63,14 @@ const AirportTransComponent = () => {
       </div>
       <div className="flex flex-col w-full space-y-6 justify-center items-center sm:max-w-[1022px] sm:mx-auto">
         <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] text-[#212529] uppercase font-bold text-center">
-          Transporting your team, stress-free and cool as cucumbers
+ Arrive Feeling Refreshed
         </h1>
-        <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center sm:text-left">
-          By all means, your business could cope without the use of corporate
-          travel services but in our opinion, when it comes to running your
-          business smoothly and profitably, there are too many reasons not to.
+        <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center  ">
+     Business travel shouldn't start with airport chaos. Partner with Treepz for optimized costs, guaranteed safety, and a seamless arrival experience for you and your team. 
         </p>
       </div>
       {/* School category */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap my-14">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {AirportUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -121,25 +118,12 @@ const AirportTransComponent = () => {
             className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
             id="info-1"
           >
-            Why Use a Corporate Travel Service?
+Why Use an Airport Transport Service?
           </h1>
           <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
-            By all means, your business could cope without the use of corporate
-            travel services but in our opinion, when it comes to running your
-            business smoothly and profitably, there are too many reasons not to.
+       Imagine: happy arrivals, boosted productivity, and reduced costs. Treepz handles everything - reliable rides, pro drivers, user-friendly app, all for a smooth touchdown. Let's talk and see how we can empower your team and your business.
           </p>
-          <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
-            Vehicles provided by specialized travel management companies or TMCs
-            like Treepz (hey there) will help your business effectively manage
-            your travel-related activities – from events and conferences to
-            those stressful daily commutes.
-          </p>
-          <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
-            TMCs serve as a one-stop solution for businesses to streamline
-            travel planning, bookings, and budget management. They also provide
-            assistance with corporate event planning, group travel, and employee
-            relocation. Sound good? Step this way…
-          </p>
+        
           <div className="w-full sm:h-[328px] my-6 sm:my-14 relative overflow-hidden rounded-2xl">
             <Image
               src="/airport-1.png"
@@ -301,6 +285,7 @@ const AirportTransComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+                            onClick={showModal}
               //onClick={() => {}}
             >
               Change your travel plans

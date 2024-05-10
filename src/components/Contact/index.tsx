@@ -30,6 +30,7 @@ import { Button } from "@/components/ui/button";
 import CountryCodeInput from "@/components/ui/country-code-input";
 import { Textarea } from "../ui/textarea";
 
+import toast, { Toaster } from "react-hot-toast";
 const formSchema = z.object({
   first_name: z.string().min(2).max(50),
   range: z.string(),
@@ -72,7 +73,7 @@ const ContactComponent = () => {
     });
 
     if (response.ok) {
-      alert("Form submitted successfully!");
+      toast.success("Form submitted successfully!");
       form.reset({
         first_name: "",
         range: "",
@@ -86,7 +87,7 @@ const ContactComponent = () => {
         phone_number: "",
       });
     } else {
-      alert("Failed to submit the form.");
+      toast.error("Form submission failed!");
     }
   };
 
@@ -199,7 +200,7 @@ const ContactComponent = () => {
               <FormField
                 control={form.control}
                 name="type_of_transportation"
-                                render={({ field: { onChange, onBlur, value, ref } }) => (
+                render={({ field: { onChange, onBlur, value, ref } }) => (
                   <FormItem>
                     <FormLabel>What type of transportation?</FormLabel>
                     <FormControl>
@@ -329,7 +330,7 @@ const ContactComponent = () => {
                 )}
               />
             </div>
-                        <FormField
+            <FormField
               control={form.control}
               name="phone_number"
               render={({ field: { onChange, onBlur, value, ref } }) => (
@@ -348,7 +349,8 @@ const ContactComponent = () => {
                           true,
                       })}
                       containerClass={clsx({
-                        " focus:outline-none border border-[#A0A3A6] border-opacity-60 rounded-[8px] px-3 py-4 w-full placeholder:text-color-100 ": true,
+                        " focus:outline-none border border-[#A0A3A6] border-opacity-60 rounded-[8px] px-3 py-4 w-full placeholder:text-color-100 ":
+                          true,
                         "border-[#A0A3A6]": "border-[#A0A3A6]",
                       })}
                       dropdownClass="bg-white"
@@ -388,4 +390,3 @@ const ContactComponent = () => {
 };
 
 export default ContactComponent;
-

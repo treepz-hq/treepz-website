@@ -11,7 +11,7 @@ import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
-
+import { useModal } from '@/contexts/ModalContext';
 
 import {
   Accordion,
@@ -23,6 +23,7 @@ import StaticPartners from '../common/static-partners';
 
 
 const EventComponent = () => {
+    const {showModal} = useModal()
   return (
     <div>
       <div className="bg-[url(/Hero.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
@@ -40,6 +41,7 @@ const EventComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[337px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px] font-semibold group overflow-hidden relative"
+                            onClick={showModal}
               //onClick={() => {}}
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
@@ -97,6 +99,7 @@ const EventComponent = () => {
           <Button
             variant={"default"}
             className="w-fit sm:w-[200px]"
+onClick={showModal}
             //onClick={() => {}}
           >
             Contact our team
