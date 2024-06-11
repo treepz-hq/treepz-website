@@ -109,13 +109,13 @@
 .marquee-wrapper-left {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee-animation-left 60s alternate-reverse infinite;
+  animation: marquee-animation-left 15s alternate-reverse infinite;
 }
 
 .marquee-wrapper-right {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee-animation-right 60s alternate-reverse infinite;
+  animation: marquee-animation-right 15s alternate-reverse infinite;
 }
 
 .marquee-item {
