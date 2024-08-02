@@ -10,7 +10,7 @@ import { ModalProvider } from "@/contexts/ModalContext";
 import { ReactNode } from "react";
 import ModalComponent from "@/components/Modal";
 import BookNowForm from "@/components/Forms/BookNowForm";
-
+import {GoogleAnalytics} from "@next/third-parties/google"
 import toast, { Toaster } from 'react-hot-toast';
 const myFont = localFont({
   src: [
@@ -61,6 +61,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                         <Toaster/>
           </ModalProvider>
         </div>
+        <GoogleAnalytics 
+        gaId="G-9R71XZ52DX"
+        />
       </body>
     </html>
   );
