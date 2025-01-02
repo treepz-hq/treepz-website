@@ -11,6 +11,7 @@ import clsx from 'clsx'
 const Footer = () => {
   const router = useRouter()
   const pathname = usePathname()
+  const year = new Date().getFullYear();
 
   return (
     <div className={clsx({
@@ -73,7 +74,7 @@ const Footer = () => {
       </div>
       <div className="w-full flex flex-col sm:flex-row space-y-4 justify-between items-center py-10">
         <p className="text-[#666] text-[15px] leading-[20px]">
-          © 2024 Treepz, Inc. All rights reserved.
+          © {year} Treepz, Inc. All rights reserved.
         </p>
         <div className="flex gap-2 items-center text-sm text-[#4D5154]">
           {socialMediaLists.map((link, index) => (
