@@ -1,19 +1,23 @@
 import { Metadata } from 'next';
-import RentACarComponent from '@/components/RentACar';
+// import RentACarComponent from '@/components/RentACar';
 import HeroComponent from './../components/Hero';
 import FeaturesComponent from '@/components/Feature';
-import FutureTransportation from '@/components/Future';
-import UsersAppComponent from '@/components/UserApps';
+// import FutureTransportation from '@/components/Future';
+// import UsersAppComponent from '@/components/UserApps';
 import BetterTogetherComponent from '@/components/Trips';
+import GetCopy from '@/components/GetCopy';
+import RideSharingStats from '@/components/RideSharing';
 
 export default function Home() {
   return (
     <main className="">
       <HeroComponent />
-      <FeaturesComponent />
-      <RentACarComponent />
-      <FutureTransportation />
-      <UsersAppComponent />
+      {/* <FeaturesComponent /> */}
+      <RideSharingStats />
+      <GetCopy />
+      {/* <RentACarComponent /> */}
+      {/* <FutureTransportation /> */}
+      {/* <UsersAppComponent /> */}
       <BetterTogetherComponent />
     </main>
   );

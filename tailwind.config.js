@@ -70,7 +70,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
+        // inter: ["var(--font-inter)"],
+        switzer: ['Switzer', 'sans-serif'],
       },
       gridTemplateColumns: {
         fluid_152: "repeat(auto-fit, minmax(151.5px, 1fr))",

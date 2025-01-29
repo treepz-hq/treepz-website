@@ -13,14 +13,15 @@ interface IProps {
   type?: string;
   closeMenu?: any
 }
-const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) => {
-   const ref = useClickOutside(() => {
-     setSelectedMenu(null);
-   });
 
-    const handleMenuItemClick = () => {
-      closeMenu();
-    };
+const GroupSubMenu: React.FC<IProps> = ({ items, setSelectedMenu, closeMenu }) => {
+  const ref = useClickOutside(() => {
+    setSelectedMenu(null);
+  });
+
+  const handleMenuItemClick = () => {
+    closeMenu();
+  };
 
   return (
     <div

@@ -25,6 +25,9 @@ import DALogo from "@/assets/svgs/news/da-logo.svg";
 import TechCabalLogo from "@/assets/svgs/news/TechCabal.svg";
 import TechMoranLogo from "@/assets/svgs/news/tech-moran.svg";
 import TechCrLogo from "@/assets/svgs/news/TechCr.svg";
+import PieChart from "@/assets/svgs/pieChart.svg";
+import Bar from "@/assets/svgs/bar.svg";
+import { title } from "process";
 
 interface PostalCardProps {
   src: string;
@@ -43,6 +46,14 @@ interface RentACarProps {
   src: string;
   title: string;
   noOfUsers: number;
+}
+[];
+
+interface LearntProps {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  iconType?: 'pie' | 'bar';
 }
 [];
 
@@ -185,7 +196,7 @@ export const EmployeePartnerData: OurPartnerProps[] = [
 
   { src: "logo-0.png" },
   { src: "New-mtn-logo.png" },
-    {src:'Wakanow-Logo.png'}
+  { src: 'Wakanow-Logo.png' }
 ];
 
 export const ExecutivePartnerData: OurPartnerProps[] = [
@@ -200,7 +211,7 @@ export const ExecutivePartnerData: OurPartnerProps[] = [
 
   { src: "logo-0.png" },
   { src: "New-mtn-logo.png" },
-    {src:'Wakanow-Logo.png'}
+  { src: 'Wakanow-Logo.png' }
 ];
 
 export const MainPartnerData: OurPartnerProps[] = [
@@ -218,35 +229,35 @@ export const MainPartnerData: OurPartnerProps[] = [
   { src: "logo-0.png" },
   { src: "New-mtn-logo.png" },
 ];
-export const HealthPartnerData: OurPartnerProps []=[
+export const HealthPartnerData: OurPartnerProps[] = [
 
-    {
-        src:"logo-19.png"
-    },
-    {
-        src:"logo-3.png"
-    },
-    {
-        src:"logo-15.png"
-    },
-    {
-        src:"logo-14.png"
-    },
-    {
-        src:"logo-12.png"
-    },
-    {
-        src:"logo-11.png"
-    },
-    {
-        src:"logo-10.png"
-    },
-    {
-        src:"logo-20.png"
-    },
-    {
-        src:"logo-24.png"
-    },
+  {
+    src: "logo-19.png"
+  },
+  {
+    src: "logo-3.png"
+  },
+  {
+    src: "logo-15.png"
+  },
+  {
+    src: "logo-14.png"
+  },
+  {
+    src: "logo-12.png"
+  },
+  {
+    src: "logo-11.png"
+  },
+  {
+    src: "logo-10.png"
+  },
+  {
+    src: "logo-20.png"
+  },
+  {
+    src: "logo-24.png"
+  },
 
 ]
 export const MiniPartnerData: OurPartnerProps[] = [
@@ -300,7 +311,14 @@ export const PostalCardData: PostalCardProps[] = [
     title: "Airport Transportation",
     href: "airport-transportation",
   },
+  {
+    logo: '',
+    title: 'African urbanization drives rentals',
+    text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
+  }
 ];
+
+
 export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "airline.png",
@@ -375,6 +393,33 @@ export const RentACarData: RentACarProps[] = [
   },
 ];
 
+export const whatWeLearnt: LearntProps[] = [
+  {
+    icon: <PieChart />,
+    title: 'African urbanization drives rentals',
+    description: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.',
+    iconType: 'pie',
+  },
+  {
+    icon: <Bar />,
+    title: 'Vehicle fleet burdens businesses',
+    description: 'Companies face high costs from vehicle maintenance, driver management, and unpredictable fuel expenses.',
+    iconType: 'bar',
+  },
+  {
+    icon: <PieChart />,
+    title: 'Outsourcing ensures transport efficiency',
+    description: 'Outsourced transportation eliminates maintenance costs while proving scalable and reducing administrative work.',
+    iconType: 'pie',
+  },
+  {
+    icon: <Bar />,
+    title: 'Smart mobility reduces costs',
+    description: 'Smart mobility solutions help businesses cut transportation costs despite economic challenge.',
+    iconType: 'bar',
+  },
+
+]
 export const BlogData: BlogProps[] = [
   {
     src: "easy-payment.png",
@@ -406,6 +451,10 @@ export const solutionsLists = [
     href: "school-transportation",
   },
   {
+    label: "Conference Shuttles",
+    href: "conference-transportation",
+  },
+  {
     label: "Convention Transportation",
     href: "convention",
   },
@@ -421,6 +470,7 @@ export const solutionsLists = [
 
 export const groupLists = [
   { label: " For Airlines ", href: "airline" },
+  { label: " For Religious ", href: "religious" },
   { label: "For Corporate Events", href: "event" },
   { label: "For School Trips", href: "university" },
 ];
@@ -430,10 +480,10 @@ export const companyLists = [
     href: "about",
     label: "About",
   },
-  // {
-  //   href: "career",
-  //   label: "Career",
-  // },
+  {
+    href: "career",
+    label: "Career",
+  },
   {
     href: "press",
     label: "Press",
@@ -451,6 +501,7 @@ export const companyLists = [
     label: "Privacy & Cookie Policy",
   },
 ];
+
 export const socialMediaLists: SocialProps[] = [
   {
     href: "https://twitter.com/treepzglobal",
@@ -511,7 +562,7 @@ export const EventUniqueData: IProps[] = [
 
 export const EmployeeUniqueData: IProps[] = [
   {
-    icon: <DoorToDoorIcon/>,
+    icon: <DoorToDoorIcon />,
     title: "We do the checks so you don’t have to",
     description:
       "Our focus is providing you with the safest transportation possible, so we regularly check all our vehicles and drivers to keep you safe and secure on every journey",
@@ -541,7 +592,7 @@ export const EmployeeUniqueData: IProps[] = [
       "At Treepz, we take pride in leading the industry with outstanding customer experience. Whether it is choosing you shuttle or customizing your personal information, we make sure that each ride is perfectly tailored to each rider.",
   },
   {
-    icon: <NoneLogo/>,
+    icon: <NoneLogo />,
     title: "Support local businesses",
     description:
       "Booking with Treepz means you’re also supporting your local businesses because we carefully select regional drivers who know the area.",
@@ -627,10 +678,10 @@ export const GovernmentsUniqueData: IProps[] = [
 
 export const UniversityUniqueData: IProps[] = [
   {
-    icon:<TravelSupport247 />,
+    icon: <TravelSupport247 />,
     title: "Attentive and secure",
     description:
-     "Every Treepz trip starts with top-notch shuttles and trained drivers, meticulously checked for your comfort and peace of mind. Get where you need to be, relaxed and ready to conquer your day.",
+      "Every Treepz trip starts with top-notch shuttles and trained drivers, meticulously checked for your comfort and peace of mind. Get where you need to be, relaxed and ready to conquer your day.",
   },
   {
     icon: <EndlessIcon />,
@@ -814,7 +865,7 @@ export const AirportUniqueData: IProps[] = [
       "A unique feature to the Treepz corporate shuttling program, we don't just leave rides to walk the last mile, we make sure the each and ever rider arrives on time to their exact destination.",
   },
   {
-    icon: <GoingFurtherIcon/>,
+    icon: <GoingFurtherIcon />,
     title: "Hyper-Efficient",
     description:
       "Optimized routes, ensuring efficiency for every rider, parent, and school.",
@@ -838,7 +889,7 @@ export const CorporateShuttleData: IProps[] = [
     icon: <AllAroundTheWorld />,
     title: "For Africa",
     description:
-      "Treepz is built for Africa. We help you navigate through busy cities, hidden wonders, and amazing sights.   ",
+      "Treepz is built for Africa. We help you navigate through busy cities, hidden wonders, and amazing sights. ",
   },
 
   {
@@ -1039,7 +1090,7 @@ export const ConferenceSolutionData: IProps[] = [
 
 export const NonEmeTranspUniqueData: IProps[] = [
   {
-    icon: <TravelSupport247/>,
+    icon: <TravelSupport247 />,
     title: "Safe and sound",
     description:
       "First and foremost, we provide safe transportation from door to door, employing drivers who will take you there in carefully designed and checked vehicles",
@@ -1051,7 +1102,7 @@ export const NonEmeTranspUniqueData: IProps[] = [
       "We will not keep you waiting or make you late for appointments, and every trip can be tailored to your budget, with no fuss, no hidden extras",
   },
   {
-    icon: <EmployeeSupport/>,
+    icon: <EmployeeSupport />,
     title: "Speak to a real person",
     description:
       "All of our team is trained and extremely caring; they will take onboard all of your concerns and requirements to provide the best and most common sense service for you",
@@ -1063,7 +1114,7 @@ export const NonEmeTranspUniqueData: IProps[] = [
       "Whether you need a vehicle that is wheelchair-accessible or spacious enough for your vital equipment, our transportation service is completely inclusive",
   },
   {
-    icon: <Support2472/>,
+    icon: <Support2472 />,
     title: "Comfort and convenience",
     description:
       "Your vehicle will have amenities such as comfy seating and temperature control, so you will always feel comfortable",

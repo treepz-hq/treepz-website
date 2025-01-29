@@ -12,6 +12,7 @@ const images = [
   '/street.png',
   '/Hero.png',
 ];
+
 const slides = [
   {
     src: "/testimony/brighter-money.png",

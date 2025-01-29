@@ -10,11 +10,11 @@ import GotPower from "./got-the-power"
 
 const ListOne = ["Representatives are available 24/7 to assist with the planning process", "Our cars come to any pick-up point or destination, including airports, hotels, resorts, theme parks, and more", "We cater to any type of special event, from weddings to school trips, sports games, or conferences"];
 
-const ListTwo = ["Luxury sedans", "Luxury vans", "SUVs", "Mini-buses","Mini-buses"]
+const ListTwo = ["Luxury sedans", "Luxury vans", "SUVs", "Mini-buses", "Mini-buses"]
 
 const BusinessSolutionComponent = () => {
   const router = useRouter();
-   const { showModal } = useModal();
+  const { showModal } = useModal();
 
   return (
     <>

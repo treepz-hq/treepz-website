@@ -38,78 +38,78 @@ const NavBar = () => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
 
-   const pathname = usePathname();
+  const pathname = usePathname();
   const targetPaths = ["/wedding-transportation", "/privacy", "/terms"];
   const bgClass = targetPaths.includes(pathname) ? "!bg-[#FDF3D8]" : "!bg-white";
-   const [openSubMenu, setOpenSubMenu] = useState(null);
-   const [selectedMenu, setSelectedMenu] = useState(null);
-   const [subMenuItemClicked, setSubMenuItemClicked] = useState(false);
-   const { showModal } = useModal();
+  const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+  const [subMenuItemClicked, setSubMenuItemClicked] = useState(false);
+  const { showModal } = useModal();
 
-   const toggleMenu = () => {
-     setIsOpen(!isOpen);
-   };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-   const closeMenu = () => {
-     setIsOpen(false);
-   };
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
 
-const handleMenuClick = (item: any) => {
-  setSelectedMenu(item.href);
-  if (item.hasSubMenu) {
-    setOpenSubMenu(openSubMenu === item.label ? null : item.label);
-    setSubMenuItemClicked(false); // Reset submenu item click state
-  } else {
-    setOpenSubMenu(null); // Close the submenu
-    setIsOpen(false); // Close the entire menu
-  }
-};
+  const handleMenuClick = (item: any) => {
+    setSelectedMenu(item.href);
+    if (item.hasSubMenu) {
+      setOpenSubMenu(openSubMenu === item.label ? null : item.label);
+      setSubMenuItemClicked(false); // Reset submenu item click state
+    } else {
+      setOpenSubMenu(null); // Close the submenu
+      setIsOpen(false); // Close the entire menu
+    }
+  };
 
-const handleSubMenuItemClick = () => {
-  setSubMenuItemClicked(true);
-};
+  const handleSubMenuItemClick = () => {
+    setSubMenuItemClicked(true);
+  };
 
-     const renderSubMenuItems = (item: any) => {
-       switch (item) {
-         case "group":
-           return (
-             <div className="flex flex-col rounded-xl shadow h-fit pb-4">
-              {GroupFirstColumn.map(({ label, href }: any) => (
-                <Link href={href} key={label} title={label} className="hover:underline p-2">
-                  {label}
-                </Link>
-              ))}
-              {GroupSecondColumn.map(({ label, href }: any) => (
-                <Link href={href} key={label} title={label} className="hover:underline p-2">
-                  {label}
-                </Link>
-              ))}
-            </div>
-           );
-         case "solutions":
-           return (
-            <div className="flex flex-col h-fit">
-              {CorporateTransportation.map(({ label, href }: any) => (
-                <Link href={href} key={label} title={label} className="hover:underline p-2">
-                  {label}
-                </Link>
-              ))}
-              {SchoolTransport.map(({ label, href }: any) => (
-                <Link href={href} key={label} title={label} className="hover:underline p-2">
-                  {label}
-                </Link>
-              ))}
-            </div>
+  const renderSubMenuItems = (item: any) => {
+    switch (item) {
+      case "group":
+        return (
+          <div className="flex flex-col rounded-xl shadow h-fit pb-4">
+            {GroupFirstColumn.map(({ label, href }: any) => (
+              <Link href={href} key={label} title={label} className="hover:underline p-2">
+                {label}
+              </Link>
+            ))}
+            {GroupSecondColumn.map(({ label, href }: any) => (
+              <Link href={href} key={label} title={label} className="hover:underline p-2">
+                {label}
+              </Link>
+            ))}
+          </div>
+        );
+      case "solutions":
+        return (
+          <div className="flex flex-col h-fit">
+            {CorporateTransportation.map(({ label, href }: any) => (
+              <Link href={href} key={label} title={label} className="hover:underline p-2">
+                {label}
+              </Link>
+            ))}
+            {SchoolTransport.map(({ label, href }: any) => (
+              <Link href={href} key={label} title={label} className="hover:underline p-2">
+                {label}
+              </Link>
+            ))}
+          </div>
 
-           );
-         default:
-           return null;
-       }
-     };
+        );
+      default:
+        return null;
+    }
+  };
   return (
     <div
-      className={`w-full sm:max-w-[1691px]  h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 fixed top-0 z-50 ${bgClass}`}
+      className={`w-full sm:max-w-[1691px] h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 fixed top-0 z-50 ${bgClass}`}
     >
       <div className="flex sm:w-[702px] justify-between items-center">
         <span className="cursor-pointer mr-10" onClick={() => router.push("/")}>
@@ -258,7 +258,7 @@ const handleSubMenuItemClick = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="hidden sm:flex flex-col sm:flex-row gap-4">
+      <div className="hidden sm:flex flex-col sm:flex-row gap-4 ml-6">
         <Button
           variant={"outline"}
           onClick={showModal}
@@ -333,9 +333,8 @@ const handleSubMenuItemClick = () => {
                   )}
                   {openSubMenu === item.label && (
                     <div
-                      className={`submenu-container transition-all duration-300 ease-in-out overflow-hidden ${
-                        openSubMenu === item.label ? "max-h-96" : "max-h-0"
-                      }`}
+                      className={`submenu-container transition-all duration-300 ease-in-out overflow-hidden ${openSubMenu === item.label ? "max-h-96" : "max-h-0"
+                        }`}
                     >
                       <div className="flex flex-col space-y-2">
                         {renderSubMenuItems(item?.type)}

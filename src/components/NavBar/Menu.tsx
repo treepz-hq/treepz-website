@@ -18,7 +18,7 @@ const MenuComponent = () => {
   useEffect(() => {
     setSelectedMenu(null);
     setOpenSubMenu(null);
-    return () => {};
+    return () => { };
   }, [pathname]);
 
   const handleMenuClick = (item: any) => {
@@ -26,7 +26,7 @@ const MenuComponent = () => {
     setOpenSubMenu(openSubMenu === item.label ? null : item.label);
   };
 
-   const renderSubMenuItems = (item: any) => {
+  const renderSubMenuItems = (item: any) => {
     switch (item) {
       case 'group':
         return (
@@ -45,9 +45,9 @@ const MenuComponent = () => {
     }
   };
 
-   const ref = useClickOutside(() => {
-     setSelectedMenu(null);
-   });
+  const ref = useClickOutside(() => {
+    setSelectedMenu(null);
+  });
 
   return (
     <>

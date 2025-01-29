@@ -26,25 +26,25 @@ const NeededInformations = [
 ];
 
 const GovernmentsComponent = () => {
-    const {showModal }= useModal()
+  const { showModal } = useModal()
   return (
     <div>
       <div className="bg-[url(/government-hero.png)] bg-cover bg-no-repeat w-full h-[650px] sm:h-[708px]">
         <div className="w-full mx-auto text-white pt-[60px]  sm:pt-[100px] px-4">
           <h1 className="font-bold text-[28px] mt-[40px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
-            Seamless and Secure: The <br className="hidden sm:block"/>Premier Government Charter <br className="hidden sm:block"/> Services
+            Seamless and Secure: The <br className="hidden sm:block" />Premier Government Charter <br className="hidden sm:block" /> Services
           </h1>
           <p className="text-base sm:text-xl text-center">
-           
-Choose Treepz, your trusted partner for secure, reliable rides. We understand your unique needs for discretion, <br/>safety, and efficiency, delivering meticulously planned charters that meet your strictest requirements.
+
+            Choose Treepz, your trusted partner for secure, reliable rides. We understand your unique needs for discretion, <br />safety, and efficiency, delivering meticulously planned charters that meet your strictest requirements.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
-                        onClick={showModal}
-            //onClick={() => {}}
+            onClick={showModal}
+          //onClick={() => {}}
           >
-Learn more about our Premier Government Charter Services
+            Learn more about our Premier Government Charter Services
           </Button>
         </div>
       </div>
@@ -66,7 +66,7 @@ Learn more about our Premier Government Charter Services
           Focus on Your Essential Duties
         </h1>
         <p className="text-xl text-[#4D5154] text-center">
-Treepz tailors charter solutions for any government need, from large-scale deployments to VIP transport. Our expertise guarantees meticulous planning and flawless execution, leaving you free to fulfill your vital missions.
+          Treepz tailors charter solutions for any government need, from large-scale deployments to VIP transport. Our expertise guarantees meticulous planning and flawless execution, leaving you free to fulfill your vital missions.
         </p>
       </div>
       {/* unique */}
@@ -81,9 +81,9 @@ Treepz tailors charter solutions for any government need, from large-scale deplo
         ))}
       </div>
       <GetAQuote />
-      <UserRoutesComponent 
-      title="Government Transportation with Treepz"
-      desc="With our many vehicle options plus scheduling technology that
+      <UserRoutesComponent
+        title="Government Transportation with Treepz"
+        desc="With our many vehicle options plus scheduling technology that
               finally puts you in control, Treepz provides super-reliable,
               carefully designed public transport services that fit your
               community and budget. When you speak to our lovely, expert team
@@ -226,8 +226,8 @@ Treepz tailors charter solutions for any government need, from large-scale deplo
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                        onClick={showModal}
-            //onClick={() => {}}
+            onClick={showModal}
+          //onClick={() => {}}
           >
             Experience a new standard
             <ChevronRightIcon />

@@ -1,96 +1,124 @@
 'use client'
-import React, { useState } from 'react'
+
+
+import React, { useRef } from 'react';
 import { Button } from '../ui/button';
 import Image from 'next/image';
-import {  NewPartnerLogos } from './data';
-import { useRouter } from 'next/navigation'
-import SwipeWordAnimation from "../WordSwipe";
-import PartnersLogo from '../common/partners';
-import ModalComponent from '../Modal';
-import BookNowForm from '../Forms/BookNowForm';
-import Marquee from '../common/Marquee';
+import { useRouter } from 'next/navigation';
 import { useModal } from '@/contexts/ModalContext';
+import Share from "@/assets/svgs/share.svg";
+import { whatWeLearnt } from "@/lib/dummyData";
+import ShareDialog from '../Modal/shareDialog';
+import GetACopy from '../GetCopy';
 
 const HeroComponent = () => {
-  const router = useRouter()
+  const router = useRouter();
   const { showModal } = useModal();
 
+  const getCopyRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToGetCopy = () => {
+    if (getCopyRef.current) {
+      getCopyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Focus on the first field after scrolling
+      setTimeout(() => {
+        const firstInput = getCopyRef.current.querySelector('input');
+        if (firstInput) {
+          (firstInput as HTMLElement).focus();
+        }
+      }, 500);
+    }
+  };
+
   return (
-    <>
-      <div className="w-full mt-5 sm:mt-10">
-        <div className="px-4 sm:px-20 w-full flex flex-col">
-          <div className="w-full mt-10 sm:mt-[108px]">
-            <SwipeWordAnimation />
+    <div className="w-full mt-[10%]">
+      <div
+        className='flex flex-col margin-auto py-[45px] mx-[7%] sm:flex-row justify-between items-center gap-4 text-center'
+      >
+        <div className='w-full items-center text-center sm:w-1/2 sm:text-left'>
+          <div className='w-full'>
+            <h1 className='text-[#212529] font-bold text-4xl uppercase leading-[52PX]'>The State of <br />Corporate Mobility <br />Report in Africa 2025</h1>
+            <p className='text-[#4D5154] my-3 text-sm text-[16px]'>Learn about the current mobility trends in the African landscape impacting how businesses will strategise and operate in 2025.</p>
           </div>
-          <div className="mt-6 mb-14 sm:text-left sm:max-w-[1016px] text-xl text-[#6F7174]">
-            We specialize in efficient and reliable personal and group
-            transportation across Africa. We&lsquo;ve helped move over 4 million
-            people to events, conventions, and conferences across 16 cities in 4
-            continent.
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className='flex flex-col gap-4 sm:flex-row w-full sm:w-[378px]'>
             <Button
-              variant={"default"}
-              className="relative overflow-hidden sm:w-[249px] sm:h-[64px] text-center items-center sm:px-[17px] group"
-              onClick={() => router.push("/business-solutions")}
+              variant="default"
+              className="relative overflow-hidden sm:w-[200px] sm:h-[40px] text-center items-center sm:px-[2px] group"
+              onClick={scrollToGetCopy}
             >
-              <p className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                Explore our business solutions
-              </p>
-              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
-                Explore our business solutions
+              <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                Download Report
+              </span>
+              <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                Download Report
               </span>
             </Button>
             <Button
-              variant={"outline"}
-              className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
-              onClick={showModal}
+              variant="outline"
+              className="relative sm:w-[200px] sm:h-[40px] group overflow-hidden"
+              onClick={() => showModal('share')}
+              aria-label="Share this report"
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                Get a quote
+                <Share className="mr-2" />
+                Share Report
               </span>
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
-                Get a quote
+                <Share className="mr-2" />
+                Share Report
               </span>
             </Button>
           </div>
         </div>
-        {/* Heros */}
-        <div className="relative mt-8 sm:mt-14">
-          <div className="relative w-full sm:max-w-[1640px] h-[176.66px] sm:h-[377.861px] mx-auto z-30">
-            <Image
-              src="/street.png"
-              alt="street"
-              fill
-              sizes="100vw"
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-          <div className="bg-[url(/bg.png)] bg-cover relative bg-no-repeat w-full h-fit -top-[62px] sm:-top-[110px]">
-            <div className="container px-4 sm:px-20 py-20 sm:pt-40">
-              <div className="w-full sm:w-[897px] flex flex-col mb-14 sm:mb-[104px] text-center sm:text-left">
-                <h1 className="text-3xl font-bold text-[#212529] sm:leading-[40px] uppercase mb-6">
-                  Why choose Treepz?
-                </h1>
-                <p className="font-normal text-xl text-[#4D5154]">
-                  Our commitment to providing structured, accessible, and
-                  predictable corporate mobility solutions has made us the
-                  leading shared mobility platform in Africa.
-                </p>
-              </div>
-              <div className="flex justify-center w-full flex-col sm:max-w-[1252px] mx-auto h-fit">
-                <p className="font-semibold text-[#6F7174] w-full text-center">
-                  Trusted by Your Favorite Businesses
-                </p>
-                <Marquee data={NewPartnerLogos} />
-              </div>
-            </div>
-          </div>
+        <div className='w-full sm:w-1/2'>
+          <Image
+            src="/CM.png"
+            alt="Corporate Mobility"
+            width={400}
+            height={300}
+            className="w-full h-[300px] object-contain"
+            unoptimized
+          />
         </div>
       </div>
-    </>
+
+      <div className="bg-[#F8B02B] rounded-2xl w-[80%] sm:w-[30%] mx-auto mb-[-20px] relative">
+        <p className="font-bold text-xl text-[#101010] px-3 py-3 text-center">
+          SOME OF WHAT WE LEARNT
+        </p>
+      </div>
+
+      <div className="w-full p-4 bg-[#FFF8F5]">
+        <div className="justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-[6%] gap-6">
+          {whatWeLearnt.map((item, index) => {
+            const bgColor =
+              item.iconType === "pie"
+                ? "bg-[#FDF2D0]"
+                : item.iconType === "bar"
+                  ? "bg-[#FFECE5]"
+                  : "bg-white";
+
+            return (
+              <div key={index} className={`rounded-2xl p-6 ${bgColor}`}>
+                <div className="flex flex-col items-center">
+                  <div className="mb-4">{item.icon}</div>
+                  <h4 className="text-xl font-semibold text-[#212529] text-center mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-[#4D5154] text-center">{item.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div ref={getCopyRef}>
+        {/* <GetACopy /> */}
+      </div>
+      <ShareDialog />
+    </div>
   );
-}
+};
 
 export default HeroComponent;
