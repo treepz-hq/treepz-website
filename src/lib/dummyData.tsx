@@ -1,6 +1,8 @@
 import XIcon from "@/assets/svgs/x-icon.svg";
+import XIconn from "@/assets/svgs/twitter-icon.svg";
 import Support2472 from '@/assets/svgs/and your concierge copy.svg'
 import NoneLogo from "@/assets/svgs/user-service.svg";
+import FacebookIconn from "@/assets/svgs/facebook.svg";
 import FacebookIcon from "@/assets/svgs/facebook-icon.svg";
 import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
 import InstagramIcon from "@/assets/svgs/instagram-icon.svg";
@@ -27,6 +29,8 @@ import TechMoranLogo from "@/assets/svgs/news/tech-moran.svg";
 import TechCrLogo from "@/assets/svgs/news/TechCr.svg";
 import PieChart from "@/assets/svgs/pieChart.svg";
 import Bar from "@/assets/svgs/bar.svg";
+import SlackIcon from "@/assets/svgs/slack-icon.svg";
+import WhatsAppIcon from "@/assets/svgs/whatsapp-icon.svg";
 import { title } from "process";
 
 interface PostalCardProps {
@@ -56,6 +60,11 @@ interface LearntProps {
   iconType?: 'pie' | 'bar';
 }
 [];
+
+interface SocialMediaIcon {
+  icon: JSX.Element;
+  description: string;
+}
 
 interface BlogProps {
   src: string;
@@ -318,7 +327,6 @@ export const PostalCardData: PostalCardProps[] = [
   }
 ];
 
-
 export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "airline.png",
@@ -390,6 +398,25 @@ export const RentACarData: RentACarProps[] = [
     src: "group.png",
     title: "Group",
     noOfUsers: 200,
+  },
+];
+
+export const socialIcon: SocialMediaIcon[] = [
+  {
+    icon: <WhatsAppIcon />,
+    description:'Whatsapp',
+  },
+  {
+    icon: <XIconn />,
+    description:'(X)Twitter',
+  },
+  {
+    icon: <SlackIcon />,
+    description:'Slack',
+  },
+  {
+    icon: <FacebookIconn />,
+    description:'Facebook',
   },
 ];
 
@@ -493,6 +520,10 @@ export const companyLists = [
     label: "Blog",
   },
   {
+    href: "report",
+    label: "Report",
+  },
+  {
     href: "terms",
     label: "Terms & Conditions",
   },
@@ -509,7 +540,7 @@ export const socialMediaLists: SocialProps[] = [
   },
   {
     href: "https://facebook.com/treepzglobal",
-    icon: <FacebookIcon />,
+    icon: <FacebookIconn />,
   },
   {
     href: "https://www.linkedin.com/company/20535443/admin/feed/posts/",

@@ -18,30 +18,31 @@ import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
 import { useModal } from "@/contexts/ModalContext";
+
 const NeededInformations = [
   "Why Use Treepz for Your Intercampus Shuttle Services?",
   "Support Your Local Business!",
   "Frequently Asked Questions",
-  
+
 ];
 
 const UniversityComponent = () => {
-    const {showModal} = useModal()
+  const { showModal } = useModal()
   return (
     <div>
       <div className="bg-[url(/university-hero.png)] bg-cover bg-no-repeat w-full h-[650px] sm:h-[708px]">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
           <h1 className="font-bold text-[28px] leading-[40px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
-          Treepz Shuttle: Campus hustle made easy.
+            Treepz Shuttle: Campus hustle made easy.
           </h1>
           <p className="text-base sm:text-xl text-center">
-   Campus life is filled with packed schedules: Juggling classes, clubs, events, and maybe some fun on the side? Treepz gets it. Our intercampus shuttle fits seamlessly into your busy world, getting you where you need to be – fast, stress-free, and ready to conquer your day.
+            Campus life is filled with packed schedules: Juggling classes, clubs, events, and maybe some fun on the side? Treepz gets it. Our intercampus shuttle fits seamlessly into your busy world, getting you where you need to be – fast, stress-free, and ready to conquer your day.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
-onClick={showModal}
-            //onClick={() => {}}
+            onClick={showModal}
+          //onClick={() => {}}
           >
             Speak to Treepz
           </Button>
@@ -86,12 +87,12 @@ onClick={showModal}
         ))}
       </div>
       <GetAQuote />
-      <UserRoutesComponent 
+      <UserRoutesComponent
         title="Treepz’s Campus Shuttle Service – The Scholarly Choice"
         desc="Our team is available 24/7, ready to provide you with prompt and
               helpful support – perhaps even a virtual high-five for acing your
               latest exam. Here are more reasons to choose Treepz, then get in
-              touch to see how we can facilitate your academic journey." 
+              touch to see how we can facilitate your academic journey."
       />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
@@ -211,9 +212,9 @@ onClick={showModal}
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]" 
-                        onClick={showModal}
-            //onClick={() => {}}
+            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+            onClick={showModal}
+          //onClick={() => {}}
           >
             Contact us
             <ChevronRightIcon />
@@ -234,7 +235,7 @@ onClick={showModal}
         <PopularCitiesCarousel />
       </div>
 
-        </div>
+    </div>
   );
 };
 

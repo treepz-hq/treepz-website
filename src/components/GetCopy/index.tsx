@@ -78,7 +78,7 @@ const GetACopy: React.FC = () => {
         </p> */}
         <p className="text-[#6F7174] text-center font-switzer text-sm font-normal leading-4 tracking-[0.4px] 
   lg:text-[#4D5154] lg:text-xl lg:leading-7 lg:tracking-[0.4px] lg:text-left">
-          Gain exclusive insights into Africa's corporate transportation landscape and discover how leading companies are optimizing their mobility solutions.
+          Gain exclusive insights into Africa&apos;s corporate transportation landscape and discover how leading companies are optimizing their mobility solutions.
         </p>
       </div>
 
