@@ -1,3 +1,4 @@
+"use client"
 import ReportComponent from '@/components/Report';
 import { Metadata } from 'next';
 import React from 'react'
@@ -8,6 +9,6 @@ const page = () => {
 
 export default page
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Treepz: Recent Trip Report.",
 };

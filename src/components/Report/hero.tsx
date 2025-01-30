@@ -21,7 +21,7 @@ const HeroComponent = () => {
       getCopyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       // Focus on the first field after scrolling
       setTimeout(() => {
-        const firstInput = getCopyRef.current.querySelector('input');
+        const firstInput = getCopyRef.current?.querySelector('input');
         if (firstInput) {
           (firstInput as HTMLElement).focus();
         }
