@@ -261,7 +261,7 @@ const NavBar = () => {
       <div className="hidden sm:flex flex-col sm:flex-row gap-4 ml-6">
         <Button
           variant={"outline"}
-          onClick={showModal}
+          onClick={()=>showModal}
           className={`font-medium w-fit sm:w-[144px] relative group overflow-hidden ${bgClass}`}
         >
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">

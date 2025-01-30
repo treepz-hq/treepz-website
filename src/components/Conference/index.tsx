@@ -35,7 +35,7 @@ const {showModal} = useModal();
               <Button
                 variant={"default"}
                 className="mt-5 w-fit px-5 py-4 sm:w-[168px] mx-auto sm:h-[64px] font-medium"
-                            onClick={showModal}
+                            onClick={()=>showModal}
                 //onClick={() => {}}
               >
                 Connect with us
@@ -81,7 +81,7 @@ const {showModal} = useModal();
             <Button
               variant={"default"}
               className="w-fit sm:w-[144px] mx-auto font-semibold sm:h-[64px]"
-            onClick={showModal}
+            onClick={()=>showModal}
             >
               Get a quote
             </Button>
@@ -172,7 +172,7 @@ const {showModal} = useModal();
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full w-fit sm:w-[156px] font-semibold mt-8 sm:mt-[54px] sm:h-[64px]"
-              onClick={showModal}
+              onClick={()=>showModal}
             >
               Get a quote
               <ChevronRightIcon />
@@ -204,7 +204,7 @@ Submit your event details and we’ll reach out within 24 hours. We’re here to
               <Button
                 variant={"default"}
                 className="w-full sm:w-[200px] sm:h-[64px] relative overflow-hidden group"
-                onClick={showModal}
+                onClick={()=>showModal}
               >
                 <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Get in touch

@@ -32,7 +32,7 @@ const NonEmergencyTranspComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold w-full sm:w-fit sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
-                        onClick={showModal}
+                        onClick={()=>showModal}
             //onClick={() => {}}
           >
             Book your non-medical emergency transportation
@@ -123,7 +123,7 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
 
-                        onClick={showModal}
+                        onClick={()=>showModal}
               //onClick={() => {}}
             >
               Get a quote
@@ -261,7 +261,7 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                        onClick={showModal}
+                        onClick={()=>showModal}
               //onClick={() => {}}
             >
               Contact our team
@@ -291,7 +291,7 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                        onClick={showModal}
+                        onClick={()=>showModal}
               //onClick={() => {}}
             >
               Talk to us about your needs
