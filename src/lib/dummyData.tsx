@@ -540,7 +540,7 @@ export const socialMediaLists: SocialProps[] = [
   },
   {
     href: "https://facebook.com/treepzglobal",
-    icon: <FacebookIconn />,
+    icon: <FacebookIcon />,
   },
   {
     href: "https://www.linkedin.com/company/20535443/admin/feed/posts/",

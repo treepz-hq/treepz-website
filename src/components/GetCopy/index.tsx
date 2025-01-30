@@ -36,35 +36,51 @@ const GetACopy: React.FC = () => {
   const [retryCount, setRetryCount] = useState(0);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false); 
 
-  const handleSubmit = async (values: FormData) => {
+  const handleSubmit = async (values: FormData, { resetForm }: { resetForm: () => void }) => {
     setIsSubmitting(true);
     setErrorMessage(null);
     setSuccessMessage(null);
     setRetryCount(0);
-
+  
     try {
       const response = await retryRequest(values, retryCount);
-      setSuccessMessage(response.message || 'Your report is on its way!');
+      setSuccessMessage('Please check your email for the report!');
+      setShowModal(true);
+      
+      resetForm();
+  
+      setTimeout(() => {
+        setShowModal(false);
+      }, 3000);
     } catch (error: any) {
-      setErrorMessage(error.message || 'Something went wrong. Please try again.');
+      setErrorMessage('Something went wrong. Please try again.');
+      setShowModal(true);
     } finally {
       setIsSubmitting(false);
     }
   };
+  
+  const closeModal = () => {
+    setShowModal(false); 
+  };
 
   return (
+    <>
     <div
-      className="flex flex-col md:flex-row px-[55px] py-[74px] items-center gap-4"
+      className="flex flex-col margin-auto py-[45px] mx-[7%] sm:flex-row  items-center gap-4"
+      // className="flex flex-col md:flex-row px-[55px] py-[74px] items-center gap-4"
       style={{
         borderTop: '1.5px dashed #D3D6D9',
         borderBottom: '1.5px dashed #D3D6D9',
-        backgroundColor: '#FFF',
+        // backgroundColor: '#FFF',
       }}
     >
-      <div className="w-full md:w-1/2 p-6">
+      <div className="w-full sm:w-1/2">
+      {/* <div className="w-full margin-auto bg-red-950 md:w-1/2 p-6"> */}
         {/* Mobile style heading */}
-        <h2 className="text-[#101010] text-center font-switzer text-xl font-semibold leading-[32px] uppercase lg:hidden">
+        <h2 className="text-[#101010] text-center font-switzer text-xl font-semibold leading-[32px] p-6 uppercase lg:hidden">
           Get Your Free Copy: Corporate Mobility Report 2025
         </h2>
 
@@ -72,22 +88,18 @@ const GetACopy: React.FC = () => {
         <h2 className="text-[#212529] text-4xl font-semibold leading-[52px] tracking-[0.4px] uppercase hidden lg:block">
           Get Your Free Copy: Corporate Mobility Report 2025
         </h2>
-
-        {/* <p className="text-[#4D5154]">
-          Gain exclusive insights into Africa's corporate transportation landscape and discover how leading companies are optimizing their mobility solutions.
-        </p> */}
         <p className="text-[#6F7174] text-center font-switzer text-sm font-normal leading-4 tracking-[0.4px] 
   lg:text-[#4D5154] lg:text-xl lg:leading-7 lg:tracking-[0.4px] lg:text-left">
           Gain exclusive insights into Africa&apos;s corporate transportation landscape and discover how leading companies are optimizing their mobility solutions.
         </p>
       </div>
-
-      {/* Form content */}
-      <div className="w-full md:w-1/2 bg-white rounded-2xl p-6 shadow-[0px_1px_24px_3px_rgba(0,0,0,0.04)]">
+      
+      {/* Form Section */}
+      <div className="w-full sm:w-1/2 rounded-2xl p-6 shadow-[0px_1px_24px_3px_rgba(0,0,0,0.04)]">
+      {/* <div className="w-full md:w-1/2 bg-white rounded-2xl p-6 shadow-[0px_1px_24px_3px_rgba(0,0,0,0.04)]"> */}
         <h2 className="text-md font-semibold mb-6 text-center">
           Fill this to get your free copy today
         </h2>
-
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -96,9 +108,10 @@ const GetACopy: React.FC = () => {
           {({ isSubmitting }) => (
             <Form className="space-y-6">
               <div className="space-y-4">
-                {/* First Name and Last Name */}
-                <div className="md:flex md:gap-4">
-                  <div className="md:w-1/2">
+                <div className="sm:flex md:gap-4">
+                {/* <div className="md:flex md:gap-4"> */}
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="firstName" className="block text-sm font-normal text-gray-700 mb-2">
                       First Name
                     </label>
@@ -112,7 +125,8 @@ const GetACopy: React.FC = () => {
                     <ErrorMessage name="firstName" component="div" className="text-red-500 text-sm" />
                   </div>
 
-                  <div className="md:w-1/2">
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="lastName" className="block text-sm font-normal text-gray-700 mb-2">
                       Last Name
                     </label>
@@ -126,10 +140,10 @@ const GetACopy: React.FC = () => {
                     <ErrorMessage name="lastName" component="div" className="text-red-500 text-sm" />
                   </div>
                 </div>
-
-                {/* Email and Phone Number */}
-                <div className="md:flex md:gap-4">
-                  <div className="md:w-1/2">
+                <div className="sm:flex md:gap-4">
+                {/* <div className="md:flex md:gap-4"> */}
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="email" className="block text-sm font-normal text-gray-700 mb-2">
                       Email
                     </label>
@@ -143,7 +157,8 @@ const GetACopy: React.FC = () => {
                     <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
                   </div>
 
-                  <div className="md:w-1/2">
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="phoneNumber" className="block text-sm font-normal text-gray-700 mb-2">
                       Phone Number
                     </label>
@@ -158,9 +173,10 @@ const GetACopy: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Job Title and Company Name */}
-                <div className="md:flex md:gap-4">
-                  <div className="md:w-1/2">
+                <div className="sm:flex md:gap-4">
+                {/* <div className="md:flex md:gap-4"> */}
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="jobTitle" className="block text-sm font-normal text-gray-700 mb-2">
                       Job Title
                     </label>
@@ -174,7 +190,8 @@ const GetACopy: React.FC = () => {
                     <ErrorMessage name="jobTitle" component="div" className="text-red-500 text-sm" />
                   </div>
 
-                  <div className="md:w-1/2">
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="companyName" className="block text-sm font-normal text-gray-700 mb-2">
                       Company Name
                     </label>
@@ -189,9 +206,10 @@ const GetACopy: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Company Size and Location */}
-                <div className="md:flex md:gap-4">
-                  <div className="md:w-1/2">
+                <div className="sm:flex md:gap-4">
+                {/* <div className="md:flex md:gap-4"> */}
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="companySize" className="block text-sm font-normal text-gray-700 mb-2">
                       Company Size
                     </label>
@@ -211,7 +229,8 @@ const GetACopy: React.FC = () => {
                     <ErrorMessage name="companySize" component="div" className="text-red-500 text-sm" />
                   </div>
 
-                  <div className="md:w-1/2">
+                  <div className="sm:w-1/2">
+                  {/* <div className="md:w-1/2"> */}
                     <label htmlFor="companyLocation" className="block text-sm font-normal text-gray-700 mb-2">
                       Company Location
                     </label>
@@ -242,9 +261,28 @@ const GetACopy: React.FC = () => {
           )}
         </Formik>
       </div>
+
+      {showModal && (
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 className="text-center text-xl font-semibold mb-4">
+              {successMessage ? 'Submission Successful' : 'Submission Failed'}
+            </h2>
+            <p className="text-center text-sm mb-4">
+              {successMessage || errorMessage}
+            </p>
+            <button
+              onClick={closeModal}
+              className="w-full bg-[#F8B02B] text-[#101010] font-semibold py-2 px-4 rounded-full"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
+    </>
   );
 };
 
 export default GetACopy;
-
