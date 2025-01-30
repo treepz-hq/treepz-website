@@ -7,59 +7,58 @@ import { useModal } from '@/contexts/ModalContext';
 
 const BetterTogetherComponent = () => {
   const { showModal } = useModal();
-  const pathname = usePathname()
-  const router = useRouter()
-  return (
-      <div className="relative px-4 sm:pt-[111px]">
-        <div className="relative w-full sm:max-w-[1640px] h-[176.66px] sm:h-[377.861px] mx-auto">
-          <Image
-            src="/footer-header.png"
-            alt="footer"
-            sizes="100vw"
-            fill
-            priority
-            className="absolute object-contain"
-          />
-        </div>
-        <div className="relative z-10 bg-[url(/cta-card.png)] bg-cover bg-no-repeat bg-black p-4 sm:p-14 rounded-2xl sm:rounded-[32px] w-full sm:w-[1138px] sm:mx-auto -mt-16 flex justify-center shadow">
-          <div className="w-full sm:w-[791px] mx-auto text-white">
-            <h1 className="text-[28px] sm:text-[56px] text-white font-semibold mb-8 w-full text-center sm:w-[841px] sm:leading-[64px]">
-              TREEPZ ARE BETTER TOGETHER
-            </h1>
-            <p className="text-xl text-[#DEE0E3] text-center w-full">
-              We believe in partnerships, not transactions. Our dedicated team goes above and beyond to tailor solutions that perfectly fit your unique needs. Forget one-size-fits-all – with Treepz, you get a personalized experience that exceeds expectations.
-            </p>
+  const pathname = usePathname();
+  const router = useRouter();
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-11 sm:w-[452px] mx-auto">
-              <Button
-                variant={"default"}
-                className="w-full sm:w-[284px] sm:h-[64px] relative overflow-hidden group"
-                onClick={() => router.push("/business-solutions")}
-              >
-                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-              Explore our business solutions
+  return (
+    <div className="relative w-full -mt-7 mb-9">
+      <div className="relative mb-4">
+        <Image
+          src="/footer-header.png"
+          alt="Footer Image"
+          width={1200}
+          height={600}
+          priority
+          className="w-full h-auto object-cover"
+          unoptimized
+        />
+      </div>
+      <div className="bg-black text-white p-14 sm:px-20 px-9 rounded-2xl sm:w-3/4 w-[80%] mx-auto relative sm:mt-0 -mt-12 bg-[url(/cta-card.png)] bg-cover bg-no-repeat custom-gradient">
+        <h2 className="text-2xl sm:text-4xl font-semibold mb-4 text-center">
+          DOWNLOAD MOBILITY REPORT
+        </h2>
+        <p className="text-[#DEE0E3] text-sm sm:text-base text-center">
+          Gain exclusive insights into Africa&apos;s corporate transportation landscape and discover how leading companies are optimizing their mobility solutions.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-[378px] mx-auto">
+          <Button
+            variant="default"
+            className="relative overflow-hidden sm:w-[210px] w-full sm:h-[45px] text-center items-center sm:px-[2px] group"
+            onClick={() => router.push("/business-solutions")}
+          >
+            <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              Download Report for Free
             </span>
-            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
-              Explore our business solutions
+            <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+              Download Report for Free
             </span>
-                
-              </Button>
-              <Button
-                variant={"outline"}
-                className="!bg-transparent text-white border-white w-fit sm:w-[156px] hover:text-white sm:h-[64px] group overflow-hidden relative"
-                onClick={()=>showModal}
-              >
-                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+          </Button>
+          <Button
+            variant="outline"
+            className="relative !bg-transparent text-white border-white sm:w-[150px] sm:h-[45px] group overflow-hidden"
+            onClick={() => showModal('share')}
+            aria-label="contact us"
+          >
+            <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Contact us
             </span>
             <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
               Contact us
             </span>
-              </Button>
-            </div>
-          </div>
+          </Button>
         </div>
       </div>
+    </div>
   );
 };
 
