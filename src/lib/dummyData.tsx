@@ -37,6 +37,8 @@ interface PostalCardProps {
   src: string;
   title: string;
   href?: string;
+  logo?: string;
+  text?: string;
 }
 [];
 
@@ -321,7 +323,7 @@ export const PostalCardData: PostalCardProps[] = [
     href: "airport-transportation",
   },
   {
-    logo: '',
+    src:"",
     title: 'African urbanization drives rentals',
     text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
   }
