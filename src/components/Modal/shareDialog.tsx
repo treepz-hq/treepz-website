@@ -46,7 +46,7 @@ const ShareDialog = () => {
           <div className="flex justify-between items-center mb-4">
             <Dialog.Title className="font-medium text-[#212529] text-lg">Share to</Dialog.Title>
             <button
-              onClick={() => setIsModalVisible(false)}
+              onClick={hideModal}
               className="bg-[#F7F7F7] text-black text-sm py-2 px-3 rounded-full"
               aria-label="Close dialog"
             >
