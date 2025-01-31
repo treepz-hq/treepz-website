@@ -96,7 +96,6 @@ const GetACopy: React.FC = () => {
       
       {/* Form Section */}
       <div className="w-full sm:w-1/2 rounded-2xl p-6 shadow-[0px_1px_24px_3px_rgba(0,0,0,0.04)]">
-      {/* <div className="w-full md:w-1/2 bg-white rounded-2xl p-6 shadow-[0px_1px_24px_3px_rgba(0,0,0,0.04)]"> */}
         <h2 className="text-md font-semibold mb-6 text-center">
           Fill this to get your free copy today
         </h2>
@@ -109,10 +108,8 @@ const GetACopy: React.FC = () => {
             <Form className="space-y-6">
               <div className="space-y-4">
                 <div className="sm:flex md:gap-4">
-                {/* <div className="md:flex md:gap-4"> */}
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="firstName" className="block text-sm font-normal text-gray-700 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-normal text-gray-700 my-2">
                       First Name
                     </label>
                     <Field
@@ -126,8 +123,7 @@ const GetACopy: React.FC = () => {
                   </div>
 
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="lastName" className="block text-sm font-normal text-gray-700 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-normal text-gray-700 my-2">
                       Last Name
                     </label>
                     <Field
@@ -141,10 +137,8 @@ const GetACopy: React.FC = () => {
                   </div>
                 </div>
                 <div className="sm:flex md:gap-4">
-                {/* <div className="md:flex md:gap-4"> */}
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="email" className="block text-sm font-normal text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-normal text-gray-700 my-2">
                       Email
                     </label>
                     <Field
@@ -158,8 +152,7 @@ const GetACopy: React.FC = () => {
                   </div>
 
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="phoneNumber" className="block text-sm font-normal text-gray-700 mb-2">
+                    <label htmlFor="phoneNumber" className="block text-sm font-normal text-gray-700 my-2">
                       Phone Number
                     </label>
                     <Field
@@ -174,10 +167,8 @@ const GetACopy: React.FC = () => {
                 </div>
 
                 <div className="sm:flex md:gap-4">
-                {/* <div className="md:flex md:gap-4"> */}
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="jobTitle" className="block text-sm font-normal text-gray-700 mb-2">
+                    <label htmlFor="jobTitle" className="block text-sm font-normal text-gray-700 my-2">
                       Job Title
                     </label>
                     <Field
@@ -191,9 +182,8 @@ const GetACopy: React.FC = () => {
                   </div>
 
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="companyName" className="block text-sm font-normal text-gray-700 mb-2">
-                      Company Name
+                    <label htmlFor="companyName" className="block text-sm font-normal text-gray-700 my-2">
+                    What&apos;s your company name?
                     </label>
                     <Field
                       type="text"
@@ -207,11 +197,9 @@ const GetACopy: React.FC = () => {
                 </div>
 
                 <div className="sm:flex md:gap-4">
-                {/* <div className="md:flex md:gap-4"> */}
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="companySize" className="block text-sm font-normal text-gray-700 mb-2">
-                      Company Size
+                    <label htmlFor="companySize" className="block text-sm font-normal text-gray-700 my-2">
+                    What&apos;s the size of your company?
                     </label>
                     <Field
                       as="select"
@@ -230,9 +218,8 @@ const GetACopy: React.FC = () => {
                   </div>
 
                   <div className="sm:w-1/2">
-                  {/* <div className="md:w-1/2"> */}
-                    <label htmlFor="companyLocation" className="block text-sm font-normal text-gray-700 mb-2">
-                      Company Location
+                    <label htmlFor="companyLocation" className="block text-sm font-normal text-gray-700 my-2">
+                    Company location (City & Country)
                     </label>
                     <Field
                       type="text"

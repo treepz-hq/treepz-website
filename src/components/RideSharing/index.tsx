@@ -18,7 +18,7 @@ const RideSharingStats: React.FC = () => {
         {/* Image Section */}
         <div className="w-full sm:w-2/3 mt-6 sm:mt-0">
           <Image
-            src="/jointRide.png"
+            src="/sharingride.png"
             alt="Ride-sharing illustration"
             width={300}
             height={300}
