@@ -18,8 +18,9 @@ const HeroComponent = () => {
 
   const scrollToGetCopy = () => {
     if (getCopyRef.current) {
-      getCopyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Focus on the first field after scrolling
+      getCopyRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' });
       setTimeout(() => {
         const firstInput = getCopyRef.current?.querySelector('input');
         if (firstInput) {
