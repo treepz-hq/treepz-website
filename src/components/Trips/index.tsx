@@ -14,7 +14,7 @@ const BetterTogetherComponent = () => {
     <div className="relative w-full -mt-7 mb-9">
       <div className="relative mb-4">
         <Image
-          src="/footer-header.png"
+          src="/TogetherDownload.png"
           alt="Footer Image"
           width={1200}
           height={600}
