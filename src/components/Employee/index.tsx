@@ -41,7 +41,7 @@ Get your employees to move better
         <Button
           variant={"default"}
           className="w-fit sm:w-[197px] mx-auto mt-5 sm:mt-[52px] sm:h-[64px] font-semibold text-base"
-          onClick={showModal}
+          onClick={()=>showModal}
         >
           Speak with our team
         </Button>
@@ -196,7 +196,7 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px] h-[64px]"
-              onClick={showModal}
+              onClick={()=>showModal}
             >
               Get in touch
               <ChevronRightIcon />
@@ -263,7 +263,7 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[263px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
               //onClick={() => {}}
             >
               Find how Treepz can help
@@ -353,7 +353,7 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="font-mediummt-6 w-fit sm:w-[241px] mx-auto sm:h-[64px] sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
               //onClick={() => {}}
             >
               Get your custom quote

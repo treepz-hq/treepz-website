@@ -34,7 +34,7 @@ const HealthTranspComponent = () => {
             variant={"default"}
             className="cursor-pointer rounded-full w-fit sm:w-[152px] sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
           >
             Learn more
           </Button>
@@ -135,7 +135,7 @@ const HealthTranspComponent = () => {
             <Button
                 variant={"default"}
                 className="cursor-pointer rounded-full text-gray-900 w-fit sm:w-[156px] flex items-center gap-2 sm:!h-[64px] mb-12"
-                onClick={showModal}
+                onClick={()=>showModal}
               >
                 Get a quote
               </Button>
@@ -246,7 +246,7 @@ const HealthTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px] sm:h-[64px]"
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Change your travel plans

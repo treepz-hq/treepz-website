@@ -26,7 +26,7 @@ const WeddingComponent = () => {
                         <Button
                             variant={"default"}
                             className="relative w-fit sm:w-[151px] sm:h-[64px] group overflow-hidden mt-8 sm:mt-[60px]"
-                            onClick={showModal}
+                            onClick={()=>showModal}
                             >
                             <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                                 Book a vehicle

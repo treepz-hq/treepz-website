@@ -35,7 +35,7 @@ with Treepz Shuttles.
             <Button
               variant={"default"}
               className="w-fit mx-auto mt-8 sm:mt-14 sm:w-[310px] font-semibold sm:h-[64px]"
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Book your corporate transportation
@@ -113,7 +113,7 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
           <Button
             variant={"default"}
             className="sm:h-[64px] w-full sm:w-[252px] sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
             //onClick={() => {}}
           >
             Talk to our friendly team
@@ -159,7 +159,7 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
               <Button
                 variant={"default"}
                 className="mt-6 w-full sm:w-[220px] sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
                 //onClick={() => {}}
               >
                 Get your team there
@@ -253,7 +253,7 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
             <Button
               variant={"default"}
               className="sm:h-[64px] mt-6 w-full sm:w-[248px] sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
               //onClick={() => {}}
             >
               Get a customized quote

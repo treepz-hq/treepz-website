@@ -57,7 +57,7 @@ const MediaComponent = () => {
                   Improve your employees productivity through employee commute
                 </p>
               </div>
-              <div onClick={showModal} className="w-full sm:w-[116px] cursor-pointer font-medium flex justify-between mt-10">
+              <div onClick={()=>showModal} className="w-full sm:w-[116px] cursor-pointer font-medium flex justify-between mt-10">
                 <p>Learn more</p>
                 <ArrowRightWhiteIcon />
               </div>

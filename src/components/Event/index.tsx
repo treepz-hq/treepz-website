@@ -41,7 +41,7 @@ const EventComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[337px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px] font-semibold group overflow-hidden relative"
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
@@ -99,7 +99,7 @@ const EventComponent = () => {
           <Button
             variant={"default"}
             className="w-fit sm:w-[200px]"
-onClick={showModal}
+onClick={()=>showModal}
             //onClick={() => {}}
           >
             Contact our team
