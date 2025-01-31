@@ -34,11 +34,11 @@ import WhatsAppIcon from "@/assets/svgs/whatsapp-icon.svg";
 import { title } from "process";
 
 interface PostalCardProps {
-  src: string;
-  title: string;
+  src?: string;
+  title?: string;
   href?: string;
-  logo?: string;
-  text?: string;
+  logo?:string;
+  text?:string;
 }
 [];
 

@@ -58,7 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <ModalComponent title="Book Now & Contact us">
               <BookNowForm />
             </ModalComponent>
-                        <Toaster/>
+             <Toaster/>
           </ModalProvider>
         </div>
         <GoogleAnalytics 

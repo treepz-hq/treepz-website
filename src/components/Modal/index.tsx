@@ -5,8 +5,8 @@ import { useModal } from "@/contexts/ModalContext";
 import ShareDialog from "./shareDialog";
 import DialogComponent from "./formDialog";
 interface ModalComponentProps {
-  children:ReactNode;
-  title?:string;
+children:ReactNode;
+title?:string;
 }
 const ModalComponent = (props:ModalComponentProps) => {
   const { isModalVisible, modalType, hideModal } = useModal();
@@ -15,7 +15,7 @@ const ModalComponent = (props:ModalComponentProps) => {
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-gray-800 bg-opacity-75 flex justify-center items-center p-8">
-     {props.children}
+      {props.children}
     </div>
   );
 };

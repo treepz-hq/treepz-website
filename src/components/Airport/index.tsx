@@ -43,7 +43,6 @@ From touchdown to town
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-medium gap-2 mt-14"
           onClick={()=>showModal}
-          //onClick={() => {}}
         >
        Book Now 
         </Button>

@@ -39,7 +39,7 @@ const HeroComponent = () => {
             <h1 className='text-[#212529] font-bold text-4xl uppercase leading-[52PX]'>The State of <br />Corporate Mobility <br />Report in Africa 2025</h1>
             <p className='text-[#4D5154] my-3 text-sm text-[16px]'>Learn about the current mobility trends in the African landscape impacting how businesses will strategise and operate in 2025.</p>
           </div>
-          <div className='flex flex-col gap-4 sm:flex-row w-full sm:w-[378px]'>
+          <div className='flex flex-col mt-8 gap-4 sm:flex-row w-full sm:w-[378px]'>
             <Button
               variant="default"
               className="relative overflow-hidden sm:w-[200px] sm:h-[40px] text-center items-center sm:px-[2px] group"
@@ -69,9 +69,9 @@ const HeroComponent = () => {
             </Button>
           </div>
         </div>
-        <div className='w-full sm:w-1/2'>
+        <div className='w-full mt-8 sm:w-1/2'>
           <Image
-            src="/CM.png"
+            src="/CMW.png"
             alt="Corporate Mobility"
             width={400}
             height={300}
