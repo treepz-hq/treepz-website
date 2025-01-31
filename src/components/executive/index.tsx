@@ -35,7 +35,7 @@ const ExecutiveComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[194px] mx-auto mt-8 sm:mt-[52px] sm:h-[64px]"
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Tell me more
@@ -132,7 +132,7 @@ const ExecutiveComponent = () => {
               variant={"default"}
               className="mt-6 w-full sm:w-[200px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Contact our team
@@ -254,7 +254,7 @@ const ExecutiveComponent = () => {
                 variant={"default"}
                 className="cursor-pointer rounded-full w-fit sm:w-[260px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
                 //onClick={() => {}}
               >
                 Get them there with Treepz
@@ -296,7 +296,7 @@ const ExecutiveComponent = () => {
               className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
 
               //onClick={() => {}}
-                            onClick={showModal}
+                            onClick={()=>showModal}
             >
               Get them there with Treepz
               <ChevronRightIcon />
@@ -352,7 +352,7 @@ const ExecutiveComponent = () => {
               variant={"default"}
               className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Get a quota
@@ -390,7 +390,7 @@ const ExecutiveComponent = () => {
               variant={"default"}
               className="cursor-pointer rounded-full w-fit font-semibold mt-8 sm:mt-6 text-black flex gap-2"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Get a quota

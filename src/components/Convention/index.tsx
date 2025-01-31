@@ -50,7 +50,7 @@ const ConventionComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[172px] mx-auto mt-8 sm:mt-14 sm:h-[64px]"
-              onClick={showModal}
+              onClick={()=>showModal}
               //onClick={() => {}}
             >
               Find out more
@@ -112,7 +112,7 @@ const ConventionComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
-            onClick={showModal}
+            onClick={()=>showModal}
             //onClick={() => {}}
           >
             Get a quote
@@ -291,7 +291,7 @@ const ConventionComponent = () => {
               </div>
               <Button
                 className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
-                onClick={showModal}
+                onClick={()=>showModal}
               >
                 {" "}
                 Get a customized quote{" "}
@@ -324,7 +324,7 @@ const ConventionComponent = () => {
         </div>
         <Button
           className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
-          onClick={showModal}
+          onClick={()=>showModal}
         >
           {" "}
           Book easy convention transportation{" "}

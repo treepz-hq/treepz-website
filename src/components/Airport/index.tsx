@@ -42,7 +42,7 @@ From touchdown to town
         <Button
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-medium gap-2 mt-14"
-                    onClick={showModal}
+                    onClick={()=>showModal}
           //onClick={() => {}}
         >
        Book Now 
@@ -175,7 +175,7 @@ Why Use an Airport Transport Service?
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
             >
               Get a quote
               <ChevronRightIcon />
@@ -285,7 +285,7 @@ Why Use an Airport Transport Service?
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                            onClick={showModal}
+                            onClick={()=>showModal}
               //onClick={() => {}}
             >
               Change your travel plans

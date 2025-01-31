@@ -38,7 +38,7 @@ const RentACarComponent = () => {
             <Button
               variant={"default"}
               className="rounded-lg w-full !h-10 group relative overflow-hidden"
-              onClick={showModal}
+              onClick={()=>showModal}
             >
                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Rent a car now

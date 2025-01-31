@@ -38,7 +38,7 @@ const SchoolTransComponent = () => {
         <Button
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-semibold gap-2 mt-14"
-          onClick={showModal}
+          onClick={()=>showModal}
         >
           Book your school transportation service
         </Button>
@@ -138,7 +138,7 @@ const SchoolTransComponent = () => {
             variant={"default"}
             className="cursor-pointer rounded-full font-medium flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
 
-              onClick={showModal}
+              onClick={()=>showModal}
             //onClick={() => {}}
           >
             Get a quote
@@ -220,7 +220,7 @@ const SchoolTransComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              onClick={showModal}
+              onClick={()=>showModal}
             >
               Get the there with Treepz
               <ChevronRightIcon />
@@ -319,7 +319,7 @@ const SchoolTransComponent = () => {
             variant={"default"}
             className="cursor-pointer rounded-full w-full sm:w-[216px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
 
-              onClick={showModal}
+              onClick={()=>showModal}
             //onClick={() => {}}
           >
             Get a custom quote

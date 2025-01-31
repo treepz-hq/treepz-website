@@ -24,7 +24,7 @@ const GetAQuote = () => {
               variant={"default"}
               className="cursor-pointer rounded-full w-fit sm:w-[144px] text-gray-900 flex items-center ml-3 sm:ml-10"
 
-                            onClick={showModal}
+                            onClick={()=>showModal}
             >
               Get a quote
             </Button>
