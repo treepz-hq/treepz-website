@@ -18,8 +18,9 @@ const HeroComponent = () => {
 
   const scrollToGetCopy = () => {
     if (getCopyRef.current) {
-      getCopyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Focus on the first field after scrolling
+      getCopyRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' });
       setTimeout(() => {
         const firstInput = getCopyRef.current?.querySelector('input');
         if (firstInput) {
@@ -35,10 +36,11 @@ const HeroComponent = () => {
         className='flex flex-col margin-auto py-[45px] mx-[7%] sm:flex-row justify-between items-center gap-4 text-center'
       >
         <div className='w-full items-center text-center sm:w-1/2 sm:text-left'>
-          <div className='w-full'>
-            <h1 className='text-[#212529] font-bold text-4xl uppercase leading-[52PX]'>The State of <br />Corporate Mobility <br />Report in Africa 2025</h1>
+          {/* <div className='w-full pt-9'> */}
+            {/* <h1 className='text-[#212529] font-bold text-4xl uppercase leading-[52PX]'>The State of <br />Corporate Mobility <br />Report in Africa 2025</h1> */}
+            <h1 className='text-[#212529] font-[600px] text-[44px] uppercase leading-[52PX]'>The State of Corporate Mobility Report in Africa 2025</h1>
             <p className='text-[#4D5154] my-3 text-sm text-[16px]'>Learn about the current mobility trends in the African landscape impacting how businesses will strategise and operate in 2025.</p>
-          </div>
+          {/* </div> */}
           <div className='flex flex-col mt-8 gap-4 sm:flex-row w-full sm:w-[378px]'>
             <Button
               variant="default"
@@ -69,13 +71,14 @@ const HeroComponent = () => {
             </Button>
           </div>
         </div>
-        <div className='w-full mt-8 sm:w-1/2'>
+        <div className='w-full sm:w-1/2 mt-8'>
+        {/* <div className='w-full mt-8 bg-green-500 sm:w-1/2'> */}
           <Image
             src="/CMW.png"
             alt="Corporate Mobility"
             width={400}
-            height={300}
-            className="w-full h-[300px] object-contain"
+            height={500}
+            className="w-full h-[400px] object-contain"
             unoptimized
           />
         </div>
