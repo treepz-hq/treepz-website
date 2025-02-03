@@ -17,6 +17,7 @@ import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import Link from 'next/link'
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
+import { useModal } from '@/contexts/ModalContext';
 
 const NeededInformations = [
   "Recurring Airport Shuttle Journeys",
@@ -27,6 +28,7 @@ const NeededInformations = [
 ];
 
 const AirlineComponent = () => {
+    const { showModal } = useModal();
   return (
     <div>
       <div className="bg-[url(/airline-hero.png)] bg-cover bg-no-repeat w-full h-[650px] sm:h-[708px] mt-10 sm:mt-20">
@@ -45,7 +47,7 @@ const AirlineComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-full sm:w-[330px] mx-auto mt-8 sm:mt-14 flex items-center gap-2 mb-11 sm:mb-0"
-            //onClick={() => {}}
+            onClick={() => showModal('form')}
           >
             Learn more about Treepz’s Airline Services
           </Button>
@@ -184,7 +186,7 @@ const AirlineComponent = () => {
               <Button
                 variant={"default"}
                 className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                //onClick={() => {}}
+                onClick={() => showModal('form')}
               >
                 Become a Treepz partner
                 <ChevronRightIcon />
@@ -271,7 +273,7 @@ const AirlineComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
             >
               Speak to the Treepz Team
               <ChevronRightIcon />

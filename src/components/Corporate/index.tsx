@@ -19,24 +19,24 @@ import { useModal } from '@/contexts/ModalContext';
 const NeededInformations = ["Corporate Shuttle Service", "Which Treepz corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Treepz vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Treepz corporate shuttle service near me?"];
 
 const CorporateComponent = () => {
-    const {showModal} = useModal();
+  const { showModal } = useModal();
   return (
     <div>
       <div className="bg-[url(/corporate-hero.png)] bg-cover bg-no-repeat w-full h-[622px] sm:h-[707px] sm:mt-20">
         <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[144px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[54px] sm:leading-[56px] mb-[28px] uppercase text-center">
-           Drive Your Business Forward 
-with Treepz Shuttles.
+            Drive Your Business Forward
+            with Treepz Shuttles.
           </h1>
           <p className="text-base sm:text-lg text-center">
-       Workplace trips shouldn't be a hassle. Treepz provides dozens of options to create a comfortable, professional atmosphere for your team, from the moment they leave home to the moment they arrive.
+            Workplace trips shouldn't be a hassle. Treepz provides dozens of options to create a comfortable, professional atmosphere for your team, from the moment they leave home to the moment they arrive.
           </p>
           <div className="flex justify-center w-full">
             <Button
               variant={"default"}
               className="w-fit mx-auto mt-8 sm:mt-14 sm:w-[310px] font-semibold sm:h-[64px]"
-                            onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Book your corporate transportation
             </Button>
@@ -55,10 +55,10 @@ with Treepz Shuttles.
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
         <h1 className="w-full mx-auto font-bold text-[20px] sm:text-[28px]  leading-[32px] uppercase text-[#212529] mb-6 text-center ">
-Expert Solutions for Your Transportation needs
+          Expert Solutions for Your Transportation needs
         </h1>
         <p className="text-xl text-[#4D5154] text-center w-full sm:w-[725px] mx-auto">
-We're invested in your journey, not just your destination. Treepz goes beyond quick transactions, building relationships and adapting to your evolving transportation needs.
+          We're invested in your journey, not just your destination. Treepz goes beyond quick transactions, building relationships and adapting to your evolving transportation needs.
         </p>
       </div>
       {/* unique */}
@@ -113,8 +113,8 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
           <Button
             variant={"default"}
             className="sm:h-[64px] w-full sm:w-[252px] sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal}
-            //onClick={() => {}}
+            onClick={() => showModal('form')}
+          //onClick={() => {}}
           >
             Talk to our friendly team
             <ChevronRightIcon />
@@ -159,8 +159,8 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
               <Button
                 variant={"default"}
                 className="mt-6 w-full sm:w-[220px] sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal}
-                //onClick={() => {}}
+                onClick={() => showModal('form')}
+              //onClick={() => {}}
               >
                 Get your team there
                 <ChevronRightIcon />
@@ -253,8 +253,8 @@ We're invested in your journey, not just your destination. Treepz goes beyond qu
             <Button
               variant={"default"}
               className="sm:h-[64px] mt-6 w-full sm:w-[248px] sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Get a customized quote
               <ChevronRightIcon />
