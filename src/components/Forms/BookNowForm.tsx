@@ -91,7 +91,7 @@ const BookNowForm = () => {
     }
   }
   return (
-    <div className="mt-8 flex flex-col">
+    <div className="mt-8 flex flex-col " >
       <div className="text-[#101010] mb-10">
         <h2 className="text-[22px] sm:leading-[28px] font-semibold mb-2">
           Transportation Request
