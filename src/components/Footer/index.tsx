@@ -52,7 +52,7 @@ const Footer = () => {
               alt="google"
               width={100}
               height={100}
-              className="w-[200px] h-auto"
+              className="w-[100px] h-auto"
               unoptimized
             />
             <Image
@@ -60,7 +60,7 @@ const Footer = () => {
               alt="google"
               width={100}
               height={100}
-              className="w-[200px] h-auto"
+              className="w-[100px] h-auto"
               unoptimized
             />
           </div>
