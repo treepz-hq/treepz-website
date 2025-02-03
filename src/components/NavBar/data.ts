@@ -37,41 +37,41 @@ export const NavMenu: MenuDataProps[] = [
 export const GroupTransport: SubMenuProps[] = [
   {
     label: "Event Transportation",
-    href: "/event",
+    href: "/event.html",
   },
   {
     label: "Convention Transportation",
-    href: "/convention",
+    href: "/convention.html",
   },
   {
     label: "Conference Shuttles",
-    href: "/conference",
+    href: "/conference.html",
   },
 ];
 
 export const SchoolTransport: SubMenuProps[] = [
   {
     label: "School Transportation",
-    href: "/school-transportation",
+    href: "/school-transportation.html",
   },
   {
     label: "Conference Shuttles",
-    href: "/conference",
+    href: "/conference.html",
   },
 ];
 
 export const CorporateTransportation: SubMenuProps[] = [
   {
     label: "Corporate Shuttle Service",
-    href: "/corporate-shuttle-service",
+    href: "/corporate-shuttle-service.html",
   },
   {
     label: "Employee Transportation",
-    href: "/employee-transportation",
+    href: "/employee-transportation.html",
   },
   {
     label: "Executive Transportation",
-    href: "/executive-transportation",
+    href: "/executive-transportation.html",
   },
   // {
   //   label: "Off-Site Parking Transportation",
@@ -82,15 +82,15 @@ export const CorporateTransportation: SubMenuProps[] = [
 export const GroundTransportation: SubMenuProps[] = [
   {
     label: "Airport Transportation",
-    href: "/airport-transportation",
+    href: "/airport-transportation.html",
   },
   {
     label: "Wedding Transportation",
-    href: "/wedding-transportation",
+    href: "/wedding-transportation.html",
   },
   {
     label: "Executive Transportation",
-    href: "/executive-transportation",
+    href: "/executive-transportation.html",
   },
   // {
   //   label: "Off-Site Parking Transportation",
@@ -101,11 +101,11 @@ export const GroundTransportation: SubMenuProps[] = [
 export const HealthCareTransportation: SubMenuProps[] = [
   {
     label: "Non-Emergency Medical Transportation",
-    href: "/non-emergency-transportation",
+    href: "/non-emergency-transportation.html",
   },
   {
     label: "Healthcare Shuttle",
-    href: "/healthcare-transportation",
+    href: "/healthcare-transportation.html",
   },
   // {
   //   label: "Elderly Transportation Services",
@@ -127,7 +127,7 @@ export const TransitAgencyTransportation: SubMenuProps[] = [
 export const GroupFirstColumn: SubMenuProps[] = [
   {
     label: "For Airline",
-    href: "/airline",
+    href: "/airline.html",
   },
   // {
   //   label: "For Corporate Events",
@@ -143,11 +143,11 @@ export const GroupFirstColumn: SubMenuProps[] = [
   // },
   {
     label: "For Wedding",
-    href: "/wedding",
+    href: "/wedding.html",
   },
   {
     label: "For Governments",
-    href: "/governments",
+    href: "/governments.html",
   },
 ];
 
@@ -166,7 +166,7 @@ export const GroupSecondColumn: SubMenuProps[] = [
   // },
   {
     label: "For University",
-    href: "/university",
+    href: "/university.html",
   },
   // {
   //   label: "For Production Crews",

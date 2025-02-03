@@ -147,10 +147,10 @@ const Footer = () => {
           <div className="sm:flex sm:gap-4 sm:items-center">
             {/* On small screens: show Terms & Conditions and Privacy & Cookie Policy side by side */}
             <div className="sm:hidden space-x-2">
-              <Link href="/terms-and-conditions" className="hover:underline">
+              <Link href="/terms-and-conditions.html" className="hover:underline">
                 Terms & Conditions
               </Link>
-              <Link href="/privacy-cookie-policy" className="hover:underline">
+              <Link href="/privacy-cookie-policy.html" className="hover:underline">
                 Privacy & Cookie Policy
               </Link>
             </div>
