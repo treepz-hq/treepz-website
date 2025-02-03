@@ -109,7 +109,7 @@ const NavBar = () => {
   };
   return (
     <div
-      className={`w-full sm:max-w-[1691px] h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 fixed top-0 z-50 ${bgClass}`}
+      className={`w-full sm:max-w-[1691px]  h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 fixed top-0 z-50 ${bgClass}`}
     >
       <div className="flex sm:w-[702px] justify-between items-center">
         <span className="cursor-pointer mr-10" onClick={() => router.push("/")}>
@@ -258,10 +258,11 @@ const NavBar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="hidden sm:flex flex-col sm:flex-row gap-4 ml-6">
+      <div className="hidden sm:flex flex-col sm:flex-row gap-4">
         <Button
           variant={"outline"}
-          onClick={()=>showModal}
+          // onClick={showModal}
+          onClick={() => showModal('form')}
           className={`font-medium w-fit sm:w-[144px] relative group overflow-hidden ${bgClass}`}
         >
           <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">

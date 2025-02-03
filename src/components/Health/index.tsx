@@ -18,7 +18,7 @@ import { useModal } from '@/contexts/ModalContext';
 const NeededInformations = ["Why Use a Corporate Travel Service?", "More than A to B", "Supporting Your Fellow Business Owners", "A Deeper Dive into Treepz for Business"];
 
 const HealthTranspComponent = () => {
-    const { showModal } = useModal();
+  const { showModal } = useModal();
 
   return (
     <div>
@@ -28,13 +28,13 @@ const HealthTranspComponent = () => {
             The Best in healthcare Transportation
           </h1>
           <p className="text-base sm:text-lg text-center w-full sm:w-[614px] mx-auto">
-           More than a ride, it&lsquo;s a healing journey. Experience compassionate medical transportation with Treepz.
+            More than a ride, it&lsquo;s a healing journey. Experience compassionate medical transportation with Treepz.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit sm:w-[152px] sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
 
-                            onClick={()=>showModal}
+            onClick={() => showModal('form')}
           >
             Learn more
           </Button>
@@ -94,7 +94,7 @@ const HealthTranspComponent = () => {
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info-1">
-         {/*  <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+          {/*  <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             Why Use a Corporate Travel Service?
           </h1> */}
           {/* <div className="space-y-6 text-[#6F7174] text-lg border-b pb-11">
@@ -133,22 +133,22 @@ const HealthTranspComponent = () => {
 
           <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <Button
-                variant={"default"}
-                className="cursor-pointer rounded-full text-gray-900 w-fit sm:w-[156px] flex items-center gap-2 sm:!h-[64px] mb-12"
-                onClick={()=>showModal}
-              >
-                Get a quote
-              </Button>
-              <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl border-b pb-11">
-                <Image
-                  src="/executive-bg.png"
-                  alt="detail"
-                  fill
-                  sizes="100vw, 100vh"
-                  priority
-                  className="object-cover absolute"
-                />
-              </div>
+              variant={"default"}
+              className="cursor-pointer rounded-full text-gray-900 w-fit sm:w-[156px] flex items-center gap-2 sm:!h-[64px] mb-12"
+              onClick={() => showModal('form')}
+            >
+              Get a quote
+            </Button>
+            <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl border-b pb-11">
+              <Image
+                src="/executive-bg.png"
+                alt="detail"
+                fill
+                sizes="100vw, 100vh"
+                priority
+                className="object-cover absolute"
+              />
+            </div>
             <div>
               <div className="border-b pb-11" id="info-3">
                 <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
@@ -246,8 +246,8 @@ const HealthTranspComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px] sm:h-[64px]"
-                            onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Change your travel plans
               <ChevronRightIcon />
@@ -268,7 +268,7 @@ const HealthTranspComponent = () => {
       <div className="mt-20">
         <PopularCitiesCarousel />
       </div>
-    
+
     </div>
   );
 };
