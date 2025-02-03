@@ -10,8 +10,8 @@ import { useModal } from "@/contexts/ModalContext";
 import { useRouter } from 'next/navigation';
 
 const WeddingComponent = () => {
-       const { showModal } = useModal();
-       const router = useRouter()
+    const { showModal } = useModal();
+    const router = useRouter()
 
     return (
         <>
@@ -26,8 +26,8 @@ const WeddingComponent = () => {
                         <Button
                             variant={"default"}
                             className="relative w-fit sm:w-[151px] sm:h-[64px] group overflow-hidden mt-8 sm:mt-[60px]"
-                            onClick={()=>showModal}
-                            >
+                            onClick={() => showModal('form')}
+                        >
                             <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                                 Book a vehicle
                             </span>
@@ -51,27 +51,27 @@ const WeddingComponent = () => {
             <div className='mt-[150px]'></div>
             <Testimony />
             <div className="container px-4 sm:px-20 flex justify-between items-center flex-col sm:flex-row">
-                {WeddingPostalData.map(({ src, title, description}) => (
+                {WeddingPostalData.map(({ src, title, description }) => (
                     <WeddingPostal src={src} title={title} description={description} key={src} />
                 ))}
             </div>
             <div className='w-full my-[70px] py-[48px] sm:py-[73px] bg-[url(/wedding-bg.png)] bg-cover bg-no-repeat h-fit px-4 sm:px-0'>
-                    <div className="w-full mx-auto text-white">
-                        <h1 className="text-[28px] sm:text-[56px] font-semibold leading-[40px] sm:leading-[64px] text-center mb-2">Inquire about Treepz Wedding Transportation</h1>
-                        <p className="text-xl text-center">Use the button below to get in touch with us</p>
-                        <Button
-                            variant={"default"}
-                            className="relative w-fit sm:w-[151px] sm:h-[64px] group overflow-hidden sm:mt-10 sm:mb-[48px] mx-auto flex justify-center"
-                            onClick={() => router.push("/contact")}
-                            >
-                            <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
-                                Contact us
-                            </span>
-                            <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0">
-                                Contact us
-                            </span>
-                        </Button>
-                    </div>
+                <div className="w-full mx-auto text-white">
+                    <h1 className="text-[28px] sm:text-[56px] font-semibold leading-[40px] sm:leading-[64px] text-center mb-2">Inquire about Treepz Wedding Transportation</h1>
+                    <p className="text-xl text-center">Use the button below to get in touch with us</p>
+                    <Button
+                        variant={"default"}
+                        className="relative w-fit sm:w-[151px] sm:h-[64px] group overflow-hidden sm:mt-10 sm:mb-[48px] mx-auto flex justify-center"
+                        onClick={() => router.push("/contact")}
+                    >
+                        <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
+                            Contact us
+                        </span>
+                        <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0">
+                            Contact us
+                        </span>
+                    </Button>
+                </div>
             </div>
         </>
     )

@@ -15,10 +15,10 @@ import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
 import { useModal } from '@/contexts/ModalContext';
 
-const NeededInformations = ["Non-Emergency Medical Transportation", "Caring Transportation When You Need it Most", "Get There Safely with Treepz", "Drill Down to the Detail", "So, What Are the Options?","It’s a Win-Win for Your Business"];
+const NeededInformations = ["Non-Emergency Medical Transportation", "Caring Transportation When You Need it Most", "Get There Safely with Treepz", "Drill Down to the Detail", "So, What Are the Options?", "It’s a Win-Win for Your Business"];
 
 const NonEmergencyTranspComponent = () => {
-    const {showModal} = useModal()
+  const { showModal } = useModal()
   return (
     <div>
       <div className="bg-[url(/non-eme-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px] mt-10 sm:mt-20">
@@ -27,13 +27,13 @@ const NonEmergencyTranspComponent = () => {
             Non-Emergency Medical Transportation
           </h1>
           <p className="text-base sm:text-lg text-center w-full sm:w-[671px] mx-auto">
-           Convenient transportation for your medical needs.
+            Convenient transportation for your medical needs.
           </p>
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold w-full sm:w-fit sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
-                        onClick={()=>showModal}
-            //onClick={() => {}}
+            onClick={() => showModal('form')}
+          //onClick={() => {}}
           >
             Book your non-medical emergency transportation
             <ChevronRightIcon />
@@ -45,7 +45,7 @@ const NonEmergencyTranspComponent = () => {
           Why Choose Treepz for Non-Emergency Medical Transportation?
         </h1>
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
-We work with the best companies  in business
+          We work with the best companies  in business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
           {MiniPartnerData.map(({ src }: any) => (
@@ -55,10 +55,10 @@ We work with the best companies  in business
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
         <h1 className="w-full sm:w-[735px] mx-auto font-bold text-[20px] sm:text-[28px] leading-[32px] uppercase text-[#212529] mb-6 text-center">
-treepz, your companion for good health
+          treepz, your companion for good health
         </h1>
         <p className="text-xl text-[#4D5154] text-center w-full sm:w-[1022px] mx-auto">
-It's not just a ride, it's a tailored solution. Our dedicated team works with you to create a transportation plan that fits your unique needs.
+          It's not just a ride, it's a tailored solution. Our dedicated team works with you to create a transportation plan that fits your unique needs.
         </p>
       </div>
       {/* unique */}
@@ -73,10 +73,10 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
         ))}
       </div>
       <GetAQuote />
-      <UserRoutesComponent 
-        title="Non-Emergency Medical Transportation with Treepz" 
+      <UserRoutesComponent
+        title="Non-Emergency Medical Transportation with Treepz"
         desc="Choose from hundreds of vehicles, dozens of styles, and seemingly
-              endless choices when it comes to amenities." 
+              endless choices when it comes to amenities."
       />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
@@ -85,7 +85,7 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
           </h1>
           {NeededInformations.map((info, index) => (
             <Link
-              href={`#info-${index+1}`}
+              href={`#info-${index + 1}`}
               className="flex border-b cursor-pointer text-gray-900 flex justify-between items-center p-4"
               key={index}
             >
@@ -123,8 +123,8 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
 
-                        onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Get a quote
               <ChevronRightIcon />
@@ -261,8 +261,8 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                        onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Contact our team
               <ChevronRightIcon />
@@ -291,8 +291,8 @@ It's not just a ride, it's a tailored solution. Our dedicated team works with yo
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                        onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Talk to us about your needs
               <ChevronRightIcon />

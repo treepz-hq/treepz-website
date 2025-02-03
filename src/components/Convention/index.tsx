@@ -50,8 +50,8 @@ const ConventionComponent = () => {
             <Button
               variant={"default"}
               className="w-full sm:w-[172px] mx-auto mt-8 sm:mt-14 sm:h-[64px]"
-              onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Find out more
             </Button>
@@ -112,8 +112,8 @@ const ConventionComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
-            onClick={()=>showModal}
-            //onClick={() => {}}
+            onClick={() => showModal('form')}
+          //onClick={() => {}}
           >
             Get a quote
           </Button>
@@ -266,7 +266,7 @@ const ConventionComponent = () => {
               <Image src="/carbon.png" alt="Carbon" layout="fill" />
             </div>
           </div>
-          <div id="info-9"  className="mt-[24px] border-b pb-11">
+          <div id="info-9" className="mt-[24px] border-b pb-11">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
               Options for Convention shuttles
             </h1>
@@ -291,7 +291,7 @@ const ConventionComponent = () => {
               </div>
               <Button
                 className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
-                onClick={()=>showModal}
+                onClick={() => showModal('form')}
               >
                 {" "}
                 Get a customized quote{" "}
@@ -299,42 +299,42 @@ const ConventionComponent = () => {
               </Button>
             </div>
           </div>
-   <div id="info-10" className="mt-[24px] border-b pb-11">
-        <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
-          How much does it cost for convention transportation near me?
-        </h1>
-        <div className="flex flex-col space-y-6 ">
-          <div className="text-lg text-[#6F7174]">
-            The cost of your convention transportation depends on a few things
-            like where you need your passengers to go, how long the conference
-            shuttle service is running, and how many vehicles you require.
-            Contact Treepz to request a FREE, bespoke quote for your conference
-            transportation.
-          </div>
-        </div>
-      </div>{" "}
-      <div id="info-11"  className="mt-[24px]  pb-11">
-        <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
-          Book EASY Convention Transportation
-        </h1>
-        <div className="flex flex-col space-y-6 mb-[40px] ">
-          <div className="text-lg text-[#6F7174]">
-            Don't hesitate. Discover our convention transportation services
-          </div>
-        </div>
-        <Button
-          className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
-          onClick={()=>showModal}
-        >
-          {" "}
-          Book easy convention transportation{" "}
-          <ChevronRightIcon className="ml-2 w-6 h-6" />{" "}
-        </Button>
-      </div>{" "}
+          <div id="info-10" className="mt-[24px] border-b pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              How much does it cost for convention transportation near me?
+            </h1>
+            <div className="flex flex-col space-y-6 ">
+              <div className="text-lg text-[#6F7174]">
+                The cost of your convention transportation depends on a few things
+                like where you need your passengers to go, how long the conference
+                shuttle service is running, and how many vehicles you require.
+                Contact Treepz to request a FREE, bespoke quote for your conference
+                transportation.
+              </div>
+            </div>
+          </div>{" "}
+          <div id="info-11" className="mt-[24px]  pb-11">
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+              Book EASY Convention Transportation
+            </h1>
+            <div className="flex flex-col space-y-6 mb-[40px] ">
+              <div className="text-lg text-[#6F7174]">
+                Don't hesitate. Discover our convention transportation services
+              </div>
+            </div>
+            <Button
+              className="bg-[#F8B02B] flex py-[16px] px-5 font-semibold rounded-[32px]"
+              onClick={() => showModal('form')}
+            >
+              {" "}
+              Book easy convention transportation{" "}
+              <ChevronRightIcon className="ml-2 w-6 h-6" />{" "}
+            </Button>
+          </div>{" "}
 
         </div>
       </div>
-         <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
+      <div className="container px-4 sm:px-20 w-full sm:max-w-[1022px] mx-auto flex flex-col">
         <h1 className="font-semibold text-xl sm:text-2xl mb-6">
           Explore our most popular cities
         </h1>

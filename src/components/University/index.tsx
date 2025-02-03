@@ -41,7 +41,7 @@ const UniversityComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-fit mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
-            onClick={()=>showModal}
+            onClick={()=>showModal('form')}
           //onClick={() => {}}
           >
             Speak to Treepz
@@ -213,7 +213,7 @@ const UniversityComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-            onClick={()=>showModal}
+            onClick={()=>showModal('form')}
           //onClick={() => {}}
           >
             Contact us

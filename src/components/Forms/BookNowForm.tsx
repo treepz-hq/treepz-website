@@ -42,13 +42,13 @@ const formSchema = z.object({
 
 const BookNowForm = () => {
 
-    const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       first_name: "",
       range: "",
       estimated_passengers: '1',
-      type_of_transportation:"",
+      type_of_transportation: "",
       describe: "",
       how_often: "",
       email: "",
@@ -72,7 +72,7 @@ const BookNowForm = () => {
     });
 
     if (response.ok) {
-            toast.success('Form submitted successfully!');
+      toast.success('Form submitted successfully!');
       form.reset({
         first_name: "",
         range: "",
@@ -87,7 +87,7 @@ const BookNowForm = () => {
       });
 
     } else {
-            toast.error('Form submission failed!');
+      toast.error('Form submission failed!');
     }
   }
   return (
@@ -140,11 +140,11 @@ const BookNowForm = () => {
             <FormField
               control={form.control}
               name="type_of_transportation"
-                                render={({ field: { onChange, onBlur, value, ref } }) => (
-                  <FormItem>
-                    <FormLabel>What type of transportation?</FormLabel>
-                    <FormControl>
-                      <Select value={value} onValueChange={onChange}>
+              render={({ field: { onChange, onBlur, value, ref } }) => (
+                <FormItem>
+                  <FormLabel>What type of transportation?</FormLabel>
+                  <FormControl>
+                    <Select value={value} onValueChange={onChange}>
                       <SelectTrigger className="w-full sm:w-[256px]">
                         <SelectValue placeholder="School" />
                       </SelectTrigger>
@@ -182,13 +182,13 @@ const BookNowForm = () => {
           <FormField
             control={form.control}
             name="how_often"
-              render={({ field: { onChange, onBlur, value, ref } }) => (
-                <FormItem>
-                  <FormLabel>
-                    How often does your organization book transportation?
-                  </FormLabel>
-                  <FormControl>
-                    <Select value={value} onValueChange={onChange}>
+            render={({ field: { onChange, onBlur, value, ref } }) => (
+              <FormItem>
+                <FormLabel>
+                  How often does your organization book transportation?
+                </FormLabel>
+                <FormControl>
+                  <Select value={value} onValueChange={onChange}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="School" />
                     </SelectTrigger>
@@ -268,7 +268,7 @@ const BookNowForm = () => {
             />
           </div>
           <div className="w-full  gap-2 sm:flex-row space-y-3 sm:space-y-0 justify-between sm:items-end">
-                        <FormField
+            <FormField
               control={form.control}
               name="phone_number"
               render={({ field: { onChange, onBlur, value, ref } }) => (

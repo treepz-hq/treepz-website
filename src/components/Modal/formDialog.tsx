@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -13,14 +14,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import BookNowForm from "../Forms/BookNowForm";
 
+import { useModal } from '@/contexts/ModalContext';
+
 const DialogComponent = () => {
+  const { isModalVisible, hideModal } = useModal();
+
+  const handleModalClose = () => {
+    hideModal();
+  };
+
   return (
-    <Dialog>
+    <Dialog open={isModalVisible} onOpenChange={handleModalClose}>
         <DialogTrigger asChild>
           <Button
             variant={"outline"}
             className="relative sm:w-[156px] cursor-pointer border-gray-900 rounded-full font-bold flex items-center gap-2 group overflow-hidden"
-            //onClick={() => {}}
+            onClick={() => {}}
           >
             <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Get a quote

@@ -33,19 +33,19 @@ const AirportTransComponent = () => {
       <div className="bg-[url(/airport-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
         <div className="mb-13 flex flex-col w-full sm:w-[783px] text-center">
           <h1 className="text-[36px] sm:text-[56px] font-bold leading-[40px] sm:leading-[64px] uppercase text-center w-full">
-From touchdown to town
+            From touchdown to town
           </h1>
           <p className="text-base text-center sm:text-xl mt-[20px] sm:mt-[28px]">
-           Leave the airport hassle behind: Book your stress-free ride with Treepz.
+            Leave the airport hassle behind: Book your stress-free ride with Treepz.
           </p>
         </div>
         <Button
           variant={"default"}
           className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-medium gap-2 mt-14"
-                    onClick={()=>showModal}
-          //onClick={() => {}}
+          onClick={() => showModal('form')}
+        //onClick={() => {}}
         >
-       Book Now 
+          Book Now
         </Button>
       </div>
       <h1 className="text-2xl sm:text-[32px] leading-[40px] font-bold mt-[56px] sm:mt-[96px] sm:mb-[42px] w-full text-center">
@@ -53,7 +53,7 @@ From touchdown to town
       </h1>
       <div className="container px-4 sm:px-20 flex flex-col mt-[75px] mb-[113px]">
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
-We are used by the best airlines cin business
+          We are used by the best airlines cin business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center ">
           {MiniPartnerData.map(({ src }: any) => (
@@ -63,10 +63,10 @@ We are used by the best airlines cin business
       </div>
       <div className="flex flex-col w-full space-y-6 justify-center items-center sm:max-w-[1022px] sm:mx-auto">
         <h1 className="text-2xl sm:text-[32px] sm:leading-[40px] text-[#212529] uppercase font-bold text-center">
- Arrive Feeling Refreshed
+          Arrive Feeling Refreshed
         </h1>
         <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center  ">
-     Business travel shouldn't start with airport chaos. Partner with Treepz for optimized costs, guaranteed safety, and a seamless arrival experience for you and your team. 
+          Business travel shouldn't start with airport chaos. Partner with Treepz for optimized costs, guaranteed safety, and a seamless arrival experience for you and your team.
         </p>
       </div>
       {/* School category */}
@@ -91,8 +91,8 @@ We are used by the best airlines cin business
         />
       </div>
       <GetAQuote />
-      <UserRoutesComponent 
-        title="Treepz for Business" 
+      <UserRoutesComponent
+        title="Treepz for Business"
         desc="Vehicles provided by specialized travel management companies or
               TMCs like Treepz (hey there) will help your business effectively
               manage your travel-related activities – from events and
@@ -118,12 +118,12 @@ We are used by the best airlines cin business
             className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6"
             id="info-1"
           >
-Why Use an Airport Transport Service?
+            Why Use an Airport Transport Service?
           </h1>
           <p className="text-base sm:text-xl mt-[20px] sm:mt-[28px] text-[#6F7174]">
-       Imagine: happy arrivals, boosted productivity, and reduced costs. Treepz handles everything - reliable rides, pro drivers, user-friendly app, all for a smooth touchdown. Let's talk and see how we can empower your team and your business.
+            Imagine: happy arrivals, boosted productivity, and reduced costs. Treepz handles everything - reliable rides, pro drivers, user-friendly app, all for a smooth touchdown. Let's talk and see how we can empower your team and your business.
           </p>
-        
+
           <div className="w-full sm:h-[328px] my-6 sm:my-14 relative overflow-hidden rounded-2xl">
             <Image
               src="/airport-1.png"
@@ -175,7 +175,7 @@ Why Use an Airport Transport Service?
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal}
+              onClick={() => showModal('form')}
             >
               Get a quote
               <ChevronRightIcon />
@@ -285,8 +285,8 @@ Why Use an Airport Transport Service?
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-                            onClick={()=>showModal}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Change your travel plans
               <ChevronRightIcon />
