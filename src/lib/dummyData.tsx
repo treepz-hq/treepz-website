@@ -296,31 +296,31 @@ export const PostalCardData: PostalCardProps[] = [
   {
     src: "postal-1.png",
     title: "Employee Shuttle Services",
-    href: "employee-transportation",
+    href: "/employee-transportation.html",
   },
   {
     src: "car-rental.png",
-    title: "Car Rental Services",
+    title: "Car Rental Services.html",
   },
   {
     src: "school-transportation.png",
     title: "School Transportation",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "conference-conventions.png",
     title: "Conference and Conventions",
-    href: "conference",
+    href: "/conference.html",
   },
   {
     src: "event-transportation.png",
     title: "Event Transportation",
-    href: "event",
+    href: "/event.html",
   },
   {
     src: "airport-transportation.png",
     title: "Airport Transportation",
-    href: "airport-transportation",
+    href: "/airport-transportation.html",
   },
   {
     logo: '',
@@ -333,7 +333,7 @@ export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "airline.png",
     title: "Airline",
-    href: "airline",
+    href: "/airline.html",
   },
   // {
   //     src:"religious.png",
@@ -343,22 +343,22 @@ export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "corporate.png",
     title: "Corporate events",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "school.png",
     title: "School trips",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "private.png",
     title: "Private events",
-    href: "executive-transportation",
+    href: "/executive-transportation.html",
   },
   {
     src: "university.png",
     title: "University",
-    href: "university",
+    href: "/university.html",
   },
   // {
   //     src:"sporting.png",
@@ -371,17 +371,17 @@ export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "production.png",
     title: "Production crews",
-    href: "contact",
+    href: "/contact.html",
   },
   {
     src: "weddings.png",
     title: "Weddings",
-    href: "wedding-transportation",
+    href: "/wedding-transportation.html",
   },
   {
     src: "government.png",
     title: "Government",
-    href: "governments",
+    href: "/governments.html",
   },
 ];
 
@@ -473,48 +473,48 @@ export const BlogData: BlogProps[] = [
 export const solutionsLists = [
   {
     label: "Airport Shuttles",
-    href: "airport-transportation",
+    href: "/airport-transportation.html",
   },
   {
     label: "Campus Shuttles",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     label: "Conference Shuttles",
-    href: "conference-transportation",
+    href: "/conference-transportation.html",
   },
   {
     label: "Convention Transportation",
-    href: "convention",
+    href: "/convention.html",
   },
   {
     label: "Corporate Shuttles",
-    href: "conference",
+    href: "/conference.html",
   },
   {
     label: "Event Transportation Service",
-    href: "event",
+    href: "/event.html",
   },
 ];
 
 export const groupLists = [
-  { label: " For Airlines ", href: "airline" },
-  { label: " For Religious ", href: "religious" },
-  { label: "For Corporate Events", href: "event" },
-  { label: "For School Trips", href: "university" },
+  { label: " For Airlines ", href: "/airline.html" },
+  { label: " For Religious ", href: "/religious.html" },
+  { label: "For Corporate Events", href: "/event.html" },
+  { label: "For School Trips", href: "/university.html" },
 ];
 
 export const companyLists = [
   {
-    href: "about",
+    href: "/about.html",
     label: "About",
   },
   {
-    href: "career",
+    href: "/career.html",
     label: "Career",
   },
   {
-    href: "press",
+    href: "/press.html",
     label: "Press",
   },
   {
@@ -522,15 +522,15 @@ export const companyLists = [
     label: "Blog",
   },
   {
-    href: "report",
+    href: "/report.html",
     label: "Report",
   },
   {
-    href: "terms",
+    href: "/terms.html",
     label: "Terms & Conditions",
   },
   {
-    href: "privacy",
+    href: "/privacy.html",
     label: "Privacy & Cookie Policy",
   },
 ];

@@ -26,11 +26,11 @@ export const NavMenu: MenuDataProps[] = [
   },
   {
     label: "About us",
-    href: "/about",
+    href: "/about.html",
   },
   {
     label: "Contact us",
-    href: "/contact",
+    href: "/contact.html",
   },
 ];
 
