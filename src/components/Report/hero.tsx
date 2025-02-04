@@ -111,7 +111,7 @@ const HeroComponent = () => {
                   <p className="text-[#4D5154] text-center">{item.description}</p>
                 </div>
               </div>
-            );
+            );z
           })}
         </div>
       </div>
