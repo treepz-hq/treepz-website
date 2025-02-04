@@ -34,7 +34,7 @@ const BetterTogetherComponent = () => {
           <Button
             variant="default"
             className="relative overflow-hidden sm:w-[210px] w-full sm:h-[45px] text-center items-center sm:px-[2px] group"
-            onClick={() => router.push("/business-solutions")}
+            onClick={() => router.push("/report.html?action=download")}
           >
             <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Download Report for Free

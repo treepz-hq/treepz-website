@@ -7,11 +7,12 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { ModalProvider } from "@/contexts/ModalContext";
-import { ReactNode } from "react";
+import { createRef, ReactNode, useEffect } from "react";
 import ModalComponent from "@/components/Modal";
 import BookNowForm from "@/components/Forms/BookNowForm";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import toast, { Toaster } from 'react-hot-toast';
+import { useSearchParams } from "next/navigation";
 const myFont = localFont({
   src: [
     {
@@ -45,8 +46,20 @@ const myFont = localFont({
 type RootLayoutProps = {
   children: ReactNode;
 };
+export const getCopyRef = createRef<HTMLDivElement | null>();
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const searchParams = useSearchParams();
+   useEffect(()=>{
+    const params = searchParams.get("action")
+    if(params && params === "download")
+    {
+      window.scrollTo({
+        top:1690,
+        behavior: "smooth"
+      })
+    }
+ },[])
   return (
     <html lang="en">
       <body className={myFont.className}>
