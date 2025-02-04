@@ -45,7 +45,7 @@ const HeroComponent = () => {
             <Button
               variant={"outline"}
               className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
-              onClick={()=>showModal}
+              onClick={()=>showModal('form')}
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Get a quote

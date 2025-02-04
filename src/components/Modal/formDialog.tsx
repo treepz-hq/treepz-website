@@ -24,7 +24,9 @@ const DialogComponent = () => {
   };
 
   return (
-    <Dialog open={isModalVisible} onOpenChange={handleModalClose}>
+    <Dialog 
+    open={isModalVisible} 
+    onOpenChange={handleModalClose}>
         <DialogTrigger asChild>
           <Button
             variant={"outline"}
@@ -39,13 +41,14 @@ const DialogComponent = () => {
             </span>
           </Button>
         </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px]">
-        <DialogHeader className="border-b pb-10">
-          <DialogTitle>Book Now & Contact us</DialogTitle>
+      <DialogContent className="sm:max-w-[600px] px-0 pb-0">
+        <DialogHeader className="border-b pb-10 px-10">
+          <DialogTitle>Book Now</DialogTitle>
         </DialogHeader>
+        <div  className="lg:px-[40px] h-[65vh]" style={{overflow:"scroll"}} >
         <BookNowForm />
+        </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

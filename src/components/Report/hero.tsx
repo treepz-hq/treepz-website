@@ -18,9 +18,10 @@ const HeroComponent = () => {
 
   const scrollToGetCopy = () => {
     if (getCopyRef.current) {
-      getCopyRef.current.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start' });
+      window.scrollTo({
+        top: getCopyRef.current.offsetTop + 450,
+        behavior: "smooth"
+      })
       setTimeout(() => {
         const firstInput = getCopyRef.current?.querySelector('input');
         if (firstInput) {
@@ -38,7 +39,7 @@ const HeroComponent = () => {
         <div className='w-full items-center text-center sm:w-1/2 sm:text-left'>
           {/* <div className='w-full pt-9'> */}
             {/* <h1 className='text-[#212529] font-bold text-4xl uppercase leading-[52PX]'>The State of <br />Corporate Mobility <br />Report in Africa 2025</h1> */}
-            <h1 className='text-[#212529] font-[600px] text-[44px] uppercase leading-[52PX]'>The State of Corporate Mobility Report in Africa 2025</h1>
+            <h1 className='text-[#212529] font-[600] text-[44px] uppercase leading-[52PX]'>The State of Corporate Mobility Report in Africa 2025</h1>
             <p className='text-[#4D5154] my-3 text-sm text-[16px]'>Learn about the current mobility trends in the African landscape impacting how businesses will strategise and operate in 2025.</p>
           {/* </div> */}
           <div className='flex flex-col mt-8 gap-4 sm:flex-row w-full sm:w-[378px]'>
@@ -110,7 +111,7 @@ const HeroComponent = () => {
                   <p className="text-[#4D5154] text-center">{item.description}</p>
                 </div>
               </div>
-            );
+            );z
           })}
         </div>
       </div>

@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { usePathname, useRouter } from 'next/navigation'
 import { Button } from "../ui/button";
 import { useModal } from '@/contexts/ModalContext';
@@ -9,6 +9,23 @@ const BetterTogetherComponent = () => {
   const { showModal } = useModal();
   const pathname = usePathname();
   const router = useRouter();
+
+    const getCopyRef = useRef<HTMLDivElement | null>(null);
+  
+    const scrollToGetCopy = () => {
+      if (getCopyRef.current) {
+        window.scrollTo({
+          top: getCopyRef.current.offsetTop + 350,
+          behavior: "smooth"
+        })
+        setTimeout(() => {
+          const firstInput = getCopyRef.current?.querySelector('input');
+          if (firstInput) {
+            (firstInput as HTMLElement).focus();
+          }
+        }, 500);
+      }
+    };
 
   return (
     <div className="relative w-full -mt-7 mb-9">
@@ -34,7 +51,8 @@ const BetterTogetherComponent = () => {
           <Button
             variant="default"
             className="relative overflow-hidden sm:w-[210px] w-full sm:h-[45px] text-center items-center sm:px-[2px] group"
-            onClick={() => router.push("/business-solutions")}
+            onClick={scrollToGetCopy}
+            aria-label="contact us"
           >
             <span className="transition-transform font-semibold duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Download Report for Free
@@ -46,7 +64,7 @@ const BetterTogetherComponent = () => {
           <Button
             variant="outline"
             className="relative !bg-transparent text-white border-white sm:w-[150px] sm:h-[45px] group overflow-hidden"
-            onClick={() => showModal('share')}
+            onClick={() => showModal('form')}
             aria-label="contact us"
           >
             <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
@@ -57,6 +75,9 @@ const BetterTogetherComponent = () => {
             </span>
           </Button>
         </div>
+      </div>
+      <div ref={getCopyRef}>
+
       </div>
     </div>
   );

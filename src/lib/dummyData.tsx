@@ -161,28 +161,33 @@ export const BlogsData: NewsProps[] = [
 
 export const NewsData: NewsProps[] = [
   {
-    logo: <DALogo />,
-    title: "Treepz partner Octamile to launch insurance for travellers, hosts",
-    date: "Oct 17, 2023",
-    href: "https://techcabal.com/2023/02/14/treepz-expands-into-kenya/",
+    // logo: <DALogo />,
+    title: "Treepz prepares for global expansion and joins the 2024 World Trade Center Trade Accelerator Program",
+    // title: "Treepz partner Octamile to launch insurance for travellers, hosts",
+    date: "Nov 20, 2024",
+    href: "https://techcabal.com/2024/11/20/treepz-prepares-for-global-expansion-and-joins-the-2024-world-trade-center-trade-accelerator-program/",
+    // href: "https://techcabal.com/2023/02/14/treepz-expands-into-kenya/",
   },
   {
-    logo: <TechCabalLogo />,
-    title: "Online vehicle rentals company, Treepz expands into Kenya",
-    date: "Feb 14, 2023",
-    href: "https://disrupt-africa.com/2023/10/17/nigerias-treepz-octamile-partner-to-launch-insurance-program-for-travellers-hosts/",
+    // logo: <TechCabalLogo />,
+    title: "Treepz Drives Innovation, Wins Top Honors at African Union Event",
+    date: "Nov 8, 2024",
+    href: "https://blog.treepz.com/we-just-won-the-best-startup-pitch-award-in-africa-at-the-15th-annual-au-conference/"
+    // href: "https://disrupt-africa.com/2023/10/17/nigerias-treepz-octamile-partner-to-launch-insurance-program-for-travellers-hosts/",
   },
   {
-    logo: <TechMoranLogo />,
-    title: "Treepz Selected for 2023 VC4A Venture Showcase",
-    date: "Aug 24, 2023",
-    href: "https://techmoran.com/2023/08/24/treepz-selected-for-2023-vc4a-venture-showcase-appoints-new-board-members-to-foster-sustainable-growth/",
+    // logo: <TechMoranLogo />,
+    title: "Treepz turns 5, is set to launch an upgraded all-in-one mobility app for corporate firms, and individuals",
+    date: "September 16, 2024",
+    href: "https://www.pulse.ng/articles/business/domestic/treepz-turns-5-set-to-launch-upgraded-all-in-one-mobility-app-for-corporate-firms-2024092618035405301#google_vignette",
+    // href: "https://techmoran.com/2023/08/24/treepz-selected-for-2023-vc4a-venture-showcase-appoints-new-board-members-to-foster-sustainable-growth/",
   },
   {
-    logo: <TechCrLogo />,
-    title: "Nigerian MaaS startup Treepz closes $2.8M seed round to fund",
-    date: "Jan 17, 2024",
-    href: "https://techcrunch.com/2021/11/22/nigerian-maas-startup-treepz-closes-2-8m-seed-round-to-fund-east-african-expansion/",
+    // logo: <TechCrLogo />,
+    title: "Treepz Makes History as the First Corporate Mobility Startup in Africa to Complete an International Cross-Border Rental Trip",
+    date: "August 19, 2024",
+    // href: "https://techcrunch.com/2021/11/22/nigerian-maas-startup-treepz-closes-2-8m-seed-round-to-fund-east-african-expansion/",
+    href: "https://disruptafrica.com/2024/08/19/nigerian-mobility-startup-treepz-completes-1st-cross-border-rental-trip/",
   },
 ];
 export const SchoolPartnerData: OurPartnerProps[] = [
@@ -296,44 +301,44 @@ export const PostalCardData: PostalCardProps[] = [
   {
     src: "postal-1.png",
     title: "Employee Shuttle Services",
-    href: "employee-transportation",
+    href: "/employee-transportation.html",
   },
   {
     src: "car-rental.png",
-    title: "Car Rental Services",
+    title: "Car Rental Services.html",
   },
   {
     src: "school-transportation.png",
     title: "School Transportation",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "conference-conventions.png",
     title: "Conference and Conventions",
-    href: "conference",
+    href: "/conference.html",
   },
   {
     src: "event-transportation.png",
     title: "Event Transportation",
-    href: "event",
+    href: "/event.html",
   },
   {
     src: "airport-transportation.png",
     title: "Airport Transportation",
-    href: "airport-transportation",
+    href: "/airport-transportation.html",
   },
-  {
-    logo: '',
-    title: 'African urbanization drives rentals',
-    text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
-  }
+  // {
+  //   logo: '',
+  //   title: 'African urbanization drives rentals',
+  //   text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
+  // }
 ];
 
 export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "airline.png",
     title: "Airline",
-    href: "airline",
+    href: "/airline.html",
   },
   // {
   //     src:"religious.png",
@@ -343,22 +348,22 @@ export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "corporate.png",
     title: "Corporate events",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "school.png",
     title: "School trips",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     src: "private.png",
     title: "Private events",
-    href: "executive-transportation",
+    href: "/executive-transportation.html",
   },
   {
     src: "university.png",
     title: "University",
-    href: "university",
+    href: "/university.html",
   },
   // {
   //     src:"sporting.png",
@@ -371,17 +376,17 @@ export const BusinessSolutionsData: PostalCardProps[] = [
   {
     src: "production.png",
     title: "Production crews",
-    href: "contact",
+    href: "/contact.html",
   },
   {
     src: "weddings.png",
     title: "Weddings",
-    href: "wedding-transportation",
+    href: "/wedding-transportation.html",
   },
   {
     src: "government.png",
     title: "Government",
-    href: "governments",
+    href: "/governments.html",
   },
 ];
 
@@ -473,48 +478,48 @@ export const BlogData: BlogProps[] = [
 export const solutionsLists = [
   {
     label: "Airport Shuttles",
-    href: "airport-transportation",
+    href: "/airport-transportation.html",
   },
   {
     label: "Campus Shuttles",
-    href: "school-transportation",
+    href: "/school-transportation.html",
   },
   {
     label: "Conference Shuttles",
-    href: "conference-transportation",
+    href: "/conference-transportation.html",
   },
   {
     label: "Convention Transportation",
-    href: "convention",
+    href: "/convention.html",
   },
   {
     label: "Corporate Shuttles",
-    href: "conference",
+    href: "/conference.html",
   },
   {
     label: "Event Transportation Service",
-    href: "event",
+    href: "/event.html",
   },
 ];
 
 export const groupLists = [
-  { label: " For Airlines ", href: "airline" },
-  { label: " For Religious ", href: "religious" },
-  { label: "For Corporate Events", href: "event" },
-  { label: "For School Trips", href: "university" },
+  { label: " For Airlines ", href: "/airline.html" },
+  { label: " For Religious ", href: "/religious.html" },
+  { label: "For Corporate Events", href: "/event.html" },
+  { label: "For School Trips", href: "/university.html" },
 ];
 
 export const companyLists = [
   {
-    href: "about",
+    href: "/about.html",
     label: "About",
   },
   {
-    href: "career",
+    href: "/career.html",
     label: "Career",
   },
   {
-    href: "press",
+    href: "/press.html",
     label: "Press",
   },
   {
@@ -522,15 +527,15 @@ export const companyLists = [
     label: "Blog",
   },
   {
-    href: "report",
+    href: "/report.html",
     label: "Report",
   },
   {
-    href: "terms",
+    href: "/terms.html",
     label: "Terms & Conditions",
   },
   {
-    href: "privacy",
+    href: "/privacy.html",
     label: "Privacy & Cookie Policy",
   }
 ];
