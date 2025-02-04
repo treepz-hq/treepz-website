@@ -322,11 +322,11 @@ export const PostalCardData: PostalCardProps[] = [
     title: "Airport Transportation",
     href: "/airport-transportation.html",
   },
-  {
-    logo: '',
-    title: 'African urbanization drives rentals',
-    text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
-  }
+  // {
+  //   logo: '',
+  //   title: 'African urbanization drives rentals',
+  //   text: 'African businesses embrace rental solutions due to urban growth and rising operational demands in metropolitan areas.'
+  // }
 ];
 
 export const BusinessSolutionsData: PostalCardProps[] = [
