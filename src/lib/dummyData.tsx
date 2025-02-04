@@ -506,15 +506,15 @@ export const groupLists = [
 
 export const companyLists = [
   {
-    href: "/about.html",
+    href: "about.html",
     label: "About",
   },
   {
-    href: "/career.html",
+    href: "career.html",
     label: "Career",
   },
   {
-    href: "/press.html",
+    href: "press.html",
     label: "Press",
   },
   {
@@ -522,15 +522,15 @@ export const companyLists = [
     label: "Blog",
   },
   {
-    href: "/report.html",
+    href: "report.html",
     label: "Report",
   },
   {
-    href: "/terms.html",
+    href: "terms.html",
     label: "Terms & Conditions",
   },
   {
-    href: "/privacy.html",
+    href: "privacy.html",
     label: "Privacy & Cookie Policy",
   },
 ];
