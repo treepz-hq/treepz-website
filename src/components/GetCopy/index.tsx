@@ -68,6 +68,7 @@ const GetACopy: React.FC = () => {
 
   return (
     <div
+    id="download"
       className="w-full"
       style={{
         borderTop: '1.5px dashed #D3D6D9',

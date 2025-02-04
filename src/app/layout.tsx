@@ -12,7 +12,7 @@ import ModalComponent from "@/components/Modal";
 import BookNowForm from "@/components/Forms/BookNowForm";
 import { GoogleAnalytics } from "@next/third-parties/google"
 import toast, { Toaster } from 'react-hot-toast';
-import { useSearchParams } from "next/navigation";
+;
 const myFont = localFont({
   src: [
     {
@@ -46,13 +46,11 @@ const myFont = localFont({
 type RootLayoutProps = {
   children: ReactNode;
 };
-export const getCopyRef = createRef<HTMLDivElement | null>();
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  const searchParams = useSearchParams();
-   useEffect(()=>{
-    const params = searchParams.get("action")
-    if(params && params === "download")
+  useEffect(()=>{
+    const params = window.location.href;
+    if(params.includes("download"))
     {
       window.scrollTo({
         top:1690,
