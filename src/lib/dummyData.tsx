@@ -532,7 +532,7 @@ export const companyLists = [
   {
     href: "privacy",
     label: "Privacy & Cookie Policy",
-  },
+  }
 ];
 
 export const socialMediaLists: SocialProps[] = [
