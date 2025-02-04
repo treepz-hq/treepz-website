@@ -91,7 +91,7 @@ const ExecutiveComponent = () => {
         desc="So, now it’s time to take advantage of Treepz’s luxury executive
                 ground transportation for a stylish and professional transfer."
       />
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
+      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4 gap-3">
         <MiniStickyBarMenu data={ExecutiveInfo} />
 
         {/* <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg">

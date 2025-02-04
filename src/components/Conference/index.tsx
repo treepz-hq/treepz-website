@@ -150,7 +150,7 @@ const ConferenceComponent = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between container px-4 sm:px-20 sm:mt-[177px]">
+      <div className="flex flex-col sm:flex-row justify-between container px-4 sm:px-20 sm:mt-[177px] gap-4">
         <div className="w-full sm:w-[624px] h-[320px] sm:h-[552px] relative mb-8 sm:mb-0">
           <Image
             src="/treepz-bg.png"

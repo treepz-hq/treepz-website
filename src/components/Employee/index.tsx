@@ -25,13 +25,13 @@ const NeededInformations = [
 ];
 
 const EmployeeTransComponent = () => {
-    const {showModal} = useModal()
+  const { showModal } = useModal()
   return (
     <>
       <div className="bg-[url(/employee-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
         <div className="mb-13 flex flex-col w-full sm:w-[783px] text-center">
           <h1 className="text-[36px] sm:text-[56px] font-bold leading-[40px] sm:leading-[64px] uppercase text-center w-full">
-Get your employees to move better
+            Get your employees to move better
           </h1>
           <p className="text-base text-center sm:text-xl mt-[20px] sm:mt-[28px]">
             Less stress, more productivity. Get your colleagues and employees to
@@ -41,7 +41,7 @@ Get your employees to move better
         <Button
           variant={"default"}
           className="w-fit sm:w-[197px] mx-auto mt-5 sm:mt-[52px] sm:h-[64px] font-semibold text-base"
-          onClick={()=>showModal('form')}
+          onClick={() => showModal('form')}
         >
           Speak with our team
         </Button>
@@ -51,7 +51,7 @@ Get your employees to move better
       </h1>
       <div className="container px-4 sm:px-20 flex flex-col mt-[75px] mb-[113px]">
         <p className="mb-8 text-base font-semibold text-[#6F7174] w-full text-center">
-          {}
+          { }
           We are trusted by the best in the business
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center ">
@@ -65,7 +65,7 @@ Get your employees to move better
           Any Size, Any Time, Anywhere
         </h1>
         <p className="text-sm sm:text-xl text-[#4D5154] px-4 sm:px-0 text-center ">
-      Our employee transportation scales to your needs, from small teams to large companies. Enjoy reliable rides, real-time tracking, and optional music at affordable prices. Get your team where they need to be, efficiently and cost-effectively.
+          Our employee transportation scales to your needs, from small teams to large companies. Enjoy reliable rides, real-time tracking, and optional music at affordable prices. Get your team where they need to be, efficiently and cost-effectively.
         </p>
       </div>
       {/* School category */}
@@ -91,15 +91,15 @@ Get your employees to move better
       </div>
       <GetAQuote />
       <UserRoutesComponent
-       title="Employee transportation service for business"
-       desc="We understand that every business is different – so with our
+        title="Employee transportation service for business"
+        desc="We understand that every business is different – so with our
               employee shuttle service, you can order one small car or a whole
               fleet of vehicles. We can’t guarantee a synchronized driving
               display on arrival, but we can guarantee punctuality,
               traceability, timeliness, and cool tunes if that’s your thing."
       />
 
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:mt-[116px] py-4">
+      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:mt-[116px] py-4 gap-3">
         <MiniStickyBarMenu data={NeededInformations} />
         <div id="info-1" className="hidden h-20"></div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">
@@ -196,7 +196,7 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px] h-[64px]"
-              onClick={()=>showModal('form')}
+              onClick={() => showModal('form')}
             >
               Get in touch
               <ChevronRightIcon />
@@ -263,8 +263,8 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="mt-6 w-fit sm:w-[263px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal('form')}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Find how Treepz can help
               <ChevronRightIcon />
@@ -353,8 +353,8 @@ Get your employees to move better
             <Button
               variant={"default"}
               className="font-mediummt-6 w-fit sm:w-[241px] mx-auto sm:h-[64px] sm:mt-10 sm:mb-[48px]"
-              onClick={()=>showModal('form')}
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
+            //onClick={() => {}}
             >
               Get your custom quote
               <ChevronRightIcon />

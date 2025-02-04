@@ -35,7 +35,7 @@ const BusinessSolutionComponent = () => {
             <Button
               variant={"default"}
               className="relative overflow-hidden sm:w-[194px] sm:h-[64px] group"
-              onClick={()=>showModal}
+              onClick={()=>showModal('form')}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                 For business use
@@ -48,7 +48,7 @@ const BusinessSolutionComponent = () => {
             <Button
               variant={"outline"}
               className="relative sm:w-[194px] sm:h-[64px] group overflow-hidden"
-              onClick={()=>showModal}
+              onClick={()=>showModal('form')}
             >
               <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
                 For personal use
@@ -103,7 +103,7 @@ const BusinessSolutionComponent = () => {
               <Button
                 variant={"default"}
                 className="relative overflow-hidden sm:w-[194px] mx-auto h-[40px] group justify-center items-center"
-                onClick={()=>showModal}
+                onClick={()=>showModal('form')}
               >
                 <span className="absolute top-0 left-0 w-full h-[20px] flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:-translate-y-full bg-red-400 ">
                   Contact Us
@@ -368,7 +368,7 @@ const BusinessSolutionComponent = () => {
               <Button
                 variant={"outline"}
                 className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
-                onClick={()=>showModal}
+                onClick={()=>showModal('form')}
               >
                 <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                   For Personal Use

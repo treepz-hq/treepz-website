@@ -4,6 +4,7 @@ import React from "react";
 import CheckedIcon from "@/assets/svgs/checked-icon.svg";
 import { Button } from "../ui/button";
 import BlogComponent from "../Blog";
+import { useModal } from '@/contexts/ModalContext';
 
 const InforArray = [
   "Streamlined technology",
@@ -13,6 +14,7 @@ const InforArray = [
 ];
 
 const UsersAppComponent = () => {
+  const { showModal } = useModal();
   return (
     <div className="bg-[#16171D] w-full">
       <div className="container px-4 sm:px-20 mt-4 sm:mt-24 py-4 sm:py-24">
@@ -64,15 +66,15 @@ const UsersAppComponent = () => {
             <Button
               variant={"default"}
               className="hover:bg-white bg-white w-full sm:w-[144px] sm:h-[52px] mt-5 sm:mt-14 group overflow-hidden relative"
-              //onClick={() => {}}
+              onClick={() => showModal('form')}
             >
-               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 Learn More
               </span>
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
                 Learn More
               </span>
-              
+
             </Button>
           </div>
           <div className="relative w-full sm:w-[624px] h-[282px] sm:h-[552px]">

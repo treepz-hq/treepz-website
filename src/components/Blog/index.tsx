@@ -3,8 +3,10 @@ import { Button } from '../ui/button';
 import BlogCard from './Card';
 import { BlogData } from '@/lib/dummyData';
 import Image from 'next/image'
+import { useModal } from '@/contexts/ModalContext';
 
 const BlogComponent = () => {
+  const { showModal } = useModal();
   return (
     <>
       <div className="relative container px-4 sm:px-20 border-t border-white py-[62px] flex w-full flex-col">
@@ -15,7 +17,7 @@ const BlogComponent = () => {
           <Button
             variant={"outline"}
             className="hidden border-white w-fit sm:w-[325px] !bg-transparent px-4 text-white hover:text-white group overflow-hidden relative sm:flex text-sm"
-            //onClick={() => {}}
+            onClick={() => showModal('form')}
           >
             <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
               Learn more about corporate shuttles
