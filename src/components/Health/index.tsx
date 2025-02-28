@@ -62,7 +62,7 @@ const HealthTranspComponent = () => {
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
+      <div className="container px-4 sm:px-20 flex  mt-4 sm:mt-[88px] sm:grid p-4 sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {HealthUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}

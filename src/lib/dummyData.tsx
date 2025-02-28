@@ -25,6 +25,10 @@ import TravelSupport247 from "@/assets/svgs/24-7-travel-support.svg";
 import CleanAndComfortableIcon from "@/assets/svgs/clean-and-comfortable.svg";
 import DALogo from "@/assets/svgs/news/da-logo.svg";
 import TechCabalLogo from "@/assets/svgs/news/TechCabal.svg";
+import CnbcAfricaLogo from '@/assets/svgs/news/cnbc_africa_logo.svg.svg'; 
+import NigeriaCommsWeek from '@/assets/svgs/news/NigeriaComms.svg'
+import PulseLogoo from '@/assets/svgs/news/pulse_logo.svg';
+import DistruptAfricaLogo from '@/assets/svgs/news/da-logo.svg';
 import TechMoranLogo from "@/assets/svgs/news/tech-moran.svg";
 import TechCrLogo from "@/assets/svgs/news/TechCr.svg";
 import PieChart from "@/assets/svgs/pieChart.svg";
@@ -161,7 +165,7 @@ export const BlogsData: NewsProps[] = [
 
 export const NewsData: NewsProps[] = [
   {
-    // logo: <DALogo />,
+    logo: <TechCabalLogo />,
     title: "Treepz prepares for global expansion and joins the 2024 World Trade Center Trade Accelerator Program",
     // title: "Treepz partner Octamile to launch insurance for travellers, hosts",
     date: "Nov 20, 2024",
@@ -169,21 +173,21 @@ export const NewsData: NewsProps[] = [
     // href: "https://techcabal.com/2023/02/14/treepz-expands-into-kenya/",
   },
   {
-    // logo: <TechCabalLogo />,
+    logo: <NigeriaCommsWeek />,
     title: "Treepz Drives Innovation, Wins Top Honors at African Union Event",
     date: "Nov 8, 2024",
-    href: "https://blog.treepz.com/we-just-won-the-best-startup-pitch-award-in-africa-at-the-15th-annual-au-conference/"
+    href: "https://www.nigeriacommunicationsweek.com.ng/treepz-drives-innovation-wins-top-honors-at-african-union-event/"
     // href: "https://disrupt-africa.com/2023/10/17/nigerias-treepz-octamile-partner-to-launch-insurance-program-for-travellers-hosts/",
   },
   {
-    // logo: <TechMoranLogo />,
+    logo: <PulseLogoo />,
     title: "Treepz turns 5, is set to launch an upgraded all-in-one mobility app for corporate firms, and individuals",
     date: "September 16, 2024",
     href: "https://www.pulse.ng/articles/business/domestic/treepz-turns-5-set-to-launch-upgraded-all-in-one-mobility-app-for-corporate-firms-2024092618035405301#google_vignette",
     // href: "https://techmoran.com/2023/08/24/treepz-selected-for-2023-vc4a-venture-showcase-appoints-new-board-members-to-foster-sustainable-growth/",
   },
   {
-    // logo: <TechCrLogo />,
+    logo: <DistruptAfricaLogo />,
     title: "Treepz Makes History as the First Corporate Mobility Startup in Africa to Complete an International Cross-Border Rental Trip",
     date: "August 19, 2024",
     // href: "https://techcrunch.com/2021/11/22/nigerian-maas-startup-treepz-closes-2-8m-seed-round-to-fund-east-african-expansion/",

@@ -17,7 +17,7 @@ const PressComponent = () => {
             </h1>
             <div className="w-full h-[240px] sm:h-[344px] relative overflow-hidden rounded-2xl mb-6">
               <Image
-                src="/press-hero-1.png"
+                src="/InterviewCeo.png"
                 fill
                 alt="press hero"
                 sizes="100vw, 100vh"
@@ -25,12 +25,11 @@ const PressComponent = () => {
                 className="object-cover absolute"
               />
             </div>
-            <Link href="https://techeconomy.ng/treepz-2023-in-review-transports-1-2-million-passengers-adds-six-new-cities-668-vehicles-and-more/" className="text-2xl sm:text-[32px] font-semibold sm:leading-[40px] capitalize mt-3 sm:mt-6">
-              Treepz 2023 in Review – Transports 1.2 million Passengers, Adds
-              Six New Cities, 668 Vehicles and More
+            <Link href="https://www.cnbcafrica.com/media/6366231482112/treepz-data-analytics-route-optimization-gps-tracking-to-improve-operational-efficiency/" className="text-2xl sm:text-[32px] font-semibold sm:leading-[40px] capitalize mt-3 sm:mt-6">
+            Full Interview of Onyeka Akumah, CEO of Treepz on CNBC Africa
             </Link>
             <p className="text-[#6F7174] text-base capitalize mt-3 sm:mt-6">
-              Jan 24, 2024
+            Dec 19, 2024
             </p>
           </div>
           <div className="w-full sm:w-[596px] flex flex-col space-y-6 pb-6 pt-6 sm:pt-14">
