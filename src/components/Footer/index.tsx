@@ -130,7 +130,7 @@ const Footer = () => {
               <div className={`flex flex-col gap-1 text-sm text-[#4D5154] ${dropdown.company ? "block" : "hidden"} sm:flex`}>
                 {companyLists.filter(link => link.label !== 'Terms & Conditions' && link.label !== 'Privacy & Cookie Policy').map((link, index) => (
                   <Link
-                    href={link.href.includes('blog') ? link.href : `/${link.href}`}
+                    href={link.href}
                     key={index}
                     className="transition duration-300 ease-in-out hover:underline my-1"
                   >

@@ -71,7 +71,9 @@ const AboutComponent = () => {
             <Button
               variant={"default"}
               className="w-fit sm:w-[240px] mb-3 mt-8 sm:mt-0 py-4 px-6 font-semibold relative overflow-hidden group h-14"
-              //onClick={() => {}}
+              onClick={() => {
+                window.open("https://treepz.notion.site/Open-Positions-at-Treepz-Global-1cf36abc474280d7ac3ee66442ac824b","_blank")
+              }}
             >
               <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
                 View open roles

@@ -506,15 +506,15 @@ export const groupLists = [
 
 export const companyLists = [
   {
-    href: "about",
+    href: "/about",
     label: "About",
   },
   {
-    href: "career",
+    href: "https://treepz.notion.site/Open-Positions-at-Treepz-Global-1cf36abc474280d7ac3ee66442ac824b",
     label: "Career",
   },
   {
-    href: "press",
+    href: "/press",
     label: "Press",
   },
   {
@@ -522,15 +522,15 @@ export const companyLists = [
     label: "Blog",
   },
   {
-    href: "report",
+    href: "/report",
     label: "Report",
   },
   {
-    href: "terms",
+    href: "/terms",
     label: "Terms & Conditions",
   },
   {
-    href: "privacy",
+    href: "/privacy",
     label: "Privacy & Cookie Policy",
   },
 ];
