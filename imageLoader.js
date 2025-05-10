@@ -1,3 +1,3 @@
 export default function ImageLoader({ src }) {
-    return `https://www.treepz.com/${src}`;
+    return `https://corporate.treepz.com${src}`;
   }
